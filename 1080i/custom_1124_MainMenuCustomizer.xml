@@ -59,19 +59,9 @@
             <aspectratio align="center" aligny="top">scale</aspectratio>
             <animation effect="zoom" start="110" end="130" center="auto" time="15000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="7500" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-            <visible>!Substring(Control.GetLabel(4322),dailybabe)</visible>
         </control>
         <include condition="!IsEmpty(Skin.String(CDWall_Folder_Path))">cdwall-musicvisualisation</include>
         <include condition="!IsEmpty(Skin.String(MovieWall_Folder_Path))">MovieWall</include>
-        <control type="multiimage">
-            <fadetime>600</fadetime>
-            <imagepath background="true">$VAR[HomeMainFanartVar]</imagepath>
-            <aspectratio align="center" aligny="top">keep</aspectratio>
-            <include>Animation_VisibleChange400</include>
-            <animation effect="zoom" start="110" end="130" center="auto" time="15000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-            <animation effect="slide" start="-15,-15" end="15,15" time="7500" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-            <visible>!Control.IsVisible(2355) + Substring(Control.GetLabel(4322),dailybabe)</visible>
-        </control>
         <control type="image">
             <fadetime>600</fadetime>
             <include>FullscreenDimensions</include>
@@ -174,6 +164,8 @@
             </animation>
             <animation effect="slide" end="-1860,0" time="300" condition="Skin.HasSetting(AlternateTimeStats) + ![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">WindowClose</animation>
             <animation effect="slide" start="-1860,0" end="0,0" delay="WidgetSlideDelay" time="300" condition="Skin.HasSetting(AlternateTimeStats) + ![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">WindowOpen</animation>
+            <animation effect="slide" end="-1260,0" time="300" condition="[Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">WindowClose</animation>
+            <animation effect="slide" start="-1260,0" end="0,0" delay="WidgetSlideDelay" time="300" condition="[Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">WindowOpen</animation>
             <control type="image">
                 <posy>-46</posy>
                 <width>1920</width>
