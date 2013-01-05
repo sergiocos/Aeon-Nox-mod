@@ -1,1 +1,14 @@
 /.dds
+SDL.dll
+zlib1.dll
+libtiff-3.dll
+libpng12-0.dll
+jpeg.dll
+packer.bat
+README.texturepacker
+SDL_image.dll
+TexturePacker.exe
+textures.cmd
+textures.log
+
+
