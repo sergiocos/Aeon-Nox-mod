@@ -25,7 +25,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Aeon Nox 4.0 by Big_Noid &amp; phil65</summary>
-	<disclaimer lang="en">Aeon Nox is a skin based on the design of Aeon by djh_. A great deal of textures used are from Aeon and it's mods. All credits to the makers of these skins and mods.</disclaimer>
+    <disclaimer lang="en">Aeon Nox is a skin based on the design of Aeon by djh_. A great deal of textures used are from Aeon and it's mods. All credits to the makers of these skins and mods.</disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
