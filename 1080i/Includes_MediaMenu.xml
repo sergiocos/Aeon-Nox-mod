@@ -81,14 +81,14 @@
             <label>$LOCALIZE[31173]</label>
             <visible>Window.IsActive(Addonbrowser)</visible>
             <onclick>UpdateAddonRepos</onclick>
-            <onclick>Notification($LOCALIZE[42002],$LOCALIZE[42011])</onclick>
+            <onclick>Notification($LOCALIZE[31902],$LOCALIZE[31911])</onclick>
         </control>
         <control type="button" id="224">
             <include>Objects_MediaMenuButtonIcons</include>
             <label>$LOCALIZE[31174]</label>
             <visible>Window.IsActive(Addonbrowser)</visible>
             <onclick>UpdateLocalAddons</onclick>
-            <onclick>Notification($LOCALIZE[42002],$LOCALIZE[42012])</onclick>
+            <onclick>Notification($LOCALIZE[31902],$LOCALIZE[31912])</onclick>
         </control>
     </include>
     <include name="MusicLibraryButtons_Left">
@@ -109,7 +109,7 @@
         </control>
         <control type="button" id="1666">
             <include>Objects_MediaMenuButtonIcons</include>
-            <label>42315</label>
+            <label>31715</label>
             <onclick>SetFocus(50)</onclick>
             <onclick>ActivateWindow(1148)</onclick>
             <visible>SubString(Container.FolderPath,special://musicplaylists/,left)</visible>
@@ -145,7 +145,7 @@
         </control>
         <control type="button" id="1666">
             <include>Objects_MediaMenuButtonIcons</include>
-            <label>42315</label>
+            <label>31715</label>
             <onclick>SetFocus(50)</onclick>
             <onclick>ActivateWindow(1148)</onclick>
             <visible>SubString(Container.FolderPath,special://videoplaylists/,left)</visible>
@@ -178,7 +178,7 @@
         </control>
         <control type="button" id="1666">
             <include>Objects_MediaMenuButtonIcons</include>
-            <label>42315</label>
+            <label>31715</label>
             <onclick>SetFocus(50)</onclick>
             <onclick>ActivateWindow(1148)</onclick>
             <visible>SubString(Container.FolderPath,special://musicplaylists/,left)</visible>

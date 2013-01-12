@@ -182,23 +182,23 @@
                         </control>
                         <control type="button" id="27">
                             <include>Objects_CustomizerSettingsButton</include>
-                            <label>42303</label>
+                            <label>31703</label>
                             <onclick>ActivateWindow(1161)</onclick>
                         </control>
                         <control type="button" id="270">
                             <include>Objects_CustomizerSettingsButton</include>
-                            <label>42304</label>
+                            <label>31704</label>
                             <onclick>ActivateWindow(1150)</onclick>
                         </control>
                         <control type="button" id="28">
                             <include>Objects_CustomizerSettingsButton</include>
-                            <label>42207</label>
+                            <label>31807</label>
                             <onclick>SetProperty(IconTarget,Icon,1124)</onclick>
                             <onclick>ActivateWindow(1145)</onclick>
                         </control>
                         <control type="button" id="30">
                             <include>Objects_CustomizerSettingsButton</include>
-                            <label>42208</label>
+                            <label>31808</label>
                             <onclick>ActivateWindow(1151)</onclick>
                         </control>
                         <control type="button" id="31">
