@@ -48,7 +48,9 @@ msgctxt "#31010"
 msgid "General main menu settings"
 msgstr ""
 
-#empty string with id 31011
+msgctxt "#31011"
+msgid "RottenTomatoes Trailers"
+msgstr ""
 
 msgctxt "#31012"
 msgid "Add group"
@@ -78,7 +80,9 @@ msgctxt "#31018"
 msgid "Big covers"
 msgstr ""
 
-#empty strings from id 31019 to 31020
+msgctxt "#31019"
+msgid "Channel4 News"
+msgstr ""
 
 msgctxt "#31021"
 msgid "Search XBMC for"
