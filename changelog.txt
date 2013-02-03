@@ -1,5 +1,5 @@
 [B]4.0.10[/B]
-- Updated language files from Transifexi
+- Updated language files from Transifex
 
 [B]4.0.9[/B]
 - Removed image
