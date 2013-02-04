@@ -327,6 +327,7 @@
                                     <width>660</width>
                                     <height>34</height>
                                     <textcolor>red</textcolor>
+                                    <selectedcolor>red</selectedcolor>
                                     <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                 </control>
                                 <control type="label">
@@ -392,6 +393,7 @@
                                         <width>660</width>
                                         <height>34</height>
                                         <textcolor>red</textcolor>
+                                        <selectedcolor>red</selectedcolor>
                                         <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                     </control>
                                     <control type="label">
@@ -428,6 +430,7 @@
                                         <width>660</width>
                                         <height>34</height>
                                         <textcolor>red</textcolor>
+                                        <selectedcolor>red</selectedcolor>
                                         <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                     </control>
                                     <control type="label">
@@ -781,6 +784,7 @@
                                     <width>660</width>
                                     <height>34</height>
                                     <textcolor>red</textcolor>
+                                    <selectedcolor>red</selectedcolor>
                                     <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                 </control>
                                 <control type="label">
@@ -843,6 +847,7 @@
                                     <width>660</width>
                                     <height>34</height>
                                     <textcolor>red</textcolor>
+                                    <selectedcolor>red</selectedcolor>
                                     <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                 </control>
                                 <control type="label">
@@ -1813,7 +1818,7 @@
                                 <pauseatend>1000</pauseatend>
                                 <fadetime>0</fadetime>
                                 <randomize>false</randomize>
-                                <loop>yes</loop>
+                               
                                 <animation effect="zoom" end="-892,0,1920,1080" time="640" tween="cubic" condition="!IsEmpty(Window(weather).Property(FSMap))">Conditional</animation>
                                 <aspectratio>keep</aspectratio>
                             </control>
@@ -2218,6 +2223,7 @@
                             <width>660</width>
                             <height>34</height>
                             <textcolor>red</textcolor>
+                            <selectedcolor>red</selectedcolor>
                             <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                         </control>
                         <control type="label">
@@ -2282,6 +2288,7 @@
                                 <width>660</width>
                                 <height>34</height>
                                 <textcolor>red</textcolor>
+                                <selectedcolor>red</selectedcolor>
                                 <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                             </control>
                             <control type="label">
