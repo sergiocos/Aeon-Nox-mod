@@ -28,6 +28,8 @@
     <onload condition="!Window.Previous(startup) + Skin.HasSetting(randomizehome) + Substring(Skin.String(SmartPlaylist10.Call),random)">$INFO[Skin.String(SmartPlaylist10.Call)]</onload>
     <onload condition="!Window.Previous(startup) + Skin.HasSetting(randomizehome) + Substring(Skin.String(SmartPlaylist11.Call),random)">$INFO[Skin.String(SmartPlaylist11.Call)]</onload>
     <onload condition="!Window.Previous(startup) + Skin.HasSetting(randomizehome) + Substring(Skin.String(SmartPlaylist12.Call),random)">$INFO[Skin.String(SmartPlaylist12.Call)]</onload>
+    <onload>AlarmClock(AutoMusicInfoPanel,ActivateWindow(1156),00:15,silent,loop)</onload>
+    <onunload>CancelAlarm(AutoMusicInfoPanel,true)</onunload>
     <onunload>CancelAlarm(HomeTileLeft,true)</onunload>
     <onunload>CancelAlarm(HomeTileRight,true)</onunload>
     <onunload>CancelAlarm(HomeTileMid,true)</onunload>
@@ -105,8 +107,10 @@
         </control>
         <control type="button" id="9011">
             <include>HiddenObject</include>
-            <onfocus condition="Control.IsVisible(2020)">SetFocus(2020)</onfocus>
-            <onfocus condition="!Control.IsVisible(2020)">SetFocus(9000)</onfocus>
+            <onfocus condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">SetFocus(4444)</onfocus>
+            <onfocus condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4444)">SetFocus(9000)</onfocus>
+            <onfocus condition="Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onfocus>
+            <onfocus>ActivateWindow(1159)</onfocus>
         </control>
         <include>MainMenuCommonContent</include>
         <!-- Fanart -->
@@ -114,9 +118,9 @@
             <!--              <visible>![[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)]]</visible>
  -->
             <control type="multiimage">
-                <fadetime>600</fadetime>
+                <aspectratio align="center" aligny="top">scale</aspectratio>
                 <imagepath background="true">$VAR[HomeMainFanartVar]</imagepath>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
+                <fadetime>600</fadetime>
                 <animation effect="fade" time="480">Visible</animation>
                 <animation effect="fade" time="480">Hidden</animation>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
@@ -124,11 +128,11 @@
                 <visible>!Substring(Control.GetLabel(4322),case)</visible>
             </control>
             <control type="image">
+                <aspectratio align="center" aligny="top">scale</aspectratio>
+                <texture background="true" fallback="special://skin/backgrounds/speakergrill.jpg">$INFO[Skin.String(LiveBG)]</texture>
                 <fadetime>600</fadetime>
                 <include>FullscreenDimensions</include>
                 <include>Animation_WindowFade250</include>
-                <aspectratio align="center" aligny="top">scale</aspectratio>
-                <texture background="true" fallback="special://skin/backgrounds/speakergrill.jpg">$INFO[Skin.String(LiveBG)]</texture>
                 <animation effect="fade" time="400">Visible</animation>
                 <animation effect="fade" time="400">Hidden</animation>
                 <visible>Substring(Control.GetLabel(4322),case)</visible>
@@ -137,12 +141,12 @@
             <include condition="SubString(Skin.String(backgroundlist), case)">LiveCDCasesbackground</include>
             <include condition="SubString(Skin.String(backgroundlist), nocase)">LiveNoCasesbackground</include>
             <include condition="[Skin.HasSetting(homecdwall) | SubString(Skin.String(backgroundlist),cdwall)] + !IsEmpty(Skin.String(CDWall_Folder_Path))">cdwall-musicvisualisation</include>
-            <include condition="SubString(Skin.String(backgroundlist),moviewall) + !IsEmpty(Skin.String(MovieWall_Folder_Path))">MovieWall</include>
+            <include condition="SubString(Skin.String(backgroundlist),moviewall)">MovieWall</include>
             <control type="image">
+                <aspectratio align="center" aligny="top">scale</aspectratio>
+                <texture background="true">$VAR[HomeWidgetFanartVar]</texture>
                 <fadetime>600</fadetime>
                 <include>FullscreenDimensions</include>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
-                <texture background="true">$VAR[HomeWidgetFanartVar]</texture>
                 <visible>[Control.HasFocus(8000) | Control.HasFocus(7000) | ControlGroup(5000).HasFocus | ControlGroup(6000).HasFocus] | [Player.HasAudio + Skin.HasSetting(musicfanarthome)]</visible>
                 <animation effect="fade" time="480">Visible</animation>
                 <animation effect="fade" time="480">Hidden</animation>
@@ -162,9 +166,9 @@
             <visible>![!IsEmpty(Window(home).Property(DisableWidgets)) + !Control.IsVisible(8995)]</visible>
             <visible>![!IsEmpty(Window(home).Property(DisableWidgets)) + Player.HasVideo + Skin.HasSetting(ShowBackgroundVideo)]</visible>
             <control type="image">
+                <texture>common/bgcolor.png</texture>
                 <include>FullscreenDimensions</include>
                 <colordiffuse>$INFO[Skin.String(BackgroundDarkness)]</colordiffuse>
-                <texture>common/bgcolor.png</texture>
             </control>
             <control type="image">
                 <posy>-150</posy>
@@ -237,8 +241,8 @@
                         <posy>613</posy>
                         <width>50</width>
                         <height>15</height>
-                        <colordiffuse>white</colordiffuse>
                         <texture>arrowdown.png</texture>
+                        <colordiffuse>white</colordiffuse>
                         <!--                     <animation effect="slide" end="0,40" time="0" condition="[!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)]">Conditional</animation>
  -->
                         <visible>Control.HasFocus(9000) + !Skin.HasSetting(showsubmenu) + IntegerGreaterThan(Container(9010).NumItems,0)</visible>
@@ -263,11 +267,11 @@
                     </control>
                     <!-- Home OSD -->
                     <control type="group">
-                        <visible>Player.HasMedia + System.IdleTime(8)</visible>
-                        <animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
                         <posy>62</posy>
                         <width>1920</width>
                         <height>1080</height>
+                        <visible>Player.HasMedia + System.IdleTime(8)</visible>
+                        <animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
                         <animation effect="fade" end="100" time="600" condition="Player.HasAudio + System.IdleTime(8)">Conditional</animation>
                         <control type="progress">
                             <posy>452</posy>
@@ -390,6 +394,8 @@
         </control>
         <include condition="!Skin.HasSetting(nohomepageMusicinfo) | !Skin.HasSetting(homepageVideoinfo)">Furniture_HomeNowPlaying</include>
         <control type="group">
+            <posx>50</posx>
+            <posy>50</posy>
             <visible>!IsEmpty(Window(home).Property(DisableWidgets)) + !Player.HasMedia + !Window.IsActive(1115) + !Window.IsActive(1154)</visible>
             <include>Animation_WindowFade200</include>
             <animation type="Visible">
@@ -400,21 +406,19 @@
                 <effect type="fade" start="100" end="0" time="240" />
                 <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
             </animation>
-            <posx>50</posx>
-            <posy>50</posy>
             <control type="image">
                 <width>170</width>
                 <height>80</height>
-                <include>PanelGlowFade</include>
                 <texture>dialogs/dialog_back_shadow.png</texture>
+                <include>PanelGlowFade</include>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             </control>
             <control type="image">
                 <width>170</width>
                 <height>80</height>
-                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                 <texture>dialogs/dialog_back.png</texture>
+                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="image">
@@ -422,35 +426,35 @@
                 <posy>12</posy>
                 <width>70</width>
                 <height>52</height>
-                <colordiffuse>white</colordiffuse>
-                <texture>special://skin/extras/BigIcons/ButtonBack.png</texture>
                 <aspectratio aligny="top">scale</aspectratio>
+                <texture>special://skin/extras/BigIcons/ButtonBack.png</texture>
+                <colordiffuse>white</colordiffuse>
             </control>
             <control type="label">
                 <posx>65</posx>
                 <width>100</width>
                 <height>74</height>
+                <align>center</align>
                 <font>Font_Reg14</font>
                 <textcolor>grey2</textcolor>
-                <align>center</align>
                 <label>$LOCALIZE[31864]</label>
                 <wrapmultiline>true</wrapmultiline>
             </control>
         </control>
         <control type="group">
             <control type="image">
+                <texture>common/white.png</texture>
                 <include>FullscreenDimensions</include>
                 <colordiffuse>black</colordiffuse>
                 <visible>Control.HasFocus(22222) | Control.HasFocus(22223) | !IsEmpty(Window(home).Property(weatherwidget))</visible>
                 <animation effect="fade" start="100" end="70" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
                 <include>Animation_VisibleChange400</include>
-                <texture>common/white.png</texture>
             </control>
             <control type="image">
-                <fadetime>600</fadetime>
-                <include>FullscreenDimensions</include>
                 <aspectratio align="center" aligny="top">keep</aspectratio>
                 <texture background="true">$VAR[HomeFSImageVar]</texture>
+                <fadetime>600</fadetime>
+                <include>FullscreenDimensions</include>
                 <animation effect="fade" time="400">Visible</animation>
                 <animation effect="fade" time="400">Hidden</animation>
                 <visible>Control.HasFocus(22222) | Control.HasFocus(22223)</visible>
@@ -458,15 +462,14 @@
             <control type="group">
                 <visible>!IsEmpty(Window(home).Property(weatherwidget))</visible>
                 <control type="multiimage">
-                    <include>FullscreenDimensions</include>
+                    <aligny>center</aligny>
+                    <aspectratio>keep</aspectratio>
                     <imagepath>$INFO[Window(weather).Property(MapPath)]</imagepath>
+                    <fadetime>0</fadetime>
+                    <include>FullscreenDimensions</include>
                     <timeperimage>500</timeperimage>
                     <pauseatend>1000</pauseatend>
-                    <fadetime>0</fadetime>
                     <randomize>false</randomize>
-                   
-                    <aspectratio>keep</aspectratio>
-                    <aligny>center</aligny>
                 </control>
                 <control type="image">
                     <posx>500</posx>
@@ -480,16 +483,16 @@
                     <posy>992</posy>
                     <width>506</width>
                     <height>42</height>
-                    <texture>weather/key1.png</texture>
                     <aspectratio>keep</aspectratio>
+                    <texture>weather/key1.png</texture>
                 </control>
                 <control type="image">
                     <posx>930</posx>
                     <posy>992</posy>
                     <width>506</width>
                     <height>42</height>
-                    <texture>weather/key2.png</texture>
                     <aspectratio>keep</aspectratio>
+                    <texture>weather/key2.png</texture>
                 </control>
             </control>
             <control type="button" id="22222">

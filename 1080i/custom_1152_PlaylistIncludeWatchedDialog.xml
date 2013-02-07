@@ -3,9 +3,9 @@
     <defaultcontrol>11</defaultcontrol>
     <zorder>4</zorder>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
@@ -45,8 +45,8 @@
                 <posy>88</posy>
                 <width>780</width>
                 <height>45</height>
-                <textcolor>white3</textcolor>
                 <align>center</align>
+                <textcolor>white3</textcolor>
                 <label>$LOCALIZE[31256]</label>
                 <scroll>true</scroll>
             </control>
@@ -55,16 +55,16 @@
                 <posy>258</posy>
                 <width>225</width>
                 <height>45</height>
-                <label>106</label>
+                <textoffsetx>30</textoffsetx>
+                <textoffsety />
+                <align>center</align>
                 <textcolor>grey2</textcolor>
+                <label>106</label>
                 <focusedcolor>white3</focusedcolor>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <onclick>SetProperty(Unwatched,True,home)</onclick>
                 <onclick>Dialog.Close(1152)</onclick>
                 <onclick>ActivateWindow(1125)</onclick>
-                <align>center</align>
-                <textoffsetx>30</textoffsetx>
-                <textoffsety />
                 <onup>10</onup>
                 <ondown>10</ondown>
                 <onleft>11</onleft>
@@ -75,13 +75,13 @@
                 <posy>258</posy>
                 <width>225</width>
                 <height>45</height>
-                <label>107</label>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                <textcolor>grey2</textcolor>
-                <focusedcolor>white3</focusedcolor>
-                <align>center</align>
                 <textoffsetx>30</textoffsetx>
                 <textoffsety />
+                <align>center</align>
+                <textcolor>grey2</textcolor>
+                <label>107</label>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <focusedcolor>white3</focusedcolor>
                 <onclick>SetProperty(Unwatched,False,home)</onclick>
                 <onclick>Dialog.Close(1152)</onclick>
                 <onclick>ActivateWindow(1125)</onclick>

@@ -13,17 +13,17 @@
     <defaultcontrol always="true">450</defaultcontrol>
     <zorder>4</zorder>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <!--     <onunload>Skin.SetString($INFO[Window(home).Property(BackgroundArea)],$INFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
  -->
     <include>Animation_DialogPopup</include>
     <controls>
         <control type="group">
-            <posy>-130</posy>
             <posx>349</posx>
+            <posy>-130</posy>
             <control type="image">
                 <posx>356</posx>
                 <posy>200</posy>
@@ -40,8 +40,8 @@
                 <posy>200</posy>
                 <width>510</width>
                 <height>620</height>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <texture border="50">osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="image">
                 <posx>375</posx>

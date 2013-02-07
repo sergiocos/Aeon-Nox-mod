@@ -4,9 +4,9 @@
     <animation effect="fade" time="200">WindowOpen</animation>
     <animation effect="fade" time="200">WindowClose</animation>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <controls>
         <control type="list" id="100">
@@ -30,9 +30,9 @@
             <posy>180</posy>
             <width>400</width>
             <height>400</height>
-            <fadetime>200</fadetime>
-            <texture>$INFO[Container(100).ListItem.Icon]</texture>
             <aspectratio aligny="top">keep</aspectratio>
+            <texture>$INFO[Container(100).ListItem.Icon]</texture>
+            <fadetime>200</fadetime>
             <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
             <bordersize>7</bordersize>
         </control>
@@ -51,10 +51,10 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Tagline)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Tagline)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -64,16 +64,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[515]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[515]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -83,16 +83,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20339]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20339]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -102,16 +102,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20417]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20417]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Writer)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Writer)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -121,16 +121,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[563]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[563]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -140,16 +140,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[345]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[345]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -159,16 +159,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[2050]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[2050]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -178,16 +178,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[572]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[572]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -197,16 +197,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20074]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20074]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Mpaa)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Mpaa)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                 </control>
@@ -220,16 +220,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20360]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20360]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -239,16 +239,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[515]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[515]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -258,16 +258,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[31005]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[31005]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Premiered)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Premiered)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -277,16 +277,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[572]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[572]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -296,16 +296,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[563]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[563]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -315,16 +315,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20074]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20074]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Mpaa)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Mpaa)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                 </control>
@@ -338,16 +338,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20364]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20364]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(TvShowTitle)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(TvShowTitle)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -357,16 +357,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20360]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20360]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                 </control>
@@ -380,16 +380,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20364]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20364]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(TvShowTitle)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(TvShowTitle)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -399,16 +399,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20373]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20373]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Season)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Season)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -418,16 +418,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20359]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20359]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Episode)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -437,16 +437,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20339]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20339]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -456,16 +456,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[563]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[563]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Rating)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -475,16 +475,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[31005]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[31005]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Premiered)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Premiered)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -494,16 +494,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[2050]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[2050]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                 </control>
@@ -517,16 +517,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[557]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[557]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -536,16 +536,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[515]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[515]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -555,16 +555,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[558]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[558]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -574,16 +574,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[20339]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[20339]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Director)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -593,16 +593,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[345]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[345]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -612,16 +612,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[572]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[572]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -631,16 +631,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[2050]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[2050]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -650,16 +650,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[572]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[572]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Studio)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                 </control>
@@ -673,16 +673,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[21893]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[21893]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Born)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Born)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -692,16 +692,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[21897]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[21897]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Died)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Died)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -711,16 +711,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[21894]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[21894]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Formed)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Formed)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -730,16 +730,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[21896]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[21896]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Disbanded)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Disbanded)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -749,16 +749,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[21898]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[21898]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_YearsActive)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_YearsActive)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -768,16 +768,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[515]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[515]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Genre)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Genre)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -787,16 +787,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[175]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[175]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Mood)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Mood)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -806,16 +806,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[176]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[176]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Style)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist_Style)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                 </control>
@@ -829,16 +829,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[557]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[557]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -848,16 +848,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[515]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[515]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -867,16 +867,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[345]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[345]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -886,16 +886,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[21899]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[21899]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Label)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Label)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -905,16 +905,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[31008]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[31008]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Type)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Type)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -924,16 +924,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[176]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[176]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Style)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Style)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -943,16 +943,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[175]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[175]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Mood)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Mood)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -962,16 +962,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[563]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[563]:</label>
                         </control>
                         <control type="image">
                             <width>180</width>
                             <height>40</height>
-                            <colordiffuse>white2</colordiffuse>
-                            <texture fallback="stars/0.0.png">$INFO[ListItem.Property(Album_Rating),stars/,.png]</texture>
                             <aspectratio align="center">keep</aspectratio>
+                            <texture fallback="stars/0.0.png">$INFO[ListItem.Property(Album_Rating),stars/,.png]</texture>
+                            <colordiffuse>white2</colordiffuse>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -981,16 +981,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[21895]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[21895]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Theme)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album_Theme)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                 </control>
@@ -1004,16 +1004,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[557]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[557]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Artist)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -1023,16 +1023,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[558]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[558]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Album)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -1042,16 +1042,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[515]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[515]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Genre)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -1061,16 +1061,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[554]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[554]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Track)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Track)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -1080,16 +1080,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[180]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[180]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Duration)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -1099,16 +1099,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[345]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[345]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Year)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -1118,16 +1118,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[567]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[567]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Playcount)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Playcount)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -1137,16 +1137,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[563]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[563]:</label>
                         </control>
                         <control type="image">
                             <width>180</width>
                             <height>40</height>
-                            <colordiffuse>white2</colordiffuse>
-                            <texture fallback="stars/0.0.png">$INFO[ListItem.Property(Album_Rating),stars/,.png]</texture>
                             <aspectratio align="center">keep</aspectratio>
+                            <texture fallback="stars/0.0.png">$INFO[ListItem.Property(Album_Rating),stars/,.png]</texture>
+                            <colordiffuse>white2</colordiffuse>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -1156,16 +1156,16 @@
                         <itemgap>10</itemgap>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <label>$LOCALIZE[573]:</label>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <aligny>bottom</aligny>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                            <label>$LOCALIZE[573]:</label>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
-                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Path)]</label>
-                            <textcolor>white6</textcolor>
-                            <scroll>true</scroll>
                             <aligny>bottom</aligny>
+                            <textcolor>white6</textcolor>
+                            <label fallback="N/A">$INFO[Container(100).ListItem.Property(Path)]</label>
+                            <scroll>true</scroll>
                         </control>
                     </control>
                 </control>
@@ -1181,33 +1181,33 @@
                     <width>135</width>
                     <height>90</height>
                     <aspectratio>keep</aspectratio>
-                    <colordiffuse>white2</colordiffuse>
-                    <fadetime>IconCrossfadeTime2</fadetime>
                     <texture fallback="flags/source/defaultsource.png">$INFO[Container(100).ListItem.Property(VideoCodec),flags/source/,.png]</texture>
+                    <fadetime>IconCrossfadeTime2</fadetime>
+                    <colordiffuse>white2</colordiffuse>
                 </control>
                 <control type="image">
                     <width>135</width>
                     <height>90</height>
                     <aspectratio>keep</aspectratio>
-                    <colordiffuse>white2</colordiffuse>
-                    <fadetime>IconCrossfadeTime2</fadetime>
                     <texture fallback="flags/source/defaultaspect.png">$INFO[Container(100).ListItem.Property(VideoAspect),flags/aspectratio/,.png]</texture>
+                    <fadetime>IconCrossfadeTime2</fadetime>
+                    <colordiffuse>white2</colordiffuse>
                 </control>
                 <control type="image">
                     <width>135</width>
                     <height>90</height>
                     <aspectratio>keep</aspectratio>
-                    <colordiffuse>white2</colordiffuse>
-                    <fadetime>IconCrossfadeTime2</fadetime>
                     <texture fallback="flags/source/defaultscreen.png">$INFO[Container(100).ListItem.Property(VideoResolution),flags/resolution/,.png]</texture>
+                    <fadetime>IconCrossfadeTime2</fadetime>
+                    <colordiffuse>white2</colordiffuse>
                 </control>
                 <control type="image">
                     <width>135</width>
                     <height>90</height>
                     <aspectratio>keep</aspectratio>
-                    <colordiffuse>white2</colordiffuse>
-                    <fadetime>IconCrossfadeTime2</fadetime>
                     <texture fallback="flags/source/defaultsound.png">$INFO[Container(100).ListItem.Property(AudioCodec),flags/info/]$INFO[Container(100).ListItem.Property(AudioChannels),,.png]</texture>
+                    <fadetime>IconCrossfadeTime2</fadetime>
+                    <colordiffuse>white2</colordiffuse>
                 </control>
             </control>
             <control type="textbox">
@@ -1267,43 +1267,43 @@
             <ondown>101</ondown>
             <animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
             <control type="button" id="191">
-                <label>$LOCALIZE[186]</label>
                 <width>434</width>
                 <height>74</height>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>18</textoffsety>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texturenofocus>-</texturenofocus>
                 <font>Font_Bold20</font>
                 <textcolor>grey</textcolor>
+                <label>$LOCALIZE[186]</label>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <focusedcolor>white2</focusedcolor>
-                <textoffsety>18</textoffsety>
-                <textoffsetx>20</textoffsetx>
             </control>
             <control type="button" id="192">
-                <label>-</label>
                 <width>434</width>
                 <height>74</height>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>18</textoffsety>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texturenofocus>-</texturenofocus>
                 <font>Font_Bold20</font>
                 <textcolor>grey</textcolor>
+                <label>-</label>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <focusedcolor>white2</focusedcolor>
-                <textoffsety>18</textoffsety>
-                <textoffsetx>20</textoffsetx>
             </control>
             <control type="button" id="193">
-                <label>-</label>
                 <width>434</width>
                 <height>74</height>
+                <textoffsetx>20</textoffsetx>
+                <textoffsety>18</textoffsety>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texturenofocus>-</texturenofocus>
                 <font>Font_Bold20</font>
                 <textcolor>grey</textcolor>
+                <label>-</label>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <focusedcolor>white2</focusedcolor>
-                <textoffsety>18</textoffsety>
-                <textoffsetx>20</textoffsetx>
             </control>
         </control>
     </controls>

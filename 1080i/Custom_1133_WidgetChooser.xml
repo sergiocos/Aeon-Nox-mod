@@ -20,9 +20,9 @@
                 <posx>326</posx>
                 <posy>100</posy>
                 <width>1240</width>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <height>810</height>
                 <texture border="20">osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <include>Animation_OpenCloseZoom</include>
             <control type="group">
@@ -41,8 +41,8 @@
                         <control type="image">
                             <width>400</width>
                             <height>60</height>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <texture>button-nofocus.png</texture>
+                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         </control>
                         <control type="label">
                             <width>400</width>
@@ -59,15 +59,15 @@
                             <control type="image">
                                 <width>400</width>
                                 <height>60</height>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 <texture>views/tripanel/listselect_fo.png</texture>
+                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             </control>
                             <control type="label">
                                 <width>400</width>
                                 <height>60</height>
                                 <textoffsetx>10</textoffsetx>
-                                <scroll>true</scroll>
                                 <font>Font_Reg19</font>
+                                <scroll>true</scroll>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </control>
@@ -76,8 +76,8 @@
                             <control type="image">
                                 <width>400</width>
                                 <height>60</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <texture>button-nofocus.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                             <control type="label">
                                 <width>400</width>
@@ -153,6 +153,13 @@
                             <visible>Library.HasContent(tvshows)</visible>
                         </item>
                         <item>
+                            <label>31819</label>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31819])</onclick>
+                            <onclick>SetProperty(CustomYesNoDialog,nextairedtv,1124)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <visible>Library.HasContent(tvshows)</visible>
+                        </item>
+                        <item>
                             <label>$LOCALIZE[31873]</label>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredtvdefault)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31873])</onclick>
@@ -189,6 +196,12 @@
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
                         <item>
+                            <label>31817</label>
+                            <onclick>SetProperty(CustomYesNoDialog,randomartists,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31817])</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                        </item>
+                        <item>
                             <label>$LOCALIZE[31081]</label>
                             <onclick>SetProperty(CustomYesNoDialog,recentmusicvideos,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31081])</onclick>
@@ -210,6 +223,12 @@
                             <visible>Library.HasContent(MusicVideos)</visible>
                         </item>
                         <item>
+                            <label>$LOCALIZE[31070]</label>
+                            <onclick>SetProperty(CustomYesNoDialog,randomaddons,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31070])</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                        </item>
+                        <item>
                             <label>1036</label>
                             <onclick>RunScript(script.favourites)</onclick>
                             <onclick>SetProperty(CustomYesNoDialog,favouriteIcon,1124)</onclick>
@@ -229,17 +248,18 @@
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
-                            <label>$LOCALIZE[31070]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,randomaddons,1124)</onclick>
-                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31070])</onclick>
-                            <onclick>ActivateWindow(1137)</onclick>
-                        </item>
-                        <item>
                             <label>$LOCALIZE[31071]</label>
                             <onclick>SetProperty(CustomYesNoDialog,weather,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31071])</onclick>
                             <onclick>ActivateWindow(1146)</onclick>
                             <visible>!IsEmpty(Weather.Plugin)</visible>
+                        </item>
+                        <item>
+                            <label>31183</label>
+                            <onclick>SetProperty(CustomYesNoDialog,wundergroundpanel,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Weather Wunderground)</onclick>
+                            <onclick>ActivateWindow(1146)</onclick>
+                            <visible>SubString(Weather.Plugin,weather.wunderground)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31072]</label>
@@ -264,12 +284,6 @@
                             <visible>System.HasAddon(plugin.image.mypicsdb)</visible>
                         </item>
                         <item>
-                            <label>31817</label>
-                            <onclick>SetProperty(CustomYesNoDialog,randomartists,1124)</onclick>
-                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31817])</onclick>
-                            <onclick>ActivateWindow(1137)</onclick>
-                        </item>
-                        <item>
                             <label>31818</label>
                             <onclick>RunScript(script.ExtraMusicInfo,info=NearEvents)</onclick>
                             <onclick>SetProperty(CustomYesNoDialog,concertspanel,1124)</onclick>
@@ -278,24 +292,16 @@
                             <visible>System.HasAddon(script.ExtraMusicInfo)</visible>
                         </item>
                         <item>
-                            <label>31819</label>
-                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31819])</onclick>
-                            <onclick>SetProperty(CustomYesNoDialog,nextairedtv,1124)</onclick>
-                            <onclick>ActivateWindow(1137)</onclick>
-                            <visible>Library.HasContent(tvshows)</visible>
-                        </item>
-                        <item>
                             <label>31820</label>
                             <onclick>SetProperty(CustomYesNoDialog,babespanelcoversquare,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31820])</onclick>
                             <onclick>ActivateWindow(1146)</onclick>
                         </item>
                         <item>
-                            <label>31183</label>
-                            <onclick>SetProperty(CustomYesNoDialog,wundergroundpanel,1124)</onclick>
-                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Weather Wunderground)</onclick>
-                            <onclick>ActivateWindow(1146)</onclick>
-                            <visible>SubString(Weather.Plugin,weather.wunderground)</visible>
+                            <label>News</label>
+                            <onclick>SetProperty(CustomYesNoDialog,rssnews,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,News)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[20304]</label>
@@ -448,8 +454,8 @@
                     <description>left Arrow</description>
                     <posx>567</posx>
                     <posy>190</posy>
-                    <height>30</height>
                     <width>786</width>
+                    <height>30</height>
                     <texture flipy="true">wall/wall_arrow_vertical.png</texture>
                     <visible>Container(4).HasPrevious</visible>
                     <include>Animation_DialogPopup</include>
@@ -458,8 +464,8 @@
                     <description>right Arrow</description>
                     <posx>567</posx>
                     <posy>990</posy>
-                    <height>30</height>
                     <width>786</width>
+                    <height>30</height>
                     <texture>wall/wall_arrow_vertical.png</texture>
                     <visible>Container(4).HasNext</visible>
                     <include>Animation_DialogPopup</include>

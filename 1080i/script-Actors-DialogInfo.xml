@@ -27,8 +27,8 @@
                     <posx>709</posx>
                     <width>40</width>
                     <height>1080</height>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <texture>common/topbar_down.png</texture>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <include>TopbarPulseAnimationRight</include>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
@@ -49,9 +49,9 @@
                     <posx>729</posx>
                     <width>1192</width>
                     <height>1080</height>
-                    <fadetime>500</fadetime>
                     <aspectratio align="center">scale</aspectratio>
                     <texture background="true">$INFO[Container(50).ListItem.Art(fanart)]</texture>
+                    <fadetime>500</fadetime>
                 </control>
                 <control type="image">
                     <posx>729</posx>
@@ -76,107 +76,107 @@
                         <visible>![[Control.HasFocus(10) + IntegerGreaterThan(Container(250).NumItems,0)] | ControlGroup(2500).HasFocus | ControlGroup(9000).HasFocus(20)]</visible>
                         <control type="grouplist">
                             <posy>60</posy>
-                            <itemgap>15</itemgap>
                             <width>1050</width>
+                            <itemgap>15</itemgap>
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Reg19</font>
-                                <label>$ADDON[script.metadata.actors 32016]:</label>
-                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                                <label>$ADDON[script.metadata.actors 32016]:</label>
                             </control>
                             <control type="fadelabel">
                                 <width>1000</width>
-                                <font>Font_Reg19</font>
-                                <label fallback="N/A">$INFO[ListItem.Property(AlsoKnownAs)]</label>
-                                <textcolor>grey</textcolor>
-                                <pauseatend>1000</pauseatend>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>grey</textcolor>
+                                <label fallback="N/A">$INFO[ListItem.Property(AlsoKnownAs)]</label>
+                                <pauseatend>1000</pauseatend>
                             </control>
                         </control>
                         <control type="grouplist">
                             <posy>120</posy>
-                            <itemgap>15</itemgap>
                             <width>1050</width>
+                            <itemgap>15</itemgap>
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Reg19</font>
-                                <label>$ADDON[script.metadata.actors 32012]:</label>
-                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                                <label>$ADDON[script.metadata.actors 32012]:</label>
                             </control>
                             <control type="fadelabel">
                                 <width>1000</width>
-                                <font>Font_Reg19</font>
-                                <label fallback="N/A">$INFO[ListItem.Property(Birthday)]$INFO[ListItem.Property(AgeLong), (,)]</label>
-                                <textcolor>grey</textcolor>
-                                <pauseatend>1000</pauseatend>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>grey</textcolor>
+                                <label fallback="N/A">$INFO[ListItem.Property(Birthday)]$INFO[ListItem.Property(AgeLong), (,)]</label>
+                                <pauseatend>1000</pauseatend>
                             </control>
                         </control>
                         <control type="grouplist">
                             <posy>180</posy>
-                            <itemgap>15</itemgap>
                             <width>1050</width>
+                            <itemgap>15</itemgap>
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Reg19</font>
-                                <label>$ADDON[script.metadata.actors 32014]:</label>
-                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                                <label>$ADDON[script.metadata.actors 32014]:</label>
                             </control>
                             <control type="fadelabel">
                                 <width>1000</width>
-                                <font>Font_Reg19</font>
-                                <label fallback="N/A">$INFO[ListItem.Property(PlaceOfBirth)]</label>
-                                <textcolor>grey</textcolor>
-                                <pauseatend>1000</pauseatend>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>grey</textcolor>
+                                <label fallback="N/A">$INFO[ListItem.Property(PlaceOfBirth)]</label>
+                                <pauseatend>1000</pauseatend>
                             </control>
                         </control>
                         <control type="grouplist">
                             <posy>240</posy>
-                            <itemgap>15</itemgap>
                             <width>1050</width>
+                            <itemgap>15</itemgap>
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Reg19</font>
-                                <label>$ADDON[script.metadata.actors 32011]:</label>
-                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                                <label>$ADDON[script.metadata.actors 32011]:</label>
                             </control>
                             <control type="fadelabel">
                                 <width>1000</width>
-                                <font>Font_Reg19</font>
-                                <label fallback="N/A">$INFO[ListItem.Property(TotalMovies)]</label>
-                                <textcolor>grey</textcolor>
-                                <pauseatend>1000</pauseatend>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>grey</textcolor>
+                                <label fallback="N/A">$INFO[ListItem.Property(TotalMovies)]</label>
+                                <pauseatend>1000</pauseatend>
                             </control>
                         </control>
                         <control type="grouplist">
                             <posy>300</posy>
-                            <itemgap>15</itemgap>
                             <width>1050</width>
+                            <itemgap>15</itemgap>
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Reg19</font>
-                                <label>$ADDON[script.metadata.actors 32017]:</label>
-                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                                <label>$ADDON[script.metadata.actors 32017]:</label>
                             </control>
                             <control type="fadelabel">
                                 <width>1000</width>
-                                <font>Font_Reg19</font>
-                                <label fallback="N/A">$INFO[ListItem.Property(Homepage)]</label>
-                                <textcolor>grey</textcolor>
-                                <pauseatend>1000</pauseatend>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>grey</textcolor>
+                                <label fallback="N/A">$INFO[ListItem.Property(Homepage)]</label>
+                                <pauseatend>1000</pauseatend>
                             </control>
                         </control>
                         <control type="grouplist">
@@ -187,18 +187,18 @@
                             <visible>!IsEmpty(ListItem.Property(Deathday))</visible>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Reg19</font>
-                                <label>$ADDON[script.metadata.actors 32013]:</label>
-                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                                <label>$ADDON[script.metadata.actors 32013]:</label>
                             </control>
                             <control type="fadelabel">
                                 <width>1000</width>
-                                <font>Font_Reg19</font>
-                                <label fallback="N/A">$INFO[ListItem.Property(Deathday)]$INFO[ListItem.Property(DeathageLong), (,)]</label>
-                                <textcolor>grey</textcolor>
-                                <pauseatend>1000</pauseatend>
                                 <aligny>bottom</aligny>
+                                <font>Font_Reg19</font>
+                                <textcolor>grey</textcolor>
+                                <label fallback="N/A">$INFO[ListItem.Property(Deathday)]$INFO[ListItem.Property(DeathageLong), (,)]</label>
+                                <pauseatend>1000</pauseatend>
                             </control>
                         </control>
                     </control>
@@ -234,26 +234,26 @@
                             <control type="label">
                                 <width>640</width>
                                 <height>50</height>
+                                <textoffsetx>15</textoffsetx>
                                 <textcolor>grey2</textcolor>
                                 <info>ListItem.Label</info>
-                                <textoffsetx>15</textoffsetx>
                                 <visible>IsEmpty(ListItem.Property(LibraryHasMovie))</visible>
                             </control>
                             <control type="label">
                                 <width>640</width>
                                 <height>50</height>
+                                <textoffsetx>15</textoffsetx>
                                 <textcolor>$VAR[FontColorVar]</textcolor>
                                 <info>ListItem.Label</info>
                                 <visible>!IsEmpty(ListItem.Property(LibraryHasMovie))</visible>
-                                <textoffsetx>15</textoffsetx>
                             </control>
                             <control type="label">
                                 <posx>690</posx>
                                 <width>100</width>
                                 <height>50</height>
+                                <textoffsetx>15</textoffsetx>
                                 <align>right</align>
                                 <label>$INFO[ListItem.Year]</label>
-                                <textoffsetx>15</textoffsetx>
                                 <scroll>true</scroll>
                             </control>
                             <control type="image">
@@ -276,27 +276,27 @@
                                 <control type="label">
                                     <width>640</width>
                                     <height>50</height>
+                                    <textoffsetx>15</textoffsetx>
                                     <textcolor>grey2</textcolor>
                                     <info>ListItem.Label</info>
                                     <visible>IsEmpty(ListItem.Property(LibraryHasMovie))</visible>
-                                    <textoffsetx>15</textoffsetx>
                                 </control>
                                 <control type="label">
                                     <width>585</width>
                                     <height>50</height>
+                                    <textoffsetx>15</textoffsetx>
                                     <textcolor>$VAR[FontColorVar]</textcolor>
                                     <info>ListItem.Label</info>
                                     <visible>!IsEmpty(ListItem.Property(LibraryHasMovie))</visible>
-                                    <textoffsetx>15</textoffsetx>
                                     <scroll>true</scroll>
                                 </control>
                                 <control type="label">
                                     <posx>690</posx>
                                     <width>100</width>
                                     <height>50</height>
+                                    <textoffsetx>15</textoffsetx>
                                     <align>right</align>
                                     <label>$INFO[ListItem.Year]</label>
-                                    <textoffsetx>15</textoffsetx>
                                     <scroll>true</scroll>
                                 </control>
                             </control>
@@ -311,27 +311,27 @@
                                 <control type="label">
                                     <width>640</width>
                                     <height>50</height>
+                                    <textoffsetx>15</textoffsetx>
                                     <info>ListItem.Label</info>
                                     <visible>IsEmpty(ListItem.Property(LibraryHasMovie))</visible>
-                                    <textoffsetx>15</textoffsetx>
                                     <scroll>true</scroll>
                                 </control>
                                 <control type="label">
                                     <width>585</width>
                                     <height>50</height>
+                                    <textoffsetx>15</textoffsetx>
                                     <textcolor>$VAR[FontColorVar]</textcolor>
                                     <info>ListItem.Label</info>
                                     <visible>!IsEmpty(ListItem.Property(LibraryHasMovie))</visible>
-                                    <textoffsetx>15</textoffsetx>
                                     <scroll>true</scroll>
                                 </control>
                                 <control type="label">
                                     <posx>690</posx>
                                     <width>100</width>
                                     <height>50</height>
+                                    <textoffsetx>15</textoffsetx>
                                     <align>right</align>
                                     <label>$INFO[ListItem.Year]</label>
-                                    <textoffsetx>15</textoffsetx>
                                     <scroll>true</scroll>
                                 </control>
                             </control>
@@ -348,18 +348,18 @@
                 </control>
                 <control type="group">
                     <control type="group">
-                        <visible>ControlGroup(9000).HasFocus(20)</visible>
                         <posx>827</posx>
                         <posy>120</posy>
+                        <visible>ControlGroup(9000).HasFocus(20)</visible>
                         <animation effect="fade" time="240">Visible</animation>
                         <animation effect="fade" time="240">Hidden</animation>
                         <control type="image">
                             <width>1000</width>
                             <height>360</height>
+                            <aspectratio>keep</aspectratio>
                             <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
                             <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                             <bordersize>7</bordersize>
-                            <aspectratio>keep</aspectratio>
                             <visible>!IsEmpty(ListItem.Art(fanart))</visible>
                         </control>
                         <control type="group">
@@ -367,22 +367,22 @@
                             <control type="label">
                                 <width>1000</width>
                                 <height>360</height>
-                                <font>font30_title</font>
-                                <textcolor>white</textcolor>
-                                <shadowcolor>FF000000</shadowcolor>
                                 <align>center</align>
+                                <font>font30_title</font>
+                                <shadowcolor>FF000000</shadowcolor>
+                                <textcolor>white</textcolor>
                                 <label>$ADDON[script.metadata.actors 32311]</label>
                             </control>
                         </control>
                     </control>
                     <control type="image">
-                        <!--filmography cover-->
                         <posx>1600</posx>
                         <posy>588</posy>
                         <width>266</width>
                         <height>400</height>
-                        <texture fallback="DefaultVideoBigPoster.png" background="true">$INFO[Container(150).Listitem.Icon]</texture>
                         <aspectratio>keep</aspectratio>
+                        <texture fallback="DefaultVideoBigPoster.png" background="true">$INFO[Container(150).Listitem.Icon]</texture>
+                        <!--filmography cover-->
                         <visible>Control.IsVisible(150)</visible>
                     </control>
                     <control type="label">
@@ -418,9 +418,9 @@
                         <focusedlayout height="1" width="1" />
                     </control>
                     <control type="group" id="2500">
-                        <visible>[Control.HasFocus(10) + IntegerGreaterThan(Container(250).NumItems,0)] | ControlGroup(2500).HasFocus</visible>
                         <posx>827</posx>
                         <posy>80</posy>
+                        <visible>[Control.HasFocus(10) + IntegerGreaterThan(Container(250).NumItems,0)] | ControlGroup(2500).HasFocus</visible>
                         <animation effect="fade" time="240">Visible</animation>
                         <animation effect="fade" time="240">Hidden</animation>
                         <control type="panel" id="250">
@@ -440,9 +440,9 @@
                                     <width>214</width>
                                     <height>434</height>
                                     <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.Icon]</texture>
                                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                                     <bordersize>7</bordersize>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="420" width="230">
@@ -450,9 +450,9 @@
                                     <width>214</width>
                                     <height>434</height>
                                     <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.Icon]</texture>
                                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                                     <bordersize>7</bordersize>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
                                     <visible>!Control.HasFocus(250)</visible>
                                 </control>
                                 <control type="image">
@@ -461,10 +461,10 @@
                                     <width>210</width>
                                     <height>430</height>
                                     <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.Icon]</texture>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                     <bordertexture border="5">views/addonwall_select.png</bordertexture>
                                     <bordersize>5</bordersize>
-                                    <texture background="true">$INFO[ListItem.Icon]</texture>
                                     <visible>Control.HasFocus(250)</visible>
                                 </control>
                                 <control type="image">
@@ -473,8 +473,8 @@
                                     <width>210</width>
                                     <height>430</height>
                                     <aspectratio>keep</aspectratio>
-                                    <bordersize>5</bordersize>
                                     <texture background="true">$INFO[ListItem.Icon]</texture>
+                                    <bordersize>5</bordersize>
                                     <visible>Control.HasFocus(250)</visible>
                                 </control>
                             </focusedlayout>
@@ -491,109 +491,109 @@
                         <ondown>150</ondown>
                         <orientation>horizontal</orientation>
                         <control type="button" id="8">
-                            <label>1024</label>
                             <width>250</width>
                             <height>50</height>
-                            <textcolor>grey</textcolor>
-                            <focusedcolor>white2</focusedcolor>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <texturenofocus>button-nofocus.png</texturenofocus>
-                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                            <align>center</align>
                             <textoffsetx>0</textoffsetx>
                             <textoffsety>4</textoffsety>
+                            <align>center</align>
                             <aligny>top</aligny>
+                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                            <texturenofocus>button-nofocus.png</texturenofocus>
                             <font>Font_Reg19</font>
+                            <textcolor>grey</textcolor>
+                            <label>1024</label>
+                            <focusedcolor>white2</focusedcolor>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="button" id="5">
-                            <label>$ADDON[script.metadata.actors 32010]</label>
                             <width>250</width>
                             <height>50</height>
-                            <textcolor>grey</textcolor>
-                            <focusedcolor>white2</focusedcolor>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <texturenofocus>button-nofocus.png</texturenofocus>
-                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                            <align>center</align>
                             <textoffsetx>0</textoffsetx>
                             <textoffsety>4</textoffsety>
+                            <align>center</align>
                             <aligny>top</aligny>
+                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                            <texturenofocus>button-nofocus.png</texturenofocus>
                             <font>Font_Reg19</font>
+                            <textcolor>grey</textcolor>
+                            <label>$ADDON[script.metadata.actors 32010]</label>
+                            <focusedcolor>white2</focusedcolor>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="button" id="6">
-                            <label>184</label>
                             <width>250</width>
                             <height>50</height>
-                            <textcolor>grey</textcolor>
-                            <focusedcolor>white2</focusedcolor>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <texturenofocus>button-nofocus.png</texturenofocus>
-                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                            <align>center</align>
                             <textoffsetx>0</textoffsetx>
                             <textoffsety>4</textoffsety>
+                            <align>center</align>
                             <aligny>top</aligny>
+                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                            <texturenofocus>button-nofocus.png</texturenofocus>
                             <font>Font_Reg19</font>
+                            <textcolor>grey</textcolor>
+                            <label>184</label>
+                            <focusedcolor>white2</focusedcolor>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="button" id="10">
-                            <label>13405</label>
                             <width>250</width>
                             <height>50</height>
-                            <textcolor>grey</textcolor>
-                            <focusedcolor>white2</focusedcolor>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <texturenofocus>button-nofocus.png</texturenofocus>
-                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                            <align>center</align>
                             <textoffsetx>0</textoffsetx>
                             <textoffsety>4</textoffsety>
+                            <align>center</align>
                             <aligny>top</aligny>
+                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                            <texturenofocus>button-nofocus.png</texturenofocus>
                             <font>Font_Reg19</font>
+                            <textcolor>grey</textcolor>
+                            <label>13405</label>
+                            <focusedcolor>white2</focusedcolor>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="button" id="20">
-                            <label>20413</label>
                             <width>250</width>
                             <height>50</height>
-                            <textcolor>grey</textcolor>
-                            <focusedcolor>white2</focusedcolor>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <texturenofocus>button-nofocus.png</texturenofocus>
-                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                            <align>center</align>
                             <textoffsetx>0</textoffsetx>
                             <textoffsety>4</textoffsety>
+                            <align>center</align>
                             <aligny>top</aligny>
+                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                            <texturenofocus>button-nofocus.png</texturenofocus>
                             <font>Font_Reg19</font>
+                            <textcolor>grey</textcolor>
+                            <label>20413</label>
+                            <focusedcolor>white2</focusedcolor>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="button" id="11">
-                            <label>20067</label>
                             <width>250</width>
                             <height>50</height>
-                            <textcolor>grey</textcolor>
-                            <focusedcolor>white2</focusedcolor>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <texturenofocus>button-nofocus.png</texturenofocus>
-                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                            <align>center</align>
                             <textoffsetx>0</textoffsetx>
                             <textoffsety>4</textoffsety>
+                            <align>center</align>
                             <aligny>top</aligny>
+                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                            <texturenofocus>button-nofocus.png</texturenofocus>
                             <font>Font_Reg19</font>
+                            <textcolor>grey</textcolor>
+                            <label>20067</label>
+                            <focusedcolor>white2</focusedcolor>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="button" id="25">
-                            <label>24002</label>
                             <width>250</width>
                             <height>50</height>
-                            <textcolor>grey</textcolor>
-                            <focusedcolor>white2</focusedcolor>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <texturenofocus>button-nofocus.png</texturenofocus>
-                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                            <align>center</align>
                             <textoffsetx>0</textoffsetx>
                             <textoffsety>4</textoffsety>
+                            <align>center</align>
                             <aligny>top</aligny>
+                            <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                            <texturenofocus>button-nofocus.png</texturenofocus>
                             <font>Font_Reg19</font>
+                            <textcolor>grey</textcolor>
+                            <label>24002</label>
+                            <focusedcolor>white2</focusedcolor>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="button" id="22">
                             <label>$LOCALIZE[31096]</label>
@@ -607,8 +607,8 @@
                     <posx>709</posx>
                     <width>40</width>
                     <height>1080</height>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <texture>common/topbar_top.png</texture>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <include>TopbarPulseAnimationLeft</include>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>

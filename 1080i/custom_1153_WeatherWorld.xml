@@ -40,10 +40,10 @@
                 <posy>70r</posy>
                 <width>500</width>
                 <height>20</height>
-                <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <scroll>false</scroll>
                 <align>right</align>
+                <shadowcolor>black</shadowcolor>
+                <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
+                <scroll>false</scroll>
                 <label>[COLOR=grey]$LOCALIZE[31727]: [/COLOR]$INFO[Window.Property(totals)]</label>
             </control>
             <control type="label">
@@ -51,19 +51,19 @@
                 <posy>32r</posy>
                 <width>500</width>
                 <height>20</height>
-                <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <scroll>false</scroll>
                 <align>right</align>
+                <shadowcolor>black</shadowcolor>
+                <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
+                <scroll>false</scroll>
                 <label>[COLOR=grey]$LOCALIZE[2050] [/COLOR]$INFO[Window.Property(runningtime)]</label>
             </control>
         </control>
         <!--<include>MainWindowMouseButtons</include>-->
         <control type="button" id="10">
-            <label>-</label>
-            <font>-</font>
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>
+            <font>-</font>
+            <label>-</label>
             <onleft>9000</onleft>
             <onright>9000</onright>
             <onup>9000</onup>
@@ -76,6 +76,8 @@
             <control type="group">
                 <include>Media_Menu_Furniture</include>
                 <control type="grouplist" id="9003">
+                    <width>450</width>
+                    <height>1080</height>
                     <animation type="Conditional" condition="Window.IsActive(1121)">
                         <effect type="fade" start="100" end="0" time="400" />
                     </animation>
@@ -83,8 +85,6 @@
                         <effect type="zoom" end="66,100" time="320" easing="in" tween="cubic" />
                         <effect type="slide" end="-49" time="320" easing="in" tween="cubic" />
                     </animation>
-                    <width>450</width>
-                    <height>1080</height>
                     <orientation>vertical</orientation>
                     <scroll>true</scroll>
                     <onleft>10</onleft>
@@ -96,9 +96,9 @@
                     <control type="label" id="200">
                         <width>250</width>
                         <height>35</height>
-                        <label>31006</label>
-                        <textcolor>blue</textcolor>
                         <align>center</align>
+                        <textcolor>blue</textcolor>
+                        <label>31006</label>
                     </control>
                     <control type="radiobutton" id="20">
                         <include>Objects_MediaMenuButtonAround</include>

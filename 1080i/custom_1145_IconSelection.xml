@@ -20,10 +20,10 @@
             <control type="image">
                 <posx>30</posx>
                 <posy>100</posy>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <width>1344</width>
                 <height>830</height>
                 <texture border="20">osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="panel" id="4">
                 <posx>50</posx>
@@ -38,15 +38,15 @@
                 <onleft>4</onleft>
                 <itemlayout width="145" height="150">
                     <control type="image">
-                        <width>135</width>
-                        <posy>90</posy>
-                        <height>60</height>
                         <posx>5</posx>
+                        <posy>90</posy>
+                        <width>135</width>
+                        <height>60</height>
                         <texture border="0,0,0,4">settings/listselect_nf.png</texture>
                     </control>
                     <control type="image">
-                        <posy>15</posy>
                         <posx>15</posx>
+                        <posy>15</posy>
                         <width>120</width>
                         <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
@@ -73,8 +73,8 @@
                         <include>PanelGlowFade</include>
                     </control>
                     <control type="image">
-                        <posy>15</posy>
                         <posx>15</posx>
+                        <posy>15</posy>
                         <width>120</width>
                         <height>120</height>
                         <texture>$INFO[ListItem.Thumb]</texture>
@@ -1480,12 +1480,6 @@
                         <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(IconTarget)],special://skin/extras/BigIcons/z2.png)</onclick>
                     </item>
                     <item>
-                        <label>CD</label>
-                        <thumb>special://skin/extras/BigIcons/CD.png</thumb>
-                        <onclick>Dialog.Close(1145)</onclick>
-                        <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(IconTarget)],special://skin/extras/BigIcons/CD.png)</onclick>
-                    </item>
-                    <item>
                         <label>CHAT</label>
                         <thumb>special://skin/extras/BigIcons/CHAT.png</thumb>
                         <onclick>Dialog.Close(1145)</onclick>
@@ -2233,10 +2227,10 @@
             </control>
             <control type="scrollbar" id="60">
                 <posx>1306</posx>
-                <include>Animation_VerticalScrollBar</include>
                 <posy>120</posy>
                 <width>98</width>
                 <height>800</height>
+                <include>Animation_VerticalScrollBar</include>
                 <onleft>4</onleft>
                 <onright>4</onright>
                 <ondown>60</ondown>

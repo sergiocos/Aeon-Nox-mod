@@ -3,9 +3,9 @@
     <defaultcontrol>21</defaultcontrol>
     <zorder>6</zorder>
     <coordinates>
-        <system>2</system>
         <posx>1378</posx>
         <posy>342</posy>
+        <system>2</system>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
@@ -13,17 +13,17 @@
             <width>284</width>
             <height>394</height>
             <control type="image" id="0">
-                <texture>keyboard/numeric_back.png</texture>
                 <width>284</width>
                 <height>394</height>
+                <texture>keyboard/numeric_back.png</texture>
             </control>
             <control type="label" id="4">
                 <posx>26</posx>
                 <posy>312</posy>
                 <width>232</width>
                 <height>46</height>
-                <font>Font_Reg19</font>
                 <align>center</align>
+                <font>Font_Reg19</font>
             </control>
             <control type="group">
                 <posx>26</posx>

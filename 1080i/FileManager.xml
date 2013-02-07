@@ -7,9 +7,9 @@
         <include>CommonSettingsBackground</include>
         <include>CommonMediaPlayingBackground</include>
         <control type="image">
+            <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
             <colordiffuse>$INFO[Skin.String(BackgroundDarkness)]</colordiffuse>
-            <texture>common/bgcolor.png</texture>
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             <include>Animation_VisibleChange400</include>
         </control>
@@ -40,8 +40,8 @@
                 <posx>1329</posx>
                 <width>696</width>
                 <height>1080</height>
-                <colordiffuse>vignette</colordiffuse>
                 <texture flipx="true">views/showcase_vignette.png</texture>
+                <colordiffuse>vignette</colordiffuse>
                 <animation type="WindowOpen">
                     <effect type="fade" end="100" time="320" easing="inout" tween="cubic" />
                     <effect type="slide" start="696,0" end="0,0" time="320" easing="inout" tween="cubic" />
@@ -52,9 +52,9 @@
                 </animation>
             </control>
             <control type="image">
+                <posy>874</posy>
                 <width>1920</width>
                 <height>206</height>
-                <posy>874</posy>
                 <texture>views/panel_spot.png</texture>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
             </control>
@@ -74,19 +74,19 @@
                     <width>675</width>
                     <height>90</height>
                     <font>Font_Bold22_Caps</font>
-                    <scroll>true</scroll>
                     <textcolor>floor</textcolor>
+                    <scroll>true</scroll>
                 </control>
                 <control type="label">
                     <posx>840</posx>
                     <posy>717</posy>
                     <width>1200</width>
                     <height>90</height>
-                    <font>Font_Bold22_Caps</font>
-                    <scroll>true</scroll>
                     <align>right</align>
-                    <label>A</label>
+                    <font>Font_Bold22_Caps</font>
                     <textcolor>floor</textcolor>
+                    <scroll>true</scroll>
+                    <label>A</label>
                 </control>
             </control>
             <control type="list" id="20">
@@ -102,8 +102,8 @@
                 <scrolltime>200</scrolltime>
                 <itemlayout height="58">
                     <control type="image">
-                        <height>60</height>
                         <width>750</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="label">
@@ -125,8 +125,8 @@
                 </itemlayout>
                 <focusedlayout height="58">
                     <control type="image">
-                        <height>60</height>
                         <width>750</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="image">
@@ -158,11 +158,11 @@
                 </focusedlayout>
             </control>
             <control type="scrollbar" id="30">
-                <include>Animation_VerticalScrollBar</include>
                 <posx>826</posx>
                 <posy>140</posy>
                 <width>46</width>
                 <height>526</height>
+                <include>Animation_VerticalScrollBar</include>
                 <onleft>20</onleft>
                 <onright>21</onright>
                 <ondown>30</ondown>
@@ -182,10 +182,10 @@
                 <posy>717</posy>
                 <width>675</width>
                 <height>90</height>
-                <font>Font_Bold22_Caps</font>
-                <scroll>true</scroll>
                 <align>right</align>
+                <font>Font_Bold22_Caps</font>
                 <textcolor>floor</textcolor>
+                <scroll>true</scroll>
             </control>
             <control type="label">
                 <posx>135</posx>
@@ -193,9 +193,9 @@
                 <width>675</width>
                 <height>90</height>
                 <font>Font_Bold22_Caps</font>
+                <textcolor>floor</textcolor>
                 <scroll>true</scroll>
                 <label>B</label>
-                <textcolor>floor</textcolor>
             </control>
             <control type="list" id="21">
                 <posx>105</posx>
@@ -210,8 +210,8 @@
                 <scrolltime>200</scrolltime>
                 <itemlayout height="58">
                     <control type="image">
-                        <height>60</height>
                         <width>750</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="label">
@@ -233,16 +233,16 @@
                 </itemlayout>
                 <focusedlayout height="58">
                     <control type="image">
-                        <height>60</height>
                         <width>750</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="image">
                         <posx>7</posx>
                         <width>736</width>
                         <height>60</height>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture>views/tripanel/listselect_fo.png</texture>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <animation effect="fade" time="160" start="100" end="0" reversible="false" condition="!Control.HasFocus(21)">Conditional</animation>
                     </control>
                     <control type="label">
@@ -267,10 +267,10 @@
             </control>
             <control type="scrollbar" id="31">
                 <posx>826</posx>
-                <include>Animation_VerticalScrollBar</include>
                 <posy>140</posy>
                 <width>46</width>
                 <height>526</height>
+                <include>Animation_VerticalScrollBar</include>
                 <onleft>21</onleft>
                 <onright>20</onright>
                 <ondown>31</ondown>

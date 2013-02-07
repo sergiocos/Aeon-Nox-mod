@@ -4964,8 +4964,8 @@
     </include>
     <include name="Weather_Widget2">
         <control type="group">
-            <visible>Substring(Control.GetLabel(4325),weather) + Weather.IsFetched</visible>
             <posy>30</posy>
+            <visible>Substring(Control.GetLabel(4325),weather) + Weather.IsFetched</visible>
             <include>Animation_Widgets</include>
             <visible>!IsEmpty(Weather.Plugin)</visible>
             <visible>![!IsEmpty(Window(home).Property(DisableWidgets)) + Window.IsActive(home)]</visible>
@@ -4977,35 +4977,35 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <label>31374</label>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+                        <label>31374</label>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Current.Condition)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Current.Condition)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Current.ConditionIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Current.ConditionIcon)</info>
                     </control>
                     <control type="label">
                         <posy>225</posy>
-                        <height>30</height>
                         <width>284</width>
-                        <font>Font_Bold35</font>
+                        <height>30</height>
                         <align>center</align>
+                        <font>Font_Bold35</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Current.Temperature))</visible>
                         <label>$INFO[Window(weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
@@ -5020,44 +5020,44 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <info>Window(weather).Property(Day0.Title)</info>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+                        <info>Window(weather).Property(Day0.Title)</info>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Day0.Outlook)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Day0.Outlook)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Day0.OutlookIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Day0.OutlookIcon)</info>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>30</height>
                         <align>right</align>
-                        <label>$LOCALIZE[419] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <label>$LOCALIZE[419] :</label>
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
+                        <height>30</height>
                         <font>Font_Reg19</font>
                         <textcolor>red</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day0.HighTemp))</visible>
@@ -5066,21 +5066,21 @@
                     <control type="label">
                         <posx>140</posx>
                         <posy>255</posy>
-                        <height>52</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>52</height>
                         <align>right</align>
-                        <label>$LOCALIZE[418] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <label>$LOCALIZE[418] :</label>
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>255</posy>
-                        <height>52</height>
                         <width>142</width>
-                        <label>$INFO[Window(weather).Property(Day0.LowTemp)] $INFO[System.TemperatureUnits]</label>
+                        <height>52</height>
                         <font>Font_Reg19</font>
                         <textcolor>blue</textcolor>
+                        <label>$INFO[Window(weather).Property(Day0.LowTemp)] $INFO[System.TemperatureUnits]</label>
                         <visible>!IsEmpty(Window(weather).Property(Day0.LowTemp))</visible>
                     </control>
                 </control>
@@ -5093,44 +5093,44 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <info>Window(weather).Property(Day1.Title)</info>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+                        <info>Window(weather).Property(Day1.Title)</info>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Day1.Outlook)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Day1.Outlook)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Day1.OutlookIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Day1.OutlookIcon)</info>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>30</height>
                         <align>right</align>
-                        <label>$LOCALIZE[419] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <label>$LOCALIZE[419] :</label>
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
+                        <height>30</height>
                         <font>Font_Reg19</font>
                         <textcolor>red</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day1.HighTemp))</visible>
@@ -5139,21 +5139,21 @@
                     <control type="label">
                         <posx>140</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>45</height>
                         <align>right</align>
-                        <label>$LOCALIZE[418] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <label>$LOCALIZE[418] :</label>
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <label>$INFO[Window(weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits]</label>
+                        <height>45</height>
                         <font>Font_Reg19</font>
                         <textcolor>blue</textcolor>
+                        <label>$INFO[Window(weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits]</label>
                         <visible>!IsEmpty(Window(weather).Property(Day1.LowTemp))</visible>
                     </control>
                 </control>
@@ -5166,44 +5166,44 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <info>Window(weather).Property(Day2.Title)</info>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+                        <info>Window(weather).Property(Day2.Title)</info>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Day2.Outlook)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Day2.Outlook)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Day2.OutlookIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Day2.OutlookIcon)</info>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>30</height>
                         <align>right</align>
-                        <label>$LOCALIZE[419] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <label>$LOCALIZE[419] :</label>
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
+                        <height>30</height>
                         <font>Font_Reg19</font>
                         <textcolor>red</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day2.HighTemp))</visible>
@@ -5212,21 +5212,21 @@
                     <control type="label">
                         <posx>140</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>45</height>
                         <align>right</align>
-                        <label>$LOCALIZE[418] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <label>$LOCALIZE[418] :</label>
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <label>$INFO[Window(weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits]</label>
+                        <height>45</height>
                         <font>Font_Reg19</font>
                         <textcolor>blue</textcolor>
+                        <label>$INFO[Window(weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits]</label>
                         <visible>!IsEmpty(Window(weather).Property(Day2.LowTemp))</visible>
                     </control>
                 </control>
@@ -5239,44 +5239,44 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <info>Window(weather).Property(Day3.Title)</info>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+                        <info>Window(weather).Property(Day3.Title)</info>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Day3.Outlook)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Day3.Outlook)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Day3.OutlookIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Day3.OutlookIcon)</info>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>30</height>
                         <align>right</align>
-                        <label>$LOCALIZE[419] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <label>$LOCALIZE[419] :</label>
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
+                        <height>30</height>
                         <font>Font_Reg19</font>
                         <textcolor>red</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day3.HighTemp))</visible>
@@ -5285,21 +5285,21 @@
                     <control type="label">
                         <posx>140</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>45</height>
                         <align>right</align>
-                        <label>$LOCALIZE[418] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <label>$LOCALIZE[418] :</label>
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <label>$INFO[Window(weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits]</label>
+                        <height>45</height>
                         <font>Font_Reg19</font>
                         <textcolor>blue</textcolor>
+                        <label>$INFO[Window(weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits]</label>
                         <visible>!IsEmpty(Window(weather).Property(Day3.LowTemp))</visible>
                     </control>
                 </control>
@@ -5580,6 +5580,98 @@
             <property name="Media">$INFO[Window(home).Property(RSS2.RSS.8.Media)]</property>
             <visible>Substring(Control.GetLabel(4325),rss2)</visible>
             <visible>!IsEmpty(Window(home).Property(RSS2.RSS.8.Title))</visible>
+        </item>
+    </include>
+    <include name="NewsWidget2Content1124">
+        <item>
+            <onclick>SetFocus(6014)</onclick>
+            <label>$INFO[Window(home).Property(News.RSS.1.Title)]</label>
+            <icon>$INFO[Window(home).Property(News.RSS.1.Image.1)]</icon>
+            <property name="Plot">$INFO[Window(Home).Property(News.RSS.1.Desc)]</property>
+            <property name="Date">$INFO[Window(home).Property(News.RSS.1.Date)]</property>
+            <property name="Channel">$INFO[Window(home).Property(News.RSS.1.Channel)]</property>
+            <property name="Media">$INFO[Window(home).Property(News.RSS.1.Media)]</property>
+            <visible>Substring(Control.GetLabel(4325),rssnews)</visible>
+            <visible>!IsEmpty(Window(home).Property(News.RSS.1.Title))</visible>
+        </item>
+        <item>
+            <onclick>SetFocus(6014)</onclick>
+            <label>$INFO[Window(home).Property(News.RSS.2.Title)]</label>
+            <icon>$INFO[Window(home).Property(News.RSS.2.Image.1)]</icon>
+            <property name="Plot">$INFO[Window(Home).Property(News.RSS.2.Desc)]</property>
+            <property name="Date">$INFO[Window(home).Property(News.RSS.2.Date)]</property>
+            <property name="Channel">$INFO[Window(home).Property(News.RSS.2.Channel)]</property>
+            <property name="Media">$INFO[Window(home).Property(News.RSS.2.Media)]</property>
+            <visible>Substring(Control.GetLabel(4325),rssnews)</visible>
+            <visible>!IsEmpty(Window(home).Property(News.RSS.2.Title))</visible>
+        </item>
+        <item>
+            <onclick>SetFocus(6014)</onclick>
+            <label>$INFO[Window(home).Property(News.RSS.3.Title)]</label>
+            <icon>$INFO[Window(home).Property(News.RSS.3.Image.1)]</icon>
+            <property name="Plot">$INFO[Window(Home).Property(News.RSS.3.Desc)]</property>
+            <property name="Date">$INFO[Window(home).Property(News.RSS.3.Date)]</property>
+            <property name="Channel">$INFO[Window(home).Property(News.RSS.3.Channel)]</property>
+            <property name="Media">$INFO[Window(home).Property(News.RSS.3.Media)]</property>
+            <visible>Substring(Control.GetLabel(4325),rssnews)</visible>
+            <visible>!IsEmpty(Window(home).Property(News.RSS.3.Title))</visible>
+        </item>
+        <item>
+            <onclick>SetFocus(6014)</onclick>
+            <label>$INFO[Window(home).Property(News.RSS.4.Title)]</label>
+            <icon>$INFO[Window(home).Property(News.RSS.4.Image.1)]</icon>
+            <property name="Plot">$INFO[Window(Home).Property(News.RSS.4.Desc)]</property>
+            <property name="Date">$INFO[Window(home).Property(News.RSS.4.Date)]</property>
+            <property name="Channel">$INFO[Window(home).Property(News.RSS.4.Channel)]</property>
+            <property name="Media">$INFO[Window(home).Property(News.RSS.4.Media)]</property>
+            <visible>Substring(Control.GetLabel(4325),rssnews)</visible>
+            <visible>!IsEmpty(Window(home).Property(News.RSS.4.Title))</visible>
+        </item>
+    </include>
+    <include name="NewsWidget2Content">
+        <item>
+            <onclick>SetFocus(6014)</onclick>
+            <label>$INFO[Window(home).Property(News.RSS.5.Title)]</label>
+            <icon>$INFO[Window(home).Property(News.RSS.5.Image.1)]</icon>
+            <property name="Plot">$INFO[Window(Home).Property(News.RSS.5.Desc)]</property>
+            <property name="Date">$INFO[Window(home).Property(News.RSS.5.Date)]</property>
+            <property name="Channel">$INFO[Window(home).Property(News.RSS.5.Channel)]</property>
+            <property name="Media">$INFO[Window(home).Property(News.RSS.5.Media)]</property>
+            <visible>Substring(Control.GetLabel(4325),rssnews)</visible>
+            <visible>!IsEmpty(Window(home).Property(News.RSS.5.Title))</visible>
+        </item>
+        <item>
+            <onclick>SetFocus(6014)</onclick>
+            <label>$INFO[Window(home).Property(News.RSS.6.Title)]</label>
+            <icon>$INFO[Window(home).Property(News.RSS.6.Image.1)]</icon>
+            <property name="Plot">$INFO[Window(Home).Property(News.RSS.6.Desc)]</property>
+            <property name="Date">$INFO[Window(home).Property(News.RSS.6.Date)]</property>
+            <property name="Channel">$INFO[Window(home).Property(News.RSS.6.Channel)]</property>
+            <property name="Media">$INFO[Window(home).Property(News.RSS.6.Media)]</property>
+            <visible>Substring(Control.GetLabel(4325),rssnews)</visible>
+            <visible>!IsEmpty(Window(home).Property(News.RSS.6.Title))</visible>
+        </item>
+        <item>
+            <onclick>SetFocus(6014)</onclick>
+            <label>$INFO[Window(home).Property(News.RSS.7.Title)]</label>
+            <icon>$INFO[Window(home).Property(News.RSS.7.Image.1)]</icon>
+            <property name="Plot">$INFO[Window(Home).Property(News.RSS.7.Desc)]</property>
+            <property name="Date">$INFO[Window(home).Property(News.RSS.7.Date)]</property>
+            <property name="Channel">$INFO[Window(home).Property(News.RSS.7.Channel)]</property>
+            <property name="Media">$INFO[Window(home).Property(News.RSS.7.Media)]</property>
+            <visible>Substring(Control.GetLabel(4325),rssnews)</visible>
+            <visible>!IsEmpty(Window(home).Property(News.RSS.7.Title))</visible>
+        </item>
+        <item>
+            <onclick>SetFocus(6014)</onclick>
+            <label>$INFO[Window(home).Property(News.RSS.8.Title)]</label>
+            <icon>$INFO[Window(home).Property(News.RSS.8.Image.1)]</icon>
+            <property name="Plot">$INFO[Window(Home).Property(News.RSS.8.Desc)]</property>
+            <property name="Date">$INFO[Window(home).Property(News.RSS.8.Date)]</property>
+            <property name="Channel">$INFO[Window(home).Property(News.RSS.8.Channel)]</property>
+            <property name="Media">$INFO[Window(home).Property(News.RSS.8.Media)]</property>
+            <visible>Substring(Control.GetLabel(4325),rssnews)</visible>
+            <visible>!IsEmpty(Window(home).Property(News.RSS.8.Title))</visible>
         </item>
     </include>
     <include name="NextAiredWidget2Content1124">

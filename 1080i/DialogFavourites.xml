@@ -2,9 +2,9 @@
 <window type="dialog" id="134">
     <defaultcontrol always="true">450</defaultcontrol>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <onunload condition="Substring(Skin.String(widgetlist),favourite) | Substring(Skin.String(widget2list),favourite)">AlarmClock(FavouriteUpdate,RunScript(script.favourites),00:01,silent)</onunload>
     <include>Animation_DialogPopup2</include>
@@ -24,10 +24,10 @@
         <control type="image">
             <posx>157</posx>
             <posy>80</posy>
-            <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             <width>1608</width>
             <height>922</height>
             <texture>osd/osd_settings_back.png</texture>
+            <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
         </control>
         <control type="image">
             <posx>175</posx>
@@ -57,10 +57,11 @@
             <posy>125</posy>
             <width>346</width>
             <height>60</height>
+            <textoffsetx>20</textoffsetx>
             <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
             <texturenofocus>-</texturenofocus>
-            <textcolor>grey2</textcolor>
             <font>Font_Bold19</font>
+            <textcolor>grey2</textcolor>
             <label>$LOCALIZE[31272]</label>
             <label2>[COLOR $VAR[FontColorVar]]$VAR[FavoritesListTypeVar][/COLOR]</label2>
             <onclick condition="Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))">Skin.SetString(FavoritesListType,2)</onclick>
@@ -71,7 +72,6 @@
             <onright>61</onright>
             <onup>450</onup>
             <ondown>450</ondown>
-            <textoffsetx>20</textoffsetx>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         </control>
         <control type="panel" id="450">
@@ -96,8 +96,8 @@
                     <posx>45</posx>
                     <width>550</width>
                     <height>60</height>
-                    <textcolor>grey</textcolor>
                     <font>Font_Reg19</font>
+                    <textcolor>grey</textcolor>
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
@@ -110,9 +110,9 @@
                 <control type="image">
                     <width>550</width>
                     <height>60</height>
+                    <texture>views/tripanel/listselect_fo.png</texture>
                     <visible>Control.HasFocus(450)</visible>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <texture>views/tripanel/listselect_fo.png</texture>
                 </control>
                 <control type="label">
                     <posx>45</posx>
@@ -134,8 +134,8 @@
                     <posx>150</posx>
                     <width>600</width>
                     <height>90</height>
-                    <textcolor>grey2</textcolor>
                     <font>Font_Reg22</font>
+                    <textcolor>grey2</textcolor>
                     <info>ListItem.Label</info>
                 </control>
                 <control type="image">
@@ -158,9 +158,9 @@
                 <control type="image">
                     <width>765</width>
                     <height>90</height>
+                    <texture>views/tripanel/listselect_fo.png</texture>
                     <visible>Control.HasFocus(450)</visible>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <texture>views/tripanel/listselect_fo.png</texture>
                 </control>
                 <control type="label">
                     <posx>150</posx>
@@ -190,8 +190,8 @@
                     <posx>205</posx>
                     <width>580</width>
                     <height>185</height>
-                    <textcolor>grey2</textcolor>
                     <font>Font_Reg22</font>
+                    <textcolor>grey2</textcolor>
                     <info>ListItem.Label</info>
                 </control>
                 <control type="image">
@@ -214,9 +214,9 @@
                 <control type="image">
                     <width>765</width>
                     <height>185</height>
+                    <texture>views/tripanel/listselect_fo.png</texture>
                     <visible>Control.HasFocus(450)</visible>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <texture>views/tripanel/listselect_fo.png</texture>
                 </control>
                 <control type="label">
                     <posx>205</posx>
@@ -240,8 +240,8 @@
             <posy>275</posy>
             <width>575</width>
             <height>575</height>
-            <texture background="true">$INFO[Container(450).Listitem.Icon]</texture>
             <aspectratio>keep</aspectratio>
+            <texture background="true">$INFO[Container(450).Listitem.Icon]</texture>
             <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
             <bordersize>7</bordersize>
             <visible>Stringcompare(Skin.String(FavoritesListType),2)</visible>
@@ -251,8 +251,8 @@
             <posy>275</posy>
             <width>445</width>
             <height>445</height>
-            <texture background="true">$INFO[Container(450).Listitem.Icon]</texture>
             <aspectratio>keep</aspectratio>
+            <texture background="true">$INFO[Container(450).Listitem.Icon]</texture>
             <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
             <bordersize>7</bordersize>
             <visible>Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))</visible>
@@ -262,9 +262,9 @@
             <posy>935</posy>
             <width>315</width>
             <height>60</height>
-            <font>Font_Reg14</font>
             <align>right</align>
             <aligny>bottom</aligny>
+            <font>Font_Reg14</font>
             <textcolor>grey2</textcolor>
             <label>$INFO[Container(450).NumItems,, $LOCALIZE[31025]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(450).NumPages,/,)]</label>
         </control>

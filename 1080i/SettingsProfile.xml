@@ -78,10 +78,10 @@
                 <posx>358</posx>
                 <posy>120</posy>
                 <width>1491</width>
-                <font>Font_ShowcaseMainLabel2</font>
-                <label>$LOCALIZE[10034]</label>
                 <align>center</align>
+                <font>Font_ShowcaseMainLabel2</font>
                 <shadowcolor>black</shadowcolor>
+                <label>$LOCALIZE[10034]</label>
             </control>
         </control>
         <control type="group">

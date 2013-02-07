@@ -23,9 +23,9 @@
     <onunload>ClearProperty(colorallareas,home)</onunload>
     <onunload>ClearProperty(colordialog,1124)</onunload>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <controls>
         <control type="group">
@@ -38,11 +38,11 @@
                 <posy>-24</posy>
                 <width>776</width>
                 <height>372</height>
+                <texture border="22">dialogs/scan_backg_shadow.png</texture>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <include>PanelGlowFade</include>
                 <include>Animation_VisibleChange400</include>
-                <texture border="22">dialogs/scan_backg_shadow.png</texture>
             </control>
             <control type="image">
                 <posx>-4</posx>
@@ -229,10 +229,10 @@
                 <selected>!IsEmpty(Window(home).Property(colorallareas))</selected>
             </control>
             <control type="label">
-                <visible>!Control.HasFocus(11)</visible>
                 <posx>120</posx>
                 <posy>225</posy>
                 <align>center</align>
+                <visible>!Control.HasFocus(11)</visible>
                 <include>Dialogs_Label3</include>
                 <label>$INFO[Container(10).ListItem.Label]</label>
             </control>

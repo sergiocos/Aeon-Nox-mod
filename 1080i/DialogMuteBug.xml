@@ -2,9 +2,9 @@
 <window>
     <zorder>1</zorder>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>-870</posy>
+        <system>1</system>
     </coordinates>
     <controls></controls>
 </window>

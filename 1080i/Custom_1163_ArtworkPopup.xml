@@ -2,9 +2,9 @@
 <window type="dialog" id="1163">
     <defaultcontrol always="true">5052</defaultcontrol>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <allowoverlay>no</allowoverlay>
     <animation type="WindowOpen" reversible="false">
@@ -35,35 +35,35 @@
             <control type="label" id="1">
                 <width>780</width>
                 <height>78</height>
-                <textcolor>$VAR[FontColorVar]</textcolor>
+                <textoffsetx>45</textoffsetx>
                 <align>center</align>
                 <font>Font_Reg32</font>
+                <textcolor>$VAR[FontColorVar]</textcolor>
                 <scroll>true</scroll>
                 <label>$INFO[System.AddonTitle(script.artwork.downloader)]</label>
-                <textoffsetx>45</textoffsetx>
             </control>
             <control type="label" id="2">
                 <posy>68</posy>
                 <width>780</width>
                 <height>45</height>
-                <textcolor>white3</textcolor>
+                <textoffsetx>45</textoffsetx>
                 <font>Font_Reg32</font>
+                <textcolor>white3</textcolor>
                 <wrapmultiline>true</wrapmultiline>
                 <label>31646</label>
-                <textoffsetx>45</textoffsetx>
             </control>
             <control type="button" id="5052">
                 <posx>390</posx>
                 <posy>258</posy>
                 <width>225</width>
                 <height>45</height>
-                <font>Font_Reg32</font>
-                <label>106</label>
-                <textcolor>grey2</textcolor>
-                <focusedcolor>white3</focusedcolor>
-                <align>center</align>
                 <textoffsetx>30</textoffsetx>
                 <textoffsety></textoffsety>
+                <align>center</align>
+                <font>Font_Reg32</font>
+                <textcolor>grey2</textcolor>
+                <label>106</label>
+                <focusedcolor>white3</focusedcolor>
                 <onleft>5053</onleft>
                 <onright>5053</onright>
                 <onup>5053</onup>
@@ -79,13 +79,13 @@
                 <posy>258</posy>
                 <width>225</width>
                 <height>45</height>
-                <font>Font_Reg32</font>
-                <label>107</label>
-                <textcolor>grey2</textcolor>
-                <focusedcolor>white3</focusedcolor>
-                <align>center</align>
                 <textoffsetx>30</textoffsetx>
                 <textoffsety></textoffsety>
+                <align>center</align>
+                <font>Font_Reg32</font>
+                <textcolor>grey2</textcolor>
+                <label>107</label>
+                <focusedcolor>white3</focusedcolor>
                 <onup>5052</onup>
                 <ondown>5052</ondown>
                 <onback>5000</onback>

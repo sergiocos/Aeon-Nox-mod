@@ -12,17 +12,17 @@
                 <include>Animation_TriPanelRight</include>
                 <visible>!IsEmpty(Container.FolderPath)</visible>
                 <control type="image">
-                    <texture border="0,100,0,200">views/tripanel/info_panel_alt_glow.png</texture>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <width>650</width>
                     <height>815</height>
+                    <texture border="0,100,0,200">views/tripanel/info_panel_alt_glow.png</texture>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
                 <control type="image">
-                    <texture border="0,100,0,200">views/tripanel/info_panel_alt.png</texture>
-                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                     <width>650</width>
                     <height>815</height>
+                    <texture border="0,100,0,200">views/tripanel/info_panel_alt.png</texture>
+                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
                 <control type="grouplist">
                     <posx>140</posx>
@@ -32,16 +32,16 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <label>$VAR[TriPanelSquareDetail1Var]</label>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         <aligny>bottom</aligny>
+                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        <label>$VAR[TriPanelSquareDetail1Var]</label>
                     </control>
                     <control type="label">
                         <width>350</width>
-                        <label fallback="N/A">$VAR[TriPanelSquareValue1Var]</label>
-                        <textcolor>white6</textcolor>
-                        <scroll>true</scroll>
                         <aligny>bottom</aligny>
+                        <textcolor>white6</textcolor>
+                        <label fallback="N/A">$VAR[TriPanelSquareValue1Var]</label>
+                        <scroll>true</scroll>
                     </control>
                 </control>
                 <control type="grouplist">
@@ -53,24 +53,24 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <label>$VAR[TriPanelSquareDetail2Var]</label>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         <aligny>bottom</aligny>
+                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        <label>$VAR[TriPanelSquareDetail2Var]</label>
                     </control>
                     <control type="label">
                         <width>350</width>
-                        <label fallback="N/A">$VAR[TriPanelSquareValue2Var]</label>
-                        <textcolor>white6</textcolor>
-                        <scroll>true</scroll>
                         <aligny>bottom</aligny>
+                        <textcolor>white6</textcolor>
+                        <label fallback="N/A">$VAR[TriPanelSquareValue2Var]</label>
+                        <scroll>true</scroll>
                     </control>
                 </control>
                 <control type="textbox">
-                    <posy>220</posy>
                     <posx>145</posx>
-                    <font>Font_Reg17</font>
+                    <posy>220</posy>
                     <width>432</width>
                     <height>365</height>
+                    <font>Font_Reg17</font>
                     <label>$VAR[InfoWallTextboxVar]</label>
                     <autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
@@ -79,16 +79,16 @@
                 <posx>800</posx>
                 <posy>315</posy>
                 <width>640</width>
-                <visible>Control.IsVisible(53)</visible>
                 <height>980</height>
+                <visible>Control.IsVisible(53)</visible>
                 <include>Animation_TriPanelMid</include>
                 <visible>[Stringcompare(Skin.String(TriPanelPosition),1) | IsEmpty(Skin.String(TriPanelPosition))]</visible>
                 <control type="image">
-                    <texture border="0,100,0,300">views/tripanel/info_panel_glow.png</texture>
-                    <width>606</width>
-                    <height>813</height>
                     <posx>18</posx>
                     <posy>-46</posy>
+                    <width>606</width>
+                    <height>813</height>
+                    <texture border="0,100,0,300">views/tripanel/info_panel_glow.png</texture>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
@@ -102,53 +102,53 @@
                     <posy>562</posy>
                     <width>530</width>
                     <height>530</height>
-                    <fadetime>400</fadetime>
-                    <texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="DefaultMusicGenres.png">$VAR[ListPosterVar]</texture>
                     <aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+                    <texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="DefaultMusicGenres.png">$VAR[ListPosterVar]</texture>
+                    <fadetime>400</fadetime>
                 </control>
                 <control type="image">
                     <posx>55</posx>
                     <posy>31</posy>
                     <width>530</width>
                     <height>530</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">common/bgcolor.png</texture>
                     <fadetime>0</fadetime>
                     <colordiffuse>FF000000</colordiffuse>
-                    <texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">common/bgcolor.png</texture>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>
                 <control type="image">
                     <posx>55</posx>
                     <posy>31</posy>
                     <width>530</width>
                     <height>530</height>
-                    <fadetime>400</fadetime>
-                    <texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
+                    <fadetime>400</fadetime>
                 </control>
                 <control type="image">
                     <width>640</width>
                     <height>715</height>
-                    <texture border="0,100,0,300">views/tripanel/poster_overlay.png</texture>
                     <aspectratio align="center">stretch</aspectratio>
+                    <texture border="0,100,0,300">views/tripanel/poster_overlay.png</texture>
                 </control>
             </control>
             <control type="group" id="5303">
                 <posx>1335</posx>
                 <posy>330</posy>
                 <width>590</width>
-                <visible>Control.IsVisible(53)</visible>
                 <height>903</height>
+                <visible>Control.IsVisible(53)</visible>
                 <include>Animation_TriPanelRight</include>
                 <animation effect="slide" end="-500,0" time="640" easing="inout" tween="circle" condition="IsEmpty(Container.FolderPath)">Conditional</animation>
                 <animation effect="slide" end="-1320,0" time="320" tween="cubic" easing="inout" condition="Stringcompare(Skin.String(TriPanelPosition),3)">Conditional</animation>
                 <visible>[Stringcompare(Skin.String(TriPanelPosition),2) | Stringcompare(Skin.String(TriPanelPosition),3)] + !Container.Content(years)</visible>
                 <control type="image">
-                    <texture>views/tripanel/info_panel_alt_glow.png</texture>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <posx>-20</posx>
                     <posy>-45</posy>
                     <width>595</width>
                     <height>719</height>
+                    <texture>views/tripanel/info_panel_alt_glow.png</texture>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
                 <control type="group">
@@ -162,41 +162,41 @@
                     <posy>517</posy>
                     <width>487</width>
                     <height>487</height>
-                    <fadetime>400</fadetime>
-                    <texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
                     <aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+                    <texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
+                    <fadetime>400</fadetime>
                 </control>
                 <control type="image">
                     <posx>53</posx>
                     <posy>31</posy>
                     <width>486</width>
                     <height>486</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">common/bgcolor.png</texture>
                     <fadetime>0</fadetime>
                     <colordiffuse>FF000000</colordiffuse>
-                    <texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">common/bgcolor.png</texture>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
                 </control>
                 <control type="image">
                     <posx>53</posx>
                     <posy>31</posy>
                     <width>486</width>
                     <height>486</height>
-                    <fadetime>400</fadetime>
-                    <texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
+                    <fadetime>400</fadetime>
                 </control>
                 <control type="image">
                     <width>590</width>
                     <height>670</height>
-                    <texture border="0,100,0,300">views/tripanel/poster_overlay.png</texture>
                     <aspectratio align="center">stretch</aspectratio>
+                    <texture border="0,100,0,300">views/tripanel/poster_overlay.png</texture>
                     <visible>!Stringcompare(Skin.String(TriPanelPosition),3)</visible>
                 </control>
                 <control type="image">
                     <width>590</width>
                     <height>670</height>
-                    <texture flipx="true" border="0,100,0,300">views/tripanel/poster_overlay.png</texture>
                     <aspectratio align="center">stretch</aspectratio>
+                    <texture flipx="true" border="0,100,0,300">views/tripanel/poster_overlay.png</texture>
                     <visible>Stringcompare(Skin.String(TriPanelPosition),3)</visible>
                 </control>
             </control>
@@ -208,16 +208,16 @@
                 <visible>Stringcompare(Skin.String(TriPanelPosition),2)</visible>
                 <visible>!IsEmpty(Container.FolderPath)</visible>
                 <control type="image">
-                    <texture border="0,100,0,300">views/tripanel/info_panel_glow.png</texture>
                     <width>650</width>
                     <height>835</height>
+                    <texture border="0,100,0,300">views/tripanel/info_panel_glow.png</texture>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
                 <control type="image">
-                    <texture border="0,100,0,300">views/tripanel/info_panel.png</texture>
                     <width>650</width>
                     <height>835</height>
+                    <texture border="0,100,0,300">views/tripanel/info_panel.png</texture>
                     <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
                 <!-- Runtime label -->
@@ -229,16 +229,16 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <label>$VAR[TriPanelSquareDetail1Var]</label>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         <aligny>bottom</aligny>
+                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        <label>$VAR[TriPanelSquareDetail1Var]</label>
                     </control>
                     <control type="label">
                         <width>350</width>
-                        <label fallback="N/A">$VAR[TriPanelSquareValue1Var]</label>
-                        <textcolor>white6</textcolor>
-                        <scroll>true</scroll>
                         <aligny>bottom</aligny>
+                        <textcolor>white6</textcolor>
+                        <label fallback="N/A">$VAR[TriPanelSquareValue1Var]</label>
+                        <scroll>true</scroll>
                     </control>
                 </control>
                 <control type="grouplist">
@@ -250,32 +250,32 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <label>$VAR[TriPanelSquareDetail2Var]</label>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         <aligny>bottom</aligny>
+                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        <label>$VAR[TriPanelSquareDetail2Var]</label>
                     </control>
                     <control type="label">
                         <width>350</width>
-                        <label fallback="N/A">$VAR[TriPanelSquareValue2Var]</label>
-                        <textcolor>white6</textcolor>
-                        <scroll>true</scroll>
                         <aligny>bottom</aligny>
+                        <textcolor>white6</textcolor>
+                        <label fallback="N/A">$VAR[TriPanelSquareValue2Var]</label>
+                        <scroll>true</scroll>
                     </control>
                 </control>
                 <control type="textbox">
-                    <posy>220</posy>
                     <posx>102</posx>
-                    <font>Font_Reg17</font>
+                    <posy>220</posy>
                     <width>480</width>
                     <height>400</height>
+                    <font>Font_Reg17</font>
                     <label>$VAR[InfoWallTextboxVar]</label>
                     <autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
                 <control type="image">
-                    <texture border="0,100,0,300">views/tripanel/panel_info_shadow.png</texture>
-                    <colordiffuse>white6</colordiffuse>
                     <width>650</width>
                     <height>835</height>
+                    <texture border="0,100,0,300">views/tripanel/panel_info_shadow.png</texture>
+                    <colordiffuse>white6</colordiffuse>
                 </control>
             </control>
             <control type="group">
@@ -287,9 +287,9 @@
                 <animation effect="slide" time="560" start="-1375,0" end="0,0" tween="cubic">VisibleChange</animation>
                 <animation effect="fade" time="160" start="100" end="0">Hidden</animation>
                 <control type="image">
-                    <width>864</width>
-                    <posy>44</posy>
                     <posx>42</posx>
+                    <posy>44</posy>
+                    <width>864</width>
                     <height>737</height>
                     <texture border="33,33,33,148">wall/wall_bg_glow.png</texture>
                     <include>PanelGlowFade</include>
@@ -297,26 +297,26 @@
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
                 <control type="image">
-                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-                    <width>864</width>
-                    <posy>44</posy>
                     <posx>42</posx>
+                    <posy>44</posy>
+                    <width>864</width>
                     <height>737</height>
                     <texture border="33,33,33,148">wall/wall_bg.png</texture>
+                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
                 <control type="image">
-                    <width>864</width>
-                    <posy>44</posy>
                     <posx>42</posx>
+                    <posy>44</posy>
+                    <width>864</width>
                     <height>737</height>
                     <texture border="33,33,33,148">wall/wall_bg_reflection.png</texture>
                 </control>
                 <control type="list" id="53">
-                    <visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(songs) | Window.IsActive(musicfiles) | Window.IsActive(musicplaylist)</visible>
                     <posx>54</posx>
                     <posy>92</posy>
                     <width>842</width>
                     <height>525</height>
+                    <visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(songs) | Window.IsActive(musicfiles) | Window.IsActive(musicplaylist)</visible>
                     <pagecontrol>70</pagecontrol>
                     <onleft>9000</onleft>
                     <onright>70</onright>
@@ -329,54 +329,54 @@
                         <control type="image">
                             <posy>-8</posy>
                             <width>842</width>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <height>60</height>
                             <texture>settings/listselect_nf.png</texture>
+                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         </control>
                         <control type="group">
                             <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                             <control type="image">
                                 <posx>24</posx>
-                                <height>52</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <width>2</width>
+                                <height>52</height>
                                 <texture>views/tripanel/upright.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                             <control type="image">
                                 <posx>109</posx>
-                                <height>52</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <width>2</width>
+                                <height>52</height>
                                 <texture>views/tripanel/upright.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                         </control>
                         <control type="label">
                             <posx>68</posx>
                             <width>75</width>
                             <height>52</height>
+                            <align>center</align>
                             <font>Font_Reg19</font>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$VAR[TriPanelSquareListValueVar]</label>
                             <scroll>false</scroll>
-                            <align>center</align>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <posx>120</posx>
                             <width>680</width>
                             <height>52</height>
-                            <label>$VAR[TriPanelSquareListValue2Var]</label>
                             <font>Font_Reg19</font>
                             <textcolor>grey2</textcolor>
+                            <label>$VAR[TriPanelSquareListValue2Var]</label>
                         </control>
                         <control type="label">
                             <posx>795</posx>
                             <width>680</width>
                             <height>52</height>
+                            <align>right</align>
                             <font>Font_Reg19</font>
+                            <textcolor>grey2</textcolor>
                             <label>$INFO[ListItem.Label2]</label>
                             <scroll>false</scroll>
-                            <align>right</align>
-                            <textcolor>grey2</textcolor>
                             <visible>!Container.Content(albums) + [!Container.Content(addons) | Window.IsActive(addonbrowser)]</visible>
                         </control>
                         <control type="image">
@@ -392,25 +392,25 @@
                         <control type="image">
                             <posy>-8</posy>
                             <width>842</width>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <height>60</height>
                             <texture>settings/listselect_nf.png</texture>
+                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         </control>
                         <control type="group">
                             <animation effect="fade" start="100" end="50" time="40" condition="true">Conditional</animation>
                             <control type="image">
                                 <posx>24</posx>
-                                <height>52</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <width>2</width>
+                                <height>52</height>
                                 <texture>views/tripanel/upright.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                             <control type="image">
                                 <posx>109</posx>
-                                <height>52</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <width>2</width>
+                                <height>52</height>
                                 <texture>views/tripanel/upright.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                         </control>
                         <control type="image">
@@ -425,26 +425,26 @@
                             <posx>68</posx>
                             <width>75</width>
                             <height>52</height>
+                            <align>center</align>
                             <font>Font_Reg19</font>
                             <label>$VAR[TriPanelSquareListValueVar]</label>
                             <scroll>false</scroll>
-                            <align>center</align>
                         </control>
                         <control type="label">
                             <posx>120</posx>
                             <width>680</width>
                             <height>52</height>
-                            <label>$VAR[TriPanelSquareListValue2Var]</label>
                             <font>Font_Reg19</font>
+                            <label>$VAR[TriPanelSquareListValue2Var]</label>
                         </control>
                         <control type="label">
                             <posx>795</posx>
                             <width>680</width>
                             <height>52</height>
+                            <align>right</align>
                             <font>Font_Reg19</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <scroll>false</scroll>
-                            <align>right</align>
                             <visible>!Container.Content(albums) + [!Container.Content(addons) | Window.IsActive(addonbrowser)]</visible>
                         </control>
                         <control type="image">
@@ -459,63 +459,63 @@
                         <control type="image">
                             <posy>44</posy>
                             <width>842</width>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <height>60</height>
                             <texture>settings/listselect_nf.png</texture>
+                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         </control>
                         <control type="group">
                             <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                             <control type="image">
                                 <posx>24</posx>
-                                <height>104</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <width>2</width>
+                                <height>104</height>
                                 <texture>views/tripanel/upright.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                             <control type="image">
                                 <posx>109</posx>
-                                <height>104</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <width>2</width>
+                                <height>104</height>
                                 <texture>views/tripanel/upright.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                         </control>
                         <control type="label">
                             <posx>68</posx>
                             <width>75</width>
                             <height>49</height>
+                            <align>center</align>
                             <font>Font_Reg19</font>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$VAR[TriPanelSquareListValueVar]</label>
                             <scroll>false</scroll>
-                            <align>center</align>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <posx>120</posx>
                             <width>680</width>
                             <height>49</height>
-                            <label>$VAR[TriPanelSquareListValue2Var]</label>
                             <font>Font_Reg19</font>
                             <textcolor>white6</textcolor>
+                            <label>$VAR[TriPanelSquareListValue2Var]</label>
                         </control>
                         <control type="label">
-                            <posy>50</posy>
                             <posx>120</posx>
+                            <posy>50</posy>
                             <width>680</width>
                             <height>49</height>
-                            <label>$VAR[ListLabel2Var]</label>
                             <font>Font_Reg19</font>
                             <textcolor>grey2</textcolor>
+                            <label>$VAR[ListLabel2Var]</label>
                         </control>
                         <control type="label">
                             <posx>795</posx>
                             <width>680</width>
                             <height>51</height>
+                            <align>right</align>
                             <font>Font_Reg19</font>
+                            <textcolor>grey2</textcolor>
                             <label>$INFO[ListItem.Label2]</label>
                             <scroll>false</scroll>
-                            <align>right</align>
-                            <textcolor>grey2</textcolor>
                             <visible>!Container.Content(albums) + !Container.Content(addons)</visible>
                         </control>
                         <control type="image">
@@ -531,25 +531,25 @@
                         <control type="image">
                             <posy>44</posy>
                             <width>842</width>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <height>60</height>
                             <texture>settings/listselect_nf.png</texture>
+                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         </control>
                         <control type="group">
                             <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                             <control type="image">
                                 <posx>24</posx>
-                                <height>104</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <width>2</width>
+                                <height>104</height>
                                 <texture>views/tripanel/upright.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                             <control type="image">
                                 <posx>109</posx>
-                                <height>104</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <width>2</width>
+                                <height>104</height>
                                 <texture>views/tripanel/upright.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                         </control>
                         <control type="image">
@@ -564,34 +564,34 @@
                             <posx>68</posx>
                             <width>75</width>
                             <height>49</height>
+                            <align>center</align>
                             <font>Font_Reg19</font>
                             <label>$VAR[TriPanelSquareListValueVar]</label>
                             <scroll>false</scroll>
-                            <align>center</align>
                         </control>
                         <control type="label">
                             <posx>120</posx>
                             <width>680</width>
                             <height>49</height>
+                            <font>Font_Reg19</font>
                             <label>$VAR[TriPanelSquareListValue2Var]</label>
-                            <font>Font_Reg19</font>
                         </control>
                         <control type="label">
-                            <posy>50</posy>
                             <posx>120</posx>
+                            <posy>50</posy>
                             <width>680</width>
                             <height>49</height>
-                            <label>$VAR[ListLabel2Var]</label>
                             <font>Font_Reg19</font>
+                            <label>$VAR[ListLabel2Var]</label>
                         </control>
                         <control type="label">
                             <posx>795</posx>
                             <width>680</width>
                             <height>51</height>
+                            <align>right</align>
                             <font>Font_Reg19</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <scroll>false</scroll>
-                            <align>right</align>
                             <visible>!Container.Content(albums) + !Container.Content(addons)</visible>
                         </control>
                         <control type="image">
@@ -606,9 +606,9 @@
                 <control type="scrollbar" id="70">
                     <posx>872</posx>
                     <posy>126</posy>
-                    <include>Animation_VerticalScrollBar</include>
                     <width>46</width>
                     <height>480</height>
+                    <include>Animation_VerticalScrollBar</include>
                     <onup>70</onup>
                     <ondown>70</ondown>
                     <onright>9000</onright>

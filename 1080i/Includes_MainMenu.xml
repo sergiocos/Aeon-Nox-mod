@@ -1168,18 +1168,18 @@
         </control>
     </include>
     <include name="MainMenuLabels">
+        <posy>-5</posy>
         <height>225</height>
         <align>center</align>
-        <label>$INFO[ListItem.Label]</label>
-        <posy>-5</posy>
         <font>Font_MainClassic</font>
+        <label>$INFO[ListItem.Label]</label>
     </include>
     <include name="MainMenuListContent">
-        <hitrect x="-238" y="475" w="2400" h="130" />
         <posx>-338</posx>
         <posy>450</posy>
         <width>3069</width>
         <height>225</height>
+        <hitrect x="-238" y="475" w="2400" h="130" />
         <onleft>9000</onleft>
         <onright>9000</onright>
         <onup condition="Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">4444</onup>
@@ -1214,20 +1214,20 @@
                 <posy>66</posy>
                 <width>88</width>
                 <height>60</height>
+                <aspectratio>keep</aspectratio>
                 <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
                 <colordiffuse>48FFFFFF</colordiffuse>
                 <visible>!SubString(ListItem.Property(BigIcon),/BigIcons/)</visible>
-                <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
                 <posx>297</posx>
                 <posy>29</posy>
                 <width>250</width>
-                <textcolor>white4</textcolor>
                 <height>225</height>
                 <align>center</align>
-                <label>$INFO[ListItem.Label]</label>
                 <font>Font_Reg17_Caps</font>
+                <textcolor>white4</textcolor>
+                <label>$INFO[ListItem.Label]</label>
             </control>
         </itemlayout>
         <focusedlayout height="225" width="250" condition="Skin.HasSetting(mainmenuicons)">
@@ -1257,11 +1257,11 @@
                 <posx>297</posx>
                 <posy>29</posy>
                 <width>250</width>
-                <textcolor>$VAR[MainMenuFontColorVar]</textcolor>
                 <height>225</height>
                 <align>center</align>
-                <label>[B]$INFO[ListItem.Label][/B]</label>
                 <font>Font_Reg17_Caps</font>
+                <textcolor>$VAR[MainMenuFontColorVar]</textcolor>
+                <label>[B]$INFO[ListItem.Label][/B]</label>
             </control>
         </focusedlayout>
         <itemlayout height="225" width="519" condition="!Skin.HasSetting(biggergap) + !Skin.HasSetting(mainmenuicons)">
@@ -1323,8 +1323,8 @@
     <include name="SubMenuListContent">
         <posx>145</posx>
         <posy>-4</posy>
-        <height>50</height>
         <width>1150</width>
+        <height>50</height>
         <onleft>9010</onleft>
         <onright>9010</onright>
         <viewtype>list</viewtype>
@@ -1340,38 +1340,38 @@
         <itemlayout width="230" height="50">
             <control type="label">
                 <posx>115</posx>
-                <height>50</height>
                 <width>224</width>
+                <height>50</height>
                 <align>center</align>
                 <font>Font_Info_Caps</font>
-                <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey2</textcolor>
+                <label>$INFO[ListItem.Label]</label>
             </control>
         </itemlayout>
         <focusedlayout width="230" height="50">
             <control type="label">
                 <posx>115</posx>
-                <height>50</height>
                 <width>224</width>
+                <height>50</height>
                 <align>center</align>
                 <font>Font_Info_Caps</font>
+                <textcolor>grey2</textcolor>
                 <animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
                 <animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
-                <textcolor>grey2</textcolor>
             </control>
             <control type="label">
                 <posx>115</posx>
-                <height>50</height>
                 <width>224</width>
+                <height>50</height>
                 <align>center</align>
+                <font>Font_Info_Caps</font>
+                <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
                 <animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
                 <animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
-                <font>Font_Info_Caps</font>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
-                <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
                 <include>Animation_VisibleChange200</include>
                 <visible>Control.HasFocus(9010)</visible>
             </control>
@@ -2574,93 +2574,70 @@
         </control>
     </include>
     <include name="MainMenuBottomBar">
-        <control type="grouplist" id="2020">
-            <posx>9</posx>
-            <posy>1037</posy>
-            <width>1920</width>
-            <onleft condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">SetFocus(4444)</onleft>
-            <onleft condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4444)">SetFocus(9000)</onleft>
-            <onleft condition="Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onleft>
-            <onright condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">SetFocus(4444)</onright>
-            <onright condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4444)">SetFocus(9000)</onright>
-            <onright condition="Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onright>
-            <align>left</align>
-            <onback>SetFocus(9000)</onback>
-            <include>Animation_VisibleChange200</include>
+        <control type="group">
+            <visible>!Window.IsActive(1159)</visible>
             <include>Animation_WindowFade250</include>
-            <onup condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">SetFocus(4444)</onup>
-            <onup condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4444)">SetFocus(9000)</onup>
-            <onup condition="Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onup>
-            <ondown>SetFocus(9000)</ondown>
-            <visible>Skin.HasSetting(bottommenu)</visible>
-            <itemgap>7</itemgap>
-            <orientation>horizontal</orientation>
-            <control type="button" id="2017">
-                <label>31831</label>
-                <include>BottomMenuButton</include>
-                <texturefocus>common/logo_music.png</texturefocus>
-                <texturenofocus>common/logo_music.png</texturenofocus>
-                <visible>System.HasMediadvd</visible>
-                <colordiffuse>$VAR[HomeDVDButtonColorVar]</colordiffuse>
-                <animation effect="zoom" center="0,22" start="100" end="120" time="160" tween="quadratic">Focus</animation>
-                <onclick>SetFocus(9000)</onclick>
-                <onclick>PlayDVD()</onclick>
+            <animation effect="slide" start="0,100" end="0,0" time="320" tween="quadratic">VisibleChange</animation>
+            <control type="image">
+                <posx>698</posx>
+                <posy>1003</posy>
+                <width>525</width>
+                <height>87</height>
+                <texture>osd/osd_top_bar.png</texture>
             </control>
-            <control type="button" id="2016">
-                <label>31053</label>
-                <include>BottomMenuButton</include>
-                <texturefocus>common/logo_pics.png</texturefocus>
-                <texturenofocus>common/logo_pics.png</texturenofocus>
-                <visible>Player.HasMedia</visible>
-                <colordiffuse>$VAR[HomeWidgetButtonColorVar]</colordiffuse>
-                <animation effect="zoom" center="0,22" start="100" end="120" time="160" tween="quadratic">Focus</animation>
-                <onclick condition="IsEmpty(Window(home).Property(DisableWidgets))">SetProperty(DisableWidgets,1,home)</onclick>
-                <onclick condition="!IsEmpty(Window(home).Property(DisableWidgets))">ClearProperty(DisableWidgets,home)</onclick>
-            </control>
-            <control type="button" id="2018">
-                <label>31053</label>
-                <include>BottomMenuButton</include>
-                <texturefocus>common/INFO.png</texturefocus>
-                <texturenofocus>common/INFO.png</texturenofocus>
-                <visible>Player.HasAudio</visible>
-                <colordiffuse>$VAR[HomeMusicInfoButtonColorVar]</colordiffuse>
-                <animation effect="zoom" center="0,22" start="100" end="120" time="160" tween="quadratic">Focus</animation>
-                <onclick>SetFocus(9000)</onclick>
-                <onclick>SetProperty(musicvisswitch,true,home)</onclick>
-                <onclick>ActivateWindow(1154)</onclick>
-            </control>
-            <control type="button" id="2019">
-                <label>31053</label>
-                <include>BottomMenuButton</include>
-                <texturefocus>common/star.png</texturefocus>
-                <texturenofocus>common/star.png</texturenofocus>
-                <colordiffuse>$VAR[HomeFeaturedButtonColorVar]</colordiffuse>
-                <animation effect="zoom" center="0,22" start="100" end="120" time="160" tween="quadratic">Focus</animation>
-                <onclick>SetFocus(9000)</onclick>
-                <onclick>ActivateWindow(1115)</onclick>
-            </control>
-            <control type="button" id="2014">
-                <label>31053</label>
-                <include>BottomMenuButton</include>
-                <texturefocus>common/tv_icon.png</texturefocus>
-                <texturenofocus>common/tv_icon.png</texturenofocus>
-                <colordiffuse>$VAR[HomeNextAiredButtonColorVar]</colordiffuse>
-                <animation effect="zoom" center="0,22" start="100" end="120" time="160" tween="quadratic">Focus</animation>
-                <onclick>SetFocus(9000)</onclick>
-                <onclick>RunAddon(script.tv.show.next.aired)</onclick>
-                <visible>!IsEmpty(Window(Home).Property(NextAired.1.Label))</visible>
+            <control type="grouplist">
+                <posx>765</posx>
+                <posy>1048</posy>
+                <width>380</width>
+                <align>center</align>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="image">
+                    <posy>2</posy>
+                    <width>60</width>
+                    <height>30</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <aspectratio>keep</aspectratio>
+                    <texture>common/logo_pics.png</texture>
+                    <colordiffuse>black</colordiffuse>
+                    <visible>Player.HasMedia</visible>
+                </control>
+                <control type="image">
+                    <width>60</width>
+                    <height>35</height>
+                    <align>center</align>
+                    <aligny>top</aligny>
+                    <aspectratio>keep</aspectratio>
+                    <texture>common/logo_music.png</texture>
+                    <colordiffuse>black</colordiffuse>
+                    <visible>System.HasMediadvd</visible>
+                </control>
+                <!--             <control type="image" id="2017">
+                <include>BottomMenuImage</include>
+                <texture>common/logo_music.png</texture>
+                <visible>!IsEmpty(Window(weather).Property(Alerts.1.Description))</visible>
+            </control> -->
+                <control type="image">
+                    <posy>-5</posy>
+                    <width>45</width>
+                    <height>45</height>
+                    <texture>dialogs/circle/$INFO[Window(Home).Property(RecommendedMovie.1.PercentPlayed)].png</texture>
+                    <colordiffuse>black</colordiffuse>
+                    <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
+                </control>
+                <control type="label">
+                    <posy>2</posy>
+                    <width min="50" max="600">auto</width>
+                    <height>30</height>
+                    <font>Font_Reg15_Caps</font>
+                    <textcolor>black</textcolor>
+                    <label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
+                    <scroll>false</scroll>
+                    <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
+                </control>
             </control>
         </control>
-    </include>
-    <include name="BottomMenuButton">
-        <width>60</width>
-        <height>40</height>
-        <aligny>top</aligny>
-        <align>center</align>
-        <aspectratio align="center" aligny="top">scale</aspectratio>
-        <font>Font_Reg19_Caps</font>
-        <focusedcolor>00000000</focusedcolor>
-        <textcolor>00000000</textcolor>
-        <scroll>false</scroll>
     </include>
 </includes>

@@ -4,9 +4,9 @@
     <allowoverlay>no</allowoverlay>
     <zorder>4</zorder>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <controls>
         <include>DialogBackFade</include>
@@ -23,22 +23,22 @@
                     <texture>views/filebrowser_sidecar.png</texture>
                 </control>
                 <control type="image">
-                    <width>429</width>
-                    <height>429</height>
                     <posx>1300</posx>
                     <posy>250</posy>
-                    <fadetime>400</fadetime>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
-                    <aspectratio aligny="bottom">keep</aspectratio>
-                </control>
-                <control type="image">
                     <width>429</width>
                     <height>429</height>
+                    <aspectratio aligny="bottom">keep</aspectratio>
+                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                    <fadetime>400</fadetime>
+                </control>
+                <control type="image">
                     <posx>1300</posx>
                     <posy>680</posy>
-                    <fadetime>400</fadetime>
-                    <texture background="true" flipy="true" diffuse="thumbs/diffuse_mirror3.png">$INFO[ListItem.Icon]</texture>
+                    <width>429</width>
+                    <height>429</height>
                     <aspectratio aligny="top">keep</aspectratio>
+                    <texture background="true" flipy="true" diffuse="thumbs/diffuse_mirror3.png">$INFO[ListItem.Icon]</texture>
+                    <fadetime>400</fadetime>
                 </control>
                 <control type="label" id="412">
                     <posx>1226</posx>
@@ -52,8 +52,8 @@
                     <posx>1226</posx>
                     <posy>900</posy>
                     <width>579</width>
-                    <font>Font_Reg24</font>
                     <align>center</align>
+                    <font>Font_Reg24</font>
                     <textcolor>white3</textcolor>
                 </control>
             </control>
@@ -67,11 +67,11 @@
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             </control>
             <control type="scrollbar" id="60">
-                <include>Animation_VerticalScrollBar</include>
                 <posx>1200</posx>
                 <posy>158</posy>
                 <width>40</width>
                 <height>728</height>
+                <include>Animation_VerticalScrollBar</include>
                 <onup>60</onup>
                 <ondown>60</ondown>
                 <onleft>451</onleft>
@@ -91,8 +91,8 @@
                 <itemlayout height="61">
                     <control type="image">
                         <posy>1</posy>
-                        <height>60</height>
                         <width>1140</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="label">
@@ -107,8 +107,8 @@
                         <posx>1041</posx>
                         <width>795</width>
                         <height>61</height>
-                        <font>Font_Reg19</font>
                         <align>right</align>
+                        <font>Font_Reg19</font>
                         <textcolor>bcicon</textcolor>
                         <info>ListItem.Label2</info>
                     </control>
@@ -123,8 +123,8 @@
                 <focusedlayout height="61">
                     <control type="image">
                         <posy>1</posy>
-                        <height>60</height>
                         <width>1140</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="image">
@@ -147,8 +147,8 @@
                         <posx>1041</posx>
                         <width>795</width>
                         <height>61</height>
-                        <font>Font_Reg19</font>
                         <align>right</align>
+                        <font>Font_Reg19</font>
                         <textcolor>white6</textcolor>
                         <info>ListItem.Label2</info>
                     </control>
@@ -175,8 +175,8 @@
                 <itemlayout height="61">
                     <control type="image">
                         <posy>1</posy>
-                        <height>60</height>
                         <width>1156</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="label">
@@ -191,8 +191,8 @@
                         <posx>1041</posx>
                         <width>795</width>
                         <height>61</height>
-                        <font>Font_Reg19</font>
                         <align>right</align>
+                        <font>Font_Reg19</font>
                         <textcolor>bcicon</textcolor>
                         <info>ListItem.Label2</info>
                     </control>
@@ -207,8 +207,8 @@
                 <focusedlayout height="61">
                     <control type="image">
                         <posy>1</posy>
-                        <height>60</height>
                         <width>1156</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="image">
@@ -231,8 +231,8 @@
                         <posx>1041</posx>
                         <width>795</width>
                         <height>61</height>
-                        <font>Font_Reg19</font>
                         <align>right</align>
+                        <font>Font_Reg19</font>
                         <textcolor>white6</textcolor>
                         <info>ListItem.Label2</info>
                     </control>
@@ -259,47 +259,47 @@
                 <control type="button" id="413">
                     <width>279</width>
                     <height>91</height>
-                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Reg22</font>
-                    <label>186</label>
+                    <textoffsety>16</textoffsety>
                     <align>center</align>
                     <aligny>top</aligny>
-                    <textoffsety>16</textoffsety>
+                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                    <font>Font_Reg22</font>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                    <label>186</label>
                 </control>
                 <control type="button" id="414">
                     <width>279</width>
                     <height>91</height>
-                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Reg22</font>
-                    <label>222</label>
+                    <textoffsety>16</textoffsety>
                     <align>center</align>
                     <aligny>top</aligny>
-                    <textoffsety>16</textoffsety>
+                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                    <font>Font_Reg22</font>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                    <label>222</label>
                 </control>
                 <control type="button" id="415">
                     <width>279</width>
                     <height>91</height>
-                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Reg22</font>
-                    <label>119</label>
+                    <textoffsety>16</textoffsety>
                     <align>center</align>
                     <aligny>top</aligny>
-                    <textoffsety>16</textoffsety>
+                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                    <font>Font_Reg22</font>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                    <label>119</label>
                 </control>
                 <control type="radiobutton" id="416">
                     <width>279</width>
                     <height>91</height>
-                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Reg22</font>
-                    <label>749</label>
+                    <textoffsety>16</textoffsety>
                     <align>center</align>
                     <aligny>top</aligny>
-                    <textoffsety>16</textoffsety>
+                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                    <font>Font_Reg22</font>
                     <selectedcolor>FF7b7b7b</selectedcolor>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                    <label>749</label>
                     <textureradioon>-</textureradioon>
                     <textureradiooff>-</textureradiooff>
                 </control>

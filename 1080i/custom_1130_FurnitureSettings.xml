@@ -3,9 +3,9 @@
     <defaultcontrol always="true">450</defaultcontrol>
     <zorder>4</zorder>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
@@ -28,13 +28,13 @@
             <control type="image">
                 <posx>356</posx>
                 <posy>200</posy>
+                <width>1210</width>
+                <height>620</height>
+                <texture border="50">osd/osd_settings_back.png</texture>
                 <animation type="Conditional" condition="!Stringcompare(Window.Property(actualItem),MainMenu)">
                     <effect type="zoom" end="100,66" time="320" easing="in" tween="cubic" />
                 </animation>
-                <width>1210</width>
-                <height>620</height>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-                <texture border="50">osd/osd_settings_back.png</texture>
             </control>
             <control type="image">
                 <posx>375</posx>

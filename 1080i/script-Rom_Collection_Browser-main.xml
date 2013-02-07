@@ -4,16 +4,16 @@
     <backgroundcolor>backgroundcolor</backgroundcolor>
     <defaultcontrol always="false">2</defaultcontrol>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <controls>
         <!-- background -->
         <control type="multiimage" id="75">
-            <include>FullscreenDimensions</include>
-            <fadetime>600</fadetime>
             <imagepath background="true" fallback="special://skin/backgrounds/programs/">$INFO[ListItem.Property(background)]</imagepath>
+            <fadetime>600</fadetime>
+            <include>FullscreenDimensions</include>
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
         </control>
@@ -28,8 +28,8 @@
             <visible>[Skin.HasSetting(darkinfopane) | !Skin.HasSetting(DisableGlowbar)] + ![Control.IsVisible(52) + Skin.HasSetting(addonwallaltbackground)]</visible>
         </control>
         <control type="image">
-            <include>FullscreenDimensions</include>
             <texture>common/bgcolor.png</texture>
+            <include>FullscreenDimensions</include>
             <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
             <animation effect="fade" end="100" time="440" delay="160">Visible</animation>
             <animation effect="fade" start="100" end="0" time="80">Hidden</animation>
@@ -40,18 +40,18 @@
             <visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53)</visible>
             <include>Animation_OpenCloseZoom_New</include>
             <control type="group">
-                <!-- info pane -->
                 <posy>39</posy>
                 <width>1920</width>
                 <height>750</height>
+                <!-- info pane -->
                 <control type="image">
                     <posx>112</posx>
                     <width>1695</width>
                     <height>1050</height>
+                    <texture>wall/wall_bg_glow.png</texture>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <include>PanelGlowFade</include>
-                    <texture>wall/wall_bg_glow.png</texture>
                 </control>
                 <control type="image">
                     <posx>112</posx>
@@ -61,8 +61,8 @@
                     <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
                 <control type="image">
-                    <posy>8</posy>
                     <posx>112</posx>
+                    <posy>8</posy>
                     <width>1695</width>
                     <height>750</height>
                     <texture>views/fanart_layout.png</texture>
@@ -73,25 +73,25 @@
                     <posy>12</posy>
                     <width>1620</width>
                     <height>42</height>
-                    <scroll>true</scroll>
-                    <font>Font_Reg15</font>
                     <align>center</align>
-                    <label>$INFO[ListItem.Tagline]</label>
+                    <font>Font_Reg15</font>
                     <textcolor>white3</textcolor>
+                    <scroll>true</scroll>
+                    <label>$INFO[ListItem.Tagline]</label>
                     <visible>Container.Content(movies)</visible>
                 </control>
                 <control type="group">
-                    <!--fanart-->
                     <posx>915</posx>
                     <posy>75</posy>
+                    <!--fanart-->
                     <control type="image">
                         <posx>-6</posx>
                         <posy>-6</posy>
                         <width>798</width>
                         <height>454</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <fadetime>FanartCrossfadeTime</fadetime>
                         <texture background="true" fallback="special://skin/backgrounds/programs/programs.jpg">$INFO[ListItem.property(background)]</texture>
+                        <fadetime>FanartCrossfadeTime</fadetime>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -101,70 +101,70 @@
                     <posy>63</posy>
                     <control type="group">
                         <control type="label">
-                            <height>20</height>
                             <width>420</width>
+                            <height>20</height>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$LOCALIZE[515]:</label>
                         </control>
                         <control type="label">
                             <posy>30</posy>
-                            <height>20</height>
                             <width>300</width>
+                            <height>20</height>
                             <label fallback="31006">$INFO[ListItem.Property(genre)]</label>
                         </control>
                         <control type="label">
                             <posx>352</posx>
-                            <height>20</height>
                             <width>420</width>
+                            <height>20</height>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$ADDON[script.games.rom.collection.browser 50006]:</label>
                         </control>
                         <control type="label">
                             <posx>352</posx>
                             <posy>30</posy>
-                            <height>20</height>
                             <width>300</width>
+                            <height>20</height>
                             <label fallback="31006">$INFO[ListItem.Property(console)]</label>
                         </control>
                         <control type="label">
                             <posy>75</posy>
-                            <height>20</height>
                             <width>420</width>
+                            <height>20</height>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$ADDON[script.games.rom.collection.browser 50003]:</label>
                         </control>
                         <control type="label">
                             <posy>105</posy>
-                            <height>20</height>
                             <width>300</width>
+                            <height>20</height>
                             <label fallback="31006">$INFO[ListItem.Property(developer)]</label>
                         </control>
                         <control type="label">
                             <posx>352</posx>
                             <posy>75</posy>
-                            <height>20</height>
                             <width>420</width>
+                            <height>20</height>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$LOCALIZE[345]:</label>
                         </control>
                         <control type="label">
                             <posx>352</posx>
                             <posy>105</posy>
-                            <height>20</height>
                             <width>300</width>
+                            <height>20</height>
                             <label fallback="31006">$INFO[ListItem.Property(year)]</label>
                         </control>
                         <control type="label">
                             <posy>147</posy>
-                            <height>20</height>
                             <width>420</width>
+                            <height>20</height>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$ADDON[script.games.rom.collection.browser 50002]:</label>
                         </control>
                         <control type="label">
                             <posy>177</posy>
-                            <height>20</height>
                             <width>300</width>
+                            <height>20</height>
                             <label fallback="31006">$INFO[ListItem.Property(publisher)]</label>
                         </control>
                         <control type="group">
@@ -172,16 +172,16 @@
                             <control type="label">
                                 <posx>352</posx>
                                 <posy>147</posy>
-                                <height>20</height>
                                 <width>420</width>
+                                <height>20</height>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <label>$LOCALIZE[563]:</label>
                             </control>
                             <control type="label">
                                 <posx>352</posx>
                                 <posy>177</posy>
-                                <height>20</height>
                                 <width>300</width>
+                                <height>20</height>
                                 <label fallback="31006">$INFO[ListItem.Property(rating)]$INFO[ListItem.Property(votes)]</label>
                             </control>
                         </control>
@@ -190,16 +190,16 @@
                             <control type="label">
                                 <posx>352</posx>
                                 <posy>147</posy>
-                                <height>20</height>
                                 <width>420</width>
+                                <height>20</height>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <label>$LOCALIZE[576]:</label>
                             </control>
                             <control type="label">
                                 <posx>352</posx>
                                 <posy>177</posy>
-                                <height>20</height>
                                 <width>300</width>
+                                <height>20</height>
                                 <label fallback="31006">$INFO[ListItem.Property(playcount)]</label>
                             </control>
                         </control>
@@ -207,17 +207,17 @@
                             <posy>228</posy>
                             <width>652</width>
                             <height>220</height>
-                            <label fallback="31006">$INFO[ListItem.Property(plot)]</label>
                             <textcolor>white6</textcolor>
+                            <label fallback="31006">$INFO[ListItem.Property(plot)]</label>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
                     </control>
                 </control>
             </control>
             <control type="group">
-                <!--Video Window-->
                 <posx>915</posx>
                 <posy>114</posy>
+                <!--Video Window-->
                 <control type="image">
                     <width>786</width>
                     <height>442</height>
@@ -253,9 +253,9 @@
                 <visible>!Control.IsVisible(52)</visible>
             </control>
             <control type="image">
+                <posy>874</posy>
                 <width>1920</width>
                 <height>206</height>
-                <posy>874</posy>
                 <texture>views/panel_spot.png</texture>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>Control.IsVisible(52)</visible>
@@ -265,15 +265,15 @@
                 <posy>874</posy>
                 <width>2490</width>
                 <height>226</height>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <texture>views/showcase_spot.png</texture>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>Control.IsVisible(58)</visible>
             </control>
             <control type="image">
-                <width>880</width>
-                <height>206</height>
                 <posx>1040</posx>
                 <posy>874</posy>
+                <width>880</width>
+                <height>206</height>
                 <texture>views/list_spot.png</texture>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>Control.IsVisible(58)</visible>
@@ -288,8 +288,8 @@
                 <posx>1224</posx>
                 <width>696</width>
                 <height>1080</height>
-                <colordiffuse>vignette</colordiffuse>
                 <texture flipx="true">views/showcase_vignette.png</texture>
+                <colordiffuse>vignette</colordiffuse>
             </control>
             <include>Neon_Floor</include>
         </control>
@@ -311,8 +311,8 @@
                 <posy>68</posy>
                 <width>1695</width>
                 <height>1038</height>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <texture>wall/wall_bg.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <animation effect="zoom" start="112,68,1695,1038" end="38,68,1845,1038" time="0" reversible="false" condition="Control.IsVisible(52)">Conditional</animation>
             </control>
             <control type="image">
@@ -378,12 +378,12 @@
                     </itemlayout>
                     <focusedlayout width="600" height="450">
                         <control type="group">
+                            <posx>57</posx>
                             <animation effect="zoom" center="auto" start="100" end="122" time="240" tween="quadratic" reversible="false">Focus</animation>
                             <animation type="UnFocus" condition="Control.HasFocus(50)">
                                 <effect type="slide" end="-57" time="0" tween="quadratic" />
                                 <effect type="zoom" center="auto" start="122" end="100" time="240" tween="quadratic" />
                             </animation>
-                            <posx>57</posx>
                             <control type="image">
                                 <posx>-3</posx>
                                 <posy>67</posy>
@@ -434,13 +434,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-6).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-6).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -450,13 +450,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -466,13 +466,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -482,13 +482,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -498,13 +498,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -516,13 +516,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -532,13 +532,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -548,13 +548,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -564,13 +564,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -580,13 +580,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -601,13 +601,13 @@
                             <control type="group">
                                 <visible>!IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                                 <control type="image">
-                                    <include>MusicShowcaseThumb</include>
                                     <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                    <include>MusicShowcaseThumb</include>
                                 </control>
                                 <include>MusicShowcaseGlassOverlayAngled</include>
                                 <control type="image">
-                                    <include>MusicShowcaseThumbReflection</include>
                                     <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                    <include>MusicShowcaseThumbReflection</include>
                                 </control>
                             </control>
                         </control>
@@ -618,13 +618,13 @@
                             <control type="group">
                                 <visible>!IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                                 <control type="image">
-                                    <include>MusicShowcaseThumb</include>
                                     <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
+                                    <include>MusicShowcaseThumb</include>
                                 </control>
                                 <include>MusicShowcaseGlassOverlayAngled</include>
                                 <control type="image">
-                                    <include>MusicShowcaseThumbReflection</include>
                                     <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
+                                    <include>MusicShowcaseThumbReflection</include>
                                 </control>
                             </control>
                         </control>
@@ -643,13 +643,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(6).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(6).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -659,13 +659,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -675,13 +675,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -691,13 +691,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -707,13 +707,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -725,13 +725,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -741,13 +741,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -757,13 +757,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -773,13 +773,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -789,13 +789,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -810,13 +810,13 @@
                             <control type="group">
                                 <visible>!IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                                 <control type="image">
-                                    <include>MusicShowcaseThumb</include>
                                     <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                    <include>MusicShowcaseThumb</include>
                                 </control>
                                 <include>MusicShowcaseGlassOverlayAngled</include>
                                 <control type="image">
-                                    <include>MusicShowcaseThumbReflection</include>
                                     <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                    <include>MusicShowcaseThumbReflection</include>
                                 </control>
                             </control>
                         </control>
@@ -827,13 +827,13 @@
                             <control type="group">
                                 <visible>!IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                                 <control type="image">
-                                    <include>MusicShowcaseThumb</include>
                                     <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
+                                    <include>MusicShowcaseThumb</include>
                                 </control>
                                 <include>MusicShowcaseGlassOverlayAngled</include>
                                 <control type="image">
-                                    <include>MusicShowcaseThumbReflection</include>
                                     <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
+                                    <include>MusicShowcaseThumbReflection</include>
                                 </control>
                             </control>
                         </control>
@@ -869,13 +869,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -891,13 +891,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -913,13 +913,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -935,13 +935,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -957,13 +957,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -979,13 +979,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -1001,13 +1001,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -1023,13 +1023,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -1045,13 +1045,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -1067,13 +1067,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -1082,13 +1082,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayMain</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflectionMain</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                <include>MusicShowcaseThumbReflectionMain</include>
                             </control>
                         </control>
                     </control>
@@ -1113,13 +1113,13 @@
                         <control type="group">
                             <visible>Skin.HasSetting(noflowalbum) + !Control.IsVisible(7003)</visible>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                <include>MusicShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </itemlayout>
@@ -1129,22 +1129,22 @@
                             <animation effect="zoom" start="100" end="110" center="202,345" time="320" reversible="false" tween="cubic">Focus</animation>
                             <animation effect="zoom" start="110" end="100" center="202,345" time="160" reversible="false" tween="cubic">Unfocus</animation>
                             <control type="image">
-                                <include>MusicShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                <include>MusicShowcaseThumb</include>
                             </control>
                             <include>MusicShowcaseGlassOverlayMain</include>
                             <control type="image">
-                                <include>MusicShowcaseThumbReflectionMain</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
+                                <include>MusicShowcaseThumbReflectionMain</include>
                             </control>
                         </control>
                     </focusedlayout>
                 </control>
             </control>
             <control type="group">
+                <posy>-30</posy>
                 <visible>Control.isVisible(52)</visible>
                 <include>Animation_OpenCloseZoom_New</include>
-                <posy>-30</posy>
                 <control type="panel" id="52">
                     <posx>60</posx>
                     <posy>154</posy>
@@ -1163,9 +1163,9 @@
                             <width>261</width>
                             <height>261</height>
                             <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
                             <bordertexture border="5">thumbs/bordershadow4.png</bordertexture>
                             <bordersize>5</bordersize>
-                            <texture background="true">$INFO[ListItem.Icon]</texture>
                             <animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
                         </control>
                     </itemlayout>
@@ -1174,15 +1174,15 @@
                             <width>261</width>
                             <height>261</height>
                             <aspectratio>keep</aspectratio>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture border="5">views/addonwall_select.png</texture>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="image">
                             <width>261</width>
                             <height>261</height>
                             <aspectratio>keep</aspectratio>
-                            <bordersize>5</bordersize>
                             <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <bordersize>5</bordersize>
                         </control>
                     </focusedlayout>
                 </control>
@@ -1200,8 +1200,8 @@
                     <control type="label">
                         <posx>1260</posx>
                         <posy>154</posy>
-                        <height>20</height>
                         <width>570</width>
+                        <height>20</height>
                         <font>Font_Bold25_Caps</font>
                         <scroll>true</scroll>
                         <label>$INFO[ListItem.Label]</label>
@@ -1209,16 +1209,16 @@
                     <control type="image">
                         <posx>1245</posx>
                         <posy>190</posy>
-                        <height>60</height>
                         <width>600</width>
+                        <height>60</height>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="group">
                         <control type="label">
                             <posx>1260</posx>
                             <posy>202</posy>
-                            <height>20</height>
                             <width>570</width>
+                            <height>20</height>
                             <textcolor>white3</textcolor>
                             <scroll>true</scroll>
                             <label>$INFO[ListItem.Property(genre)]</label>
@@ -1227,10 +1227,10 @@
                             <control type="label">
                                 <posx>1830</posx>
                                 <posy>1015</posy>
-                                <height>20</height>
                                 <width>690</width>
-                                <font>Font_Reg19</font>
+                                <height>20</height>
                                 <align>right</align>
+                                <font>Font_Reg19</font>
                                 <textcolor>$VAR[FlagDiffuseVar]</textcolor>
                                 <scroll>true</scroll>
                                 <label>$INFO[ListItem.Property(year)]$INFO[ListItem.Property(maxplayers), • , Players]$INFO[ListItem.Property(rating), • ]$INFO[ListItem.Property(votes),(,)]</label>
@@ -1238,10 +1238,10 @@
                             <control type="label">
                                 <posx>1830</posx>
                                 <posy>1060</posy>
-                                <height>20</height>
                                 <width>690</width>
-                                <font>Font_Reg19</font>
+                                <height>20</height>
                                 <align>right</align>
+                                <font>Font_Reg19</font>
                                 <textcolor>$VAR[FlagDiffuseVar]</textcolor>
                                 <label>$INFO[ListItem.Property(publisher)]</label>
                             </control>
@@ -1252,8 +1252,8 @@
                             <width>570</width>
                             <height>350</height>
                             <font>Font_Reg19</font>
-                            <label fallback="31006">$INFO[ListItem.Property(plot)]</label>
                             <textcolor>white6</textcolor>
+                            <label fallback="31006">$INFO[ListItem.Property(plot)]</label>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
                     </control>
@@ -1273,9 +1273,9 @@
                         <control type="image">
                             <width>573</width>
                             <height>322</height>
-                            <fadetime>IconCrossfadeTime</fadetime>
                             <aspectratio align="center">keep</aspectratio>
                             <texture background="true" fallback="special://skin/backgrounds/programs/programs.jpg">$INFO[ListItem.Property(gameinfobig)]</texture>
+                            <fadetime>IconCrossfadeTime</fadetime>
                             <visible>!Player.Hasvideo</visible>
                             <include>Animation_VisibleChange200</include>
                         </control>
@@ -1303,13 +1303,13 @@
                         <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
                         <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-7).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-7).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1317,13 +1317,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-6).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-6).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1331,13 +1331,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-5).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-5).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1345,13 +1345,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-4).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-4).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1359,13 +1359,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-3).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-3).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1373,13 +1373,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-2).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-2).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1389,13 +1389,13 @@
                         <animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
                         <animation effect="rotatey" center="2205" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(6).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(6).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1403,13 +1403,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(5).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(5).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1417,13 +1417,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(4).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(4).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1431,13 +1431,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(3).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(3).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1445,13 +1445,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(2).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(2).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1459,13 +1459,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(1).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(1).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1478,13 +1478,13 @@
                             <animation effect="rotatey" center="1395" end="-55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                             <animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
                             <control type="image">
-                                <include>MovieShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumb</include>
                             </control>
                             <include>MovieShowcaseGlassOverlay</include>
                             <control type="image">
-                                <include>MovieShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumbReflection</include>
                             </control>
                         </control>
                         <control type="group">
@@ -1493,13 +1493,13 @@
                             <visible>Container.OnNext</visible>
                             <animation effect="rotatey" center="608" end="-55" time="200" reversible="false" tween="quadratic">Hidden</animation>
                             <control type="image">
-                                <include>MovieShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-1).Icon]</texture>
+                                <include>MovieShowcaseThumb</include>
                             </control>
                             <include>MovieShowcaseGlassOverlay</include>
                             <control type="image">
-                                <include>MovieShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-1).Icon]</texture>
+                                <include>MovieShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -1517,13 +1517,13 @@
                         <animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
                         <animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(7).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(7).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1531,13 +1531,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(6).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(6).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1545,13 +1545,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(5).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(5).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1559,13 +1559,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(4).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(4).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1573,13 +1573,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(3).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(3).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1587,13 +1587,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(2).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(2).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1603,13 +1603,13 @@
                         <animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
                         <animation effect="rotatey" center="-270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-6).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-6).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1617,13 +1617,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-5).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-5).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1631,13 +1631,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-4).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-4).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1645,13 +1645,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-3).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-3).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1659,13 +1659,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-2).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-2).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1673,13 +1673,13 @@
                         <visible>!IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                         <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-1).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-1).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1692,13 +1692,13 @@
                             <animation effect="rotatey" center="540" end="55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                             <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                             <control type="image">
-                                <include>MovieShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumb</include>
                             </control>
                             <include>MovieShowcaseGlassOverlay</include>
                             <control type="image">
-                                <include>MovieShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumbReflection</include>
                             </control>
                         </control>
                         <control type="group">
@@ -1707,13 +1707,13 @@
                             <visible>Container.OnPrevious</visible>
                             <animation effect="rotatey" center="1328" end="55" time="200" reversible="false" tween="quadratic">Hidden</animation>
                             <control type="image">
-                                <include>MovieShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(1).Icon]</texture>
+                                <include>MovieShowcaseThumb</include>
                             </control>
                             <include>MovieShowcaseGlassOverlay</include>
                             <control type="image">
-                                <include>MovieShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(1).Icon]</texture>
+                                <include>MovieShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </control>
@@ -1748,13 +1748,13 @@
                             <effect type="slide" end="-1028" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-6).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-6).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1768,13 +1768,13 @@
                             <effect type="slide" end="-866" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-5).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-5).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1788,13 +1788,13 @@
                             <effect type="slide" end="-704" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-4).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-4).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1808,13 +1808,13 @@
                             <effect type="slide" end="-543" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-3).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-3).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1828,13 +1828,13 @@
                             <effect type="slide" end="-384" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-2).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-2).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1848,13 +1848,13 @@
                             <effect type="slide" end="-226" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-1).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-1).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1868,13 +1868,13 @@
                             <effect type="slide" end="1028" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(6).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(6).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1888,13 +1888,13 @@
                             <effect type="slide" end="866" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(5).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(5).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1908,13 +1908,13 @@
                             <effect type="slide" end="704" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(4).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(4).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1928,13 +1928,13 @@
                             <effect type="slide" end="543" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(3).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(3).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1948,13 +1948,13 @@
                             <effect type="slide" end="384" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(2).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(2).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1968,13 +1968,13 @@
                             <effect type="slide" end="226" time="640" tween="cubic" easing="inout" />
                         </animation>
                         <control type="image">
-                            <include>MovieShowcaseThumb</include>
                             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(1).Icon]</texture>
+                            <include>MovieShowcaseThumb</include>
                         </control>
                         <include>MovieShowcaseGlassOverlay</include>
                         <control type="image">
-                            <include>MovieShowcaseThumbReflection</include>
                             <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(1).Icon]</texture>
+                            <include>MovieShowcaseThumbReflection</include>
                         </control>
                     </control>
                     <control type="group">
@@ -1982,13 +1982,13 @@
                         <control type="group">
                             <visible>!IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
                             <control type="image">
-                                <include>MovieShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumb</include>
                             </control>
                             <include>MovieShowcaseGlassOverlay</include>
                             <control type="image">
-                                <include>MovieShowcaseThumbReflectionMain</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumbReflectionMain</include>
                             </control>
                         </control>
                     </control>
@@ -2010,34 +2010,34 @@
                     <preloaditems>2</preloaditems>
                     <itemlayout height="600" width="294">
                         <control type="group">
+                            <posy>16</posy>
                             <visible>Skin.HasSetting(noflow) + !Control.IsVisible(6000)</visible>
                             <animation effect="fade" time="0" delay="640">Visible</animation>
-                            <posy>16</posy>
                             <control type="image">
-                                <include>MovieShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumb</include>
                             </control>
                             <include>MovieShowcaseGlassOverlay</include>
                             <control type="image">
-                                <include>MovieShowcaseThumbReflection</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumbReflection</include>
                             </control>
                         </control>
                     </itemlayout>
                     <focusedlayout height="525" width="294">
                         <control type="group">
+                            <posy>16</posy>
                             <visible>Skin.HasSetting(noflow) + !Control.IsVisible(6000)</visible>
                             <animation effect="fade" time="0" delay="640">Visible</animation>
                             <animation effect="zoom" start="100" end="120" center="202,345" time="240" reversible="false" tween="cubic">Focus</animation>
-                            <posy>16</posy>
                             <control type="image">
-                                <include>MovieShowcaseThumb</include>
                                 <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumb</include>
                             </control>
                             <include>MovieShowcaseGlassOverlay</include>
                             <control type="image">
-                                <include>MovieShowcaseThumbReflectionMain</include>
                                 <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
+                                <include>MovieShowcaseThumbReflectionMain</include>
                             </control>
                         </control>
                     </focusedlayout>
@@ -2067,8 +2067,8 @@
                             <posy>300</posy>
                             <width>300</width>
                             <height>225</height>
-                            <texture background="true" diffuse="thumbs/cdcover_mask.png">$INFO[ListItem.Icon]</texture>
                             <aspectratio scalediffuse="false">scale</aspectratio>
+                            <texture background="true" diffuse="thumbs/cdcover_mask.png">$INFO[ListItem.Icon]</texture>
                         </control>
                         <control type="image">
                             <posx>-12</posx>
@@ -2085,8 +2085,8 @@
                             <posy>528</posy>
                             <width>300</width>
                             <height>225</height>
-                            <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[ListItem.Icon]</texture>
                             <aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+                            <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[ListItem.Icon]</texture>
                         </control>
                     </itemlayout>
                     <focusedlayout width="315" height="750">
@@ -2098,8 +2098,8 @@
                                 <posy>300</posy>
                                 <width>300</width>
                                 <height>225</height>
-                                <texture background="true" diffuse="thumbs/cdcover_mask.png">$INFO[ListItem.Icon]</texture>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
+                                <texture background="true" diffuse="thumbs/cdcover_mask.png">$INFO[ListItem.Icon]</texture>
                             </control>
                             <control type="image">
                                 <posx>-12</posx>
@@ -2116,8 +2116,8 @@
                                 <posy>528</posy>
                                 <width>300</width>
                                 <height>225</height>
-                                <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[ListItem.Icon]</texture>
                                 <aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+                                <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[ListItem.Icon]</texture>
                                 <animation effect="fade" start="100" end="30" time="160">Focus</animation>
                                 <animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
                             </control>
@@ -2134,8 +2134,8 @@
                         <posy>1005</posy>
                         <width>1245</width>
                         <font>Font_Info_Caps</font>
-                        <textcolor>floor</textcolor>
                         <shadowcolor>floorshadow</shadowcolor>
+                        <textcolor>floor</textcolor>
                         <label>$INFO[ListItem.Property(genre)]</label>
                     </control>
                     <control type="label">
@@ -2143,10 +2143,10 @@
                         <posy>1040</posy>
                         <width>1245</width>
                         <font>Font_ShowcaseMainLabel2_Caps</font>
+                        <shadowcolor>floorshadow</shadowcolor>
+                        <textcolor>floor</textcolor>
                         <scroll>true</scroll>
                         <scrollspeed>30</scrollspeed>
-                        <textcolor>floor</textcolor>
-                        <shadowcolor>floorshadow</shadowcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </control>
@@ -2168,8 +2168,8 @@
                         <posy>123</posy>
                         <width>170</width>
                         <height>850</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texture>views/listpanel_detailwide.png</texture>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <visible>!Skin.HasSetting(slimlist)</visible>
                     </control>
                     <control type="image">
@@ -2177,8 +2177,8 @@
                         <posy>123</posy>
                         <width>123</width>
                         <height>850</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texture>views/listpanel_detailwide.png</texture>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <visible>Skin.HasSetting(slimlist)</visible>
                     </control>
                     <control type="list" id="58">
@@ -2196,8 +2196,8 @@
                         <itemlayout height="98" condition="!Skin.HasSetting(slimlist)">
                             <control type="image">
                                 <posy>38</posy>
-                                <height>60</height>
                                 <width>1140</width>
+                                <height>60</height>
                                 <texture>osd/osd_settings_buttonnf.png</texture>
                             </control>
                             <control type="label">
@@ -2222,8 +2222,8 @@
                                 <posy>1</posy>
                                 <width>170</width>
                                 <height>48</height>
-                                <font>Font_Info</font>
                                 <align>center</align>
+                                <font>Font_Info</font>
                                 <textcolor>grey2</textcolor>
                                 <label>$INFO[ListItem.Property(year)]</label>
                             </control>
@@ -2232,16 +2232,16 @@
                                 <posy>54</posy>
                                 <width>170</width>
                                 <height>27</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture fallback="stars/0.0.png">$INFO[ListItem.Property(rating),stars/,.png]</texture>
                                 <colordiffuse>grey</colordiffuse>
-                                <aspectratio>keep</aspectratio>
                             </control>
                         </itemlayout>
                         <focusedlayout height="98" condition="!Skin.HasSetting(slimlist)">
                             <control type="image">
                                 <posy>38</posy>
-                                <height>60</height>
                                 <width>1140</width>
+                                <height>60</height>
                                 <texture>osd/osd_settings_buttonnf.png</texture>
                             </control>
                             <control type="image">
@@ -2249,8 +2249,8 @@
                                 <posy>-1</posy>
                                 <width>1118</width>
                                 <height>98</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <texture>views/tripanel/listselect_fo.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(58)">Conditional</animation>
                             </control>
                             <control type="label">
@@ -2273,8 +2273,8 @@
                                 <posy>1</posy>
                                 <width>170</width>
                                 <height>48</height>
-                                <font>Font_Info</font>
                                 <align>center</align>
+                                <font>Font_Info</font>
                                 <label>$INFO[ListItem.Property(year)]</label>
                             </control>
                             <control type="image">
@@ -2282,15 +2282,15 @@
                                 <posy>54</posy>
                                 <width>170</width>
                                 <height>27</height>
+                                <aspectratio>keep</aspectratio>
                                 <texture fallback="stars/0.0.png">$INFO[ListItem.Property(rating),stars/,.png]</texture>
                                 <colordiffuse>dcffffff</colordiffuse>
-                                <aspectratio>keep</aspectratio>
                             </control>
                         </focusedlayout>
                         <itemlayout height="60" condition="Skin.HasSetting(slimlist)">
                             <control type="image">
-                                <height>60</height>
                                 <width>1142</width>
+                                <height>60</height>
                                 <texture>osd/osd_settings_buttonnf.png</texture>
                             </control>
                             <control type="label">
@@ -2305,8 +2305,8 @@
                                 <posx>1029</posx>
                                 <width>123</width>
                                 <height>60</height>
-                                <font>Font_Reg19</font>
                                 <align>center</align>
+                                <font>Font_Reg19</font>
                                 <textcolor>grey2</textcolor>
                                 <label>$INFO[ListItem.Property(year)]</label>
                             </control>
@@ -2321,8 +2321,8 @@
                         </itemlayout>
                         <focusedlayout height="60" condition="Skin.HasSetting(slimlist)">
                             <control type="image">
-                                <height>60</height>
                                 <width>1142</width>
+                                <height>60</height>
                                 <texture>osd/osd_settings_buttonnf.png</texture>
                             </control>
                             <control type="image">
@@ -2344,8 +2344,8 @@
                                 <posx>1029</posx>
                                 <width>123</width>
                                 <height>60</height>
-                                <font>Font_Reg19</font>
                                 <align>center</align>
+                                <font>Font_Reg19</font>
                                 <label>$INFO[ListItem.Property(year)]</label>
                             </control>
                             <control type="image">
@@ -2359,10 +2359,10 @@
                     </control>
                     <control type="scrollbar" id="2201">
                         <posx>1195</posx>
-                        <include>Animation_VerticalScrollBar</include>
                         <posy>158</posy>
                         <width>46</width>
                         <height>780</height>
+                        <include>Animation_VerticalScrollBar</include>
                         <onup>2201</onup>
                         <ondown>2201</ondown>
                         <onleft>58</onleft>
@@ -2379,8 +2379,8 @@
                         <width>525</width>
                         <height>780</height>
                         <aspectratio aligny="bottom">keep</aspectratio>
-                        <fadetime>IconCrossfadeTime2</fadetime>
                         <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <fadetime>IconCrossfadeTime2</fadetime>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -2389,8 +2389,8 @@
                         <width>510</width>
                         <height>765</height>
                         <aspectratio aligny="top">keep</aspectratio>
-                        <fadetime>IconCrossfadeTime2</fadetime>
                         <texture diffuse="thumbs/diffuse_mirror3.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
+                        <fadetime>IconCrossfadeTime2</fadetime>
                     </control>
                 </control>
             </control>
@@ -2401,14 +2401,14 @@
                     <control type="image">
                         <posx>120</posx>
                         <posy>987</posy>
-                        <include>AudioFlagsVars</include>
                         <texture>$INFO[ListItem.Property(publisher),special://skin/extras/games/studios/,.png]</texture>
+                        <include>AudioFlagsVars</include>
                     </control>
                     <control type="image">
                         <posx>1665</posx>
                         <posy>987</posy>
-                        <include>AudioFlagsVars</include>
                         <texture>$INFO[ListItem.Property(console),special://skin/extras/games/console/,.png]</texture>
+                        <include>AudioFlagsVars</include>
                     </control>
                 </control>
                 <control type="label">
@@ -2417,8 +2417,8 @@
                     <width>900</width>
                     <align>center</align>
                     <font>Font_Info_Caps</font>
-                    <textcolor>floor</textcolor>
                     <shadowcolor>floorshadow</shadowcolor>
+                    <textcolor>floor</textcolor>
                     <label>$INFO[ListItem.Property(genre)]</label>
                     <visible>Control.IsVisible(51) | Control.IsVisible(53)</visible>
                 </control>
@@ -2428,10 +2428,10 @@
                     <width>900</width>
                     <align>center</align>
                     <font>Font_ShowcaseMainLabel2_Caps</font>
+                    <shadowcolor>floorshadow</shadowcolor>
+                    <textcolor>floor</textcolor>
                     <scroll>true</scroll>
                     <scrollspeed>30</scrollspeed>
-                    <textcolor>floor</textcolor>
-                    <shadowcolor>floorshadow</shadowcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
             </control>
@@ -2498,8 +2498,8 @@
                                 <posy>538</posy>
                                 <width>25</width>
                                 <height>25</height>
-                                <animation effect="rotate" end="-180" center="auto" delay="240" time="640" condition="[ControlGroup(9000).HasFocus | ControlGroup(100).HasFocus]">Conditional</animation>
                                 <texture>common/arrowleft.png</texture>
+                                <animation effect="rotate" end="-180" center="auto" delay="240" time="640" condition="[ControlGroup(9000).HasFocus | ControlGroup(100).HasFocus]">Conditional</animation>
                                 <colordiffuse>$VAR[TitleColorVar]</colordiffuse>
                                 <include>Animation_VisibleChange400</include>
                                 <visible>!ControlGroup(9000).HasFocus</visible>
@@ -2532,13 +2532,13 @@
                     <animation effect="slide" end="0,0" time="320" tween="quadratic" condition="ControlGroup(100).HasFocus">Conditional</animation>
                     <animation effect="slide" end="0,-300" time="320" tween="quadratic" condition="!ControlGroup(100).HasFocus">Conditional</animation>
                     <control type="image">
-                        <animation effect="zoom" start="0,0,1920,1" end="0,0,1920,270" time="240" tween="quadratic" condition="ControlGroup(100).HasFocus">Conditional</animation>
                         <description>filter background image</description>
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>1080</width>
                         <height>240</height>
                         <texture flipy="true">osd/osd_back.png</texture>
+                        <animation effect="zoom" start="0,0,1920,1" end="0,0,1920,270" time="240" tween="quadratic" condition="ControlGroup(100).HasFocus">Conditional</animation>
                         <colordiffuse>FFFFFFFF</colordiffuse>
                     </control>
                     <control type="radiobutton" id="1000">
@@ -2546,13 +2546,13 @@
                         <posy>75</posy>
                         <width>300</width>
                         <height>45</height>
-                        <font>Font_Reg18</font>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <label>$ADDON[script.games.rom.collection.browser 50004]</label>
-                        <textcolor>white2</textcolor>
-                        <focusedcolor>white2</focusedcolor>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                         <texturenofocus>button-nofocus.png</texturenofocus>
+                        <font>Font_Reg18</font>
+                        <textcolor>white2</textcolor>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <label>$ADDON[script.games.rom.collection.browser 50004]</label>
+                        <focusedcolor>white2</focusedcolor>
                         <onleft>900</onleft>
                         <onright>500</onright>
                         <onup>50</onup>
@@ -2564,15 +2564,15 @@
                         <posy>123</posy>
                         <width>300</width>
                         <height>45</height>
-                        <visible>true</visible>
-                        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>button-nofocus.png</texturenofocus>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <label>$ADDON[script.games.rom.collection.browser 50005]</label>
-                        <textcolor>white2</textcolor>
+                        <textoffsetx>10</textoffsetx>
                         <align>left</align>
                         <aligny>center</aligny>
-                        <textoffsetx>10</textoffsetx>
+                        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                        <texturenofocus>button-nofocus.png</texturenofocus>
+                        <textcolor>white2</textcolor>
+                        <visible>true</visible>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <label>$ADDON[script.games.rom.collection.browser 50005]</label>
                         <onup>1000</onup>
                         <ondown>2</ondown>
                         <onleft>900</onleft>
@@ -2584,15 +2584,15 @@
                         <posy>171</posy>
                         <width>300</width>
                         <height>45</height>
-                        <visible>true</visible>
-                        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>button-nofocus.png</texturenofocus>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <label>$ADDON[script.games.rom.collection.browser 50005]</label>
-                        <textcolor>white2</textcolor>
+                        <textoffsetx>10</textoffsetx>
                         <align>left</align>
                         <aligny>center</aligny>
-                        <textoffsetx>10</textoffsetx>
+                        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                        <texturenofocus>button-nofocus.png</texturenofocus>
+                        <textcolor>white2</textcolor>
+                        <visible>true</visible>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <label>$ADDON[script.games.rom.collection.browser 50005]</label>
                         <onup>1100</onup>
                         <ondown>50</ondown>
                         <onleft>900</onleft>
@@ -2632,10 +2632,10 @@
                             <scrolltime>200</scrolltime>
                             <itemlayout height="48">
                                 <control type="image">
-                                    <width>300</width>
-                                    <height>45</height>
                                     <posx>0</posx>
                                     <posy>0</posy>
+                                    <width>300</width>
+                                    <height>45</height>
                                     <texture border="5">button-nofocus.png</texture>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 </control>
@@ -2644,43 +2644,43 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="48">
                                 <control type="image">
-                                    <width>300</width>
-                                    <height>45</height>
                                     <posx>0</posx>
                                     <posy>0</posy>
+                                    <width>300</width>
+                                    <height>45</height>
+                                    <texture border="5">views/tripanel/listselect_fo.png</texture>
                                     <visible>Control.HasFocus(500)</visible>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <texture border="5">views/tripanel/listselect_fo.png</texture>
                                 </control>
                                 <control type="image">
-                                    <width>300</width>
-                                    <height>45</height>
                                     <posx>0</posx>
                                     <posy>0</posy>
+                                    <width>300</width>
+                                    <height>45</height>
+                                    <texture border="10">views/addonwall_select.png</texture>
                                     <visible>!Control.HasFocus(500)</visible>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <texture border="10">views/addonwall_select.png</texture>
                                 </control>
                                 <control type="label">
                                     <posx>8</posx>
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </focusedlayout>
@@ -2709,55 +2709,55 @@
                             <scrolltime>200</scrolltime>
                             <itemlayout height="48">
                                 <control type="image">
+                                    <posx>0</posx>
+                                    <posy>0</posy>
                                     <width>300</width>
                                     <height>45</height>
-                                    <posx>0</posx>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <posy>0</posy>
                                     <texture border="5">button-nofocus.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 </control>
                                 <control type="label">
                                     <posx>8</posx>
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="48">
                                 <control type="image">
-                                    <width>300</width>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <height>45</height>
                                     <posx>0</posx>
                                     <posy>0</posy>
-                                    <visible>Control.HasFocus(600)</visible>
+                                    <width>300</width>
+                                    <height>45</height>
                                     <texture border="5">views/tripanel/listselect_fo.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <visible>Control.HasFocus(600)</visible>
                                 </control>
                                 <control type="image">
+                                    <posx>0</posx>
+                                    <posy>0</posy>
                                     <width>300</width>
                                     <height>45</height>
-                                    <posx>0</posx>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <posy>0</posy>
-                                    <visible>!Control.HasFocus(600)</visible>
                                     <texture border="10">views/addonwall_select.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <visible>!Control.HasFocus(600)</visible>
                                 </control>
                                 <control type="label">
                                     <posx>8</posx>
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </focusedlayout>
@@ -2786,55 +2786,55 @@
                             <scrolltime>200</scrolltime>
                             <itemlayout height="48">
                                 <control type="image">
-                                    <width>300</width>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <height>45</height>
                                     <posx>0</posx>
                                     <posy>0</posy>
+                                    <width>300</width>
+                                    <height>45</height>
                                     <texture border="5">button-nofocus.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 </control>
                                 <control type="label">
                                     <posx>8</posx>
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="48">
                                 <control type="image">
-                                    <width>300</width>
-                                    <height>45</height>
                                     <posx>0</posx>
                                     <posy>0</posy>
+                                    <width>300</width>
+                                    <height>45</height>
+                                    <texture border="5">views/tripanel/listselect_fo.png</texture>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                     <visible>Control.HasFocus(700)</visible>
-                                    <texture border="5">views/tripanel/listselect_fo.png</texture>
                                 </control>
                                 <control type="image">
-                                    <width>300</width>
-                                    <height>45</height>
                                     <posx>0</posx>
                                     <posy>0</posy>
+                                    <width>300</width>
+                                    <height>45</height>
+                                    <texture border="10">views/addonwall_select.png</texture>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                     <visible>!Control.HasFocus(700)</visible>
-                                    <texture border="10">views/addonwall_select.png</texture>
                                 </control>
                                 <control type="label">
                                     <posx>8</posx>
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </focusedlayout>
@@ -2863,55 +2863,55 @@
                             <scrolltime>200</scrolltime>
                             <itemlayout height="48">
                                 <control type="image">
-                                    <width>300</width>
-                                    <height>45</height>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                     <posx>0</posx>
                                     <posy>0</posy>
+                                    <width>300</width>
+                                    <height>45</height>
                                     <texture border="5">button-nofocus.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 </control>
                                 <control type="label">
                                     <posx>8</posx>
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="48">
                                 <control type="image">
+                                    <posx>0</posx>
+                                    <posy>0</posy>
                                     <width>300</width>
                                     <height>45</height>
-                                    <posx>0</posx>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <posy>0</posy>
-                                    <visible>Control.HasFocus(800)</visible>
                                     <texture border="5">views/tripanel/listselect_fo.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <visible>Control.HasFocus(800)</visible>
                                 </control>
                                 <control type="image">
+                                    <posx>0</posx>
+                                    <posy>0</posy>
                                     <width>300</width>
                                     <height>45</height>
-                                    <posx>0</posx>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <posy>0</posy>
-                                    <visible>!Control.HasFocus(800)</visible>
                                     <texture border="10">views/addonwall_select.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <visible>!Control.HasFocus(800)</visible>
                                 </control>
                                 <control type="label">
                                     <posx>8</posx>
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </focusedlayout>
@@ -2940,55 +2940,55 @@
                             <scrolltime>200</scrolltime>
                             <itemlayout height="48">
                                 <control type="image">
-                                    <width>90</width>
-                                    <height>45</height>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                     <posx>0</posx>
                                     <posy>0</posy>
+                                    <width>90</width>
+                                    <height>45</height>
                                     <texture border="5">button-nofocus.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 </control>
                                 <control type="label">
                                     <posx>0</posx>
                                     <posy>0</posy>
                                     <width>75</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </itemlayout>
                             <focusedlayout height="48">
                                 <control type="image">
+                                    <posx>0</posx>
+                                    <posy>0</posy>
                                     <width>90</width>
                                     <height>45</height>
-                                    <posx>0</posx>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <posy>0</posy>
-                                    <visible>Control.HasFocus(900)</visible>
                                     <texture border="5">views/tripanel/listselect_fo.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <visible>Control.HasFocus(900)</visible>
                                 </control>
                                 <control type="image">
+                                    <posx>0</posx>
+                                    <posy>0</posy>
                                     <width>90</width>
                                     <height>45</height>
-                                    <posx>0</posx>
-                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <posy>0</posy>
-                                    <visible>!Control.HasFocus(900)</visible>
                                     <texture border="10">views/addonwall_select.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <visible>!Control.HasFocus(900)</visible>
                                 </control>
                                 <control type="label">
                                     <posx>0</posx>
                                     <posy>0</posy>
                                     <width>75</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <align>left</align>
                                     <aligny>center</aligny>
+                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-                                    <align>left</align>
                                     <info>ListItem.Label</info>
                                 </control>
                             </focusedlayout>
@@ -3006,10 +3006,10 @@
             <posy>560</posy>
             <width>680</width>
             <height>10</height>
-            <scroll>true</scroll>
-            <textcolor>white6</textcolor>
-            <label></label>
             <font>font10</font>
+            <textcolor>white6</textcolor>
+            <scroll>true</scroll>
+            <label></label>
         </control>
         <control type="button">
             <include>HiddenObject</include>

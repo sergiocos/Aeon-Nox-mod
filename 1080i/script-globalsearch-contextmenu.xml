@@ -3,9 +3,9 @@
     <defaultcontrol>1001</defaultcontrol>
     <include>Animation_DialogZoom</include>
     <coordinates>
-        <system>1</system>
         <posx>269</posx>
         <posy>200</posy>
+        <system>1</system>
     </coordinates>
     <controls>
         <control type="image">
@@ -39,15 +39,15 @@
             <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
         </control>
         <control type="button" id="1001">
-            <height>58</height>
             <width>462</width>
+            <height>58</height>
+            <textoffsety>12</textoffsety>
+            <align>center</align>
+            <texturefocus>dialogs/shutdown_focus.png</texturefocus>
+            <texturenofocus>dialogs/context_nofocus.png</texturenofocus>
+            <font>Font_Reg19</font>
             <textcolor>context</textcolor>
             <focusedcolor>white2</focusedcolor>
-            <texturenofocus>dialogs/context_nofocus.png</texturenofocus>
-            <texturefocus>dialogs/shutdown_focus.png</texturefocus>
-            <align>center</align>
-            <font>Font_Reg19</font>
-            <textoffsety>12</textoffsety>
             <onleft>1001</onleft>
             <onright>1001</onright>
             <onup>1003</onup>
@@ -55,15 +55,15 @@
             <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
         </control>
         <control type="button" id="1002">
-            <height>58</height>
             <width>462</width>
+            <height>58</height>
+            <textoffsety>12</textoffsety>
+            <align>center</align>
+            <texturefocus>dialogs/shutdown_focus.png</texturefocus>
+            <texturenofocus>dialogs/context_nofocus.png</texturenofocus>
+            <font>Font_Reg19</font>
             <textcolor>context</textcolor>
             <focusedcolor>white2</focusedcolor>
-            <texturenofocus>dialogs/context_nofocus.png</texturenofocus>
-            <texturefocus>dialogs/shutdown_focus.png</texturefocus>
-            <align>center</align>
-            <font>Font_Reg19</font>
-            <textoffsety>12</textoffsety>
             <onleft>1002</onleft>
             <onright>1002</onright>
             <onup>1001</onup>
@@ -71,15 +71,15 @@
             <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
         </control>
         <control type="button" id="1003">
-            <height>58</height>
             <width>462</width>
+            <height>58</height>
+            <textoffsety>12</textoffsety>
+            <align>center</align>
+            <texturefocus>dialogs/shutdown_focus.png</texturefocus>
+            <texturenofocus>dialogs/context_nofocus.png</texturenofocus>
+            <font>Font_Reg19</font>
             <textcolor>context</textcolor>
             <focusedcolor>white2</focusedcolor>
-            <texturenofocus>dialogs/context_nofocus.png</texturenofocus>
-            <texturefocus>dialogs/shutdown_focus.png</texturefocus>
-            <align>center</align>
-            <font>Font_Reg19</font>
-            <textoffsety>12</textoffsety>
             <onleft>1003</onleft>
             <onright>1003</onright>
             <onup>1002</onup>

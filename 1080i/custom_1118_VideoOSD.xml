@@ -2,9 +2,9 @@
 <window type="dialog" id="1118">
     <defaultcontrol always="true">450</defaultcontrol>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
@@ -38,8 +38,8 @@
             <posy>205</posy>
             <width>600</width>
             <height>60</height>
-            <textcolor>$VAR[TitleColorVar]</textcolor>
             <font>Font_Bold22</font>
+            <textcolor>$VAR[TitleColorVar]</textcolor>
             <label>$LOCALIZE[31619]</label>
         </control>
         <control type="grouplist" id="450">

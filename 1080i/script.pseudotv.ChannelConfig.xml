@@ -3,9 +3,9 @@
     <allowoverlay>no</allowoverlay>
     <zorder>1</zorder>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <controls>
         <control type="group">
@@ -15,17 +15,17 @@
                 <posy>23</posy>
                 <width>1233</width>
                 <height>673</height>
+                <texture>settings/settings_panelback_shadow.png</texture>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                <texture>settings/settings_panelback_shadow.png</texture>
             </control>
             <control type="image">
                 <posx>23</posx>
                 <posy>23</posy>
                 <width>1233</width>
                 <height>673</height>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <texture>settings/settings_panelback.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="grouplist" id="9">
                 <posx>42</posx>
@@ -40,11 +40,11 @@
                 <control type="button" id="112">
                     <width>216</width>
                     <height>64</height>
+                    <textoffsetx>12</textoffsetx>
+                    <textoffsety>12</textoffsety>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <font>Font_Bold20_Caps</font>
-                    <textoffsety>12</textoffsety>
-                    <textoffsetx>12</textoffsetx>
                     <label>186</label>
                     <onclick condition="!Control.isVisible(106)">PreviousMenu</onclick>
                     <pulseonselect>no</pulseonselect>
@@ -52,11 +52,11 @@
                 <control type="button" id="113">
                     <width>216</width>
                     <height>64</height>
+                    <textoffsetx>12</textoffsetx>
+                    <textoffsety>12</textoffsety>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <font>Font_Bold20_Caps</font>
-                    <textoffsety>12</textoffsety>
-                    <textoffsetx>12</textoffsetx>
                     <onclick condition="!Control.isVisible(106)">PreviousMenu</onclick>
                     <label>222</label>
                     <pulseonselect>no</pulseonselect>
@@ -66,10 +66,10 @@
                 <posx>239</posx>
                 <posy>80</posy>
                 <width>994</width>
-                <font>Font_ShowcaseMainLabel2</font>
-                <label>PseudoTV - Channel configuration$INFO[Control.GetLabel(104), - ]</label>
                 <align>center</align>
+                <font>Font_ShowcaseMainLabel2</font>
                 <shadowcolor>black</shadowcolor>
+                <label>PseudoTV - Channel configuration$INFO[Control.GetLabel(104), - ]</label>
             </control>
             <control type="group" id="105">
                 <width>600</width>
@@ -118,8 +118,8 @@
                             <posx>916</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                             <textcolor>grey2</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
@@ -142,22 +142,22 @@
                             <posx>916</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                             <info>ListItem.Label2</info>
                         </control>
                     </focusedlayout>
                 </control>
                 <control type="scrollbar" id="103">
+                    <posx>1222</posx>
+                    <posy>100</posy>
+                    <width>31</width>
+                    <height>533</height>
                     <include>Animation_VerticalScrollBar</include>
                     <onup>103</onup>
                     <ondown>103</ondown>
                     <onleft>102</onleft>
                     <onright>9</onright>
-                    <posx>1222</posx>
-                    <posy>100</posy>
-                    <width>31</width>
-                    <height>533</height>
                     <visible>Control.IsVisible(102)</visible>
                 </control>
             </control>
@@ -189,8 +189,8 @@
                         <posx>820</posx>
                         <width>786</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
                         <align>right</align>
+                        <font>Font_Reg20</font>
                     </control>
                 </control>
                 <control type="group">
@@ -212,18 +212,18 @@
                         <posx>820</posx>
                         <width>786</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
                         <align>right</align>
+                        <font>Font_Reg20</font>
                         <textcolor>grey2</textcolor>
                         <label>$INFO[Control.GetLabel(109)]</label>
                     </control>
                 </control>
                 <control type="button" id="110">
-                    <textoffsetx>20</textoffsetx>
                     <posx>840</posx>
                     <posy>-6</posy>
                     <width>40</width>
                     <height>65</height>
+                    <textoffsetx>20</textoffsetx>
                     <texturefocus>settings/spin-down-focus.png</texturefocus>
                     <texturenofocus>settings/spin-down.png</texturenofocus>
                     <include>Default_SettingButton</include>
@@ -233,11 +233,11 @@
                     <ondown>114</ondown>
                 </control>
                 <control type="button" id="111">
-                    <textoffsetx>20</textoffsetx>
                     <posx>880</posx>
                     <posy>-6</posy>
                     <width>40</width>
                     <height>65</height>
+                    <textoffsetx>20</textoffsetx>
                     <texturefocus>settings/spin-up-focus.png</texturefocus>
                     <texturenofocus>settings/spin-up.png</texturenofocus>
                     <include>Default_SettingButton</include>
@@ -247,17 +247,17 @@
                     <ondown>114</ondown>
                 </control>
                 <control type="button" id="114">
-                    <textoffsetx>20</textoffsetx>
                     <posy>49</posy>
-                    <label>Advanced Channel Rules</label>
                     <width>980</width>
                     <height>50</height>
-                    <font>Font_Reg20</font>
+                    <textoffsetx>20</textoffsetx>
+                    <textoffsetx>70</textoffsetx>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <font>Font_Reg20</font>
                     <textcolor>grey2</textcolor>
-                    <textoffsetx>70</textoffsetx>
+                    <label>Advanced Channel Rules</label>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <onup>110</onup>
                     <ondown>107</ondown>
                     <onleft>9</onleft>
@@ -323,8 +323,8 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                         </control>
                     </control>
                     <control type="group">
@@ -346,18 +346,18 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                             <textcolor>grey2</textcolor>
                             <label>$INFO[Control.GetLabel(142)]</label>
                         </control>
                     </control>
                     <control type="button" id="140">
-                        <textoffsetx>20</textoffsetx>
                         <posx>840</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-down-focus.png</texturefocus>
                         <texturenofocus>settings/spin-down.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -367,11 +367,11 @@
                         <ondown>110</ondown>
                     </control>
                     <control type="button" id="141">
-                        <textoffsetx>20</textoffsetx>
                         <posx>880</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-up-focus.png</texturefocus>
                         <texturenofocus>settings/spin-up.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -406,8 +406,8 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                         </control>
                     </control>
                     <control type="group">
@@ -429,18 +429,18 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                             <textcolor>grey2</textcolor>
                             <label>$INFO[Control.GetLabel(152)]</label>
                         </control>
                     </control>
                     <control type="button" id="150">
-                        <textoffsetx>20</textoffsetx>
                         <posx>840</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-down-focus.png</texturefocus>
                         <texturenofocus>settings/spin-down.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -450,11 +450,11 @@
                         <ondown>114</ondown>
                     </control>
                     <control type="button" id="151">
-                        <textoffsetx>20</textoffsetx>
                         <posx>880</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-up-focus.png</texturefocus>
                         <texturenofocus>settings/spin-up.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -489,8 +489,8 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                         </control>
                     </control>
                     <control type="group">
@@ -512,18 +512,18 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                             <textcolor>grey2</textcolor>
                             <label>$INFO[Control.GetLabel(162)]</label>
                         </control>
                     </control>
                     <control type="button" id="160">
-                        <textoffsetx>20</textoffsetx>
                         <posx>840</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-down-focus.png</texturefocus>
                         <texturenofocus>settings/spin-down.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -533,11 +533,11 @@
                         <ondown>114</ondown>
                     </control>
                     <control type="button" id="161">
-                        <textoffsetx>20</textoffsetx>
                         <posx>880</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-up-focus.png</texturefocus>
                         <texturenofocus>settings/spin-up.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -572,8 +572,8 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                         </control>
                     </control>
                     <control type="group">
@@ -595,18 +595,18 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                             <textcolor>grey2</textcolor>
                             <label>$INFO[Control.GetLabel(172)]</label>
                         </control>
                     </control>
                     <control type="button" id="170">
-                        <textoffsetx>20</textoffsetx>
                         <posx>840</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-down-focus.png</texturefocus>
                         <texturenofocus>settings/spin-down.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -616,11 +616,11 @@
                         <ondown>114</ondown>
                     </control>
                     <control type="button" id="171">
-                        <textoffsetx>20</textoffsetx>
                         <posx>880</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-up-focus.png</texturefocus>
                         <texturenofocus>settings/spin-up.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -655,8 +655,8 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                         </control>
                     </control>
                     <control type="group">
@@ -678,18 +678,18 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                             <textcolor>grey2</textcolor>
                             <label>$INFO[Control.GetLabel(182)]</label>
                         </control>
                     </control>
                     <control type="button" id="180">
-                        <textoffsetx>20</textoffsetx>
                         <posx>840</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-down-focus.png</texturefocus>
                         <texturenofocus>settings/spin-down.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -699,11 +699,11 @@
                         <ondown>114</ondown>
                     </control>
                     <control type="button" id="181">
-                        <textoffsetx>20</textoffsetx>
                         <posx>880</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-up-focus.png</texturefocus>
                         <texturenofocus>settings/spin-up.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -738,8 +738,8 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                         </control>
                     </control>
                     <control type="group">
@@ -761,18 +761,18 @@
                             <posx>820</posx>
                             <width>786</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
                             <align>right</align>
+                            <font>Font_Reg20</font>
                             <textcolor>grey2</textcolor>
                             <label>$INFO[Control.GetLabel(192)]</label>
                         </control>
                     </control>
                     <control type="button" id="190">
-                        <textoffsetx>20</textoffsetx>
                         <posx>840</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-down-focus.png</texturefocus>
                         <texturenofocus>settings/spin-down.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -782,11 +782,11 @@
                         <ondown>194</ondown>
                     </control>
                     <control type="button" id="191">
-                        <textoffsetx>20</textoffsetx>
                         <posx>880</posx>
                         <posy>-6</posy>
                         <width>40</width>
                         <height>65</height>
+                        <textoffsetx>20</textoffsetx>
                         <texturefocus>settings/spin-up-focus.png</texturefocus>
                         <texturenofocus>settings/spin-up.png</texturenofocus>
                         <include>Default_SettingButton</include>
@@ -796,8 +796,8 @@
                         <ondown>194</ondown>
                     </control>
                     <control type="radiobutton" id="194">
-                        <textoffsetx>20</textoffsetx>
                         <posy>49</posy>
+                        <textoffsetx>20</textoffsetx>
                         <label>Show in Order</label>
                         <include>Default_SettingRadioButton</include>
                         <onup>191</onup>

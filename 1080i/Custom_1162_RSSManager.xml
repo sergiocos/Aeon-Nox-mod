@@ -20,10 +20,10 @@
             <control type="image">
                 <posx>456</posx>
                 <posy>200</posy>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <width>1010</width>
                 <height>300</height>
                 <texture>osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="group">
                 <control type="grouplist" id="20">

@@ -4,9 +4,9 @@
     <onunload>ClearProperty(quicknavsetup,home)</onunload>
     <onunload>ClearProperty(viewtypeselect,home)</onunload>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <animation type="WindowClose">
         <effect type="slide" end="-460,0" time="320" easing="in" tween="cubic" />
@@ -16,9 +16,9 @@
     </animation>
     <controls>
         <control type="image">
+            <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
             <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-            <texture>common/bgcolor.png</texture>
             <visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
             <include>Animation_VisibleChange400</include>
             <animation effect="fade" end="100" time="560">WindowOpen</animation>
@@ -52,9 +52,9 @@
             </control>
         </control>
         <control type="list" id="9011">
-            <visible>!IsEmpty(Window(home).Property(viewtypeselect))</visible>
             <width>450</width>
             <height>1080</height>
+            <visible>!IsEmpty(Window(home).Property(viewtypeselect))</visible>
             <orientation>vertical</orientation>
             <onleft>Dialog.CLose(1121)</onleft>
             <onup>9011</onup>
@@ -68,8 +68,8 @@
                 </control>
                 <control type="label">
                     <posx>15</posx>
-                    <height>60</height>
                     <width>219</width>
+                    <height>60</height>
                     <font>Font_Reg19</font>
                     <textcolor>grey2</textcolor>
                     <info>ListItem.Label</info>
@@ -77,8 +77,8 @@
                 </control>
                 <control type="label">
                     <posx>15</posx>
-                    <height>60</height>
                     <width>219</width>
+                    <height>60</height>
                     <font>Font_Reg19</font>
                     <info>ListItem.Label</info>
                     <visible>StringCompare(ListItem.Label,Container.Viewmode)</visible>
@@ -94,16 +94,16 @@
                 </control>
                 <control type="label">
                     <posx>15</posx>
-                    <height>60</height>
                     <width>219</width>
+                    <height>60</height>
                     <font>Font_Reg19</font>
                     <info>ListItem.Label</info>
                     <visible>!StringCompare(ListItem.Label,Container.Viewmode)</visible>
                 </control>
                 <control type="label">
                     <posx>15</posx>
-                    <height>60</height>
                     <width>219</width>
+                    <height>60</height>
                     <font>Font_Reg19</font>
                     <info>ListItem.Label</info>
                     <visible>StringCompare(ListItem.Label,Container.Viewmode)</visible>
@@ -236,10 +236,10 @@
             <visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
         </control>
         <control type="list" id="9011">
-            <visible>IsEmpty(Window(home).Property(viewtypeselect))</visible>
-            <visible>!Window.IsVisible(script-globalsearch-main.xml)</visible>
             <width>450</width>
             <height>1080</height>
+            <visible>IsEmpty(Window(home).Property(viewtypeselect))</visible>
+            <visible>!Window.IsVisible(script-globalsearch-main.xml)</visible>
             <orientation>vertical</orientation>
             <onleft>Dialog.CLose(1121)</onleft>
             <onup>9011</onup>
@@ -253,7 +253,7 @@
                 </control>
                 <control type="image">
                     <posx>72</posx>
-                    <posy>1</posy>
+                    <posy>5</posy>
                     <width>75</width>
                     <height>75</height>
                     <aspectratio align="center">keep</aspectratio>
@@ -262,11 +262,11 @@
                 </control>
                 <control type="label">
                     <posx>110</posx>
-                    <posy>57</posy>
-                    <height>60</height>
+                    <posy>53</posy>
                     <width>219</width>
+                    <height>60</height>
                     <align>center</align>
-                    <font>Font_Reg17_Caps</font>
+                    <font>Font_Reg15_Caps</font>
                     <textcolor>white3</textcolor>
                     <info>ListItem.Label</info>
                 </control>
@@ -287,7 +287,7 @@
                 </control>
                 <control type="image">
                     <posx>72</posx>
-                    <posy>1</posy>
+                    <posy>5</posy>
                     <width>75</width>
                     <height>75</height>
                     <aspectratio align="center">keep</aspectratio>
@@ -296,11 +296,11 @@
                 </control>
                 <control type="label">
                     <posx>110</posx>
-                    <posy>57</posy>
-                    <height>60</height>
+                    <posy>53</posy>
                     <width>219</width>
+                    <height>60</height>
                     <align>center</align>
-                    <font>Font_Reg17_Caps</font>
+                    <font>Font_Reg15_Caps</font>
                     <info>ListItem.Label</info>
                 </control>
             </focusedlayout>
@@ -310,27 +310,123 @@
         </control>
         <control type="button" id="9012">
             <posy>1040</posy>
-            <width>219</width>
+            <width>60</width>
             <height>40</height>
-            <label>$VAR[QuickNavButtonLabelVar]</label>
+            <align>center</align>
             <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
             <texturenofocus border="8">-</texturenofocus>
+            <textcolor>grey2</textcolor>
+            <label>-</label>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
             <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
             <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881])</onclick>
             <onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
-            <textcolor>grey2</textcolor>
-            <font>Font_Reg15</font>
-            <align>center</align>
-            <label>$LOCALIZE[31095]</label>
             <onleft>Dialog.Close(1121)</onleft>
+            <onright>9013</onright>
+            <onup>SetFocus(9011,20)</onup>
+            <onup>9011</onup>
+            <ondown>SetFocus(9011,0)</ondown>
+            <ondown>9011</ondown>
+            <visible>IsEmpty(Window(home).Property(viewtypeselect)) + !Skin.HasSetting(kioskmode)</visible>
+        </control>
+        <control type="image">
+            <posx>10</posx>
+            <posy>1043</posy>
+            <width>42</width>
+            <height>42</height>
+            <texture>$VAR[QuickConfigIconVar]</texture>
+            <animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9012)">Conditional</animation>
+            <visible>Control.IsVisible(9012)</visible>
+        </control>
+        <control type="button" id="9013">
+            <posx>65</posx>
+            <posy>1040</posy>
+            <width>50</width>
+            <height>40</height>
+            <align>center</align>
+            <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+            <texturenofocus border="8">-</texturenofocus>
+            <textcolor>grey2</textcolor>
+            <label>-</label>
+            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+            <onclick>Action(Close)</onclick>
+            <onclick>Fullscreen</onclick>
+            <onleft>9012</onleft>
+            <onright>9014</onright>
+            <onup>SetFocus(9011,20)</onup>
+            <onup>9011</onup>
+            <ondown>SetFocus(9011,0)</ondown>
+            <ondown>9011</ondown>
+            <visible>IsEmpty(Window(home).Property(viewtypeselect)) + Player.HasMedia</visible>
+        </control>
+        <control type="image">
+            <posx>65</posx>
+            <posy>1043</posy>
+            <width>42</width>
+            <height>42</height>
+            <texture>special://skin/extras/BigIcons/Fullscreen2.png</texture>
+            <animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9013)">Conditional</animation>
+            <visible>Control.IsVisible(9013)</visible>
+        </control>
+        <control type="button" id="9014">
+            <posx>110</posx>
+            <posy>1040</posy>
+            <width>50</width>
+            <height>40</height>
+            <align>center</align>
+            <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+            <texturenofocus border="8">-</texturenofocus>
+            <textcolor>grey2</textcolor>
+            <label>-</label>
+            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+            <onclick>Action(Close)</onclick>
+            <onclick>ActivateWindow(musicplaylist)</onclick>
+            <onleft>9013</onleft>
+            <onright>9015</onright>
+            <onup>SetFocus(9011,20)</onup>
+            <onup>9011</onup>
+            <ondown>SetFocus(9011,0)</ondown>
+            <ondown>9011</ondown>
+            <visible>IsEmpty(Window(home).Property(viewtypeselect)) + Player.HasAudio + !Window.IsActive(musicplaylist)</visible>
+        </control>
+        <control type="image">
+            <posx>115</posx>
+            <posy>1043</posy>
+            <width>42</width>
+            <height>42</height>
+            <texture>special://skin/extras/BigIcons/Format.png</texture>
+            <animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9014)">Conditional</animation>
+            <visible>Control.IsVisible(9014)</visible>
+        </control>
+        <control type="button" id="9015">
+            <posx>160</posx>
+            <posy>1040</posy>
+            <width>60</width>
+            <height>40</height>
+            <align>center</align>
+            <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+            <texturenofocus border="8">-</texturenofocus>
+            <textcolor>grey2</textcolor>
+            <label>-</label>
+            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+            <onclick>Action(Close)</onclick>
+            <onclick>PlayDVD()</onclick>
+            <onleft>9014</onleft>
             <onright>Dialog.Close(1121)</onright>
             <onup>SetFocus(9011,20)</onup>
             <onup>9011</onup>
             <ondown>SetFocus(9011,0)</ondown>
             <ondown>9011</ondown>
-            <visible>IsEmpty(Window(home).Property(viewtypeselect))</visible>
-            <visible>!Skin.HasSetting(kioskmode)</visible>
+            <visible>IsEmpty(Window(home).Property(viewtypeselect)) + System.HasMediadvd</visible>
+        </control>
+        <control type="image">
+            <posx>165</posx>
+            <posy>1043</posy>
+            <width>42</width>
+            <height>42</height>
+            <texture>special://skin/extras/BigIcons/CD-DVD.png</texture>
+            <animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9015)">Conditional</animation>
+            <visible>Control.IsVisible(9015)</visible>
         </control>
     </controls>
 </window>

@@ -4,9 +4,9 @@
     <onload>Dialog.Close(1154)</onload>
     <onunload condition="!Window.IsActive(1154) + Skin.HasSetting(musicvisinfomode)">ActivateWindow(1154)</onunload>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
@@ -28,8 +28,8 @@
                 <posy>180</posy>
                 <width>1208</width>
                 <height>780</height>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <texture>osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="image">
                 <posx>374</posx>
@@ -43,8 +43,8 @@
                 <posy>225</posy>
                 <width>600</width>
                 <height>60</height>
-                <textcolor>$VAR[TitleColorVar]</textcolor>
                 <font>Font_Bold19</font>
+                <textcolor>$VAR[TitleColorVar]</textcolor>
                 <label>$LOCALIZE[12006]</label>
             </control>
             <control type="grouplist" id="450">

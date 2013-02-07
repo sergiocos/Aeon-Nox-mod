@@ -66,6 +66,15 @@
         <value condition="Stringcompare(System.Time(mm),58)">FFC9C0BB</value>
         <value condition="Stringcompare(System.Time(mm),59)">FF99E0CC</value>
     </variable>
+    <variable name="NewsFeedVar">
+        <value condition="Stringcompare(System.Language,German)">http://pipes.yahoo.com/pipes/pipe.run?_id=5cc10db1ae3a763e4919c6de8fb58551&amp;_render=rss&amp;youtubeid=tagesschau</value>
+        <!--       <value condition="Stringcompare(System.Language,Australia)">http://pipes.yahoo.com/pipes/pipe.run?_id=5cc10db1ae3a763e4919c6de8fb58551&amp;_render=rss&amp;youtubeid=7NEWS</value> -->
+        <value>http://pipes.yahoo.com/pipes/pipe.run?_id=5cc10db1ae3a763e4919c6de8fb58551&amp;_render=rss&amp;youtubeid=Channel4News</value>
+    </variable>
+    <variable name="QuickConfigIconVar">
+        <value condition="!IsEmpty(Window(home).Property(quicknavsetup))">special://skin/extras/BigIcons/ButtonStop.png</value>
+        <value>special://skin/extras/BigIcons/Gears.png</value>
+    </variable>
     <variable name="DefaultAreaColorVar">
         <value condition="[Window.IsActive(fullscreeninfo) | Window.IsActive(fullscreenvideo) | Window.IsActive(videoosd) | Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)| Window.IsActive(videobookmarks)] + !IsEmpty(Skin.String(diffuse_videolibrary))">$INFO[Skin.String(diffuse_videolibrary)]</value>
         <value condition="[Window.IsActive(musiclibrary) | Window.IsActive(musicosd) | Window.IsActive(musicfiles) | Window.IsActive(visualisation)] + !IsEmpty(Skin.String(diffuse_music))">$INFO[Skin.String(diffuse_music)]</value>
@@ -100,26 +109,6 @@
         <value condition="[Window.IsActive(1128) | Window.IsActive(1138)] + !IsEmpty(Skin.String(diffuse_color))">$INFO[Skin.String(diffuse_color)]</value>
         <value condition="Substring(Skin.CurrentTheme,whit)">$VAR[WhiteAreaColorVar]</value>
         <value>$VAR[DefaultAreaColorVar]</value>
-    </variable>
-    <variable name="HomeDVDButtonColorVar">
-        <value condition="Control.HasFocus(2017)">$VAR[ColorDiffuseVar]</value>
-        <value>white3</value>
-    </variable>
-    <variable name="HomeWidgetButtonColorVar">
-        <value condition="Control.HasFocus(2016)">$VAR[ColorDiffuseVar]</value>
-        <value>white3</value>
-    </variable>
-    <variable name="HomeMusicInfoButtonColorVar">
-        <value condition="Control.HasFocus(2018)">$VAR[ColorDiffuseVar]</value>
-        <value>white3</value>
-    </variable>
-    <variable name="HomeFeaturedButtonColorVar">
-        <value condition="Control.HasFocus(2019)">$VAR[ColorDiffuseVar]</value>
-        <value>white3</value>
-    </variable>
-    <variable name="HomeNextAiredButtonColorVar">
-        <value condition="Control.HasFocus(2014)">$VAR[ColorDiffuseVar]</value>
-        <value>white3</value>
     </variable>
     <variable name="DefaultFontColorVar">
         <value condition="[Window.IsActive(fullscreeninfo) | Window.IsActive(fullscreenvideo) | Window.IsActive(videoosd) | Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)| Window.IsActive(videobookmarks)] + !IsEmpty(Skin.String(font_videolibrary))">$INFO[Skin.String(font_videolibrary)]</value>
@@ -759,6 +748,14 @@
         <value condition="Skin.HasSetting(mainmenuicons)">$LOCALIZE[536]</value>
         <value condition="Skin.HasSetting(biggergap)">$LOCALIZE[31861]</value>
         <value>$LOCALIZE[31083]</value>
+    </variable>
+    <variable name="MovieWallPathVar">
+        <value condition="Stringcompare(Control.GetLabel(4322),moviewall1)">$INFO[Skin.String(MovieWall_Folder_Path_1)]</value>
+        <value condition="Stringcompare(Control.GetLabel(4322),moviewall2)">$INFO[Skin.String(MovieWall_Folder_Path_2)]</value>
+        <value condition="Stringcompare(Control.GetLabel(4322),moviewall3)">$INFO[Skin.String(MovieWall_Folder_Path_3)]</value>
+        <value condition="Stringcompare(Control.GetLabel(4322),moviewall4)">$INFO[Skin.String(MovieWall_Folder_Path_4)]</value>
+        <value condition="Stringcompare(Control.GetLabel(4322),moviewall5)">$INFO[Skin.String(MovieWall_Folder_Path_5)]</value>
+        <value>-</value>
     </variable>
     <variable name="LibraryStatsVar">
         <value condition="Stringcompare(Control.GetLabel(4326),movies)">[COLOR grey]$LOCALIZE[31502]:[/COLOR] $INFO[Window(Home).Property(Movies.Count)][COLOR grey]  •  $LOCALIZE[16102]:[/COLOR] $INFO[Window(Home).Property(Movies.Watched)][COLOR grey]  •  $LOCALIZE[16101]:[/COLOR] $INFO[Window(Home).Property(Movies.UnWatched)]</value>

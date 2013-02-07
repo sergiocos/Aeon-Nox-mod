@@ -38,8 +38,8 @@
         </control>
         <control type="group">
             <posx>280</posx>
-            <include>Animation_OpenCloseZoom</include>
             <posy>-60</posy>
+            <include>Animation_OpenCloseZoom</include>
             <control type="image">
                 <posx>230</posx>
                 <posy>120</posy>
@@ -53,14 +53,14 @@
             <control type="image">
                 <posx>230</posx>
                 <posy>120</posy>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <width>940</width>
                 <height>780</height>
                 <texture border="20">osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="label">
-                <posy>180</posy>
                 <posx>100</posx>
+                <posy>180</posy>
                 <width>746</width>
                 <height>40</height>
                 <align>center</align>
@@ -68,8 +68,8 @@
                 <label>31716</label>
             </control>
             <control type="label">
-                <posy>180</posy>
                 <posx>550</posx>
+                <posy>180</posy>
                 <width>746</width>
                 <height>40</height>
                 <align>center</align>
@@ -91,8 +91,8 @@
                     <control type="image">
                         <width>450</width>
                         <height>60</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texture>button-nofocus.png</texture>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     </control>
                     <control type="label">
                         <width>450</width>
@@ -109,15 +109,15 @@
                         <control type="image">
                             <width>450</width>
                             <height>60</height>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="label">
                             <width>450</width>
                             <height>60</height>
                             <textoffsetx>10</textoffsetx>
-                            <scroll>true</scroll>
                             <font>Font_Reg19</font>
+                            <scroll>true</scroll>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </control>
@@ -126,8 +126,8 @@
                         <control type="image">
                             <width>450</width>
                             <height>60</height>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <texture>button-nofocus.png</texture>
+                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         </control>
                         <control type="label">
                             <width>450</width>

@@ -9,8 +9,8 @@
                 <animation effect="fade" start="100" end="0" time="640">Hidden</animation>
             </control>
             <control type="image">
-                <include>FullscreenDimensions</include>
                 <texture>views/list_filter.png</texture>
+                <include>FullscreenDimensions</include>
                 <include>Animation_WindowFade200</include>
                 <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
             </control>
@@ -43,10 +43,10 @@
                     <control type="image">
                         <posx>1214</posx>
                         <posy>754</posy>
-                        <animation effect="slide" end="500,0" time="0" condition="Skin.HasSetting(lowlistmusicwidelist)">Conditional</animation>
                         <width>146</width>
                         <height>490</height>
                         <texture>views/listpanel_detailwide.png</texture>
+                        <animation effect="slide" end="500,0" time="0" condition="Skin.HasSetting(lowlistmusicwidelist)">Conditional</animation>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <animation effect="fade" start="100" end="0" time="40" condition="Control.HasFocus(7002)">Conditional</animation>
                     </control>
@@ -57,8 +57,8 @@
                             <posy>755</posy>
                             <width>515</width>
                             <height>338</height>
-                            <label>$VAR[InfoWallTextboxVar]</label>
                             <textcolor>white3</textcolor>
+                            <label>$VAR[InfoWallTextboxVar]</label>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                             <animation effect="fade" start="100" end="0" time="40" condition="Control.HasFocus(7002)">Conditional</animation>
                             <visible>Skin.HasSetting(lowlist)</visible>
@@ -68,8 +68,8 @@
                             <posy>755</posy>
                             <width>515</width>
                             <height>503</height>
-                            <label>$VAR[InfoWallTextboxVar]</label>
                             <textcolor>white3</textcolor>
+                            <label>$VAR[InfoWallTextboxVar]</label>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                             <animation effect="fade" start="100" end="0" time="40" condition="Control.HasFocus(7002)">Conditional</animation>
                             <visible>!Skin.HasSetting(lowlist)</visible>
@@ -83,50 +83,50 @@
                     <control type="image">
                         <posx>450</posx>
                         <posy>600</posy>
-                        <height>1</height>
                         <width>1440</width>
-                        <colordiffuse>66FFFFFF</colordiffuse>
+                        <height>1</height>
                         <texture>views/lowlistpanel_line.png</texture>
+                        <colordiffuse>66FFFFFF</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>450</posx>
                         <posy>975</posy>
-                        <height>1</height>
                         <width>1440</width>
-                        <colordiffuse>66FFFFFF</colordiffuse>
+                        <height>1</height>
                         <texture>views/lowlistpanel_line.png</texture>
+                        <colordiffuse>66FFFFFF</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>450</posx>
                         <posy>675</posy>
-                        <height>1</height>
                         <width>398</width>
-                        <colordiffuse>66FFFFFF</colordiffuse>
+                        <height>1</height>
                         <texture>views/lowlistpanel_line.png</texture>
+                        <colordiffuse>66FFFFFF</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>450</posx>
                         <posy>750</posy>
-                        <height>1</height>
                         <width>398</width>
-                        <colordiffuse>66FFFFFF</colordiffuse>
+                        <height>1</height>
                         <texture>views/lowlistpanel_line.png</texture>
+                        <colordiffuse>66FFFFFF</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>450</posx>
                         <posy>825</posy>
-                        <height>1</height>
                         <width>398</width>
-                        <colordiffuse>66FFFFFF</colordiffuse>
+                        <height>1</height>
                         <texture>views/lowlistpanel_line.png</texture>
+                        <colordiffuse>66FFFFFF</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>450</posx>
                         <posy>900</posy>
-                        <height>1</height>
                         <width>398</width>
-                        <colordiffuse>66FFFFFF</colordiffuse>
+                        <height>1</height>
                         <texture>views/lowlistpanel_line.png</texture>
+                        <colordiffuse>66FFFFFF</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>855</posx>
@@ -134,19 +134,19 @@
                         <width>628</width>
                         <height>360</height>
                         <aspectratio>scale</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                        <fadetime>400</fadetime>
                         <bordersize>7</bordersize>
                     </control>
                     <control type="multiimage">
-                        <randomize>false</randomize>
                         <posx>862</posx>
                         <posy>614</posy>
                         <width>614</width>
                         <height>346</height>
                         <aspectratio>scale</aspectratio>
-                        <timeperimage>10000</timeperimage>
                         <imagepath background="true">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
+                        <randomize>false</randomize>
+                        <timeperimage>10000</timeperimage>
                         <visible>!Skin.HasSetting(musicextrafanart)</visible>
                     </control>
                 </control>
@@ -157,10 +157,10 @@
                     <control type="fadelabel">
                         <posx>450</posx>
                         <posy>540</posy>
-                        <height>60</height>
                         <width>1440</width>
-                        <font>Font_Bold28_Caps</font>
+                        <height>60</height>
                         <align>center</align>
+                        <font>Font_Bold28_Caps</font>
                         <textcolor>white3</textcolor>
                         <label>$INFO[ListItem.Album]</label>
                         <visible>Container.Content(songs)</visible>
@@ -168,10 +168,10 @@
                     <control type="fadelabel">
                         <posx>450</posx>
                         <posy>540</posy>
-                        <height>60</height>
                         <width>1440</width>
-                        <font>Font_Bold28_Caps</font>
+                        <height>60</height>
                         <align>center</align>
+                        <font>Font_Bold28_Caps</font>
                         <textcolor>white3</textcolor>
                         <label>$INFO[ListItem.Artist]</label>
                         <visible>Container.Content(albums)</visible>
@@ -179,8 +179,8 @@
                     <control type="fadelabel">
                         <posx>458</posx>
                         <posy>975</posy>
-                        <height>105</height>
                         <width>1242</width>
+                        <height>105</height>
                         <font>Font_OSDTitle2_Caps</font>
                         <textcolor>white3</textcolor>
                         <label>$INFO[ListItem.Label]</label>
@@ -188,8 +188,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>600</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[515]:</label>
                         <visible>Container.Content(songs) | Container.Content(albums)</visible>
@@ -197,8 +197,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>600</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[21900]:</label>
                         <visible>Container.Content(artists)</visible>
@@ -206,8 +206,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>638</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <scroll>true</scroll>
                         <label fallback="31006">$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Formed)]</label>
@@ -216,8 +216,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>638</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <label fallback="31006">$INFO[ListItem.Genre]</label>
                         <visible>Container.Content(songs) | Container.Content(albums)</visible>
@@ -225,8 +225,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>675</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[21897]/$LOCALIZE[21896]:</label>
                         <visible>Container.Content(artists)</visible>
@@ -234,8 +234,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>712</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <scroll>true</scroll>
                         <label fallback="31006">$INFO[ListItem.Property(Artist_Died)]$INFO[ListItem.Property(Artist_Disbanded)]</label>
@@ -244,8 +244,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>675</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[567]:</label>
                         <visible>Container.Content(songs)</visible>
@@ -253,8 +253,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>712</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <label fallback="31006">$INFO[ListItem.PlayCount]</label>
                         <visible>Container.Content(songs)</visible>
@@ -262,8 +262,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>750</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[21898]:</label>
                         <visible>Container.Content(artists)</visible>
@@ -271,8 +271,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>788</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <scroll>true</scroll>
                         <label fallback="31006">$INFO[ListItem.Property(Artist_YearsActive)]</label>
@@ -281,8 +281,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>750</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[568]:</label>
                         <visible>Container.Content(songs)</visible>
@@ -290,8 +290,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>788</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <label fallback="31006">$INFO[ListItem.LastPlayed]</label>
                         <visible>Container.Content(songs)</visible>
@@ -299,8 +299,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>675</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[21899]:</label>
                         <visible>Container.Content(albums)</visible>
@@ -308,8 +308,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>712</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <scroll>true</scroll>
                         <label fallback="31006">$INFO[ListItem.Property(Album_Label)]</label>
@@ -318,8 +318,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>750</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[563]:</label>
                         <animation effect="slide" end="0,75" time="120" condition="Container.Content(songs)">Conditional</animation>
@@ -328,8 +328,8 @@
                     <control type="image">
                         <posx>333</posx>
                         <posy>788</posy>
-                        <height>30</height>
                         <width>390</width>
+                        <height>30</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.StarRating]</texture>
                         <animation effect="slide" end="0,75" time="120" condition="Container.Content(songs)">Conditional</animation>
@@ -338,8 +338,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>825</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[515]:</label>
                         <visible>Container.Content(artists)</visible>
@@ -347,8 +347,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>862</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <label fallback="31006">$INFO[ListItem.Property(Artist_Genre)]</label>
                         <scroll>true</scroll>
@@ -357,8 +357,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>825</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[467]:</label>
                         <visible>Container.Content(albums)</visible>
@@ -366,8 +366,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>862</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <label fallback="31006">$INFO[ListItem.Property(Album_Type)]</label>
                         <visible>Container.Content(albums)</visible>
@@ -375,8 +375,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>900</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[176]:</label>
                         <visible>Container.Content(artists)</visible>
@@ -384,8 +384,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>938</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <scroll>true</scroll>
                         <label fallback="31006">$INFO[ListItem.Property(Artist_Style)]</label>
@@ -394,8 +394,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>900</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <textcolor>white3</textcolor>
                         <label>$LOCALIZE[345]:</label>
                         <visible>Container.Content(songs) | Container.Content(albums)</visible>
@@ -403,8 +403,8 @@
                     <control type="label">
                         <posx>458</posx>
                         <posy>938</posy>
-                        <height>38</height>
                         <width>390</width>
+                        <height>38</height>
                         <aligny>top</aligny>
                         <label fallback="31006">$INFO[ListItem.Year]</label>
                         <visible>Container.Content(songs) | Container.Content(albums)</visible>
@@ -414,8 +414,8 @@
                         <posy>615</posy>
                         <width>405</width>
                         <height>348</height>
-                        <label fallback="547">$VAR[InfoWallTextboxVar]</label>
                         <textcolor>white3</textcolor>
+                        <label fallback="547">$VAR[InfoWallTextboxVar]</label>
                         <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                     </control>
                 </control>
@@ -428,8 +428,8 @@
                         <posy>604</posy>
                         <width>390</width>
                         <height>150</height>
-                        <fadetime>IconCrossfadeTime2</fadetime>
                         <texture background="true">$VAR[TVShowLogoVar]</texture>
+                        <fadetime>IconCrossfadeTime2</fadetime>
                         <visible>!IsEmpty(Skin.String(ArtistsLogosPath))</visible>
                     </control>
                 </control>
@@ -440,16 +440,16 @@
                     <control type="image">
                         <width>135</width>
                         <height>88</height>
-                        <colordiffuse>white2</colordiffuse>
-                        <fadetime>IconCrossfadeTime2</fadetime>
                         <texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
+                        <fadetime>IconCrossfadeTime2</fadetime>
+                        <colordiffuse>white2</colordiffuse>
                     </control>
                     <control type="image">
                         <width>135</width>
                         <height>88</height>
-                        <colordiffuse>white2</colordiffuse>
                         <texture fallback="flags/source/defaultsource.png">$INFO[ListItem.Property(Album_Label),flags/music/recordlabel/,.png]</texture>
                         <fadetime>IconCrossfadeTime2</fadetime>
+                        <colordiffuse>white2</colordiffuse>
                         <visible>!IsEmpty(ListItem.Album) + Container.Content(albums)</visible>
                     </control>
                 </control>
@@ -489,22 +489,22 @@
                         <texture diffuse="thumbs/cdcover_mask.png" fallback="DefaultAudio.png">$VAR[ListAlbumVar]</texture>
                     </control>
                     <control type="image">
-                        <aspectratio scalediffuse="false" align="right">scale</aspectratio>
-                        <texture diffuse="thumbs/cdcover_mask.png">thumbs/cdcover_glass_noreflect.png</texture>
-                        <bordertexture border="20">thumbs/cd_shadow.png</bordertexture>
-                        <bordersize>20</bordersize>
                         <posx>-20</posx>
                         <posy>-20</posy>
                         <width>468</width>
                         <height>468</height>
+                        <aspectratio scalediffuse="false" align="right">scale</aspectratio>
+                        <texture diffuse="thumbs/cdcover_mask.png">thumbs/cdcover_glass_noreflect.png</texture>
+                        <bordertexture border="20">thumbs/cd_shadow.png</bordertexture>
+                        <bordersize>20</bordersize>
                     </control>
                     <control type="image">
                         <posy>430</posy>
                         <width>428</width>
                         <height>428</height>
+                        <aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
                         <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$VAR[ListAlbumVar]</texture>
                         <colordiffuse>66FFFFFF</colordiffuse>
-                        <aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
                     </control>
                 </control>
             </control>
@@ -531,26 +531,26 @@
                     <control type="image">
                         <posx>1</posx>
                         <posy>65</posy>
-                        <visible>!Skin.HasSetting(lowlistmusicwidelist)</visible>
-                        <height>1</height>
                         <width>910</width>
+                        <height>1</height>
                         <texture>views/lowlistpanel_line.png</texture>
+                        <visible>!Skin.HasSetting(lowlistmusicwidelist)</visible>
                     </control>
                     <control type="image">
                         <posx>1</posx>
                         <posy>65</posy>
-                        <height>1</height>
-                        <visible>Skin.HasSetting(lowlistmusicwidelist)</visible>
                         <width>1470</width>
+                        <height>1</height>
                         <texture>views/lowlistpanel_line.png</texture>
+                        <visible>Skin.HasSetting(lowlistmusicwidelist)</visible>
                     </control>
                     <control type="label">
                         <posx>52</posx>
                         <width>75</width>
                         <height>66</height>
                         <align>center</align>
-                        <textcolor>grey2</textcolor>
                         <font>Font_Bold24</font>
+                        <textcolor>grey2</textcolor>
                         <label>$INFO[ListItem.TrackNumber]</label>
                         <visible>Container.Content(songs)</visible>
                     </control>
@@ -558,8 +558,8 @@
                         <posx>30</posx>
                         <width>700</width>
                         <height>66</height>
-                        <textcolor>grey2</textcolor>
                         <font>Font_Bold16_Caps</font>
+                        <textcolor>grey2</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                         <visible>!Container.Content(songs)</visible>
                     </control>
@@ -567,8 +567,8 @@
                         <posx>105</posx>
                         <width>650</width>
                         <height>66</height>
-                        <textcolor>grey2</textcolor>
                         <font>Font_Bold16_Caps</font>
+                        <textcolor>grey2</textcolor>
                         <label>$INFO[ListItem.Title]</label>
                         <visible>Container.Content(songs)</visible>
                     </control>
@@ -579,8 +579,8 @@
                             <width>650</width>
                             <height>66</height>
                             <align>right</align>
-                            <textcolor>grey2</textcolor>
                             <font>Font_Bold16_Caps</font>
+                            <textcolor>grey2</textcolor>
                             <label>$INFO[ListItem.Label2]</label>
                             <visible>Container.Content(albums)</visible>
                         </control>
@@ -590,8 +590,8 @@
                             <width>146</width>
                             <height>33</height>
                             <align>center</align>
-                            <textcolor>grey2</textcolor>
                             <font>Font_Bold16_Caps</font>
+                            <textcolor>grey2</textcolor>
                             <label>$INFO[ListItem.Label2]</label>
                             <visible>!Container.Content(albums)</visible>
                         </control>
@@ -600,8 +600,8 @@
                             <width>146</width>
                             <height>33</height>
                             <align>center</align>
-                            <textcolor>grey2</textcolor>
                             <font>Font_Bold16</font>
+                            <textcolor>grey2</textcolor>
                             <label>$INFO[ListItem.Year]</label>
                             <visible>Container.Content(albums)</visible>
                         </control>
@@ -610,8 +610,8 @@
                             <width>146</width>
                             <height>66</height>
                             <align>center</align>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <font>Font_Bold16</font>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
                             <visible>Container.Content(artists)</visible>
                         </control>
@@ -633,11 +633,11 @@
                         <control type="image">
                             <posx>1</posx>
                             <posy>65</posy>
-                            <height>1</height>
                             <width>910</width>
+                            <height>1</height>
                             <texture>views/lowlistpanel_line.png</texture>
                         </control>
-				<!--sergiu: bara custom-->
+						<!--sergiu: bara custom-->
 					<control type="image">	
 							<posx>0</posx>	  	
               				<posy>-6</posy>	  	
@@ -647,23 +647,32 @@
 							<texture>views/lowlistmusic_selectbar.png</texture>
 							<animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="300" condition="!Control.HasFocus(506)">Conditional</animation>
 	  	            </control>
+                        <control type="image">
+                            <posx>14</posx>
+                            <width>897</width>
+                            <height>66</height>
+                            <texture>views/tripanel/listselect_fo.png</texture>
+                            <include>PanelGlowFade</include>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                            <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(506)">Conditional</animation>
+                        </control>
                     </control>
                     <control type="group">
                         <visible>Skin.HasSetting(lowlistmusicwidelist)</visible>
                         <control type="image">
                             <posx>1</posx>
                             <posy>65</posy>
-                            <height>1</height>
                             <width>1470</width>
+                            <height>1</height>
                             <texture>views/lowlistpanel_line.png</texture>
                         </control>
                         <control type="image">
                             <posx>14</posx>
                             <width>1470</width>
-                            <include>PanelGlowFade</include>
                             <height>66</height>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
+                            <include>PanelGlowFade</include>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(506)">Conditional</animation>
                         </control>
                     </control>
@@ -773,8 +782,8 @@
                             <posy>38</posy>
                             <width>146</width>
                             <height>21</height>
-                            <texture>$INFO[ListItem.StarRating]</texture>
                             <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.StarRating]</texture>
                             <colordiffuse>dcffffff</colordiffuse>
                             <visible>Container.Content(albums) | Container.Content(songs)</visible>
                         </control>
@@ -783,8 +792,8 @@
                             <width>146</width>
                             <height>66</height>
                             <align>center</align>
-                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <font>Font_Bold16</font>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
                             <visible>Container.Content(artists)</visible>
                         </control>
@@ -800,8 +809,8 @@
                     <posx>407</posx>
                     <posy>606</posy>
                     <width>46</width>
-                    <include>Animation_VerticalScrollBar</include>
                     <height>460</height>
+                    <include>Animation_VerticalScrollBar</include>
                     <texturesliderbackground>views/scrollbarbacklist.png</texturesliderbackground>
                     <onleft>9000</onleft>
                     <onright>506</onright>
@@ -809,10 +818,10 @@
                 </control>
                 <control type="scrollbar" id="60">
                     <posx>407</posx>
-                    <include>Animation_VerticalScrollBar</include>
                     <posy>771</posy>
                     <width>46</width>
                     <height>300</height>
+                    <include>Animation_VerticalScrollBar</include>
                     <texturesliderbackground>views/scrollbarbacklist.png</texturesliderbackground>
                     <onleft>9000</onleft>
                     <onright>506</onright>

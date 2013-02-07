@@ -2,9 +2,9 @@
 <window>
     <defaultcontrol always="true">29</defaultcontrol>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <controls>
         <control type="group">
@@ -17,12 +17,12 @@
                     <posx>387</posx>
                     <posy>0</posy>
                     <control type="label">
-                        <textoffsetx>15</textoffsetx>
                         <posy>120</posy>
                         <width>489</width>
                         <height>60</height>
-                        <label>31103</label>
+                        <textoffsetx>15</textoffsetx>
                         <font>Font_Bold22_Caps</font>
+                        <label>31103</label>
                     </control>
                     <control type="list" id="13">
                         <posx>0</posx>
@@ -47,12 +47,12 @@
                                 <posx>0</posx>
                                 <width>489</width>
                                 <height>74</height>
-                                <font>Font_Reg20</font>
+                                <textoffsetx>30</textoffsetx>
                                 <align>center</align>
+                                <font>Font_Reg20</font>
                                 <textcolor>grey2</textcolor>
                                 <selectedcolor>selected</selectedcolor>
                                 <info>ListItem.Label</info>
-                                <textoffsetx>30</textoffsetx>
                             </control>
                         </itemlayout>
                         <focusedlayout height="74">
@@ -69,11 +69,11 @@
                                 <posx>0</posx>
                                 <width>489</width>
                                 <height>74</height>
-                                <font>Font_Reg20</font>
-                                <align>center</align>
-                                <info>ListItem.Label</info>
-                                <selectedcolor>selected</selectedcolor>
                                 <textoffsetx>30</textoffsetx>
+                                <align>center</align>
+                                <font>Font_Reg20</font>
+                                <selectedcolor>selected</selectedcolor>
+                                <info>ListItem.Label</info>
                             </control>
                         </focusedlayout>
                     </control>
@@ -82,10 +82,10 @@
                     <posx>876</posx>
                     <posy>0</posy>
                     <control type="label" id="21">
-                        <textoffsetx>15</textoffsetx>
                         <posy>120</posy>
                         <width>489</width>
                         <height>60</height>
+                        <textoffsetx>15</textoffsetx>
                         <font>Font_Bold20_Caps</font>
                     </control>
                     <control type="list" id="11">
@@ -109,12 +109,12 @@
                             </control>
                             <control type="image">
                                 <posx>0</posx>
+                                <posy>0</posy>
                                 <width>74</width>
                                 <height>74</height>
-                                <posy>0</posy>
-                                <bordersize>8</bordersize>
-                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                                 <aspectratio>keep</aspectratio>
+                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+                                <bordersize>8</bordersize>
                                 <colordiffuse>88FFFFFF</colordiffuse>
                             </control>
                             <control type="label">
@@ -122,10 +122,10 @@
                                 <posy>0</posy>
                                 <width>415</width>
                                 <height>74</height>
+                                <textoffsetx>15</textoffsetx>
                                 <font>Font_Reg20</font>
                                 <textcolor>grey2</textcolor>
                                 <label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
-                                <textoffsetx>15</textoffsetx>
                             </control>
                         </itemlayout>
                         <focusedlayout height="74">
@@ -149,21 +149,21 @@
                             </control>
                             <control type="image">
                                 <posx>0</posx>
+                                <posy>0</posy>
                                 <width>74</width>
                                 <height>74</height>
-                                <posy>0</posy>
-                                <bordersize>8</bordersize>
-                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                                 <aspectratio>keep</aspectratio>
+                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+                                <bordersize>8</bordersize>
                             </control>
                             <control type="label">
                                 <posx>74</posx>
                                 <posy>0</posy>
                                 <width>415</width>
                                 <height>74</height>
+                                <textoffsetx>15</textoffsetx>
                                 <font>Font_Reg20</font>
                                 <label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
-                                <textoffsetx>15</textoffsetx>
                             </control>
                         </focusedlayout>
                     </control>
@@ -172,10 +172,10 @@
                     <posx>1365</posx>
                     <posy>0</posy>
                     <control type="label" id="22">
-                        <textoffsetx>15</textoffsetx>
                         <posy>120</posy>
                         <width>489</width>
                         <height>60</height>
+                        <textoffsetx>15</textoffsetx>
                         <font>Font_Bold20_Caps</font>
                     </control>
                     <control type="list" id="12">
@@ -199,12 +199,12 @@
                             </control>
                             <control type="image">
                                 <posx>0</posx>
+                                <posy>0</posy>
                                 <width>74</width>
                                 <height>74</height>
-                                <posy>0</posy>
-                                <bordersize>8</bordersize>
-                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                                 <aspectratio>keep</aspectratio>
+                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+                                <bordersize>8</bordersize>
                                 <colordiffuse>88FFFFFF</colordiffuse>
                             </control>
                             <control type="label">
@@ -212,10 +212,10 @@
                                 <posy>0</posy>
                                 <width>415</width>
                                 <height>74</height>
+                                <textoffsetx>15</textoffsetx>
                                 <font>Font_Reg20</font>
                                 <textcolor>grey2</textcolor>
                                 <label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
-                                <textoffsetx>15</textoffsetx>
                             </control>
                         </itemlayout>
                         <focusedlayout height="74">
@@ -239,21 +239,21 @@
                             </control>
                             <control type="image">
                                 <posx>0</posx>
+                                <posy>0</posy>
                                 <width>74</width>
                                 <height>74</height>
-                                <posy>0</posy>
-                                <bordersize>8</bordersize>
-                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                                 <aspectratio>keep</aspectratio>
+                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+                                <bordersize>8</bordersize>
                             </control>
                             <control type="label">
                                 <posx>74</posx>
                                 <posy>0</posy>
                                 <width>415</width>
                                 <height>74</height>
+                                <textoffsetx>15</textoffsetx>
                                 <font>Font_Reg20</font>
                                 <label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
-                                <textoffsetx>15</textoffsetx>
                             </control>
                         </focusedlayout>
                     </control>
@@ -270,53 +270,53 @@
                     <control type="button" id="26">
                         <width>334</width>
                         <height>74</height>
+                        <textoffsetx>20</textoffsetx>
+                        <textoffsety>18</textoffsety>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texturenofocus>-</texturenofocus>
                         <font>Font_Bold20</font>
                         <textcolor>grey</textcolor>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <focusedcolor>white2</focusedcolor>
-                        <textoffsety>18</textoffsety>
-                        <textoffsetx>20</textoffsetx>
                         <label>31012</label>
                     </control>
                     <control type="button" id="27">
                         <width>334</width>
                         <height>74</height>
+                        <textoffsetx>20</textoffsetx>
+                        <textoffsety>18</textoffsety>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texturenofocus>-</texturenofocus>
                         <font>Font_Bold20</font>
                         <textcolor>grey</textcolor>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <focusedcolor>white2</focusedcolor>
-                        <textoffsety>18</textoffsety>
-                        <textoffsetx>20</textoffsetx>
                         <label>31013</label>
                     </control>
                     <control type="button" id="28">
                         <width>334</width>
                         <height>74</height>
+                        <textoffsetx>20</textoffsetx>
+                        <textoffsety>18</textoffsety>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texturenofocus>-</texturenofocus>
                         <font>Font_Bold20</font>
                         <textcolor>grey</textcolor>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <focusedcolor>white2</focusedcolor>
-                        <textoffsety>18</textoffsety>
-                        <textoffsetx>20</textoffsetx>
                         <label>31014</label>
                     </control>
                     <control type="button" id="29">
                         <width>334</width>
                         <height>74</height>
+                        <textoffsetx>20</textoffsetx>
+                        <textoffsety>18</textoffsety>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texturenofocus>-</texturenofocus>
                         <font>Font_Bold20</font>
                         <textcolor>grey</textcolor>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <focusedcolor>white2</focusedcolor>
-                        <textoffsety>18</textoffsety>
-                        <textoffsetx>20</textoffsetx>
                         <label>186</label>
                     </control>
                 </control>

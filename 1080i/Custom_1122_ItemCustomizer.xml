@@ -39,8 +39,8 @@
                 <posy>200</posy>
                 <width>1010</width>
                 <height>810</height>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <texture>osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="group">
                 <control type="grouplist">
@@ -101,21 +101,21 @@
                     </control>
                     <control type="image">
                         <posx>100</posx>
-                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
                         <width>600</width>
                         <height>100</height>
                         <align>center</align>
                         <aspectratio>keep</aspectratio>
+                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
                         <colordiffuse>FFFFFFFF</colordiffuse>
                         <visible>!Substring(Skin.String(ItemToEdit.Icon),/BigIcons/)</visible>
                     </control>
                     <control type="image">
                         <posx>100</posx>
-                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
                         <width>600</width>
                         <height>100</height>
                         <align>center</align>
                         <aspectratio>keep</aspectratio>
+                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
                         <colordiffuse>white</colordiffuse>
                         <visible>Substring(Skin.String(ItemToEdit.Icon),/BigIcons/)</visible>
                     </control>

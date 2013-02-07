@@ -22,13 +22,13 @@
                 <texture background="true">$VAR[PosterVar]</texture>
             </control>
             <control type="image">
-                <animation effect="fade" time="320" delay="408">Visible</animation>
-                <animation effect="fade" time="80">Hidden</animation>
                 <posx>709</posx>
                 <width>40</width>
                 <height>1080</height>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <texture>common/topbar_down.png</texture>
+                <animation effect="fade" time="320" delay="408">Visible</animation>
+                <animation effect="fade" time="80">Hidden</animation>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <include>TopbarPulseAnimationRight</include>
                 <visible>!Skin.HasSetting(DisableGlowbar) + IsEmpty(Window(movieinformation).Property(FanartZoom))</visible>
             </control>
@@ -80,10 +80,10 @@
             <control type="button" id="13">
                 <posx>991</posx>
                 <posy>239</posy>
-                <label>-</label>
-                <height>45</height>
                 <width>854</width>
+                <height>45</height>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                <label>-</label>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <ondown>50</ondown>
                 <visible>!IsEmpty(ListItem.Director)</visible>
@@ -91,12 +91,12 @@
             <control type="button" id="130">
                 <posx>991</posx>
                 <posy>239</posy>
-                <label>-</label>
-                <height>45</height>
                 <width>854</width>
-                <onclick>RunScript(script.metadata.actors,$INFO[ListItem.Director])</onclick>
-                <texturenofocus>-</texturenofocus>
+                <height>45</height>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <label>-</label>
+                <onclick>RunScript(script.metadata.actors,$INFO[ListItem.Director])</onclick>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <ondown>131</ondown>
                 <visible>!IsEmpty(ListItem.Director)</visible>
@@ -104,12 +104,12 @@
             <control type="button" id="131">
                 <posx>991</posx>
                 <posy>284</posy>
-                <label>-</label>
-                <height>42</height>
                 <width>854</width>
-                <onclick>RunScript(script.metadata.actors,$INFO[ListItem.Writer])</onclick>
-                <texturenofocus>-</texturenofocus>
+                <height>42</height>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                <texturenofocus>-</texturenofocus>
+                <label>-</label>
+                <onclick>RunScript(script.metadata.actors,$INFO[ListItem.Writer])</onclick>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <ondown>50</ondown>
                 <onup>130</onup>
@@ -131,19 +131,19 @@
                 <control type="image" id="8822">
                     <posx>20</posx>
                     <posy>-65</posy>
-                    <fadetime>200</fadetime>
                     <width>494</width>
                     <height>153</height>
                     <aspectratio aligny="top">keep</aspectratio>
-                    <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
                     <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+                    <fadetime>200</fadetime>
+                    <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
                     <visible>!IsEmpty(ListItem.Art(clearlogo)) + Container.Content(tvshows)</visible>
                 </control>
                 <control type="grouplist">
                     <posx>0</posx>
                     <posy>-120</posy>
-                    <height>200</height>
                     <width>1018</width>
+                    <height>200</height>
                     <itemgap>4</itemgap>
                     <orientation>vertical</orientation>
                     <control type="label">
@@ -158,28 +158,28 @@
                         <width>1018</width>
                         <height>40</height>
                         <font>Font_Reg20</font>
+                        <textcolor>grey</textcolor>
                         <label>$INFO[ListItem.Tagline]</label>
                         <scroll>true</scroll>
-                        <textcolor>grey</textcolor>
                         <visible>Container.Content(movies) + !IsEmpty(ListItem.Tagline)</visible>
                     </control>
                     <control type="label">
                         <width>1018</width>
                         <height>40</height>
+                        <aligny>bottom</aligny>
                         <font>Font_Reg20</font>
+                        <textcolor>grey</textcolor>
                         <label>$INFO[ListItem.Artist]</label>
                         <scroll>true</scroll>
-                        <textcolor>grey</textcolor>
-                        <aligny>bottom</aligny>
                         <visible>Container.Content(musicvideos) + !IsEmpty(ListItem.Artist)</visible>
                     </control>
                     <control type="label">
                         <width>1018</width>
                         <height>40</height>
-                        <font>Font_Reg20</font>
-                        <label>$INFO[ListItem.TvShowTitle]</label>
                         <aligny>bottom</aligny>
+                        <font>Font_Reg20</font>
                         <textcolor>grey</textcolor>
+                        <label>$INFO[ListItem.TvShowTitle]</label>
                         <visible>Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle)</visible>
                     </control>
                 </control>
@@ -187,12 +187,12 @@
                 <control type="image">
                     <posx>10</posx>
                     <posy>102</posy>
-                    <animation effect="fade" time="200">VisibleChange</animation>
                     <width>249</width>
                     <height>57</height>
-                    <colordiffuse>grey</colordiffuse>
                     <aspectratio>keep</aspectratio>
                     <texture fallback="flags/rating/info/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/info/,.png]</texture>
+                    <animation effect="fade" time="200">VisibleChange</animation>
+                    <colordiffuse>grey</colordiffuse>
                     <visible>Container.Content(movies) | Container.Content(MusicVideos)</visible>
                 </control>
                 <control type="image">
@@ -208,71 +208,71 @@
                 <control type="label">
                     <posx>272</posx>
                     <posy>87</posy>
-                    <align>center</align>
                     <width>164</width>
                     <height>85</height>
+                    <align>center</align>
                     <font>Font_OSDTitle2</font>
-                    <label fallback="-">$INFO[ListItem.Year]</label>
                     <textcolor>grey</textcolor>
+                    <label fallback="-">$INFO[ListItem.Year]</label>
                     <visible>!Container.Content(episodes)</visible>
                 </control>
                 <control type="label">
                     <posx>465</posx>
                     <posy>98</posy>
                     <width>560</width>
+                    <height>60</height>
                     <font>Font_Reg20_Caps_Info</font>
+                    <textcolor>grey</textcolor>
                     <label fallback="31006">$INFO[ListItem.Genre]</label>
                     <scroll>true</scroll>
-                    <textcolor>grey</textcolor>
-                    <height>60</height>
                     <wrapmultiline>true</wrapmultiline>
                     <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(MusicVideos)</visible>
                 </control>
                 <control type="group">
                     <visible>Container.Content(episodes)</visible>
                     <control type="image">
-                        <posy>90</posy>
                         <posx>571</posx>
+                        <posy>90</posy>
                         <height>80</height>
                         <include>Furniture_FlagUpright</include>
                     </control>
                     <control type="image">
                         <posx>436</posx>
                         <posy>87</posy>
-                        <animation effect="fade" time="200">VisibleChange</animation>
                         <width>135</width>
                         <height>90</height>
-                        <colordiffuse>grey</colordiffuse>
                         <aspectratio align="center">keep</aspectratio>
                         <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
+                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <colordiffuse>grey</colordiffuse>
                     </control>
                     <control type="label">
                         <posx>591</posx>
                         <posy>87</posy>
                         <width>500</width>
-                        <font>Font_Reg20</font>
-                        <label fallback="-">$LOCALIZE[20416]:[CR]$INFO[ListItem.Premiered]</label>
-                        <textcolor>grey</textcolor>
                         <height>85</height>
+                        <font>Font_Reg20</font>
+                        <textcolor>grey</textcolor>
+                        <label fallback="-">$LOCALIZE[20416]:[CR]$INFO[ListItem.Premiered]</label>
                     </control>
                     <control type="label">
                         <posx>272</posx>
                         <posy>87</posy>
-                        <align>center</align>
                         <width>164</width>
                         <height>85</height>
+                        <align>center</align>
                         <font>Font_Bold28</font>
-                        <label fallback="-">$VAR[ListItemSeasonVar,S]$VAR[ListItemEpisodeVar,E]</label>
                         <textcolor>grey</textcolor>
+                        <label fallback="-">$VAR[ListItemSeasonVar,S]$VAR[ListItemEpisodeVar,E]</label>
                     </control>
                 </control>
                 <!-- Second Row -->
                 <control type="group">
-                    <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <posy>-4</posy>
+                    <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <control type="label">
-                        <posy>171</posy>
                         <posx>4</posx>
+                        <posy>171</posy>
                         <width>165</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -280,8 +280,8 @@
                         <label>$LOCALIZE[20339]:</label>
                     </control>
                     <control type="label">
-                        <posy>171</posy>
                         <posx>180</posx>
+                        <posy>171</posy>
                         <width>840</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -290,11 +290,11 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>Container.Content(tvshows)</visible>
                     <posy>-4</posy>
+                    <visible>Container.Content(tvshows)</visible>
                     <control type="label">
-                        <posy>171</posy>
                         <posx>4</posx>
+                        <posy>171</posy>
                         <width>165</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -302,8 +302,8 @@
                         <label>$LOCALIZE[31005]:</label>
                     </control>
                     <control type="label">
-                        <posy>171</posy>
                         <posx>180</posx>
+                        <posy>171</posy>
                         <width>840</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -312,11 +312,11 @@
                 </control>
                 <!-- Third Row -->
                 <control type="group">
-                    <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <posy>-4</posy>
+                    <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <control type="label">
-                        <posy>214</posy>
                         <posx>4</posx>
+                        <posy>214</posy>
                         <width>165</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -324,8 +324,8 @@
                         <label>$LOCALIZE[20417]:</label>
                     </control>
                     <control type="label">
-                        <posy>214</posy>
                         <posx>180</posx>
+                        <posy>214</posy>
                         <width>840</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -334,11 +334,11 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>Container.Content(tvshows)</visible>
                     <posy>-4</posy>
+                    <visible>Container.Content(tvshows)</visible>
                     <control type="label">
-                        <posy>214</posy>
                         <posx>4</posx>
+                        <posy>214</posy>
                         <width>165</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -347,8 +347,8 @@
                         <visible>!Skin.HasSetting(NextAiredInfo)</visible>
                     </control>
                     <control type="label">
-                        <posy>214</posy>
                         <posx>4</posx>
+                        <posy>214</posy>
                         <width>165</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -357,8 +357,8 @@
                         <visible>Skin.HasSetting(NextAiredInfo)</visible>
                     </control>
                     <control type="label">
-                        <posy>214</posy>
                         <posx>180</posx>
+                        <posy>214</posy>
                         <width>840</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -366,8 +366,8 @@
                         <visible>!Skin.HasSetting(NextAiredInfo)</visible>
                     </control>
                     <control type="label">
-                        <posy>214</posy>
                         <posx>180</posx>
+                        <posy>214</posy>
                         <width>840</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -377,11 +377,11 @@
                 </control>
                 <!-- Fourth Row Left-->
                 <control type="group">
-                    <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <posy>-4</posy>
+                    <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <control type="label">
-                        <posy>255</posy>
                         <posx>4</posx>
+                        <posy>255</posy>
                         <width>165</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -389,8 +389,8 @@
                         <label>$LOCALIZE[2050]:</label>
                     </control>
                     <control type="label">
-                        <posy>255</posy>
                         <posx>180</posx>
+                        <posy>255</posy>
                         <width>300</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -398,11 +398,11 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>Container.Content(tvshows) + !Skin.HasSetting(NextAiredInfo)</visible>
                     <posy>-4</posy>
+                    <visible>Container.Content(tvshows) + !Skin.HasSetting(NextAiredInfo)</visible>
                     <control type="label">
-                        <posy>255</posy>
                         <posx>4</posx>
+                        <posy>255</posy>
                         <width>300</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -411,8 +411,8 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)) </visible>
                     </control>
                     <control type="label">
-                        <posy>255</posy>
                         <posx>4</posx>
+                        <posy>255</posy>
                         <width>300</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -421,8 +421,8 @@
                         <visible>IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
                     </control>
                     <control type="label">
-                        <posy>255</posy>
                         <posx>180</posx>
+                        <posy>255</posy>
                         <width>750</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -430,8 +430,8 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
                     </control>
                     <control type="label">
-                        <posy>255</posy>
                         <posx>180</posx>
+                        <posy>255</posy>
                         <width>750</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -440,11 +440,11 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>Container.Content(tvshows) + Skin.HasSetting(NextAiredInfo)</visible>
                     <posy>-4</posy>
+                    <visible>Container.Content(tvshows) + Skin.HasSetting(NextAiredInfo)</visible>
                     <control type="label">
-                        <posy>255</posy>
                         <posx>4</posx>
+                        <posy>255</posy>
                         <width>165</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -452,8 +452,8 @@
                         <label>$LOCALIZE[563]:</label>
                     </control>
                     <control type="label">
-                        <posy>255</posy>
                         <posx>180</posx>
+                        <posy>255</posy>
                         <width>750</width>
                         <height>44</height>
                         <font>Font_Reg32</font>
@@ -464,18 +464,18 @@
                 <control type="group">
                     <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <control type="image">
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <posx>569</posx>
                         <posy>257</posy>
                         <width>2</width>
                         <height>40</height>
                         <texture>views/tripanel/upright.png</texture>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     </control>
                     <control type="group">
                         <posy>-4</posy>
                         <control type="label">
-                            <posy>255</posy>
                             <posx>562</posx>
+                            <posy>255</posy>
                             <width>165</width>
                             <height>44</height>
                             <align>right</align>
@@ -485,8 +485,8 @@
                             <visible>Container.Content(movies)</visible>
                         </control>
                         <control type="label">
-                            <posy>255</posy>
                             <posx>562</posx>
+                            <posy>255</posy>
                             <width>165</width>
                             <height>44</height>
                             <align>right</align>
@@ -496,8 +496,8 @@
                             <visible>!Container.Content(movies)</visible>
                         </control>
                         <control type="label">
-                            <posy>255</posy>
                             <posx>585</posx>
+                            <posy>255</posy>
                             <width>750</width>
                             <height>44</height>
                             <font>Font_Reg32</font>
@@ -506,8 +506,8 @@
                     </control>
                 </control>
                 <control type="label">
-                    <posy>292</posy>
                     <posx>4</posx>
+                    <posy>292</posy>
                     <width>165</width>
                     <height>44</height>
                     <font>Font_Reg32</font>
@@ -519,9 +519,9 @@
                     <posy>536</posy>
                     <width>1016</width>
                     <height>320</height>
+                    <align>left</align>
                     <font>Font_Reg32</font>
                     <pagecontrol>60</pagecontrol>
-                    <align>left</align>
                     <label fallback="31006">$INFO[ListItem.Plot]</label>
                     <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
                     <visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
@@ -538,16 +538,16 @@
                         <width>140</width>
                         <height>70</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <texture>$VAR[SourceFlagVar,flags/info/,.png]</texture>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <visible>!IsEmpty(Control.GetLabel(900011))</visible>
                     </control>
                     <control type="image" id="900012">
                         <width>132</width>
                         <height>90</height>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.VideoCodec,flags/source/,.png]</texture>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <visible>IsEmpty(Control.GetLabel(900011))</visible>
                         <animation effect="slide" end="0,-10" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900012))</visible>
@@ -559,10 +559,10 @@
                     <control type="image" id="900013">
                         <width>161</width>
                         <height>90</height>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
+                        <aspectratio>keep</aspectratio>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <animation effect="slide" end="0,-9" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900013))</visible>
                     </control>
@@ -573,10 +573,10 @@
                     <control type="image" id="900017">
                         <width>70</width>
                         <height>65</height>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
+                        <aspectratio>keep</aspectratio>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.AudioChannels,flags/info/channels/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <animation effect="slide" end="0,3" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900017))</visible>
                     </control>
@@ -587,9 +587,9 @@
                     <control type="image" id="900014">
                         <width>100</width>
                         <height>70</height>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.VideoResolution,flags/info/,.png]</texture>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <visible>!IsEmpty(Control.GetLabel(900014))</visible>
                     </control>
                     <control type="image">
@@ -599,9 +599,9 @@
                     <control type="image" id="900015">
                         <width>132</width>
                         <height>90</height>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <animation effect="slide" end="0,-10" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900015))</visible>
                     </control>
@@ -612,9 +612,9 @@
                     <control type="image" id="900016">
                         <width>132</width>
                         <height>75</height>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <animation effect="slide" end="0,-4" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900016))</visible>
                     </control>
@@ -625,9 +625,9 @@
                     <control type="image">
                         <width>58</width>
                         <height>70</height>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>flags/info/cc.png</texture>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
                         <visible>!IsEmpty(ListItem.SubtitleLanguage)</visible>
                     </control>
                 </control>
@@ -641,21 +641,21 @@
                         <colordiffuse>FF7c7c7c</colordiffuse>
                     </control>
                     <control type="image">
-                        <posy>872</posy>
                         <posx>142</posx>
+                        <posy>872</posy>
                         <include>Furniture_FlagUpright</include>
                     </control>
                     <control type="image">
                         <posx>150</posx>
                         <posy>862</posy>
-                        <colordiffuse>grey</colordiffuse>
                         <width>135</width>
                         <height>90</height>
                         <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
+                        <colordiffuse>grey</colordiffuse>
                     </control>
                     <control type="image">
-                        <posy>872</posy>
                         <posx>292</posx>
+                        <posy>872</posy>
                         <include>Furniture_FlagUpright</include>
                     </control>
                     <control type="label">
@@ -681,8 +681,8 @@
                             <label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
                         </control>
                         <control type="image">
-                            <posy>872</posy>
                             <posx>442</posx>
+                            <posy>872</posy>
                             <include>Furniture_FlagUpright</include>
                         </control>
                     </control>
@@ -709,8 +709,8 @@
                             <label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
                         </control>
                         <control type="image">
-                            <posy>872</posy>
                             <posx>592</posx>
+                            <posy>872</posy>
                             <include>Furniture_FlagUpright</include>
                         </control>
                         <control type="label">
@@ -766,8 +766,8 @@
                     <control type="label">
                         <width>555</width>
                         <height>30</height>
-                        <font>Font_Reg32</font>
                         <textoffsetx>15</textoffsetx>
+                        <font>Font_Reg32</font>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
@@ -782,8 +782,8 @@
                     <control type="label">
                         <width>555</width>
                         <height>30</height>
-                        <font>Font_Reg32</font>
                         <textoffsetx>15</textoffsetx>
+                        <font>Font_Reg32</font>
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
@@ -796,9 +796,9 @@
                     <posy>439</posy>
                     <width>100</width>
                     <height>30</height>
+                    <textoffsetx>15</textoffsetx>
                     <align>center</align>
                     <font>Font_Reg12</font>
-                    <textoffsetx>15</textoffsetx>
                     <label>INFO</label>
                 </control>
                 <control type="image">
@@ -806,8 +806,8 @@
                     <posy>436</posy>
                     <width>40</width>
                     <height>40</height>
-                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texture>arrowright.png</texture>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 </control>
             </control>
             <control type="grouplist" id="5000">
@@ -893,9 +893,9 @@
                 </control>
             </control>
             <control type="group">
-                <visible>ControlGroup(5000).HasFocus(22) + Container.Content(movies)</visible>
                 <posx>825</posx>
                 <posy>606</posy>
+                <visible>ControlGroup(5000).HasFocus(22) + Container.Content(movies)</visible>
                 <control type="image">
                     <width>315</width>
                     <height>315</height>
@@ -922,8 +922,8 @@
                 <posy>366</posy>
                 <width>176</width>
                 <height>176</height>
-                <texture background="true">$INFO[Container(50).Listitem.Icon]</texture>
                 <aspectratio>keep</aspectratio>
+                <texture background="true">$INFO[Container(50).Listitem.Icon]</texture>
                 <fadetime>400</fadetime>
                 <visible>!Control.HasFocus(5054)</visible>
             </control>
@@ -934,8 +934,8 @@
                     <posy>366</posy>
                     <width>176</width>
                     <height>176</height>
-                    <texture background="true">$INFO[Container(50).Listitem.Icon]</texture>
                     <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Container(50).Listitem.Icon]</texture>
                     <fadetime>400</fadetime>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <bordertexture border="5">views/addonwall_select.png</bordertexture>
@@ -946,8 +946,8 @@
                     <posy>366</posy>
                     <width>176</width>
                     <height>176</height>
-                    <texture background="true">$INFO[Container(50).Listitem.Icon]</texture>
                     <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Container(50).Listitem.Icon]</texture>
                     <fadetime>400</fadetime>
                     <bordersize>5</bordersize>
                 </control>
@@ -1034,30 +1034,30 @@
                 <posx>825</posx>
                 <posy>1042</posy>
                 <width>1050</width>
+                <font>Font_Info</font>
+                <textcolor>grey</textcolor>
                 <scroll>true</scroll>
                 <haspath>true</haspath>
-                <font>Font_Info</font>
                 <label>$INFO[ListItem.FileNameAndPath]</label>
-                <textcolor>grey</textcolor>
             </control>
             <control type="image">
                 <posx>709</posx>
                 <width>40</width>
                 <height>1080</height>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <texture>common/topbar_top.png</texture>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <include>TopbarPulseAnimationLeft</include>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             </control>
             <control type="group">
                 <control type="image">
-                    <posy>608</posy>
                     <posx>750</posx>
+                    <posy>608</posy>
                     <width>450</width>
                     <height>318</height>
-                    <fadetime>500</fadetime>
                     <aspectratio align="center">keep</aspectratio>
                     <texture background="true">$VAR[VideoInfoThumbPreviewVar]</texture>
+                    <fadetime>500</fadetime>
                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                     <bordersize>7</bordersize>
                     <visible>ControlGroup(5000).HasFocus(10)</visible>
@@ -1067,21 +1067,21 @@
                     <posy>615</posy>
                     <width>540</width>
                     <height>304</height>
-                    <fadetime>500</fadetime>
-                    <timeperimage>4000</timeperimage>
                     <aspectratio align="center">scale</aspectratio>
                     <imagepath background="true">$VAR[ExtraFanartPreviewVar]</imagepath>
+                    <fadetime>500</fadetime>
+                    <timeperimage>4000</timeperimage>
                     <animation effect="zoom" start="1072,615,540,304" end="0,0,1920,1080" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
                     <visible>ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(24)</visible>
                 </control>
                 <control type="image">
-                    <posy>608</posy>
                     <posx>1265</posx>
+                    <posy>608</posy>
                     <width>554</width>
                     <height>318</height>
-                    <fadetime>500</fadetime>
                     <aspectratio align="center">scale</aspectratio>
                     <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+                    <fadetime>500</fadetime>
                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                     <bordersize>7</bordersize>
                     <animation effect="zoom" start="1265,608,554,318" end="-25,-25,1970,1130" time="640" tween="cubic" condition="!IsEmpty(Window(movieinformation).Property(FanartZoom))">Conditional</animation>
@@ -1092,8 +1092,8 @@
                     <posy>610</posy>
                     <width>550</width>
                     <height>314</height>
-                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texture border="5">views/addonwall_select.png</texture>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <visible>Control.HasFocus(5055)</visible>
                     <animation effect="fade" time="160">VisibleChange</animation>
                     <animation effect="slide" end="-200" condition="ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(24)">Conditional</animation>
@@ -1108,8 +1108,8 @@
                 <posy>555</posy>
                 <width>30</width>
                 <height>30</height>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texture flipx="true">arrowright.png</texture>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <include>Animation_VisibleChange200</include>
                 <colordiffuse>white2</colordiffuse>
                 <animation effect="slide" start="-150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
@@ -1120,8 +1120,8 @@
                 <posy>555</posy>
                 <width>30</width>
                 <height>30</height>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texture>arrowright.png</texture>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <colordiffuse>white2</colordiffuse>
                 <include>Animation_VisibleChange200</include>
                 <animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>

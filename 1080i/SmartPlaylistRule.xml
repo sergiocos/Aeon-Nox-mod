@@ -2,16 +2,16 @@
 <window>
     <defaultcontrol always="true">15</defaultcontrol>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
         <control type="image">
+            <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
             <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-            <texture>common/bgcolor.png</texture>
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
         </control>
         <control type="group">
@@ -24,16 +24,16 @@
                 <posy>7</posy>
                 <width>1272</width>
                 <height>460</height>
+                <texture flipx="true">dialogs/scan_backg_shadow.png</texture>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <include>PanelGlowFade</include>
-                <texture flipx="true">dialogs/scan_backg_shadow.png</texture>
             </control>
             <control type="image">
                 <width>1292</width>
                 <height>474</height>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <texture flipx="true">dialogs/scrapersettings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="label">
                 <posx>267</posx>
@@ -49,26 +49,26 @@
                     <posy>105</posy>
                     <width>954</width>
                     <height>74</height>
-                    <font>Font_Reg20</font>
-                    <label>21422</label>
+                    <textoffsetx>30</textoffsetx>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>settings/settings_separator.png</texturenofocus>
+                    <font>Font_Reg20</font>
                     <disabledcolor>white2</disabledcolor>
-                    <textoffsetx>30</textoffsetx>
+                    <label>21422</label>
                     <enable>no</enable>
                 </control>
                 <control type="spincontrolex" id="15">
                     <posx>267</posx>
                     <posy>178</posy>
                     <width>477</width>
+                    <textoffsetx>0</textoffsetx>
+                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                    <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
                     <onleft>9000</onleft>
                     <onright>16</onright>
                     <onup>18</onup>
                     <ondown>17</ondown>
                     <label>-</label>
-                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                    <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
-                    <textoffsetx>0</textoffsetx>
                     <include>Default_SettingButton</include>
                     <spinposx>-2</spinposx>
                 </control>
@@ -76,29 +76,29 @@
                     <posx>744</posx>
                     <posy>178</posy>
                     <width>530</width>
+                    <textoffsetx>0</textoffsetx>
+                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                    <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                     <onleft>15</onleft>
                     <onright>9002</onright>
                     <onup>18</onup>
                     <ondown>17</ondown>
                     <label>-</label>
-                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                    <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-                    <textoffsetx>0</textoffsetx>
                     <include>Default_SettingButton</include>
                     <spinposx>-2</spinposx>
                 </control>
             </control>
             <control type="edit" id="17">
-                <textoffsetx>18</textoffsetx>
                 <posx>267</posx>
                 <posy>252</posy>
                 <width>1007</width>
                 <height>74</height>
-                <font>Font_Reg20</font>
+                <textoffsetx>18</textoffsetx>
+                <textoffsetx>30</textoffsetx>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
+                <font>Font_Reg20</font>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                <textoffsetx>30</textoffsetx>
                 <hinttext>21420</hinttext>
                 <onup>9001</onup>
                 <onleft>17</onleft>
@@ -106,17 +106,17 @@
                 <ondown>20</ondown>
             </control>
             <control type="button" id="20">
-                <textoffsetx>18</textoffsetx>
                 <posx>267</posx>
                 <posy>326</posy>
                 <width>1007</width>
                 <height>74</height>
-                <label>1024</label>
-                <font>Font_Reg20</font>
+                <textoffsetx>18</textoffsetx>
+                <textoffsetx>30</textoffsetx>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
+                <font>Font_Reg20</font>
+                <label>1024</label>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                <textoffsetx>30</textoffsetx>
                 <onup>17</onup>
                 <onleft>9000</onleft>
                 <onright>20</onright>
@@ -136,12 +136,12 @@
                     <posy>4</posy>
                     <width>231</width>
                     <height>96</height>
+                    <textoffsetx>20</textoffsetx>
+                    <textoffsety>18</textoffsety>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <label>186</label>
                     <font>Font_Bold20_Caps</font>
-                    <textoffsety>18</textoffsety>
-                    <textoffsetx>20</textoffsetx>
+                    <label>186</label>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 </control>
                 <control type="button" id="19">
@@ -149,12 +149,12 @@
                     <posy>4</posy>
                     <width>231</width>
                     <height>96</height>
+                    <textoffsetx>20</textoffsetx>
+                    <textoffsety>18</textoffsety>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <label>222</label>
                     <font>Font_Bold20_Caps</font>
-                    <textoffsety>18</textoffsety>
-                    <textoffsetx>20</textoffsetx>
+                    <label>222</label>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 </control>
             </control>

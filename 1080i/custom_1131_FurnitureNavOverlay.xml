@@ -3,9 +3,9 @@
     <defaultcontrol>12</defaultcontrol>
     <zorder>4</zorder>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <onload>Notification($LOCALIZE[31902],$LOCALIZE[31913])</onload>
