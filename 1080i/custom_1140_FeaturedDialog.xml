@@ -34,6 +34,31 @@
             <texture>osd/osd_settings_back.png</texture>
             <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
         </control>
+
+                            <control type="button" id="8002">
+                <label></label>
+                <onclick>SetProperty(SkinWidgets_RandomItems_Update,true,home)</onclick>
+                <onclick>SetFocus(8001)</onclick>
+                        <posx>93</posx>
+                        <posy>47</posy>
+                    <width>70</width>
+                    <height>70</height>
+                    <onleft>8001</onleft>
+                    <onright>8001</onright>
+                    <onup>8001</onup>
+                    <ondown>8001</ondown>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                <visible>Substring(Control.GetLabel(4321),random)</visible>
+            </control>
+                        <control type="button">
+                        <posx>93</posx>
+                        <posy>47</posy>
+                    <width>70</width>
+                    <height>70</height>
+                    <visible>Control.IsVisible(8002)</visible>
+                    <texturenofocus>special://skin/extras/BigIcons/ButtonReload.png</texturenofocus>
+                    <colordiffuse>white</colordiffuse>
+                </control>
         <control type="panel" id="8001">
             <posx>177</posx>
             <posy>45</posy>
@@ -43,6 +68,7 @@
             <scrolltime>0</scrolltime>
             <onup>8993</onup>
             <ondown>8993</ondown>
+            <onleft>8002</onleft>
             <orientation>horizontal</orientation>
             <itemlayout width="400" height="310" condition="Substring(Window(home).Property(Featured),albums)">
                 <control type="group">
@@ -255,6 +281,79 @@
                     <visible>Control.HasFocus(8001)</visible>
                 </control>
             </focusedlayout>
+            <itemlayout width="400" height="310" condition="Substring(Window(home).Property(Featured),TV)">
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>380</width>
+                    <height>240</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                </control>
+                <control type="label">
+                    <posx>200</posx>
+                    <posy>240</posy>
+                    <width>380</width>
+                    <height>50</height>
+                    <textoffsetx>15</textoffsetx>
+                    <align>center</align>
+                    <label>$INFO[ListItem.Label]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>grey2</textcolor>
+                </control>
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>380</width>
+                    <height>240</height>
+                    <texture>common/black.png</texture>
+                    <colordiffuse>99FFFFFF</colordiffuse>
+                    <include>Animation_VisibleChange400</include>
+                    <visible>Control.HasFocus(8001)</visible>
+                </control>
+            </itemlayout>
+            <focusedlayout width="400" height="310" condition="Substring(Window(home).Property(Featured),TV)">
+                <control type="image">
+                    <posx>5</posx>
+                    <posy>5</posy>
+                    <width>380</width>
+                    <height>240</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                </control>
+                <control type="label">
+                    <posx>159</posx>
+                    <posy>240</posy>
+                    <width>380</width>
+                    <height>50</height>
+                    <textoffsetx>15</textoffsetx>
+                    <align>center</align>
+                    <label>$INFO[ListItem.Label]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>grey2</textcolor>
+                    <visible>!Control.HasFocus(8001)</visible>
+                </control>
+                <control type="label">
+                    <posx>200</posx>
+                    <posy>240</posy>
+                    <width>380</width>
+                    <height>50</height>
+                    <textoffsetx>15</textoffsetx>
+                    <align>center</align>
+                    <label>$INFO[ListItem.Label]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+                    <visible>Control.HasFocus(8001)</visible>
+                </control>
+                <control type="image">
+                    <width>400</width>
+                    <height>310</height>
+                    <texture border="5">views/addonwall_select.png</texture>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                    <include>Animation_VisibleChange200</include>
+                    <visible>Control.HasFocus(8001)</visible>
+                </control>
+            </focusedlayout>
             <content>
                 <include condition="Stringcompare(Window(home).Property(Featured),randommovies)">RandomMoviesItems</include>
                 <include condition="Stringcompare(Window(home).Property(Featured),recentmovies)">LatestMoviesItems</include>
@@ -275,9 +374,9 @@
         </control>
         <control type="button" id="5014">
             <include>HiddenObject</include>
-            <onfocus condition="!IsEmpty(Container(8001).ListItem.Property(Trailer)) | Substring(Control.GetLabel(4321),random)">SetFocus(8020)</onfocus>
-            <onfocus condition="IsEmpty(Container(8001).ListItem.Property(Trailer)) + !Substring(Control.GetLabel(4321),random)">$INFO[Container(8001).ListItem.Property(Path)]</onfocus>
-            <onfocus condition="IsEmpty(Container(8001).ListItem.Property(Trailer)) + !Substring(Control.GetLabel(4321),random)">Action(Close)</onfocus>
+            <onfocus condition="Substring(Control.GetLabel(4321),movie)">SetFocus(8020)</onfocus>
+            <onfocus condition="!Substring(Control.GetLabel(4321),movie)">$INFO[Container(8001).ListItem.Property(Path)]</onfocus>
+            <onfocus condition="!Substring(Control.GetLabel(4321),movie)">Action(Close)</onfocus>
         </control>
         <control type="grouplist" id="8020">
             <posx>730</posx>
@@ -312,17 +411,11 @@
             </control>
             <control type="button" id="8016">
                 <label>$LOCALIZE[20410]</label>
-                <onclick>PlayMedia($ESCINFO[Container(8001).ListItem.Property(Trailer)])</onclick>
-                <include>Objects_ContextMenuButton</include>
-                <visible>!IsEmpty(Container(8001).ListItem.Property(Trailer))</visible>
                 <onclick>Action(Close)</onclick>
-            </control>
-            <control type="button" id="8035">
-                <label>$LOCALIZE[31087]</label>
-                <onclick>SetProperty(SkinWidgets_RandomItems_Update,true,home)</onclick>
-                <onclick>SetFocus(8001)</onclick>
+                <onclick condition="!IsEmpty(Container(8001).ListItem.Property(Trailer))">PlayMedia($ESCINFO[Container(8001).ListItem.Property(Trailer)])</onclick>
+                <onclick condition="IsEmpty(Container(8001).ListItem.Property(Trailer))">ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Container(8001).ListItem.Label] Trailer,return)</onclick>
                 <include>Objects_ContextMenuButton</include>
-                <visible>Substring(Control.GetLabel(4321),random)</visible>
+                <visible>Substring(Control.GetLabel(4321),movie)</visible>
             </control>
             <control type="image" id="2">
                 <posy>699</posy>
@@ -350,16 +443,32 @@
                 </control>
                 <control type="label">
                     <posx>223</posx>
-                    <posy>5</posy>
+                    <posy>0</posy>
                     <width>1373</width>
                     <height>50</height>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[Container(8001).ListItem.Label]</label>
-                    <font>Font_Reg24</font>
+                    <font>Font_Bold24</font>
+                </control>
+                    <control type="grouplist">
+                    <posx>223</posx>
+                    <posy>40</posy>
+                        <orientation>vertical</orientation>
+                        <itemgap>0</itemgap>
+                <control type="label">
+                    <posx>223</posx>
+                    <posy>45</posy>
+                    <width>1373</width>
+                    <height>43</height>
+                    <textoffsetx>15</textoffsetx>
+                    <aligny>top</aligny>
+                    <label>$INFO[Container(8001).ListItem.Property(Tagline)]</label>
+                    <font>Font_Reg19</font>
+                    <textcolor>white4</textcolor>
                 </control>
                 <control type="label">
                     <posx>223</posx>
-                    <posy>58</posy>
+                    <posy>50</posy>
                     <width>1373</width>
                     <height>30</height>
                     <textoffsetx>15</textoffsetx>
@@ -367,11 +476,22 @@
                     <font>Font_Reg19</font>
                     <textcolor>grey2</textcolor>
                 </control>
+                <control type="label">
+                    <posx>223</posx>
+                    <posy>98</posy>
+                    <width>1373</width>
+                    <height>30</height>
+                    <textoffsetx>15</textoffsetx>
+                    <label>$INFO[Container(8001).ListItem.Property(Director),[COLOR bcicon]$LOCALIZE[31156] [/COLOR]]</label>
+                    <font>Font_Reg19</font>
+                    <textcolor>grey2</textcolor>
+                </control>
+                </control>
                 <control type="textbox">
                     <posx>238</posx>
                     <posy>145</posy>
                     <width>1343</width>
-                    <height>195</height>
+                    <height>203</height>
                     <aligny>top</aligny>
                     <label>$INFO[Container(8001).ListItem.Property(Plot)]</label>
                     <font>Font_Reg19</font>
@@ -379,9 +499,10 @@
                     <autoscroll delay="5000" time="AutoScrollTime" repeat="8001">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
                 <control type="image">
-                    <posx>1295</posx>
-                    <width>300</width>
-                    <height>116</height>
+                    <posx>1240</posx>
+                    <posy>-10</posy>
+                    <width>340</width>
+                    <height>156</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Container(8001).ListItem.Property(Logo)]</texture>
                 </control>
