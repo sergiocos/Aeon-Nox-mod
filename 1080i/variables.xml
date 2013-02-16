@@ -1578,12 +1578,13 @@
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo) + IsEmpty(Window(Home).Property(NextAired.NextDate))">$VAR[LastEpisodeVar]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Mpaa]</value>
     </variable>
-    <variable name="LowListSubTitleVar">
+     <!-- SERGIU LOW LIST --><variable name="LowListSubTitleVar">
         <value condition="SubString(ListItem.Path,videodb://1/7)">$LOCALIZE[20457]</value>
-        <value condition="Container.Content(movies) | Container.Content(tvshows)">$INFO[ListItem.Genre]</value>
-        <value condition="Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[20416] ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
-        <value condition="Container.Content(seasons)">$INFO[ListItem.Episode,, [LOWERCASE]$LOCALIZE[20360] [/LOWERCASE]]$INFO[ListItem.Property(WatchedEpisodes), (,]$INFO[ListItem.Property(TotalEpisodes),/,)]</value>
-    </variable>
+        <value condition="Container.Content(tvshows)">[LOWERCASE]$INFO[ListItem.Property(TotalEpisodes),, ]$VAR[OneOrMoreEpisodesVar] $INFO[ListItem.Genre,• ,][/LOWERCASE]</value>
+		<value condition="Container.Content(movies)">[LOWERCASE]$INFO[ListItem.Duration,, minute] $INFO[ListItem.Genre,• ,][/LOWERCASE]</value>
+        <value condition="Container.Content(episodes)">$INFO[ListItem.Premiered ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
+        <value condition="Container.Content(seasons)">[LOWERCASE]$INFO[ListItem.Property(TotalEpisodes),, ]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</value>
+     </variable><!-- SERGIU LOW LIST -->
     <!-- Featured Items -->
     <variable name="FeaturedInfoDialogIconVar">
         <value condition="StringCompare(Window(1115).Property(InfoDialog),5002)">$INFO[Container(5002).ListItem.Icon]</value>

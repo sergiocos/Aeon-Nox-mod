@@ -84,9 +84,19 @@
                         <texture background="true">$VAR[TVShowLogoVar]</texture>
                         <fadetime>400</fadetime>
                         <include>Animation_VisibleChange400</include>
-                        <visible>!Skin.HasSetting(lowlistclearart) + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
+                        <visible>!Skin.HasSetting(lowlistclearart) + [!Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
                     </control>
-                                        </control>
+					<!--sergiu: logo episoade--> <control type="image">
+						<posx>33</posx>
+						<posy>915</posy>
+						<width>380</width>
+						<height>149</height>
+						<texture background="true">$VAR[TVShowLogoVar]</texture>
+						<visible>Container.Content(episodes)</visible>
+						<fadetime>300</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>
+                    </control>
 
                     <control type="image">
                         <posx>1128</posx>
@@ -194,6 +204,7 @@
                             <imagepath background="true">$INFO[ListItem.Path]/extrathumbs/</imagepath>
                             <fadetime>1000</fadetime>
                             <timeperimage>8000</timeperimage>
+							<visible>Container.Content(movies)</visible>
                         </control>
                     </control>
                     <control type="image">
@@ -416,22 +427,23 @@
                         <fadetime>400</fadetime>
                     </control>
                     <control type="label">
-                        <posx>1625</posx>
+                        <posx>1895</posx>
                         <posy>966</posy>
                         <width>330</width>
                         <height>90</height>
-                        <align>left</align>
-                        <font>Font_Bold16</font>
-                        <label>Last: $VAR[LastEpisodeVar]</label>
+                        <align>right</align>
+                        <font>Font_Bold19</font>
+                        <label>recent: $VAR[LastEpisodeVar]</label>
                     </control>
                     <control type="label">
-                        <posx>1625</posx>
+                        <posx>1895</posx>
                         <posy>995</posy>
                         <width>330</width>
                         <height>90</height>
-                        <align>left</align>
-                        <font>Font_Bold16</font>
-                        <label>Next: $VAR[NextEpisodeVar]</label>
+                        <align>right</align>
+                        <font>Font_Bold19</font>
+                        <label>următorul: $VAR[NextEpisodeVar]</label>
+						<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>
                     </control>
                     </control>
                 </control>
@@ -698,7 +710,7 @@
                 </control>
                 <control type="group">
                     <posx>-25</posx>
-                    <posy>194</posy>
+                    <posy>94</posy>
                     <animation effect="slide" end="-21,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
                     <animation type="Visible">
                         <effect type="fade" time="120" end="100" />
