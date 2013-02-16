@@ -19,6 +19,14 @@
                     <animation effect="slide" end="0,-165" time="120" condition="!Skin.HasSetting(nohighlist)">Conditional</animation>
                     <control type="group">
                         <visible>Container.Content(movies) + [Skin.HasSetting(lowlisttagline) | Control.HasFocus(7002)] + !IsEmpty(ListItem.Tagline)</visible>
+                        <!--                         <animation type="Visible">
+                            <effect type="slide" start="0,50" end="0,0" time="400" easing="in" tween="cubic" />
+                            <effect type="fade" end="100" time="300" />
+                        </animation>
+                        <animation type="Hidden">
+                            <effect type="slide" end="0,50" time="400" tween="cubic" />
+                            <effect type="fade" start="100" end="0" time="200" />
+                        </animation> -->
                         <animation type="Visible">
                             <effect type="zoom" end="100,100" start="100,0" time="320" easing="in" tween="cubic" center="960,755" />
                         </animation>
@@ -43,7 +51,8 @@
                         </control>
                     </control>
                     <control type="group">
-					<animation effect="slide" end="-655,0" time="120" condition="!Control.IsVisible(9900) + !Control.HasFocus(7002)">Conditional</animation>
+                                            <animation effect="slide" end="-655,0" time="120" condition="!Control.IsVisible(9900) + !Control.HasFocus(7002)">Conditional</animation>
+
                     <control type="image">
                         <posy>710</posy>
                         <width>1920</width>
@@ -77,7 +86,8 @@
                         <include>Animation_VisibleChange400</include>
                         <visible>!Skin.HasSetting(lowlistclearart) + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
                     </control>
-                </control>
+                                        </control>
+
                     <control type="image">
                         <posx>1128</posx>
                         <posy>754</posy>
