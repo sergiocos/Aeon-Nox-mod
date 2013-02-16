@@ -364,12 +364,6 @@
             <filename>MC360.ttf</filename>
             <size>31</size>
         </font>
-		<!--sergiu: 1 new-->
-		<font>
-			<name>Fut_LT_Cond</name>
-			<filename>fut_lt_cond.ttf</filename>
-			<size>46</size>
-		</font>
         <!--Aeon Nox-->
         <!--CAPS-->
     </fontset>
