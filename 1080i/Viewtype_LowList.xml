@@ -84,7 +84,7 @@
                         <texture background="true">$VAR[TVShowLogoVar]</texture>
                         <fadetime>400</fadetime>
                         <include>Animation_VisibleChange400</include>
-                        <visible>!Skin.HasSetting(lowlistclearart) + [!Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
+                        <visible>!Player.HasVideo+!Skin.HasSetting(lowlistclearart) + [!Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
                     </control>
 					<!--sergiu: logo si banner ep--> <control type="image">
 						<posx>33</posx>
@@ -103,7 +103,7 @@
                         <height>118,56</height>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <texture background="true" diffuse="thumbs/banner_mask.png">$VAR[BannerVar]</texture>
-						<visible>Container.Content(episodes)</visible>
+						<visible>Container.Content(episodes)+!Player.HasVideo</visible>
                     </control>
 					<control type="image">
                             <posx>1262.4</posx>
@@ -114,7 +114,7 @@
                             <bordersize>12</bordersize>
                             <bordertexture border="12">thumbs/banner_shadow.png</bordertexture>
                             <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-							<visible>Container.Content(episodes)</visible>
+							<visible>Container.Content(episodes)+!Player.HasVideo</visible>
                         </control><!--sergiu: logo si banner ep-->
                     </control>
                     <control type="image">
