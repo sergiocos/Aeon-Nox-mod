@@ -51,8 +51,7 @@
                         </control>
                     </control>
                     <control type="group">
-                                            <animation effect="slide" end="-655,0" time="120" condition="!Control.IsVisible(9900) + !Control.HasFocus(7002)">Conditional</animation>
-
+                        <animation effect="slide" end="-655,0" time="120" condition="!Control.IsVisible(9900) + !Control.HasFocus(7002)">Conditional</animation>
                     <control type="image">
                         <posy>710</posy>
                         <width>1920</width>
@@ -189,7 +188,7 @@
                         <colordiffuse>66FFFFFF</colordiffuse>
                     </control>
                     <control type="group">
-                       <visible>!Container.Content(episodes)</visible>
+                        <visible>!Container.Content(episodes)</visible>
                         <control type="image">
                             <posx>855</posx>
                             <posy>607</posy>
@@ -408,25 +407,25 @@
                     <control type="group">
                         <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
                         <visible>Skin.HasSetting(NextAiredInfo)</visible>
-                    <control type="image">
-                        <posx>1770</posx>
-                        <posy>987</posy>
-                        <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
-                        <include>OSDFlagVars</include>
-                        <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
+                        <control type="image">
+                            <posx>1770</posx>
+                            <posy>987</posy>
+                            <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
+                            <include>OSDFlagVars</include>
+                            <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
+                        </control>
+                        <control type="image">
+                            <posx>1425</posx>
+                            <posy>987</posy>
+                            <width>330</width>
+                            <height>90</height>
+                            <aspectratio scalediffuse="true">keep</aspectratio>
+                            <texture diffuse="thumbs/banner_mask.png" background="true">$VAR[BannerVar]</texture>
+                            <fadetime>400</fadetime>
+                            <visible>![Skin.HasSetting(lowlistbanner) + Container.Content(tvshows)]</visible>
+                            <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
+                        </control>
                     </control>
-                    <control type="image">
-                        <posx>1425</posx>
-                        <posy>987</posy>
-                        <width>330</width>
-                        <height>90</height>
-                        <aspectratio scalediffuse="true">keep</aspectratio>
-                        <texture diffuse="thumbs/banner_mask.png" background="true">$VAR[BannerVar]</texture>
-                        <fadetime>400</fadetime>
-                        <visible>![Skin.HasSetting(lowlistbanner) + Container.Content(tvshows)]</visible>
-                        <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
-                    </control>
-                   </control>
                     <control type="group">
                         <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
                         <visible>!Skin.HasSetting(NextAiredInfo)</visible>
@@ -473,7 +472,7 @@
                         <font>Font_Bold19</font>
                         <label>$VAR[ShowStatusVar]</label>
 						<visible>IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>
-                    </control>
+                        </control>
                     </control>
                 </control>
                 <control type="group">
@@ -739,7 +738,7 @@
                 </control>
                 <control type="group">
                     <posx>-25</posx>
-                    <posy>94</posy>
+                    <posy>194</posy>
                     <animation effect="slide" end="-21,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
                     <animation type="Visible">
                         <effect type="fade" time="120" end="100" />
