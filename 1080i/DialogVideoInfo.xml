@@ -71,9 +71,9 @@
             <!-- Buttons -->
             <control type="button" id="13">
                 <posx>991</posx>
-                <posy>239</posy>
+                <posy>284</posy>
                 <width>854</width>
-                <height>45</height>
+                <height>42</height>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
                 <label>-</label>
@@ -83,9 +83,9 @@
             </control>
             <control type="button" id="130">
                 <posx>991</posx>
-                <posy>239</posy>
+                <posy>284</posy>
                 <width>854</width>
-                <height>45</height>
+                <height>42</height>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
                 <label>-</label>
@@ -96,7 +96,7 @@
             </control>
             <control type="button" id="131">
                 <posx>991</posx>
-                <posy>284</posy>
+                <posy>325</posy>
                 <width>854</width>
                 <height>42</height>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
@@ -167,6 +167,7 @@
                     <aspectratio aligny="center" align="left">keep</aspectratio>
                     <texture background="true">$INFO[ListItem.Country,flags/language/,.png]</texture>
                     <fadetime>200</fadetime>
+                    <colordiffuse>AAFFFFFF</colordiffuse>
                     <visible>!IsEmpty(ListItem.Country)</visible>
                     <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
                 </control> 
@@ -219,7 +220,7 @@
                     <aspectratio>keep</aspectratio>
                     <texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
                     <colordiffuse>FF7c7c7c</colordiffuse>
-                    <visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
+                    <visible>Container.Content(tvshows)</visible>
                 </control>
                 <control type="label">
                     <posx>272</posx>
@@ -232,6 +233,109 @@
                     <textcolor>grey</textcolor>
                     <visible>!Container.Content(episodes)</visible>
                 </control>
+                <control type="group">
+                    <visible>Container.Content(episodes)</visible>
+                    <control type="label">
+                        <posx>4</posx>
+                        <posy>87</posy>
+                        <width>249</width>
+                        <height>85</height>
+                        <align>left</align>
+                        <label fallback="-">$VAR[ListItemSeasonVar,S]   -   $VAR[ListItemEpisodeVar,E]</label>
+                        <font>Font_Bold28</font>
+                        <textcolor>grey</textcolor>
+                    </control>
+                    <control type="image">
+                        <posx>285</posx>
+                        <posy>87</posy>
+                        <width>135</width>
+                        <height>90</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
+                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <colordiffuse>grey</colordiffuse>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>435</posx>
+                    <posy>90</posy>
+                    <visible>Container.Content(movies) | Container.Content(episodes)</visible>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>2</posy>
+                        <width>135</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Duration]</label>
+                        <font>Font_Bold25</font>
+                        <textcolor>grey</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>1</posx>
+                        <posy>44</posy>
+                        <width>135</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <label>$LOCALIZE[12391]</label>
+                        <font>Font_Reg10_Caps</font>
+                        <textcolor>grey</textcolor>
+                    </control>
+                    <control type="image">
+                        <posx>132</posx>
+                        <posy>1</posy>
+                        <height>79</height>
+                        <include>Furniture_FlagUpright</include>
+                    </control>
+                    <control type="image">
+                        <posx>140</posx>
+                        <posy>14</posy>
+                        <width>141</width>
+                        <height>52</height>
+                        <texture>flags/posters/imdb.png</texture>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
+                        <include>AudioFlagsVars</include>
+                    </control>
+                    <control type="label">
+                        <posx>200</posx>
+                        <posy>21</posy>
+                        <width>135</width>
+                        <height>38</height>
+                        <label fallback="?">$INFO[ListItem.Rating]</label>
+                        <font>Font_Bold28</font>
+                        <textcolor>grey</textcolor>
+                        <textcolor>BBa4a4a4</textcolor>
+                    </control>
+                    <control type="image">
+                        <posx>287</posx>
+                        <posy>1</posy>
+                        <height>79</height>
+                        <include>Furniture_FlagUpright</include>
+                    </control>
+                    <control type="image" id="800011">
+                        <posx>300</posx>
+                        <posy>1</posy>
+                        <width>116</width>
+                        <height>79</height>
+                        <aspectratio aligny="center" align="center">keep</aspectratio>
+                        <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+                        <colordiffuse>FF7c7c7c</colordiffuse>
+                                                <visible>!IsEmpty(Control.GetLabel(800011))</visible>
+
+                    </control>
+                    <control type="label">
+                        <posx>291</posx>
+                        <posy></posy>
+                        <width>155</width>
+                        <height>74</height>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Studio]</label>
+                        <font>Font_Reg14_Caps</font>
+                        <textcolor>grey</textcolor>
+                        <textcolor>BBa4a4a4</textcolor>
+                        <wrapmultiline>true</wrapmultiline>
+                                                <visible>IsEmpty(Control.GetLabel(800011))</visible>
+                    </control>
+                </control>
                 <control type="label">
                     <posx>465</posx>
                     <posy>98</posy>
@@ -242,56 +346,18 @@
                     <textcolor>grey</textcolor>
                     <scroll>true</scroll>
                     <wrapmultiline>true</wrapmultiline>
-                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(MusicVideos)</visible>
-                </control>
-                <control type="group">
-                    <visible>Container.Content(episodes)</visible>
-                    <control type="image">
-                        <posx>571</posx>
-                        <posy>90</posy>
-                        <height>80</height>
-                        <include>Furniture_FlagUpright</include>
-                    </control>
-                    <control type="image">
-                        <posx>436</posx>
-                        <posy>87</posy>
-                        <width>135</width>
-                        <height>90</height>
-                        <aspectratio align="center">keep</aspectratio>
-                        <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-                        <colordiffuse>grey</colordiffuse>
-                    </control>
-                    <control type="label">
-                        <posx>591</posx>
-                        <posy>87</posy>
-                        <width>500</width>
-                        <height>85</height>
-                        <label fallback="-">$LOCALIZE[20416]:[CR]$INFO[ListItem.Premiered]</label>
-                        <font>Font_Reg20</font>
-                        <textcolor>grey</textcolor>
-                    </control>
-                    <control type="label">
-                        <posx>272</posx>
-                        <posy>87</posy>
-                        <width>164</width>
-                        <height>85</height>
-                        <align>center</align>
-                        <label fallback="-">$VAR[ListItemSeasonVar,S]$VAR[ListItemEpisodeVar,E]</label>
-                        <font>Font_Bold28</font>
-                        <textcolor>grey</textcolor>
-                    </control>
+                    <visible>Container.Content(tvshows) | Container.Content(MusicVideos)</visible>
                 </control>
                 <!-- Second Row -->
                 <control type="group">
                     <posy>-4</posy>
-                    <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
+                    <visible>Container.Content(movies) | Container.Content(MusicVideos)</visible>
                     <control type="label">
                         <posx>4</posx>
                         <posy>171</posy>
                         <width>165</width>
                         <height>44</height>
-                        <label>$LOCALIZE[20339]:</label>
+                        <label>$LOCALIZE[515]:</label>
                         <font>Font_Reg32</font>
                         <textcolor>grey</textcolor>
                     </control>
@@ -300,7 +366,29 @@
                         <posy>171</posy>
                         <width>840</width>
                         <height>44</height>
-                        <label fallback="31006">$INFO[ListItem.Director]</label>
+                        <label fallback="31006">$INFO[ListItem.Genre]</label>
+                        <font>Font_Reg32</font>
+                        <scroll>true</scroll>
+                    </control>
+                </control>
+                <control type="group">
+                    <posy>-4</posy>
+                    <visible>Container.Content(episodes)</visible>
+                    <control type="label">
+                        <posx>4</posx>
+                        <posy>171</posy>
+                        <width>165</width>
+                        <height>44</height>
+                        <label>$LOCALIZE[31005]:</label>
+                        <font>Font_Reg32</font>
+                        <textcolor>grey</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>180</posx>
+                        <posy>171</posy>
+                        <width>840</width>
+                        <height>44</height>
+                        <label fallback="31006">$INFO[ListItem.Premiered]</label>
                         <font>Font_Reg32</font>
                         <scroll>true</scroll>
                     </control>
@@ -335,7 +423,7 @@
                         <posy>214</posy>
                         <width>165</width>
                         <height>44</height>
-                        <label>$LOCALIZE[20417]:</label>
+                        <label>$LOCALIZE[20339]:</label>
                         <font>Font_Reg32</font>
                         <textcolor>grey</textcolor>
                     </control>
@@ -344,7 +432,7 @@
                         <posy>214</posy>
                         <width>840</width>
                         <height>44</height>
-                        <label fallback="31006">$INFO[ListItem.Writer]</label>
+                        <label fallback="31006">$INFO[ListItem.Director]</label>
                         <font>Font_Reg32</font>
                         <scroll>true</scroll>
                     </control>
@@ -400,16 +488,16 @@
                         <posy>255</posy>
                         <width>165</width>
                         <height>44</height>
-                        <label>$LOCALIZE[2050]:</label>
+                        <label>$LOCALIZE[20417]:</label>
                         <font>Font_Reg32</font>
                         <textcolor>grey</textcolor>
                     </control>
                     <control type="label">
                         <posx>180</posx>
                         <posy>255</posy>
-                        <width>300</width>
+                        <width>840</width>
                         <height>44</height>
-                        <label fallback="31006">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+                        <label fallback="31006">$INFO[ListItem.Writer]</label>
                         <font>Font_Reg32</font>
                     </control>
                 </control>
@@ -476,51 +564,6 @@
                         <font>Font_Reg32</font>
                     </control>
                 </control>
-                <!-- Fourth Row Right -->
-                <control type="group">
-                    <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
-                    <control type="image">
-                        <posx>569</posx>
-                        <posy>257</posy>
-                        <width>2</width>
-                        <height>40</height>
-                        <texture>views/tripanel/upright.png</texture>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    </control>
-                    <control type="group">
-                        <posy>-4</posy>
-                        <control type="label">
-                            <posx>562</posx>
-                            <posy>255</posy>
-                            <width>165</width>
-                            <height>44</height>
-                            <align>right</align>
-                            <label>$LOCALIZE[31095]:</label>
-                            <font>Font_Reg32</font>
-                            <textcolor>grey</textcolor>
-                            <visible>Container.Content(movies)</visible>
-                        </control>
-                        <control type="label">
-                            <posx>562</posx>
-                            <posy>255</posy>
-                            <width>165</width>
-                            <height>44</height>
-                            <align>right</align>
-                            <label>$LOCALIZE[563]:</label>
-                            <font>Font_Reg32</font>
-                            <textcolor>grey</textcolor>
-                            <visible>!Container.Content(movies)</visible>
-                        </control>
-                        <control type="label">
-                            <posx>585</posx>
-                            <posy>255</posy>
-                            <width>750</width>
-                            <height>44</height>
-                            <label fallback="-">$INFO[ListItem.RatingAndVotes]$INFO[ListItem.Top250, / $LOCALIZE[13409] #]</label>
-                            <font>Font_Reg32</font>
-                        </control>
-                    </control>
-                </control>
                 <control type="label">
                     <posx>4</posx>
                     <posy>292</posy>
@@ -559,7 +602,7 @@
                         <visible>!IsEmpty(Control.GetLabel(900011))</visible>
                     </control>
                     <control type="image" id="900012">
-                        <width>132</width>
+                        <width>121</width>
                         <height>90</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.VideoCodec,flags/source/,.png]</texture>
@@ -573,10 +616,10 @@
                         <visible>!IsEmpty(Control.GetLabel(900012)) | !IsEmpty(Control.GetLabel(900011))</visible>
                     </control>
                     <control type="image" id="900013">
-                        <width>161</width>
+                        <width>121</width>
                         <height>70</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+                        <texture>$VAR[AudioFlagVar]</texture>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <visible>!IsEmpty(Control.GetLabel(900013))</visible>
                     </control>
@@ -622,19 +665,6 @@
                     <control type="image">
                         <include>Furniture_FlagUpright</include>
                         <visible>!IsEmpty(Control.GetLabel(900015))</visible>
-                    </control>
-                    <control type="image" id="900016">
-                        <width>132</width>
-                        <height>75</height>
-                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
-                        <animation effect="slide" end="0,-4" condition="true">Conditional</animation>
-                        <visible>!IsEmpty(Control.GetLabel(900016))</visible>
-                    </control>
-                    <control type="image">
-                        <include>Furniture_FlagUpright</include>
-                        <visible>!IsEmpty(Control.GetLabel(900016))</visible>
                     </control>
                     <control type="image">
                         <width>58</width>
@@ -939,6 +969,8 @@
                 <aspectratio>keep</aspectratio>
                 <texture background="true">$INFO[Container(50).Listitem.Icon]</texture>
                 <fadetime>400</fadetime>
+                        <bordertexture border="7">thumbs/multiplex_tvborder.png</bordertexture>
+                        <bordersize>7</bordersize>
                 <visible>!Control.HasFocus(5054)</visible>
             </control>
             <control type="group">
@@ -1046,11 +1078,11 @@
             </control>
             <control type="label">
                 <posx>825</posx>
-                <posy>1042</posy>
-                <width>1050</width>
+                <posy>1034</posy>
+                <width>950</width>
                 <label>$INFO[ListItem.FileNameAndPath]</label>
-                <font>Font_Info</font>
-                <textcolor>grey</textcolor>
+                <font>Font_Reg12</font>
+                <textcolor>white5</textcolor>
                 <scroll>true</scroll>
                 <haspath>true</haspath>
             </control>
@@ -1138,6 +1170,18 @@
                 <include>Animation_VisibleChange200</include>
                 <animation effect="slide" start="150" end="0" delay="640" time="320" tween="cubic">WindowOpen</animation>
                 <visible>Container(5000).HasNext+ ControlGroup(5000).HasFocus</visible>
+            </control>
+            <control type="image">
+                <posx>1650</posx>
+                <posy>920</posy>
+                <width>300</width>
+                <height>300</height>
+                <texture background="true">$INFO[ListItem.Art(discart)]</texture>
+                <include>Animation_VisibleChange200</include>
+                <animation type="WindowOpen">
+                <effect type="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" />
+                <effect type="slide" start="150" end="0" delay="640" time="320" tween="cubic" />
+                </animation>
             </control>
         </control>
     </controls>
