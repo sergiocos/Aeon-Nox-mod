@@ -145,7 +145,7 @@
                         <height>50</height>
                         <label>$INFO[ListItem.Title]</label>
                         <font>Font_Reg38_Caps</font>
-                                    <animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(movies) + IsEmpty(ListItem.TagLine)] | Container.Content(tvshows)">Conditional</animation>
+                        <animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(movies) + IsEmpty(ListItem.TagLine)] | Container.Content(tvshows)">Conditional</animation>
                         <visible>!Control.IsVisible(8822)</visible>
                         <scroll>true</scroll>
                     </control>
@@ -222,17 +222,18 @@
                     <colordiffuse>FF7c7c7c</colordiffuse>
                     <visible>Container.Content(tvshows)</visible>
                 </control>
-                <control type="label">
-                    <posx>272</posx>
-                    <posy>92</posy>
-                    <width>165</width>
-                    <height>60</height>
-                    <align>center</align>
-                    <label fallback="-">$INFO[ListItem.Year]</label>
-                    <font>Font_Bold25</font>
-                    <textcolor>grey</textcolor>
+                <control type="group">
                     <visible>!Container.Content(episodes)</visible>
-                </control>
+                    <control type="label">
+                        <posx>272</posx>
+                        <posy>92</posy>
+                        <width>165</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label fallback="-">$INFO[ListItem.Year]</label>
+                        <font>Font_Bold25</font>
+                        <textcolor>grey</textcolor>
+                    </control>
                     <control type="label">
                         <posx>272</posx>
                         <posy>136</posy>
@@ -243,6 +244,7 @@
                         <font>Font_Reg10_Caps</font>
                         <textcolor>grey</textcolor>
                     </control>
+                </control>
                 <control type="group">
                     <visible>Container.Content(episodes)</visible>
                     <control type="label">
@@ -329,8 +331,7 @@
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
                         <colordiffuse>FF7c7c7c</colordiffuse>
-                                                <visible>!IsEmpty(Control.GetLabel(800011))</visible>
-
+                        <visible>!IsEmpty(Control.GetLabel(800011))</visible>
                     </control>
                     <control type="label">
                         <posx>291</posx>
@@ -343,7 +344,7 @@
                         <textcolor>grey</textcolor>
                         <textcolor>BBa4a4a4</textcolor>
                         <wrapmultiline>true</wrapmultiline>
-                                                <visible>IsEmpty(Control.GetLabel(800011))</visible>
+                        <visible>IsEmpty(Control.GetLabel(800011))</visible>
                     </control>
                 </control>
                 <control type="label">
@@ -360,7 +361,7 @@
                 </control>
                 <!-- Second Row -->
                 <control type="group">
-                    <posy>-4</posy>
+                    <posy>-2</posy>
                     <visible>Container.Content(movies) | Container.Content(MusicVideos)</visible>
                     <control type="label">
                         <posx>4</posx>
@@ -382,7 +383,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <posy>-4</posy>
+                    <posy>-2</posy>
                     <visible>Container.Content(episodes)</visible>
                     <control type="label">
                         <posx>4</posx>
@@ -612,7 +613,7 @@
                         <visible>!IsEmpty(Control.GetLabel(900011))</visible>
                     </control>
                     <control type="image" id="900012">
-                        <width>121</width>
+                        <width>130</width>
                         <height>90</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.VideoCodec,flags/source/,.png]</texture>
@@ -639,12 +640,11 @@
                     </control>
                     <control type="image" id="900017">
                         <width>100</width>
-                        <height>100</height>
+                        <height>89</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <animation effect="slide" end="0,-10" condition="true">Conditional</animation>
                         <texture>$INFO[ListItem.AudioChannels,flags/info/channels/,.png]</texture>
                         <colordiffuse>FF7c7c7c</colordiffuse>
-                        <animation effect="slide" end="0,-3" condition="true">Conditional</animation>
+                        <animation effect="slide" end="0,-8" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900017))</visible>
                     </control>
                     <control type="image">
@@ -666,7 +666,7 @@
                     </control>
                     <control type="image" id="900015">
                         <width>100</width>
-                        <height>83</height>
+                        <height>85</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <animation effect="slide" end="0,-7" condition="true">Conditional</animation>
                         <texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
