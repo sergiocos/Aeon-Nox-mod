@@ -378,7 +378,7 @@
                         <width>70</width>
                         <height>65</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$INFO[ListItem.AudioChannels,flags/info/channels/,.png]</texture>
+                        <texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <animation effect="slide" end="0,3" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900017))</visible>
@@ -391,7 +391,7 @@
                         <width>100</width>
                         <height>70</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$INFO[ListItem.VideoResolution,flags/info/,.png]</texture>
+                        <texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <visible>!IsEmpty(Control.GetLabel(900014))</visible>
                     </control>
@@ -429,7 +429,7 @@
                         <width>58</width>
                         <height>70</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>flags/info/cc.png</texture>
+                        <texture>flags/cc.png</texture>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <visible>!IsEmpty(ListItem.SubtitleLanguage)</visible>
                     </control>
