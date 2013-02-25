@@ -133,9 +133,31 @@
                     <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
                     <visible>!IsEmpty(ListItem.Art(clearlogo)) + Container.Content(tvshows)</visible>
                 </control>
+                    <control type="image">
+                    <posx>-20</posx>
+                    <posy>-20</posy>
+                        <width>120</width>
+                        <height>120</height>
+                        <texture>common/imdb.png</texture>
+                        <colordiffuse>FFAAAAAA</colordiffuse>
+                        <include>AudioFlagsVars</include>
+                        <visible>!IsEmpty(ListItem.Top250)</visible>
+                    </control>
+                    <control type="label">
+                    <posx>-20</posx>
+                    <posy>-33</posy>
+                        <width>120</width>
+                        <height>120</height>
+                        <label>$INFO[ListItem.Top250]</label>
+                        <textcolor>black</textcolor>
+                        <align>center</align>
+                        <font>Font_Reg19_Caps</font>
+                        <visible>!IsEmpty(ListItem.Top250)</visible>
+                    </control>
                 <control type="grouplist">
                     <posx>0</posx>
                     <posy>-5</posy>
+                        <animation effect="slide" start="0,0" end="90,0" time="0" condition="!IsEmpty(ListItem.Top250)">Conditional</animation>
                     <width>1018</width>
                     <height>200</height>
                     <aligny>top</aligny>
@@ -170,7 +192,6 @@
                     <fadetime>200</fadetime>
                     <colordiffuse>AAFFFFFF</colordiffuse>
                     <visible>!IsEmpty(Control.GetLabel(12020))</visible>
-                    <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
                 </control> 
                     <control type="label">
                         <width>995</width>
@@ -247,6 +268,7 @@
                     </control>
                 </control>
                 <control type="group">
+                   <visible>Container.Content(tvshows)</visible>
                 <control type="image">
                         <posx>442</posx>
                         <posy>87</posy>
@@ -670,7 +692,7 @@
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
                         <colordiffuse>FF7c7c7c</colordiffuse>
-                        <animation effect="slide" end="0,-8" condition="true">Conditional</animation>
+                        <animation effect="slide" end="0,-11" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900017))</visible>
                     </control>
                     <control type="image">
