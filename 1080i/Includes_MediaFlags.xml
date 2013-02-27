@@ -155,33 +155,32 @@
                 <control type="group">
                     <visible>Container.Content(tvshows)</visible>
                     <visible>Control.IsVisible(503) | Control.IsVisible(500) | Control.IsVisible(508) | Control.IsVisible(501)</visible>
-                <control type="image">
+                    <control type="image">
                         <posx>300</posx>
-                        <posy>997</posy>
-                    <width>150</width>
-                    <height>70</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
-                    <colordiffuse>$VAR[FlagDiffuseVar]</colordiffuse>
-                </control>
+                        <posy>987</posy>
+                        <width>140</width>
+                        <height>105</height>
+                        <texture>flags/imdb.png</texture>
+                        <aspectratio>keep</aspectratio>
+                        <include>AudioFlagsVars</include>
+                    </control>
+                    <control type="label">
+                        <posx>300</posx>
+                        <posy>1030</posy>
+                        <width>135</width>
+                        <height>38</height>
+                        <align>center</align>
+                        <label fallback="?">$INFO[ListItem.Rating]</label>
+                        <font>Font_Bold24</font>
+                        <textcolor>floor</textcolor>
+                    </control>
                 <control type="image">
                         <posx>1450</posx>
                         <posy>994</posy>
                     <width>170</width>
-                    <height>63</height>
+                    <height>83</height>
                     <aspectratio>keep</aspectratio>
                     <texture>tvguide/$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
-                    <colordiffuse>$VAR[FlagDiffuseVar]</colordiffuse>
-                </control>
-                <control type="label">
-                        <posx>1450</posx>
-                        <posy>1021</posy>
-                    <width>170</width>
-                    <height>70</height>
-                    <aspectratio>keep</aspectratio>
-                    <font>Font_Reg10_Caps</font>
-                    <align>center</align>
-                    <label>$INFO[Window(Home).Property(NextAired.Status)]</label>
                     <colordiffuse>$VAR[FlagDiffuseVar]</colordiffuse>
                 </control>
 </control>
@@ -189,7 +188,12 @@
                     <posx>1665</posx>
                     <posy>987</posy>
                     <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[RatingFlagVar,flags/rating/,.png]</texture>
-                    <include>AudioFlagsVars</include>
+                    <width>135</width>
+                    <height>100</height>
+                    <aspectratio>keep</aspectratio>
+                    <fadetime>IconCrossfadeTime2</fadetime>
+                    <colordiffuse>$VAR[FlagDiffuseVar]</colordiffuse>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <animation effect="slide" end="-45" condition="Control.IsVisible(550)">Conditional</animation>
                     <animation effect="slide" end="-2205" condition="Control.IsVisible(514)">Conditional</animation>
                     <animation effect="slide" end="-1320" condition="Control.isVisible(503) + [Skin.HasSetting(landscapeonelogo) | Skin.HasSetting(landscapelogo)] + Container.Content(movies)">Conditional</animation>

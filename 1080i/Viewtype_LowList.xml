@@ -436,16 +436,16 @@
                         <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
-                        <posx>1520</posx>
-                        <posy>987</posy>
-                        <width>80</width>
-                        <height>80</height>
+                        <posx>1500</posx>
+                        <posy>977</posy>
+                        <width>120</width>
+                        <height>100</height>
                         <aspectratio scalediffuse="true">keep</aspectratio>
                         <texture background="true">tvguide/$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
                         <fadetime>400</fadetime>
                     </control>
                     <control type="label">
-                        <posx>1895</posx>
+                        <posx>1900</posx>
                         <posy>966</posy>
                         <width>330</width>
                         <height>90</height>
@@ -454,7 +454,7 @@
                         <label>recent: $VAR[LastEpisodeVar]</label>
                     </control>
                     <control type="label">
-                        <posx>1895</posx>
+                        <posx>1900</posx>
                         <posy>995</posy>
                         <width>330</width>
                         <height>90</height>
