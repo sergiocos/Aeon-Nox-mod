@@ -445,7 +445,7 @@
                         <fadetime>400</fadetime>
                     </control>
                     <control type="label">
-                        <posx>1900</posx>
+                        <posx>1912</posx>
                         <posy>966</posy>
                         <width>330</width>
                         <height>90</height>
@@ -454,7 +454,7 @@
                         <label>recent: $VAR[LastEpisodeVar]</label>
                     </control>
                     <control type="label">
-                        <posx>1900</posx>
+                        <posx>1912</posx>
                         <posy>995</posy>
                         <width>330</width>
                         <height>90</height>
@@ -464,7 +464,7 @@
 						<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>
                     </control>
 					<control type="label">
-                        <posx>1895</posx>
+                        <posx>1912</posx>
                         <posy>995</posy>
                         <width>330</width>
                         <height>90</height>
