@@ -3,6 +3,8 @@
     <defaultcontrol always="true">5000</defaultcontrol>
     <onload>AlarmClock(ActorIconMove,Control.Move(50,3),00:07,silent,loop)</onload>
     <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
+    <onload condition="System.HasAddon(script.dvdextras) + Container.Content(movies)">XBMC.RunScript(script.dvdextras,$INFO[ListItem.FilenameAndPath],start_theme)</onload>
+    <onunload condition="System.HasAddon(script.dvdextras) + Container.Content(movies)">XBMC.RunScript(script.dvdextras,stop_theme)</onunload>
     <onunload>CancelAlarm(ActorIconMove,true)</onunload>
     <onunload>ClearProperty(FanartZoom,movieinformation)</onunload>
     <allowoverlay>no</allowoverlay>
@@ -1202,6 +1204,13 @@
                     <onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrathumbs)</onclick>
                     <visible>!Skin.HasSetting(kioskmode)</visible>
                     <visible>Container.Content(movies) + system.hasaddon(script.artwork.downloader)+ !substring(Container.FolderPath,plugin://)</visible>
+                </control>
+                <control type="button" id="100">
+                    <description>Extras</description>
+                    <include>DialogVideoInfoButton</include>
+                    <label>$LOCALIZE[31020]</label>
+                    <onclick>XBMC.RunScript(script.dvdextras,$INFO[ListItem.FilenameAndPath])</onclick>
+                    <visible>[Container.Content(movies) | Container.Content(episodes)] + System.HasAddon(script.dvdextras)</visible>
                 </control>
             </control>
             <control type="group">
