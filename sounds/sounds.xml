@@ -71,11 +71,11 @@
     <window>
       <name>infodialog</name>
       <activate>notify.wav</activate>
-      <deactivate>out.wav</deactivate>
+      <deactivate></deactivate>
     </window>
     <window>
       <name>startup</name>
-      <activate></activate>
+      <activate>intro.wav</activate>
     </window>
   </windows>
 </sounds>
