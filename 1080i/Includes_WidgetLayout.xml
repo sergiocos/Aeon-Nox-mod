@@ -199,13 +199,14 @@
                     <height>87</height>
                     <texture flipy="true">$VAR[NavBarImageVar]</texture>
                     <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+                <animation effect="slide" end="0,5" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
                     <animation effect="rotatex" end="180" time="320" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
                 </control>
                 <control type="group">
                     <control type="label">
                         <posy>3</posy>
                         <width>1920</width>
-                        <height>3</height>
+                        <height>40</height>
                         <textoffsetx>5</textoffsetx>
                         <label>$INFO[Window(Home).Property(peopleborntoday.1.name)][COLOR=grey]$INFO[Window.Property(peopleborntoday.1.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.2.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.2.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.3.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.3.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.4.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.4.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.5.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.5.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.6.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.6.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.7.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.7.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.8.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.8.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.9.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.9.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.10.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.10.job), • ][/COLOR]</label>
                         <font>Font_Reg15</font>
@@ -216,7 +217,7 @@
                         <visible>Skin.HasSetting(ActorBirthdayRSS)</visible>
                     </control>
                     <control type="rss">
-                        <posy>3</posy>
+                        <posy>7</posy>
                         <width>1920</width>
                         <height>50</height>
                         <aligny>center</aligny>
@@ -246,7 +247,7 @@
                     <posx>165</posx>
                     <posy>3</posy>
                     <width>1880</width>
-                    <height>3</height>
+                    <height>40</height>
                     <textoffsetx>0</textoffsetx>
                     <label>$INFO[Window(Home).Property(peopleborntoday.1.name)][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.1.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.2.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.2.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.3.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.3.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.4.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.4.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.5.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.5.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.6.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.6.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.7.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.7.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.8.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.8.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.9.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.9.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.10.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.10.job), • ][/COLOR]</label>
                     <font>Font_Reg15</font>
@@ -2670,14 +2671,19 @@
                 <onfocus>SetProperty(EpisodeNumber,$ESCINFO[Container(5010).ListItem.Property(EpisodeNumber)])</onfocus>
                 <onfocus>SetProperty(Version,$ESCINFO[Container(5010).ListItem.Property(Version)])</onfocus>
                 <onfocus>SetProperty(Trailer,$ESCINFO[Container(5010).ListItem.Property(Trailer)])</onfocus>
-                <onfocus condition="Substring(Window(home).Property(WidgetType),movie) | Substring(Window(home).Property(WidgetType),musicvideo) | Substring(Window(home).Property(WidgetType),actors) | Substring(Window(home).Property(WidgetType),tv) | Substring(Window(home).Property(WidgetType),roms)">SetFocus(5020)</onfocus>
-                <onfocus condition="Substring(Window(home).Property(WidgetType),babe)">ClearProperty(PanelWidgetInfo,home)</onfocus>
-                <onfocus condition="Substring(Window(home).Property(WidgetType),babe)">SetFocus(22222)</onfocus>
-                <onfocus condition="Substring(Window(home).Property(WidgetType),addons) | Substring(Window(home).Property(WidgetType),album)  | Substring(Window(home).Property(WidgetType),artist) | Substring(Window(home).Property(WidgetType),rss) | Substring(Window(home).Property(WidgetType),pics)">SetFocus(5030)</onfocus>
-            </control>
+                <onfocus>SetFocus(5055)</onfocus>
+                </control>
         </control>
     </include>
     <include name="WidgetInfoPanel">
+                    <control type="button" id="5055">
+                    <include>HiddenObject</include>
+                 <onfocus condition="Substring(Window(home).Property(WidgetType),movie) | Substring(Window(home).Property(WidgetType),musicvideo) | Substring(Window(home).Property(WidgetType),actors) | Substring(Window(home).Property(WidgetType),tv) | Substring(Window(home).Property(WidgetType),roms)">SetFocus(5020)</onfocus>
+                <onfocus condition="Substring(Window(home).Property(WidgetType),babe)">ClearProperty(PanelWidget2Info,home)</onfocus>
+                <onfocus condition="Substring(Window(home).Property(WidgetType),babe)">ClearProperty(PanelWidgetInfo,home)</onfocus>
+                <onfocus condition="Substring(Window(home).Property(WidgetType),babe)">SetFocus(22222)</onfocus>
+                <onfocus condition="Substring(Window(home).Property(WidgetType),addons) | Substring(Window(home).Property(WidgetType),album)  | Substring(Window(home).Property(WidgetType),artist) | Substring(Window(home).Property(WidgetType),rss) | Substring(Window(home).Property(WidgetType),pics)">SetFocus(5030)</onfocus>
+                </control>
         <control type="group">
             <posx>135</posx>
             <posy>389</posy>
@@ -3950,7 +3956,7 @@
             </control>
             <control type="button" id="6014">
                 <include>HiddenObject</include>
-                <onfocus condition="Substring(Control.GetLabel(4325),babe)">SetFocus(22223)</onfocus>
+                <onfocus condition="Substring(Control.GetLabel(4325),babe)">SetFocus(22222)</onfocus>
                 <onfocus condition="!Substring(Control.GetLabel(4325),babe)">SetFocus(7020)</onfocus>
             </control>
         </control>
@@ -4511,11 +4517,8 @@
                 <onfocus>SetProperty(EpisodeNumber,$ESCINFO[Container(6010).ListItem.Property(EpisodeNumber)])</onfocus>
                 <onfocus>SetProperty(Version,$ESCINFO[Container(6010).ListItem.Property(Version)])</onfocus>
                 <onfocus>SetProperty(Trailer,$ESCINFO[Container(6010).ListItem.Property(Trailer)])</onfocus>
-                <onfocus condition="Substring(Window(home).Property(WidgetType),movie) | Substring(Window(home).Property(WidgetType),musicvideo) | Substring(Window(home).Property(WidgetType),actors) | Substring(Window(home).Property(WidgetType),tv) | Substring(Window(home).Property(WidgetType),roms)">SetFocus(5020)</onfocus>
-                <onfocus condition="Substring(Window(home).Property(WidgetType),babe)">ClearProperty(PanelWidget2Info,home)</onfocus>
-                <onfocus condition="Substring(Window(home).Property(WidgetType),babe)">SetFocus(22223)</onfocus>
-                <onfocus condition="Substring(Window(home).Property(WidgetType),addons) | Substring(Window(home).Property(WidgetType),album)  | Substring(Window(home).Property(WidgetType),artist) | Substring(Window(home).Property(WidgetType),rss) | Substring(Window(home).Property(WidgetType),pics)">SetFocus(5030)</onfocus>
-            </control>
+                <onfocus>SetFocus(5055)</onfocus>
+                </control>
         </control>
     </include>
     <include name="5010List">
