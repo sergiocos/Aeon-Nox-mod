@@ -637,25 +637,6 @@
                             <height>1</height>
                             <texture>views/lowlistpanel_line.png</texture>
                         </control>
-					<!--sergiu: bara custom-->
-					<control type="image">	
-							<posx>0</posx>	  	
-              				<posy>-6</posy>	  	
-							<width>930</width>
-							<height>78</height>
-							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-							<texture>views/lowlistmusic_selectbar.png</texture>
-							<animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="300" condition="!Control.HasFocus(506)">Conditional</animation>
-	  	            </control>
-                        <control type="image">
-                            <posx>14</posx>
-                            <width>897</width>
-                            <height>66</height>
-                            <texture border="8">views/tripanel/listselect_fo.png</texture>
-                            <include>PanelGlowFade</include>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(506)">Conditional</animation>
-                        </control>
                     </control>
                     <control type="group">
                         <visible>Skin.HasSetting(lowlistmusicwidelist)</visible>
@@ -676,6 +657,16 @@
                             <animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(506)">Conditional</animation>
                         </control>
                     </control>
+					<!--sergiu: bara custom-->
+					<control type="image">	
+							<posx>0</posx>	  	
+              				<posy>-6</posy>	  	
+							<width>930</width>
+							<height>78</height>
+							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+							<texture>views/lowlistmusic_selectbar.png</texture>
+							<animation effect="fade" start="100" end="60" tween="sine" easing="inout" time="300" condition="!Control.HasFocus(506)">Conditional</animation>
+	  	            </control>
                     <control type="label">
                         <posx>52</posx>
                         <width>75</width>
