@@ -2640,19 +2640,16 @@
             <animation effect="slide" end="0,18" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) + [[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
             <animation effect="slide" end="0,-31" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)">Conditional</animation>
                 <visible>!IsEmpty(Window(home).Property(WidgetType)) + [!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))]</visible>
-                <animation type="Visible" reversible="false" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))">
-                    <include condition="Skin.HasSetting(lowermainmenu)">Animation_PanelFlipUp1</include>
-                    <include condition="!Skin.HasSetting(lowermainmenu)">Animation_PanelFlipDown1</include>
+                <animation type="Visible" reversible="false" condition="Stringcompare(Window(home).Property(WidgetPosition),Widget1)">
+                    <include condition="Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipUp1</include>
+                    <include condition="!Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipDown1</include>
                 </animation>
-                <animation type="Hidden" reversible="false" condition="IsEmpty(Window(home).Property(PanelWidgetInfo))">
-                    <include condition="Skin.HasSetting(lowermainmenu)">Animation_PanelFlipDown2</include>
-                    <include condition="!Skin.HasSetting(lowermainmenu)">Animation_PanelFlipUp2</include>
+                <animation type="Hidden" reversible="false">
+                    <include condition="Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipDown2</include>
+                    <include condition="!Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipUp2</include>
                 </animation>
-               <animation type="Visible" reversible="false" condition="!IsEmpty(Window(home).Property(PanelWidget2Info))">
-                    <include>Animation_PanelFlipUp1</include>
-                </animation>
-                <animation type="Hidden" reversible="false" condition="IsEmpty(Window(home).Property(PanelWidget2Info))">
-                    <include>Animation_PanelFlipDown2</include>
+               <animation type="Visible" reversible="false" condition="Stringcompare(Window(home).Property(WidgetPosition),Widget2)">
+                    <include>Animation_LargePanelFlipUp1</include>
                 </animation>
             <control type="image">
                 <posx>-100</posx>
@@ -2755,9 +2752,6 @@
                     <control type="button" id="5015">
                         <label>$LOCALIZE[208]</label>
                         <include>WidgetMenuLabel</include>
-                        <onclick>ClearProperty(PanelWidgetInfo,Home)</onclick>
-                        <onclick>ClearProperty(PanelWidget2Info,Home)</onclick>
-                        <onclick>ClearProperty(WidgetPosition,Home)</onclick>
                     <onclick condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))">SetFocus(5010)</onclick>
                     <onclick condition="!IsEmpty(Window(home).Property(PanelWidget2Info))">SetFocus(6010)</onclick>
                         <onclick condition="Substring(Window(home).Property(WidgetType),movies)">Runscript(service.skin.widgets,movieid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
@@ -2766,12 +2760,11 @@
                         <onclick condition="Substring(Window(home).Property(WidgetType),roms)">RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(home).Property(Id)])</onclick>
                         <onclick condition="!SubString(Window(home).Property(WidgetType),actor) + !Substring(Window(home).Property(WidgetType),roms) + !Substring(Window(home).Property(WidgetType),movies) + !Substring(Window(home).Property(WidgetType),tv) + !Substring(Window(home).Property(WidgetType),musicvideo)">$INFO[Window(home).Property(Path)]</onclick>
                         <onclick condition="SubString(Window(home).Property(WidgetType),actor)">RunScript(script.metadata.actors,$INFO[Window(home).Property(Label)])</onclick>
+                        <onclick condition="Substring(Window(home).Property(WidgetType),nextaired)">$INFO[Window(home).Property(Path)]</onclick>
                     </control>
                     <control type="button" id="5018">
                             <label>Resume $INFO[Window(home).Property(PercentPlayed),(,)]</label>
                             <include>WidgetMenuLabel</include>
-                        <onclick>ClearProperty(PanelWidgetInfo,Home)</onclick>
-                        <onclick>ClearProperty(PanelWidget2Info,Home)</onclick>
                         <onclick>$INFO[Window(home).Property(Path)]</onclick>
                             <visible>!Substring(Window(home).Property(WidgetType),nextaired)</visible>
                             <visible>!IsEmpty(Window(home).Property(DBID)) + !Stringcompare(Window(home).Property(PercentPlayed),0%)</visible>
@@ -3916,7 +3909,8 @@
                     <include>Animation_PanelFlipUp2</include>
                 </animation>
                 <animation type="Conditional" condition="IsEmpty(Window(Home).Property(PanelWidget2Info))" reversible="false">
-                    <include>Animation_PanelFlipDown1</include>
+                    <include condition="!Skin.HasSetting(lowermainmenu)">Animation_PanelFlipUp1</include>
+                    <include condition="Skin.HasSetting(lowermainmenu)">Animation_PanelFlipDown1</include>
                 </animation>
                 <control type="group">
                     <visible>Substring(Control.GetLabel(4325),default) | Substring(Control.GetLabel(4325),glass)</visible>
