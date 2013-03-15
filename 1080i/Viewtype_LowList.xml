@@ -358,7 +358,7 @@
                         <posx>1500</posx>
                         <posy>606</posy>
                         <width>405</width>
-                        <height>350</height>
+                        <height>367</height>
                         <label>$VAR[GlobalPlotVar]</label>
                         <font>Font_Reg19</font>
                         <textcolor>white6</textcolor>
@@ -460,7 +460,7 @@
                         <height>90</height>	  	
                         <align>right</align>	  	
                         <font>Font_Bold19</font>	  	
-                        <label>urmÄƒtorul: $VAR[NextEpisodeVar]</label>	  	
+                        <label>urmÄ?torul: $VAR[NextEpisodeVar]</label>	  	
             <visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>	  	
                     </control> 	
           <control type="label">	  	
@@ -595,9 +595,9 @@
                             <posx>1275</posx>
                             <posy>756</posy>
                             <width>633</width>
-                            <height>234</height>
+                            <height>237</height>
                             <label>$VAR[GlobalPlotVar]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg32</font>
                             <textcolor>white6</textcolor>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                             <visible>Skin.HasSetting(nohighlist)</visible>
