@@ -730,7 +730,8 @@
           </control>
           <control type="image">
             <posx>165</posx>
-            <posy>12</posy>
+            <posy>-15</posy>
+			<height>120</height>
             <aspectratio>keep</aspectratio>
                             <include>OSDFlagVars</include>
             <animation effect="fade" time="250">VisibleChange</animation>

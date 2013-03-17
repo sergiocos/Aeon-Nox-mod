@@ -163,10 +163,11 @@
         <texture fallback="flags/source/defaultsource.png">$VAR[VideoSourceFlagVar,flags/source/,.png]</texture>
       </control>
       <control type="image">
-        <posx>1770</posx>
-        <posy>7</posy>
+        <posx>1765</posx>
+        <posy>-17</posy>
+		<height>120</height>
         <aspectratio>keep</aspectratio>
-<include>OSDFlagVars</include>
+		<include>OSDFlagVars</include>
         <animation effect="fade" time="250">VisibleChange</animation>
         <texture fallback="flags/studios/default-studio.png">$INFO[VideoPlayer.Studio,flags/studios/,.png]</texture>
         <visible>!Skin.HasSetting(nostudioratingflags)</visible>
@@ -227,7 +228,6 @@
           <visible>VideoPlayer.Content(episodes)</visible>
         </control>
         <control type="group">
-          <visible>VideoPlayer.Content(movies)</visible>
           <control type="image">
             <description>IMDB Rating</description>
             <posx>1670</posx>
