@@ -373,25 +373,6 @@
                     </control> -->
                        
                        </control> 
-                       <control type="group">
-                            <posx>1630</posx>
-                            <control type="label">
-                                <posy>-27</posy>
-                                <width>330</width>
-                                <height>90</height>
-                                <align>left</align>
-                                <font>Font_Reg12</font>
-                                <label>$LOCALIZE[210]: [B]$VAR[LastEpisodeVar][/B]</label>
-                            </control>
-                            <control type="label">
-                                <posy>0</posy>
-                                <width>330</width>
-                                <height>90</height>
-                                <align>left</align>
-                                <font>Font_Reg12</font>
-                                <label>$LOCALIZE[209]: [B]$VAR[NextEpisodeVar][/B]</label>
-                            </control>
-</control>
                     </control>
                 </control>      
     </include>
