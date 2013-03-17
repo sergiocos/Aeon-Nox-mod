@@ -150,6 +150,7 @@
             <onfocus>SetProperty(LatestTitle,$ESCINFO[Container(5010).ListItem.Property(LatestTitle)])</onfocus>
             <onfocus>SetProperty(LatestDate,$ESCINFO[Container(5010).ListItem.Property(LatestDate)])</onfocus>
             <onfocus>SetProperty(Studio,$ESCINFO[Container(5010).ListItem.Property(Studio)])</onfocus>
+            <onfocus>SetProperty(Country,$ESCINFO[Container(5010).ListItem.Property(Country)])</onfocus>
             <onfocus>SetProperty(Network,$ESCINFO[Container(5010).ListItem.Property(Network)])</onfocus>
             <onfocus>SetProperty(PercentPlayed,$ESCINFO[Container(5010).ListItem.Property(PercentPlayed)])</onfocus>
             <onfocus>SetProperty(AudioChannels,$ESCINFO[Container(5010).ListItem.Property(AudioChannels)])</onfocus>
@@ -223,6 +224,7 @@
             <onfocus>SetProperty(LatestTitle,$ESCINFO[Container(6010).ListItem.Property(LatestTitle)])</onfocus>
             <onfocus>SetProperty(LatestDate,$ESCINFO[Container(6010).ListItem.Property(LatestDate)])</onfocus>
             <onfocus>SetProperty(Studio,$ESCINFO[Container(6010).ListItem.Property(Studio)])</onfocus>
+            <onfocus>SetProperty(Country,$ESCINFO[Container(6010).ListItem.Property(Country)])</onfocus>
             <onfocus>SetProperty(Network,$ESCINFO[Container(6010).ListItem.Property(Network)])</onfocus>
             <onfocus>SetProperty(PercentPlayed,$ESCINFO[Container(6010).ListItem.Property(PercentPlayed)])</onfocus>
             <onfocus>SetProperty(AudioChannels,$ESCINFO[Container(6010).ListItem.Property(AudioChannels)])</onfocus>
@@ -368,11 +370,8 @@
             <animation effect="slide" end="0,330" time="480" tween="cubic" delay="160" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + [Window.IsActive(1115) | Window.IsActive(1154)]">Conditional</animation>
             <control type="group">
                 <posy>472</posy>
-                <!-- Library Totals -->
                 <include>LibraryStats</include>
-                <!-- Time Panel-->
                 <include>TimePanel</include>
-                <!-- Alternate Stats + Time -->
                 <include>AlternateTimeAndStats</include>
             </control>
             <!-- RSS -->

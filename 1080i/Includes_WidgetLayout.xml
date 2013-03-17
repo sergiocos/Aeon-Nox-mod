@@ -207,7 +207,7 @@
                         <textoffsetx>5</textoffsetx>
                         <label>$INFO[Window(Home).Property(peopleborntoday.1.name)][COLOR=grey]$INFO[Window.Property(peopleborntoday.1.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.2.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.2.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.3.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.3.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.4.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.4.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.5.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.5.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.6.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.6.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.7.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.7.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.8.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.8.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.9.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.9.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.10.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.10.job), • ][/COLOR]</label>
                         <font>Font_Reg15</font>
-                        <textcolor>$VAR[RSSLabelColorVar]</textcolor>
+                        <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
                         <scroll>true</scroll>
                         <wrapmultiline>false</wrapmultiline>
                         <scrollspeed>40</scrollspeed>
@@ -248,7 +248,7 @@
                     <textoffsetx>0</textoffsetx>
                     <label>$INFO[Window(Home).Property(peopleborntoday.1.name)][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.1.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.2.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.2.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.3.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.3.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.4.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.4.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.5.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.5.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.6.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.6.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.7.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.7.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.8.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.8.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.9.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.9.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.10.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.10.job), • ][/COLOR]</label>
                     <font>Font_Reg15</font>
-                    <textcolor>$VAR[RSSLabelColorVar]</textcolor>
+                    <textcolor>FF666666</textcolor>
                     <scroll>true</scroll>
                     <wrapmultiline>false</wrapmultiline>
                     <scrollspeed>40</scrollspeed>
@@ -1607,7 +1607,7 @@
                 </control>
                 <control type="grouplist">
                     <posx>205</posx>
-                    <posy>290</posy>
+                    <posy>310</posy>
                     <width>1100</width>
                     <align>center</align>
                     <visible>Substring(Control.GetLabel(4321),movie)</visible>
@@ -1615,28 +1615,28 @@
                     <itemgap>40</itemgap>
                     <control type="image">
                         <texture>$INFO[Container(8000).ListItem.Property(AudioCodec),flags/audio/]$INFO[Container(8000).ListItem.Property(AudioChannels),,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Container(8000).ListItem.Property(VideoResolution),flags/resolution/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Container(8000).ListItem.Property(VideoCodec),flags/source/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Container(8000).ListItem.Property(VideoAspect),flags/aspectratio/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <!--                     <control type="image">
                         <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[WidgetRatingFlagVar,flags/rating/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                         <visible>!IsEmpty(Window(home).Property(mpaa))</visible>
                     </control> -->
                     <control type="image">
                         <texture fallback="flags/studios/default-studio.png">$INFO[Container(8000).ListItem.Property(Studio),flags/studios/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                 </control>
             </control>
@@ -2626,6 +2626,7 @@
         </control>
         <control type="group">
             <posx>135</posx>
+            <include>Animation_OpenCloseZoom</include>
             <posy>389</posy>
             <width>1920</width>
             <height>825</height>
@@ -2826,6 +2827,7 @@
                     <posx>470</posx>
                     <posy>-320</posy>
                     <orientation>vertical</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
                     <itemgap>0</itemgap>
                     <control type="label">
                         <width>800</width>
@@ -2843,6 +2845,23 @@
                         <font>Font_MainClassic3</font>
                         <visible>IsEmpty(Window(home).Property(Logo))</visible>
                     </control>
+                    <control type="grouplist">
+                        <width>1100</width>
+                        <height>40</height>
+                        <orientation>horizontal</orientation>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <visible>!IsEmpty(Window(home).Property(TagLine))</visible>
+                        <control type="image" id="12020">
+                            <posx>15</posx>
+                            <posy>3</posy>
+                            <width>35</width>
+                            <height>35</height>
+                            <aspectratio align="right">keep</aspectratio>
+                            <texture background="true">$INFO[Window(home).Property(Country),flags/language/,.png]</texture>
+                            <fadetime>200</fadetime>
+                            <colordiffuse>AAFFFFFF</colordiffuse>
+                            <visible>!IsEmpty(Control.GetLabel(12020))</visible>
+                        </control>
                     <control type="label">
                         <width>800</width>
                         <height>40</height>
@@ -2850,7 +2869,7 @@
                         <label>$INFO[Window(home).Property(Tagline)]</label>
                         <font>Font_Reg19</font>
                         <textcolor>white3</textcolor>
-                        <visible>!IsEmpty(Window(home).Property(TagLine)) + !IsEmpty(Window(home).Property(Logo))</visible>
+                        <visible>!IsEmpty(Window(home).Property(Logo))</visible>
                     </control>
                     <control type="label">
                         <width>1100</width>
@@ -2859,11 +2878,10 @@
                         <label>$INFO[Window(home).Property(Tagline)]</label>
                         <font>Font_Reg19</font>
                         <textcolor>white3</textcolor>
-                        <visible>!IsEmpty(Window(home).Property(TagLine)) + IsEmpty(Window(home).Property(Logo))</visible>
+                        <visible>IsEmpty(Window(home).Property(Logo))</visible>
+                    </control>
                     </control>
                     <control type="label">
-                        <posx>610</posx>
-                        <posy>58</posy>
                         <width>986</width>
                         <height>30</height>
                         <textoffsetx>15</textoffsetx>
@@ -2873,8 +2891,6 @@
                         <visible>!IsEmpty(Window(home).Property(EpisodeNumber))</visible>
                     </control>
                     <control type="label">
-                        <posx>610</posx>
-                        <posy>58</posy>
                         <width>986</width>
                         <height>30</height>
                         <textoffsetx>15</textoffsetx>
@@ -2887,20 +2903,21 @@
                         <height>40</height>
                         <orientation>horizontal</orientation>
                         <itemgap>0</itemgap>
-                        <posx>15</posx>
                         <usecontrolcoords>true</usecontrolcoords>
                         <control type="image">
-                            <posy>-2</posy>
-                            <width>45</width>
-                            <height>45</height>
+                            <posy>-3</posy>
+                            <width>50</width>
+                            <height>50</height>
+                            <aspectratio align="right">keep</aspectratio>
                             <colordiffuse>white</colordiffuse>
+                             <animation effect="slide" end="9,0" time="0" condition="true">Conditional</animation>
                             <texture>dialogs/circle/$INFO[Window(home).Property(PercentPlayed)].png</texture>
                             <visible>!IsEmpty(Window(home).Property(PercentPlayed)) + !Stringcompare(Window(home).Property(PercentPlayed),0%)</visible>
                         </control>
                         <control type="label">
                             <width>1373</width>
                             <height>40</height>
-                            <textoffsetx>0</textoffsetx>
+                            <textoffsetx>15</textoffsetx>
                             <label>$INFO[Window(home).Property(Year),, • ]$INFO[Window(home).Property(RunningTime),, $LOCALIZE[12391]]</label>
                             <font>Font_Reg19</font>
                             <textcolor>grey2</textcolor>
@@ -2953,7 +2970,7 @@
                     <posy>245</posy>
                     <texture>tvguide/$INFO[Window(home).Property(StatusID),,.png]</texture>
                     <width>150</width>
-                    <height>100</height>
+                    <height>70</height>
                     <aspectratio>keep</aspectratio>
                     <fadetime>IconCrossfadeTime2</fadetime>
                     <colordiffuse>white2</colordiffuse>
@@ -2961,40 +2978,61 @@
                 </control>
                 <control type="grouplist">
                     <posx>495</posx>
-                    <posy>250</posy>
+                    <posy>270</posy>
                     <width>1300</width>
                     <align>center</align>
+                    <usecontrolcoords>true</usecontrolcoords>
                     <orientation>horizontal</orientation>
                     <itemgap>40</itemgap>
                     <control type="image">
                         <texture>$INFO[Window(home).Property(AudioCodec),flags/audio/]$INFO[Window(home).Property(AudioChannels),,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Window(home).Property(VideoResolution),flags/resolution/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Window(home).Property(VideoCodec),flags/source/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Window(home).Property(VideoAspect),flags/aspectratio/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[WidgetRatingFlagVar,flags/rating/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                         <visible>!IsEmpty(Window(home).Property(mpaa))</visible>
                     </control>
+                    <control type="group">
+                            <width>150</width>
+        <height>64</height>
+        <visible>IsEmpty(Window(home).Property(NextTitle))</visible>
                     <control type="image">
-                        <texture>$INFO[Window(home).Property(Rating),stars/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <texture>flags/imdb.png</texture>
+                        <include>OSDFlagVars</include>
                     </control>
+                    <control type="label">
+                        <posy>21</posy>
+                        <width>150</width>
+                        <height>38</height>
+                        <align>center</align>
+                        <label fallback="?">$INFO[Window(home).Property(Rating)]</label>
+                        <font>Font_Bold22</font>
+                        <textcolor>floor</textcolor>
+                    </control>
+        
+                    </control>
+<!--                     <control type="image">
+                        <texture>$INFO[Window(home).Property(Rating),stars/,.png]</texture>
+                        <include>OSDFlagVars</include>
+                    </control> -->
                     <control type="image">
                         <texture>$INFO[Window(home).Property(Studio),flags/studios/,.png]</texture>
                         <width>150</width>
                         <height>90</height>
+                        <posy>-11</posy>
                         <aspectratio>keep</aspectratio>
                         <fadetime>IconCrossfadeTime2</fadetime>
                         <colordiffuse>white2</colordiffuse>
@@ -3450,7 +3488,7 @@
                 </control>
                 <control type="grouplist">
                     <posx>205</posx>
-                    <posy>290</posy>
+                    <posy>310</posy>
                     <width>1100</width>
                     <align>center</align>
                     <visible>Substring(Control.GetLabel(4325),movie)</visible>
@@ -3458,28 +3496,28 @@
                     <itemgap>40</itemgap>
                     <control type="image">
                         <texture>$INFO[Container(7000).ListItem.Property(AudioCodec),flags/audio/]$INFO[Container(7000).ListItem.Property(AudioChannels),,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Container(7000).ListItem.Property(VideoResolution),flags/resolution/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Container(7000).ListItem.Property(VideoCodec),flags/source/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <control type="image">
                         <texture>$INFO[Container(7000).ListItem.Property(VideoAspect),flags/aspectratio/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                     <!--                     <control type="image">
                         <texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[WidgetRatingFlagVar,flags/rating/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                         <visible>!IsEmpty(Window(home).Property(mpaa))</visible>
                     </control> -->
                     <control type="image">
                         <texture fallback="flags/studios/default-studio.png">$INFO[Container(7000).ListItem.Property(Studio),flags/studios/,.png]</texture>
-                        <include>HomeInfoWidgetVars</include>
+                        <include>OSDFlagVars</include>
                     </control>
                 </control>
             </control>
@@ -4781,6 +4819,12 @@
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),Icon1panel)">IconPanel1Items</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),Icon2panel)">IconPanel2Items</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),favouriteIconpanel)">FavouritesItems</include>
+<!--                     <item>
+                        <label>Show all</label>
+                        <onclick condition="Substring(Control.GetLabel(4321),watchlisttv)">ActivateWindow(Videos,library://video/inprogressshows.xml,return)</onclick>
+                        <visible>Control.HasFocus(5010)</visible>
+                        <visible>Substring(Control.GetLabel(4321),watchlisttv)</visible>
+                    </item> -->
                 </content>
             </control>
         </control>
@@ -6524,10 +6568,10 @@
                     <texture background="true">$INFO[ListItem.Property(Network),flags/studios/,.png]</texture>
                 </control>
                 <control type="image">
-                    <posx>595</posx>
-                    <posy>214</posy>
+                    <posx>605</posx>
+                    <posy>254</posy>
                     <width>150</width>
-                    <height>150</height>
+                    <height>70</height>
                     <aspectratio>keep</aspectratio>
                     <texture>tvguide/$INFO[ListItem.Property(StatusID)].png</texture>
                 </control>

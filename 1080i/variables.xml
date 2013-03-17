@@ -180,10 +180,6 @@
         <value condition="Skin.HasSetting(colortext)">$VAR[FontColorVar]</value>
         <value>white2</value>
     </variable>
-    <variable name="RSSLabelColorVar">
-        <value condition="Skin.HasSetting(alternativerss)">$VAR[FontColorVar]</value>
-        <value>black</value>
-    </variable>
     <variable name="FocusTextureColorVar">
         <value>$VAR[ColorDiffuseVar]</value>
     </variable>
@@ -430,11 +426,12 @@
         <value condition="[Window.IsActive(programs) + !Container.Content(addons)] | [Skin.HasSetting(wallgenre) + Container.Content(movies)] | [Skin.HasSetting(wallgenretv) + [Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.TVShowTitle)]">$INFO[ListItem.Genre]</value>
         <value condition="Window.IsActive(pictures) + [Control.IsVisible(501) | Control.IsVisible(500)]">$INFO[ListItem.FolderName]</value>
         <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem.TvShowTitle]</value>
+        <value condition="Container.Content(songs)">$INFO[ListItem.Artist]$INFO[ListItem.Album, - ]</value>
         <value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
         <value>$INFO[ListItem.Label2]</value>
     </variable>
     <variable name="FirstLabelVar">
-        <value condition="SubString(Container.FolderPath,videodb://5/,left)">$INFO[ListItem.Title]</value>
+        <value condition="SubString(Container.FolderPath,videodb://5/,left) | Container.Content(songs)">[COLOR grey]$INFO[ListItem.TrackNumber,,: ][/COLOR]$INFO[ListItem.Title]</value>
         <value>$INFO[ListItem.Label]</value>
     </variable>
     <variable name="DialogVideoInfoFanartVar">
@@ -1945,13 +1942,11 @@
     </variable>
     <variable name="TopBarTypeLabelVar">
         <value condition="Skin.HasSetting(ClassicTopBar)">$LOCALIZE[31038]</value>
-        <value condition="Skin.HasSetting(altbreadcrumbstexture)">$LOCALIZE[31037]</value>
         <value condition="Skin.HasSetting(FadedTopBar)">$LOCALIZE[31054]</value>
         <value>$LOCALIZE[31036]</value>
     </variable>
     <variable name="BreadCrumbsContentColorVar">
-        <value condition="Skin.HasSetting(altbreadcrumbstexture)">white6</value>
-        <value>grey2</value>
+        <value>grey</value>
     </variable>
     <variable name="CustomItemFanartLabelVar">
         <value condition="IsEmpty(Skin.String(ItemToEdit.MultiFanart))">$LOCALIZE[571]</value>
@@ -2461,10 +2456,6 @@
         <value condition="Substring(Control.GetLabel(4322),4,right)">$INFO[Window(Home).Property(SmartPlaylist4.10.Art(poster))]</value>
         <value condition="Substring(Control.GetLabel(4322),5,right)">$INFO[Window(Home).Property(SmartPlaylist5.10.Art(poster))]</value>
         <value condition="Substring(Control.GetLabel(4322),6,right)">$INFO[Window(Home).Property(SmartPlaylist6.10.Art(poster))]</value>
-    </variable>
-    <variable name="FanartFallbackToIcon">
-        <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value>$INFO[ListItem.Icon]</value>
     </variable>
     <variable name="NowPlayingMultiImageVar">
         <value condition="System.HasAddon(script.artistslideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>

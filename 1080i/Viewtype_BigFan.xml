@@ -16,6 +16,7 @@
                 <focusposition>0</focusposition>
                 <orientation>horizontal</orientation>
                 <preloaditems>2</preloaditems>
+                <visible>![!IsEmpty(Skin.String((DisableBigFanVL)) + Window.IsActive(videos)]</visible>
                 <visible>Window.IsActive(videos) + [Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(sets)]</visible>
                 <itemlayout height="1080" width="1920">
                     <control type="image">
@@ -175,7 +176,6 @@
                     <height>55</height>
                     <texture>$VAR[WatchedIconVar]</texture>
                     <fadetime>0</fadetime>
-                    <animation effect="slide" end="-65,0" time="0" condition="Container.ListItem.IsResumable">Conditional</animation>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>
             </control>
