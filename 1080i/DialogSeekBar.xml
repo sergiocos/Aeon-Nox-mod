@@ -713,8 +713,6 @@
           <control type="image">
             <posx>15</posx>
             <posy>12</posy>
-            <width>135</width>
-            <height>90</height>
             <aspectratio>keep</aspectratio>
                             <include>OSDFlagVars</include>
             <texture>$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]</texture>
@@ -725,8 +723,6 @@
             <posx>15</posx>
             <posy>12</posy>
             <animation effect="slide" start="0" end="45" reversible="false" condition="Skin.HasSetting(nostudioratingflags)">Conditional</animation>
-            <width>135</width>
-            <height>90</height>
             <aspectratio>keep</aspectratio>
                             <include>OSDFlagVars</include>
             <animation effect="fade" time="250">VisibleChange</animation>
@@ -735,8 +731,6 @@
           <control type="image">
             <posx>165</posx>
             <posy>12</posy>
-            <width>135</width>
-            <height>90</height>
             <aspectratio>keep</aspectratio>
                             <include>OSDFlagVars</include>
             <animation effect="fade" time="250">VisibleChange</animation>
@@ -747,8 +741,6 @@
             <description>Rating Flags</description>
             <posx>315</posx>
             <posy>12</posy>
-            <width>135</width>
-            <height>90</height>
             <aspectratio>keep</aspectratio>
                             <include>OSDFlagVars</include>
             <animation effect="fade" time="250">VisibleChange</animation>
@@ -758,8 +750,6 @@
           <control type="image">
             <posx>1470</posx>
             <posy>12</posy>
-            <width>135</width>
-            <height>90</height>
             <aspectratio>keep</aspectratio>
                             <include>OSDFlagVars</include>
             <animation effect="fade" time="250">VisibleChange</animation>
@@ -769,8 +759,6 @@
           <control type="image">
             <posx>1620</posx>
             <posy>12</posy>
-            <width>135</width>
-            <height>90</height>
             <aspectratio>keep</aspectratio>
                             <include>OSDFlagVars</include>
             <animation effect="fade" time="250">VisibleChange</animation>
@@ -782,8 +770,6 @@
             <posx>1770</posx>
             <posy>12</posy>
             <animation effect="slide" start="0" end="-45" reversible="false" condition="Skin.HasSetting(nostudioratingflags)">Conditional</animation>
-            <width>135</width>
-            <height>90</height>
             <aspectratio>keep</aspectratio>
                             <include>OSDFlagVars</include>me>
             <animation effect="fade" time="250">VisibleChange</animation>
