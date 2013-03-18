@@ -37,6 +37,8 @@
             </control>
             <include condition="Skin.HasSetting(effect_bg)">BG_Effect_Home</include>
             <!-- Buttons -->
+            <control type="group">
+            <posx>-40</posx>
             <control type="button" id="13">
                 <posx>991</posx>
                 <posy>284</posy>
@@ -124,7 +126,9 @@
                         <height>50</height>
                         <label>$INFO[ListItem.Title]</label>
                         <font>Font_Reg38_Caps</font>
-                        <animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(movies) + IsEmpty(ListItem.TagLine) + Stringcompare(ListItem.Title,ListItem.OriginalTitle)] | Container.Content(tvshows)">Conditional</animation>
+                        <animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(movies) + IsEmpty(ListItem.Genre)]">Conditional</animation>
+                        <animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(musicvideos) + IsEmpty(ListItem.Artist)]">Conditional</animation>
+                        <animation effect="slide" start="0,0" end="0,30" time="0" condition="Container.Content(tvshows)">Conditional</animation>
                         <scroll>true</scroll>
                     </control>
                     <control type="grouplist">
@@ -136,7 +140,7 @@
                         <itemgap>0</itemgap>
                         <orientation>horizontal</orientation>
                         <usecontrolcoords>true</usecontrolcoords>
-                        <visible>!IsEmpty(ListItem.Tagline) | [!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.Title,ListItem.OriginalTitle)]</visible>
+                            <visible>!IsEmpty(ListItem.Genre) + Container.Content(movies)</visible>
                         <control type="image" id="12020">
                             <posx>0</posx>
                             <posy>6</posy>
@@ -151,20 +155,10 @@
                         <control type="label">
                             <width>995</width>
                             <height>40</height>
-                            <label>$INFO[ListItem.Tagline]</label>
+                            <label>$INFO[ListItem.Genre]</label>
                             <font>Font_Reg20</font>
                             <textcolor>grey</textcolor>
                             <scroll>true</scroll>
-                            <visible>!IsEmpty(ListItem.Tagline)</visible>
-                        </control>
-                        <control type="label">
-                            <width>995</width>
-                            <height>40</height>
-                            <label>$INFO[ListItem.OriginalTitle]</label>
-                            <font>Font_Reg20</font>
-                            <textcolor>grey</textcolor>
-                            <scroll>true</scroll>
-                            <visible>IsEmpty(ListItem.Tagline) + !Stringcompare(ListItem.Title,ListItem.OriginalTitle)</visible>
                         </control>
                     </control>
                     <control type="label">
@@ -373,7 +367,7 @@
                     </control>
                 </control>
                 <!-- Horizontal Info Labels -->
-                <control type="grouplist">
+                <control type="grouplist"       >
                     <orientation>vertical</orientation>
                     <posy>169</posy>
                     <posx>3</posx>
@@ -383,12 +377,13 @@
                         <orientation>horizontal</orientation>
                         <height>43</height>
                         <itemgap>12</itemgap>
+                        <visible>!IsEmpty(ListItem.OriginalTitle)   + !Stringcompare(ListItem.Title,ListItem.OriginalTitle)</visible>
                         <visible>Container.Content(movies) | Container.Content(MusicVideos)</visible>
                         <control type="label">
                             <posx>4</posx>
                             <width>165</width>
                             <height>44</height>
-                            <label>$LOCALIZE[515]:</label>
+                            <label>$LOCALIZE[20376]:</label>
                             <font>Font_Reg17_2</font>
                             <textcolor>grey</textcolor>
                         </control>
@@ -396,7 +391,7 @@
                             <posx>180</posx>
                             <width>840</width>
                             <height>44</height>
-                            <label fallback="31006">$INFO[ListItem.Genre]</label>
+                            <label fallback="31006">$INFO[ListItem.OriginalTitle]</label>
                             <font>Font_Reg17_2</font>
                             <scroll>true</scroll>
                         </control>
@@ -548,9 +543,19 @@
                 </control>
                 <control type="group">
                     <visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
-                    <control type="textbox">
+                    <control type="grouplist">
+                        <orientation>vertical</orientation>
                         <posx>4</posx>
                         <posy>536</posy>
+                        <height>320</height>
+                        <control type="label">
+                            <label>$INFO[ListItem.TagLine]</label>
+                            <height>30</height>
+                            <width>1016</width>
+                            <font>Font_Bold18</font>
+                            <visible>!IsEmpty(ListItem.Tagline)</visible>
+                        </control>
+                    <control type="textbox">
                         <width>1016</width>
                         <height>320</height>
                         <align>left</align>
@@ -561,8 +566,6 @@
                         <visible>IsEmpty(ListItem.Art(discart)) + IsEmpty(ListItem.Art(characterart)) + IsEmpty(ListItem.Art(tvshow.characterart))</visible>
                     </control>
                     <control type="textbox">
-                        <posx>4</posx>
-                        <posy>536</posy>
                         <width>746</width>
                         <height>320</height>
                         <label fallback="31006">$INFO[ListItem.Plot]</label>
@@ -571,6 +574,7 @@
                         <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
                         <visible>!IsEmpty(ListItem.Art(discart)) | !IsEmpty(ListItem.Art(characterart)) | !IsEmpty(ListItem.Art(tvshow.characterart))</visible>
                     </control>
+                        </control>
                     <control type="image">
                         <posx>780</posx>
                         <posy>536</posy>
@@ -1275,6 +1279,76 @@
                     <onclick>SetProperty(Position,20)</onclick>
                     <onclick>SetFocus(601)</onclick>
                 </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(21).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(21).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(21).Label)</visible>
+                    <onclick>SetProperty(Position,21)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(22).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(22).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(22).Label)</visible>
+                    <onclick>SetProperty(Position,22)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(23).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(23).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(23).Label)</visible>
+                    <onclick>SetProperty(Position,23)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(24).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(24).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(24).Label)</visible>
+                    <onclick>SetProperty(Position,24)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(25).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(25).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(25).Label)</visible>
+                    <onclick>SetProperty(Position,25)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(26).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(26).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(26).Label)</visible>
+                    <onclick>SetProperty(Position,26)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(27).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(27).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(27).Label)</visible>
+                    <onclick>SetProperty(Position,27)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(28).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(28).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(28).Label)</visible>
+                    <onclick>SetProperty(Position,28)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(29).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(29).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(29).Label)</visible>
+                    <onclick>SetProperty(Position,29)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <label>$INFO[Container(50).ListItem(30).Label]</label>
+                    <thumb>$INFO[Container(50).ListItem(30).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(30).Label)</visible>
+                    <onclick>SetProperty(Position,30)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
                 </content>
             </control>
             <control type="panel" id="601">
@@ -1343,8 +1417,8 @@
             </control>
             
             <control type="panel" id="602">
-                <posx>1551</posx>
-                <posy>366</posy>
+                <posx>1541</posx>
+                <posy>368</posy>
                 <width>264</width>
                 <height>176</height>
                 <animation effect="slide" end="0,40" time="0" condition="!IntegerGreaterThan(Container(602).NumItems,3)">conditional</animation>
@@ -1352,20 +1426,20 @@
                 <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                 <orientation>vertical</orientation>
                 <visible>!Control.HasFocus(600) + !Control.HasFocus(601)</visible>
-                <itemlayout height="88" width="88">
+                <itemlayout height="86" width="86">
                     <control type="image">
-                        <width>88</width>
-                        <height>88</height>
+                        <width>86</width>
+                        <height>86</height>
                         <aspectratio aligny="top">scale</aspectratio>
                                     <bordersize>3</bordersize>
                         <bordertexture border="3">thumbs/thumbshadow.png</bordertexture>
                         <info>ListItem.Icon</info>
                     </control>
                 </itemlayout>
-                <focusedlayout height="88" width="88">
+                <focusedlayout height="86" width="86">
                     <control type="image">
-                        <width>88</width>
-                        <height>88</height>
+                        <width>86</width>
+                        <height>86</height>
                                     <bordersize>3</bordersize>
                         <bordertexture border="3">thumbs/thumbshadow.png</bordertexture> 
                         <aspectratio aligny="top">scale</aspectratio>
@@ -1473,6 +1547,30 @@
                     <thumb>$INFO[Container(50).ListItem(16).Thumb]</thumb>
                     <visible>!IsEmpty(Container(50).ListItemNoWrap(16).Thumb)</visible>
                     <onclick>SetProperty(Position,16)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <thumb>$INFO[Container(50).ListItem(17).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(17).Thumb)</visible>
+                    <onclick>SetProperty(Position,17)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <thumb>$INFO[Container(50).ListItem(18).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(18).Thumb)</visible>
+                    <onclick>SetProperty(Position,18)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <thumb>$INFO[Container(50).ListItem(19).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(19).Thumb)</visible>
+                    <onclick>SetProperty(Position,19)</onclick>
+                    <onclick>SetFocus(601)</onclick>
+                </item>
+                <item>
+                    <thumb>$INFO[Container(50).ListItem(20).Thumb]</thumb>
+                    <visible>!IsEmpty(Container(50).ListItemNoWrap(20).Thumb)</visible>
+                    <onclick>SetProperty(Position,20)</onclick>
                     <onclick>SetFocus(601)</onclick>
                 </item>
                 </content>
@@ -1775,6 +1873,7 @@
                 <visible>Container(5000).HasNext+ ControlGroup(5000).HasFocus</visible>
             </control>
         </control>
+        </control>
         <control type="group">
             <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
             <animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
@@ -1786,7 +1885,7 @@
                 <texture>info/movieinfogradient.png</texture>
             </control>
             <control type="image">
-                <posx>1600</posx>
+                <posx>1570</posx>
                 <posy>620</posy>
                 <width>300</width>
                 <height>300</height>
@@ -1794,8 +1893,9 @@
                 <include>Animation_VisibleChange200</include>
                 <visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
                 <animation type="WindowOpen" reversible="false">
-                    <effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
-                    <effect type="rotate" start="0" center="1750,770" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    <effect type="slide" start="-1570,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    <effect type="rotate" start="0" center="1720,770" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    <effect type="zoom" start="104" center="1720,770" end="100" delay="2320" time="200" tween="quadratic" easing="out" />
                 </animation>
                 <animation type="WindowClose" reversible="false">
                     <effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
