@@ -171,8 +171,8 @@
         <control type="group">
             <posy>610</posy>
             <visible>[system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(ActorBirthdayRSS)] + !Skin.HasSetting(DisableRSS)</visible>
-            <animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidget2Info))">Conditional</animation>
-            <animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidgetInfo))">Conditional</animation>
+            <animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidget2Info)) + !Window.IsActive(1115)">Conditional</animation>
+            <animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidgetInfo)) + !Window.IsActive(1115)">Conditional</animation>
             <animation effect="slide" end="1920,0" time="240">WindowClose</animation>
             <animation effect="slide" start="1880,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
             <animation effect="slide" start="1880,0" end="0,0" delay="2000" time="480" condition="Window.Previous(startup)">WindowOpen</animation>
@@ -2616,6 +2616,8 @@
         </control>
     </include>
     <include name="WidgetInfoPanel">
+        <control type="group">
+
         <control type="button" id="5055">
             <include>HiddenObject</include>
             <onfocus condition="Substring(Window(home).Property(WidgetType),movie) | Substring(Window(home).Property(WidgetType),musicvideo) | Substring(Window(home).Property(WidgetType),actors) | Substring(Window(home).Property(WidgetType),tv) | Substring(Window(home).Property(WidgetType),roms)">SetFocus(5020)</onfocus>
@@ -2624,30 +2626,6 @@
             <onfocus condition="Substring(Window(home).Property(WidgetType),babe)">SetFocus(22222)</onfocus>
             <onfocus condition="Substring(Window(home).Property(WidgetType),addons) | Substring(Window(home).Property(WidgetType),album)  | Substring(Window(home).Property(WidgetType),artist) | Substring(Window(home).Property(WidgetType),rss) | Substring(Window(home).Property(WidgetType),pics)">SetFocus(5030)</onfocus>
         </control>
-        <control type="group">
-            <posx>135</posx>
-            <include>Animation_OpenCloseZoom</include>
-            <posy>389</posy>
-            <width>1920</width>
-            <height>825</height>
-            <animation type="Conditional" condition="true">
-                <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
-            </animation>
-            <animation effect="slide" end="0,285" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Stringcompare(Window(home).Property(WidgetPosition),Widget1)">Conditional</animation>
-            <animation effect="slide" end="0,18" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) + [[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
-            <animation effect="slide" end="0,-31" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)">Conditional</animation>
-            <visible>!IsEmpty(Window(home).Property(WidgetType)) + [!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))]</visible>
-            <animation type="Visible" reversible="false" condition="Stringcompare(Window(home).Property(WidgetPosition),Widget1)">
-                <include condition="Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipUp1</include>
-                <include condition="!Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipDown1</include>
-            </animation>
-            <animation type="Hidden" reversible="false">
-                <include condition="Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipDown2</include>
-                <include condition="!Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipUp2</include>
-            </animation>
-            <animation type="Visible" reversible="false" condition="Stringcompare(Window(home).Property(WidgetPosition),Widget2)">
-                <include>Animation_LargePanelFlipUp1</include>
-            </animation>
             <control type="image">
                 <posx>-100</posx>
                 <posy>-350</posy>
@@ -2850,7 +2828,7 @@
                         <height>40</height>
                         <orientation>horizontal</orientation>
                         <usecontrolcoords>true</usecontrolcoords>
-                        <visible>!IsEmpty(Window(home).Property(TagLine))</visible>
+                        <visible>!IsEmpty(Window(home).Property(Genre))</visible>
                         <control type="image" id="12020">
                             <posx>15</posx>
                             <posy>3</posy>
@@ -2866,7 +2844,7 @@
                         <width>800</width>
                         <height>40</height>
                         <textoffsetx>15</textoffsetx>
-                        <label>$INFO[Window(home).Property(Tagline)]</label>
+                        <label>$INFO[Window(home).Property(Genre)]</label>
                         <font>Font_Reg19</font>
                         <textcolor>white3</textcolor>
                         <visible>!IsEmpty(Window(home).Property(Logo))</visible>
@@ -2875,7 +2853,7 @@
                         <width>1100</width>
                         <height>40</height>
                         <textoffsetx>15</textoffsetx>
-                        <label>$INFO[Window(home).Property(Tagline)]</label>
+                        <label>$INFO[Window(home).Property(Genre)]</label>
                         <font>Font_Reg19</font>
                         <textcolor>white3</textcolor>
                         <visible>IsEmpty(Window(home).Property(Logo))</visible>
@@ -2888,7 +2866,7 @@
                         <label>$INFO[Window(home).Property(Label2)]</label>
                         <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        <visible>!IsEmpty(Window(home).Property(EpisodeNumber))</visible>
+                        <visible>Substring(Window(home).Property(WidgetType),tv)</visible>
                     </control>
                     <control type="label">
                         <width>986</width>
@@ -2897,7 +2875,7 @@
                         <label>$INFO[Window(home).Property(EpisodeNumber),[UPPERCASE],[/UPPERCASE]]$INFO[Window(home).Property(NextTitle),:  ]</label>
                         <font>Font_Reg19</font>
                         <textcolor>white2</textcolor>
-                        <visible>!IsEmpty(Window(home).Property(EpisodeNumber))</visible>
+                        <visible>Substring(Window(home).Property(WidgetType),tv)</visible>
                     </control>
                     <control type="grouplist">
                         <height>40</height>
@@ -2923,11 +2901,32 @@
                             <textcolor>grey2</textcolor>
                         </control>
                     </control>
+                        <control type="label">
+                            <width>1373</width>
+                            <height>40</height>
+                            <textoffsetx>15</textoffsetx>
+                            <label>$INFO[Window(home).Property(Director),$LOCALIZE[31156] ]</label>
+                            <font>Font_Reg19</font>
+                            <textcolor>grey2</textcolor>
+                        </control>
                 </control>
-                <control type="group">
-                    <control type="textbox" id="5060">
+                <control type="grouplist">
+                    <orientation>vertical</orientation>
                         <posx>482</posx>
                         <posy>-70</posy>
+                        <width>2000</width>
+                        <height>308</height>
+                        <control type="label">
+                            <width>1373</width>
+                            <height>30</height>
+                            <textoffsetx>0</textoffsetx>
+                            <align>left</align>
+                            <label>$INFO[Window(home).Property(Tagline)]</label>
+                            <font>Font_Bold19</font>
+                            <textcolor>white2</textcolor>
+                            <visible>!IsEmpty(Window(home).Property(Tagline))</visible>
+                        </control>
+                    <control type="textbox" id="5060">
                         <width>1290</width>
                         <height>308</height>
                         <aligny>top</aligny>
@@ -2939,8 +2938,6 @@
                         <visible>IsEmpty(Window(home).Property(Discart)) + !Substring(Window(home).Property(WidgetType),tv)</visible>
                     </control>
                     <control type="textbox" id="5060">
-                        <posx>482</posx>
-                        <posy>-70</posy>
                         <width>960</width>
                         <height>308</height>
                         <aligny>top</aligny>
@@ -2952,8 +2949,6 @@
                         <visible>!IsEmpty(Window(home).Property(Discart))</visible>
                     </control>
                     <control type="textbox" id="5060">
-                        <posx>482</posx>
-                        <posy>-70</posy>
                         <width>860</width>
                         <height>308</height>
                         <aligny>top</aligny>
@@ -2983,6 +2978,10 @@
                     <align>center</align>
                     <usecontrolcoords>true</usecontrolcoords>
                     <orientation>horizontal</orientation>
+                    <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="960" time="960" tween="cubic" />
+                        <effect type="zoom" start="100,0" end="100,100" delay="960" time="960" center="auto" tween="cubic" />
+                    </animation>
                     <itemgap>40</itemgap>
                     <control type="image">
                         <texture>$INFO[Window(home).Property(AudioCodec),flags/audio/]$INFO[Window(home).Property(AudioChannels),,.png]</texture>

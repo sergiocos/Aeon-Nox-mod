@@ -141,8 +141,10 @@
             <onfocus>SetProperty(Year,$ESCINFO[Container(5010).ListItem.Property(Year)])</onfocus>
             <onfocus>SetProperty(Plot,$ESCINFO[Container(5010).ListItem.Property(Plot)])</onfocus>
             <onfocus>SetProperty(Tagline,$ESCINFO[Container(5010).ListItem.Property(Tagline)])</onfocus>
+            <onfocus>SetProperty(OriginalTitle,$ESCINFO[Container(5010).ListItem.Property(OriginalTitle)])</onfocus>
             <onfocus>SetProperty(RunningTime,$ESCINFO[Container(5010).ListItem.Property(RunningTime)])</onfocus>
             <onfocus>SetProperty(Director,$ESCINFO[Container(5010).ListItem.Property(Director)])</onfocus>
+            <onfocus>SetProperty(Artist,$ESCINFO[Container(5010).ListItem.Property(Artist)])</onfocus>
             <onfocus>SetProperty(Rating,$ESCINFO[Container(5010).ListItem.Property(Rating)])</onfocus>
             <onfocus>SetProperty(StatusID,$ESCINFO[Container(5010).ListItem.Property(StatusID)])</onfocus>
             <onfocus>SetProperty(Status,$ESCINFO[Container(5010).ListItem.Property(Status)])</onfocus>
@@ -158,7 +160,7 @@
             <onfocus>SetProperty(VideoCodec,$ESCINFO[Container(5010).ListItem.Property(VideoCodec)])</onfocus>
             <onfocus>SetProperty(VideoAspect,$ESCINFO[Container(5010).ListItem.Property(VideoAspect)])</onfocus>
             <onfocus>SetProperty(VideoResolution,$ESCINFO[Container(5010).ListItem.Property(VideoResolution)])</onfocus>
-            <onfocus>SetProperty(extrafanart,$ESCINFO[Container(5010).ListItem.Property(VideoResolution)])</onfocus>
+            <onfocus>SetProperty(extrafanart,$ESCINFO[Container(5010).ListItem.Property(extrafanart)])</onfocus>
             <onfocus>SetProperty(extrathumb,$ESCINFO[Container(5010).ListItem.Property(extrathumb)])</onfocus>
             <onfocus>SetProperty(mpaa,$ESCINFO[Container(5010).ListItem.Property(mpaa)])</onfocus>
             <onfocus>SetProperty(Id,$ESCINFO[Container(5010).ListItem.Property(Id)])</onfocus>
@@ -215,8 +217,10 @@
             <onfocus>SetProperty(Year,$ESCINFO[Container(6010).ListItem.Property(Year)])</onfocus>
             <onfocus>SetProperty(Plot,$ESCINFO[Container(6010).ListItem.Property(Plot)])</onfocus>
             <onfocus>SetProperty(Tagline,$ESCINFO[Container(6010).ListItem.Property(Tagline)])</onfocus>
+            <onfocus>SetProperty(OriginalTitle,$ESCINFO[Container(6010).ListItem.Property(OriginalTitle)])</onfocus>
             <onfocus>SetProperty(RunningTime,$ESCINFO[Container(6010).ListItem.Property(RunningTime)])</onfocus>
             <onfocus>SetProperty(Director,$ESCINFO[Container(6010).ListItem.Property(Director)])</onfocus>
+            <onfocus>SetProperty(Artist,$ESCINFO[Container(6010).ListItem.Property(Artist)])</onfocus>
             <onfocus>SetProperty(Rating,$ESCINFO[Container(6010).ListItem.Property(Rating)])</onfocus>
             <onfocus>SetProperty(StatusID,$ESCINFO[Container(6010).ListItem.Property(StatusID)])</onfocus>
             <onfocus>SetProperty(Status,$ESCINFO[Container(6010).ListItem.Property(Status)])</onfocus>
@@ -232,7 +236,7 @@
             <onfocus>SetProperty(VideoCodec,$ESCINFO[Container(6010).ListItem.Property(VideoCodec)])</onfocus>
             <onfocus>SetProperty(VideoAspect,$ESCINFO[Container(6010).ListItem.Property(VideoAspect)])</onfocus>
             <onfocus>SetProperty(VideoResolution,$ESCINFO[Container(6010).ListItem.Property(VideoResolution)])</onfocus>
-            <onfocus>SetProperty(extrafanart,$ESCINFO[Container(6010).ListItem.Property(VideoResolution)])</onfocus>
+            <onfocus>SetProperty(extrafanart,$ESCINFO[Container(6010).ListItem.Property(extrafanart)])</onfocus>
             <onfocus>SetProperty(extrathumb,$ESCINFO[Container(6010).ListItem.Property(extrathumb)])</onfocus>
             <onfocus>SetProperty(mpaa,$ESCINFO[Container(6010).ListItem.Property(mpaa)])</onfocus>
             <onfocus>SetProperty(Id,$ESCINFO[Container(6010).ListItem.Property(Id)])</onfocus>
@@ -365,8 +369,8 @@
         <include>RSSPanel</include>
         <include>MainMenuBottomBar</include>
         <control type="group">
-            <animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidget2Info))">Conditional</animation>
-            <animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidgetInfo))">Conditional</animation>
+            <animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidget2Info)) + !Window.IsActive(1115)">Conditional</animation>
+            <animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidgetInfo)) + !Window.IsActive(1115)">Conditional</animation>
             <animation effect="slide" end="0,330" time="480" tween="cubic" delay="160" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + [Window.IsActive(1115) | Window.IsActive(1154)]">Conditional</animation>
             <control type="group">
                 <posy>472</posy>
@@ -540,7 +544,35 @@
             <include condition="!IsEmpty(Weather.Plugin) + SubString(Skin.String(widget2list),weather)">Weather_Widget2</include>
             <include>RecentWidget2</include>
         </control>
+        <control type="group">
+                    <posx>135</posx>
+            <include>Animation_OpenCloseZoom</include>
+            <posy>389</posy>
+            <width>1920</width>
+            <height>825</height>
+            <animation type="Conditional" condition="true">
+                <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
+            </animation>
+            <animation effect="slide" end="0,285" time="0" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Stringcompare(Window(home).Property(WidgetPosition),Widget1)">Conditional</animation>
+            <animation effect="slide" end="0,18" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) + [[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
+            <animation effect="slide" end="0,-31" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)">Conditional</animation>
+            <visible>!IsEmpty(Window(home).Property(WidgetType))</visible>
+            <visible>[!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))]</visible>
+            <visible>!Window.IsActive(1115)</visible>
+            <animation type="Visible" reversible="false" condition="Stringcompare(Window(home).Property(WidgetPosition),Widget1)">
+                <include condition="Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipUp1</include>
+                <include condition="!Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipDown1</include>
+            </animation>
+            <animation type="Hidden" reversible="false">
+                <include condition="Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipDown2</include>
+                <include condition="!Skin.HasSetting(lowermainmenu)">Animation_LargePanelFlipUp2</include>
+            </animation>
+            <animation type="Visible" reversible="false" condition="Stringcompare(Window(home).Property(WidgetPosition),Widget2)">
+                <include>Animation_LargePanelFlipUp1</include>
+            </animation>
         <include>WidgetInfoPanel</include>
+        
+        </control>
         <include condition="!Skin.HasSetting(nohomepageMusicinfo) | !Skin.HasSetting(homepageVideoinfo)">Furniture_HomeNowPlaying</include>
         <control type="group">
             <posx>0</posx>
