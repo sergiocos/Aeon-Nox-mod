@@ -2836,7 +2836,7 @@
                             <posx>15</posx>
                             <posy>3</posy>
                             <width>35</width>
-                            <height>35</height>
+                            <height>37</height>
                             <aspectratio align="right">keep</aspectratio>
                             <texture background="true">$INFO[Window(home).Property(Country),flags/language/,.png]</texture>
                             <fadetime>200</fadetime>
@@ -3017,6 +3017,7 @@
                     <control type="image">
                         <texture>$INFO[Window(home).Property(VideoResolution),flags/resolution/,.png]</texture>
                         <include>OSDFlagVars</include>
+                        <visible>!IsEmpty(Window(home).Property(VideoAspect))</visible>
                     </control>
                     <control type="image">
                         <texture>$INFO[Window(home).Property(VideoCodec),flags/source/,.png]</texture>
@@ -3120,7 +3121,34 @@
                         <textoffsetx>15</textoffsetx>
                         <label>$INFO[Window(home).Property(Label2)]</label>
                         <font>Font_Reg19</font>
+                        <textcolor>white2</textcolor>
+                    </control>
+                    <control type="label">
+                        <width>1251</width>
+                        <height>30</height>
+                        <textoffsetx>15</textoffsetx>
+                        <label>$INFO[Window(home).Property(Born),$LOCALIZE[21893]: ]$INFO[Window(home).Property(Formed),$LOCALIZE[21894]: ]</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
+                        <visible>!IsEmpty(Window(home).Property(Born)) | !IsEmpty(Window(home).Property(Formed))</visible>
+                    </control>
+                    <control type="label">
+                        <width>1251</width>
+                        <height>30</height>
+                        <textoffsetx>15</textoffsetx>
+                        <label>$INFO[Window(home).Property(Died),$LOCALIZE[21897]: ]$INFO[Window(home).Property(Disbanded),$LOCALIZE[21896]: ]</label>
+                        <font>Font_Reg19</font>
+                        <textcolor>grey2</textcolor>
+                        <visible>!IsEmpty(Window(home).Property(Died)) | !IsEmpty(Window(home).Property(Disbanded))</visible>
+                    </control>
+                    <control type="label">
+                        <width>1251</width>
+                        <height>30</height>
+                        <textoffsetx>15</textoffsetx>
+                        <label>$INFO[Window(home).Property(YearsActive)]</label>
+                        <font>Font_Reg19</font>
+                        <textcolor>grey2</textcolor>
+                        <visible>!IsEmpty(Window(home).Property(YearsActive))</visible>
                     </control>
                 </control>
                 <control type="label">
@@ -3134,39 +3162,11 @@
                     <textcolor>grey2</textcolor>
                     <visible>Substring(Window(home).Property(WidgetType),pics)</visible>
                 </control>
-                <control type="grouplist">
-                    <posx>710</posx>
-                    <posy>100</posy>
-                    <width>1200</width>
-                    <align>left</align>
-                    <orientation>horizontal</orientation>
-                    <itemgap>30</itemgap>
-                    <control type="image">
-                        <width>160</width>
-                        <height>80</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[Window(home).Property(Rating),stars/,.png]</texture>
-                        <fadetime>IconCrossfadeTime2</fadetime>
-                        <colordiffuse>white2</colordiffuse>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-                        <visible>!IsEmpty(Window(home).Property(Rating))</visible>
-                    </control>
-                    <control type="image">
-                        <width>120</width>
-                        <height>70</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[Window(home).Property(RecordLabel),flags/music/recordlabel/,.png]</texture>
-                        <fadetime>IconCrossfadeTime2</fadetime>
-                        <colordiffuse>white2</colordiffuse>
-                        <animation effect="fade" time="200">VisibleChange</animation>
-                        <visible>!IsEmpty(Window(home).Property(RecordLabel))</visible>
-                    </control>
-                </control>
                 <control type="textbox">
                     <posx>700</posx>
                     <posy>245</posy>
                     <width>1050</width>
-                    <height>425</height>
+                    <height>338</height>
                     <aligny>top</aligny>
                     <label fallback="414">$VAR[WidgetTextboxVar]</label>
                     <font>Font_Reg19</font>
@@ -3179,7 +3179,7 @@
                     <posx>700</posx>
                     <posy>245</posy>
                     <width>740</width>
-                    <height>425</height>
+                    <height>338</height>
                     <aligny>top</aligny>
                     <label fallback="414">$VAR[WidgetTextboxVar]</label>
                     <font>Font_Reg19</font>
@@ -3187,6 +3187,86 @@
                     <pagecontrol>5034</pagecontrol>
                     <visible>![Substring(Control.GetLabel(5130),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))]</visible>
                     <autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                </control>
+                <control type="image">
+                    <posx>725</posx>
+                    <posy>600</posy>
+                    <width>1040</width>
+                        <height>1</height>
+                        <texture>views/lowlistpanel_line.png</texture>
+                    <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo)) | !IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="false">
+                        <effect type="fade" start="0" end="100" delay="1520" time="560" tween="cubic" />
+                    </animation>
+                </control>
+                <control type="grouplist">
+                    <posx>710</posx>
+                    <posy>610</posy>
+                    <width>1200</width>
+                    <align>left</align>
+                    <orientation>horizontal</orientation>
+                    <itemgap>30</itemgap>
+                    <control type="image">
+                        <width>160</width>
+                        <height>80</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[Window(home).Property(Rating),stars/,.png]</texture>
+                        <fadetime>IconCrossfadeTime2</fadetime>
+                        <colordiffuse>white2</colordiffuse>
+                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <visible>!IsEmpty(Window(home).Property(Rating)) + !Stringcompare(Window(home).Property(Rating),-1)</visible>
+                    </control>
+                    <control type="image"><!--todo fallback label-->
+                        <width>160</width>
+                        <height>70</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[Window(home).Property(RecordLabel),flags/music/recordlabel/,.png]</texture>
+                        <fadetime>IconCrossfadeTime2</fadetime>
+                        <colordiffuse>white2</colordiffuse>
+                        <animation effect="fade" time="200">VisibleChange</animation>
+                        <visible>!IsEmpty(Window(home).Property(RecordLabel))</visible>
+                    </control>
+                <control type="grouplist">
+                    <posy>10</posy>
+                    <width>1030</width>
+                    <orientation>vertical</orientation>
+                    <height>84</height>
+                    <control type="label">
+                        <width>1251</width>
+                        <height>28</height>
+                        <textoffsetx>0</textoffsetx>
+                        <label>$INFO[Window(home).Property(Theme)]</label>
+                        <font>Font_Reg14_Caps</font>
+                        <textcolor>grey2</textcolor>
+                        <visible>!IsEmpty(Window(home).Property(Theme))</visible>
+                    </control>
+                    <control type="label">
+                        <width>1251</width>
+                        <height>28</height>
+                        <textoffsetx>0</textoffsetx>
+                        <label>$INFO[Window(home).Property(Instrument)]</label>
+                        <font>Font_Reg14_Caps</font>
+                        <textcolor>grey2</textcolor>
+                        <visible>!IsEmpty(Window(home).Property(Instrument))</visible>
+                    </control>
+                    <control type="label">
+                        <width>1251</width>
+                        <height>28</height>
+                        <textoffsetx>0</textoffsetx>
+                        <label>$INFO[Window(home).Property(Style)]</label>
+                        <font>Font_Reg14_Caps</font>
+                        <textcolor>grey2</textcolor>
+                        <visible>!IsEmpty(Window(home).Property(Style))</visible>
+                    </control>
+                    <control type="label">
+                        <width>1251</width>
+                        <height>28</height>
+                        <textoffsetx>0</textoffsetx>
+                        <label>$INFO[Window(home).Property(Mood)]</label>
+                        <font>Font_Reg14_Caps</font>
+                        <textcolor>grey2</textcolor>
+                        <visible>!IsEmpty(Window(home).Property(Mood))</visible>
+                    </control>
+                </control>
                 </control>
                 <control type="image">
                     <posx>1331</posx>
