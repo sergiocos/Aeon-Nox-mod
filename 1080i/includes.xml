@@ -1785,7 +1785,7 @@
                 <content>
                     <item>
                         <label fallback="31502">Oprire TOT</label>
-                        <thumb fallback="special://skin/extras/BigIcons/Film.png">$INFO[Skin.String(QuickList1_1.MultiFanart)]</thumb>
+                        <thumb fallback="special://skin/extras/BigIcons/Power.png">$INFO[Skin.String(QuickList1_1.MultiFanart)]</thumb>
                         <property name="DisableIcon">$INFO[Skin.String(QuickList1_1.Disable)]</property>
                         <property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_1.Type)]</property>
                         <property name="Path" fallback="ReplaceWindow(Videos,MovieTitles,return)">$INFO[Skin.String(QuickList1_1.Path)]</property>
@@ -1795,7 +1795,7 @@
                     </item>
                     <item>
                         <label fallback="31503">Restart HTPC</label>
-                        <thumb fallback="special://skin/extras/BigIcons/Television.png">$INFO[Skin.String(QuickList1_2.MultiFanart)]</thumb>
+                        <thumb fallback="special://skin/extras/BigIcons/psd.png">$INFO[Skin.String(QuickList1_2.MultiFanart)]</thumb>
                         <property name="DisableIcon">$INFO[Skin.String(QuickList1_2.Disable)]</property>
                         <property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_2.Type)]</property>
                         <property name="Path" fallback="ReplaceWindow(Videos,TVShowTitles,return)">$INFO[Skin.String(QuickList1_2.Path)]</property>
@@ -1804,7 +1804,7 @@
                     </item>
                     <item>
                         <label fallback="31501">Actualizare skin</label>
-                        <thumb fallback="special://skin/extras/BigIcons/Headphone.png">$INFO[Skin.String(QuickList1_3.MultiFanart)]</thumb>
+                        <thumb fallback="special://skin/extras/BigIcons/Drivedownload.png">$INFO[Skin.String(QuickList1_3.MultiFanart)]</thumb>
                         <property name="DisableIcon">$INFO[Skin.String(QuickList1_3.Disable)]</property>
                         <property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_3.Type)]</property>
                         <property name="Path" fallback="ReplaceWindow(Music)">$INFO[Skin.String(QuickList1_3.Path)]</property>
@@ -1813,7 +1813,7 @@
                     </item>
                     <item>
                         <label fallback="20389">Reload Skin</label>
-                        <thumb fallback="special://skin/extras/BigIcons/Media.png">$INFO[Skin.String(QuickList1_4.MultiFanart)]</thumb>
+                        <thumb fallback="special://skin/extras/BigIcons/rapidshare.png">$INFO[Skin.String(QuickList1_4.MultiFanart)]</thumb>
                         <property name="DisableIcon">$INFO[Skin.String(QuickList1_4.Disable)]</property>
                         <property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_4.Type)]</property>
                         <property name="Path" fallback="ReplaceWindow(Videos,MusicVideoTitles,return)">$INFO[Skin.String(QuickList1_4.Path)]</property>
