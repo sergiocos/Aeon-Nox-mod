@@ -419,11 +419,11 @@
     </variable>
     <variable name="SecondLabelVar">
         <value condition="SubString(ListItem.Path,videodb://1/7) + !Stringcompare(ListItem.Label,..)">$LOCALIZE[20457]</value>
-        <value condition="[Container.Content(movies) + Skin.HasSetting(FloorLabelTagline) + !ListItem.IsFolder] | [Container.Content(seasons) + IsEmpty(ListItem.TVShowTitle)]">$INFO[ListItem.Tagline]</value>
+        <value condition="[Container.Content(movies) + Skin.HasSetting(FloorLabelTagline) + !ListItem.IsFolder]">$INFO[ListItem.Tagline]</value>
         <value condition="[Container.Content(movies) + !Skin.HasSetting(wallgenre) + !ListItem.IsFolder] | [Container.Content(seasons) + IsEmpty(ListItem.TVShowTitle)]">$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</value>
-        <value condition="!Skin.HasSetting(wallgenretv) + Container.Content(tvshows)">$INFO[ListItem.Label2]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</value>
-        <value condition="!Skin.HasSetting(wallgenretv) + Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</value>
-        <value condition="[Window.IsActive(programs) + !Container.Content(addons)] | [Skin.HasSetting(wallgenre) + Container.Content(movies)] | [Skin.HasSetting(wallgenretv) + [Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.TVShowTitle)]">$INFO[ListItem.Genre]</value>
+        <value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Genre]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Genre]</value>
+        <value condition="[Skin.HasSetting(wallgenre) + Container.Content(movies)]">$INFO[ListItem.Genre]</value>
         <value condition="Window.IsActive(pictures) + [Control.IsVisible(501) | Control.IsVisible(500)]">$INFO[ListItem.FolderName]</value>
         <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem.TvShowTitle]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.Artist]$INFO[ListItem.Album, - ]</value>
@@ -558,63 +558,54 @@
     </variable>
     <variable name="FanartPanelDetail2Var">
         <value condition="Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[20417]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[31188]:</value>
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[13279]:</value>
     </variable>
     <variable name="FanartPanelValue2Var">
         <value condition="Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Writer]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$VAR[ShowStatusVar]</value>
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Studio]</value>
     </variable>
     <variable name="FanartPanelDetail3Var">
         <value condition="IsEmpty(ListItem.TvShowTitle) + [Skin.HasSetting(wallgenre) | Skin.HasSetting(FloorLabelTagline)]">$LOCALIZE[345]:</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[515]:</value>
         <value condition="Container.Content(episodes)">$LOCALIZE[20416]:</value>
-        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[563]:</value>
+        <value>$LOCALIZE[31008]:</value>
     </variable>
     <variable name="FanartPanelValue3Var">
         <value condition="IsEmpty(ListItem.TvShowTitle) + [Skin.HasSetting(wallgenre) | Skin.HasSetting(FloorLabelTagline)]">$INFO[ListItem.Year]</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Genre]</value>
         <value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
-        <value condition="Container.Content(tvshows)">$INFO[ListItem.RatingAndVotes]</value>
-        <value condition="Container.Content(seasons)">$INFO[ListItem.Mpaa]</value>
+        <value>$INFO[Window(home).Property(NextAired.Classification)]</value>
     </variable>
     <variable name="FanartPanelDetail4Var">
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[31095]:</value>
         <value condition="Container.Content(episodes)">$LOCALIZE[563]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + [Skin.HasSetting(wallgenretv) | Control.IsVisible(503) | Skin.HasSetting(DisableNextAiredInfo)]">$LOCALIZE[20360]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(wallgenretv) + !Control.IsVisible(503)">$LOCALIZE[515]:</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[4]:</value>
     </variable>
     <variable name="FanartPanelValue4Var">
         <value condition="Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.RatingAndVotes]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + [Skin.HasSetting(wallgenretv) | Control.IsVisible(503) | Skin.HasSetting(DisableNextAiredInfo)]">$INFO[ListItem.Property(TotalEpisodes)]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(wallgenretv)">$INFO[ListItem.Genre]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[Window(Home).Property(NextAired.AirTime)]</value>
     </variable>
     <variable name="FanartPanelDetail5Var">
         <value condition="Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[2050]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[31189]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[20074]:</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[31189]:</value>
     </variable>
     <variable name="FanartPanelValue5Var">
         <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)] + !ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
         <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)] + ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR grey]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$VAR[LastEpisodeVar]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Mpaa]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$VAR[LastEpisodeVar]</value>
     </variable>
     <variable name="FanartPanelDetail6Var">
         <value condition="!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.OriginalTitle,ListItem.Title)">$LOCALIZE[20376]:</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[21875]:</value>
         <value condition="Container.Content(episodes)">$LOCALIZE[20352]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[31190]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[515]:</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[31190]:</value>
     </variable>
     <variable name="FanartPanelValue6Var">
         <value condition="!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.OriginalTitle,ListItem.Title)">$INFO[ListItem.OriginalTitle]</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Country]</value>
         <value condition="Container.Content(episodes) + !ListItem.Property(IsSpecial)">$INFO[ListItem.Season,$LOCALIZE[20373] ], $INFO[ListItem.Episode,$LOCALIZE[20359] ]</value>
         <value condition="Container.Content(episodes)">$LOCALIZE[20381],$INFO[ListItem.Episode, $LOCALIZE[20359] ]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$VAR[NextEpisodeVar]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[Listitem.Genre]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$VAR[NextEpisodeVar]$INFO[Window(Home).Property(NextAired.NextSeasonNumber), - S] $INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E]</value>
     </variable>
     <variable name="FanartPanelPlotVar">
         <value condition="!Skin.HasSetting(preferplot) + !IsEmpty(ListItem.PlotOutline) + Control.IsVisible(7550)">$INFO[ListItem.PlotOutline]</value>
@@ -644,51 +635,43 @@
     <variable name="PosterPanelDetail3Var">
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[345]:</value>
         <value condition="Container.Content(episodes)">$LOCALIZE[20416]:</value>
-        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[563]:</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[31008]:</value>
     </variable>
     <variable name="PosterPanelValue3Var">
         <value condition="IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Year]</value>
         <value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
-        <value condition="Container.Content(tvshows)">$INFO[ListItem.Rating]</value>
-        <value condition="Container.Content(seasons)">$INFO[ListItem.Mpaa]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[Window(home).Property(NextAired.Classification)]</value>
     </variable>
     <variable name="PosterPanelValue4Var">
         <value condition="IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.RatingAndVotes]$INFO[ListItem.Top250, / $LOCALIZE[13409] #]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + [Skin.HasSetting(wallgenretv) | Control.IsVisible(503) | Skin.HasSetting(DisableNextAiredInfo)]">$INFO[ListItem.Property(TotalEpisodes)]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(wallgenretv)">$INFO[ListItem.Genre]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[Window(Home).Property(NextAired.AirTime)]</value>
     </variable>
     <variable name="PosterPanelDetail5Var">
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[2050]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[31190]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[515]:</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$LOCALIZE[31190]:</value>
     </variable>
     <variable name="PosterPanelValue5Var">
         <value condition="IsEmpty(ListItem.TvShowTitle) + !ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
         <value condition="IsEmpty(ListItem.TvShowTitle) + ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR white3]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$VAR[NextEpisodeVar]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[Listitem.Genre]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$VAR[NextEpisodeVar]</value>
     </variable>
     <variable name="PosterPanelDetail6Var">
         <value condition="!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.OriginalTitle,ListItem.Title)">$LOCALIZE[20376]:</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[21875]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[31189]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[20074]:</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[31189]:</value>
     </variable>
     <variable name="PosterPanelValue6Var">
         <value condition="!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.OriginalTitle,ListItem.Title)">$INFO[ListItem.OriginalTitle]</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Country]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$VAR[LastEpisodeVar]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Mpaa]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$VAR[LastEpisodeVar]</value>
     </variable>
     <variable name="PosterPanelDetail7Var">
         <value condition="IsEmpty(ListItem.TvShowTitle) | [Container.Content(tvshows)+Control.isVisible(503)]">$LOCALIZE[515]:</value>
-        <value condition="[Container.Content(tvshows) + !Control.IsVisible(503) + !Skin.HasSetting(DisableNextAiredInfo)]">$LOCALIZE[2050]:</value>
-        <value condition="[Container.Content(tvshows) + !Control.IsVisible(503)]">$LOCALIZE[33054]:</value>
+        <value condition="Container.Content(tvshows) + !Control.IsVisible(503)">$LOCALIZE[2050]:</value>
     </variable>
     <variable name="PosterPanelValue7Var">
         <value condition="IsEmpty(ListItem.TvShowTitle) | [Container.Content(tvshows)+Control.isVisible(503)]">$INFO[ListItem.Genre]</value>
-        <value condition="[Container.Content(tvshows) + !Control.isVisible(503) + !Skin.HasSetting(DisableNextAiredInfo)]">$INFO[Window(Home).Property(NextAired.Runtime),, $LOCALIZE[12391]]</value>
-        <value condition="[Container.Content(tvshows) + !Control.isVisible(503)]">$INFO[ListItem.Property(TotalSeasons)]</value>
+        <value condition="Container.Content(tvshows) + !Control.isVisible(503)">$INFO[Window(Home).Property(NextAired.Runtime),, $LOCALIZE[12391]]</value>
     </variable>
     <variable name="TVShowLogoVar">
         <value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
@@ -710,12 +693,19 @@
         <value condition="!Container.Content(songs) + !IsEmpty(ListItem.Property(Album_Description))">defaulticons/DefaultAddonAlbumInfo.png</value>
         <value condition="!Container.Content(songs) + !IsEmpty(ListItem.Property(Artist_Description))]">defaulticons/DefaultAddonArtistInfo.png</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.DiscNumber,flags/discnumber/,.png]</value>
-        <value condition="Container.ListItem.IsResumable">dialogs/circle/$INFO[ListItem.PercentPlayed].png</value>
+        <value condition="Container.ListItem.IsResumable + !IsEmpty(ListItem.Top250)">dialogs/circletop250/$INFO[ListItem.PercentPlayed].png</value>
+        <value condition="Container.ListItem.IsResumable + !StringCompare(ListItem.Overlay,OverlayWatched.png)">dialogs/circle/$INFO[ListItem.PercentPlayed].png</value>
+        <value condition="Container.ListItem.IsResumable">dialogs/circlewatched/$INFO[ListItem.PercentPlayed].png</value>
         <value condition="!Stringcompare(ListItem.Label,..) + Container.Content(tvshows) + [[Stringcompare(Window(Home).Property(RecommendedEpisode.1.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.2.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.3.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.4.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.5.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.6.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.7.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.8.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.9.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.10.TvShowTitle),ListItem.TvShowTitle)]]">common/inprogress.png</value>
         <value condition="!Stringcompare(ListItem.Label,..) + !StringCompare(ListItem.Overlay,OverlayWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem.Label)]] | [Container.Content(tvshows) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem.Title)]]]">common/new.png</value>
         <value condition="!StringCompare(ListItem.Overlay,OverlayWatched.png) + !IsEmpty(ListItem.Top250)">common/imdb.png</value>
+        <value condition="!IsEmpty(ListItem.Top250)">common/imdbwatched.png</value>
         <value condition="!IsEmpty(ListItem.Property(Addon.Broken))">common/wrench.png</value>
         <value>$INFO[ListItem.Overlay]</value>
+    </variable>
+    <variable name="CountryFlagVar">
+        <value condition="!IsEmpty(ListItem.Country)">$INFO[ListItem.Country,flags/language/,.png]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[Window(home).Property(NextAired.Country),flags/language/,.png]</value>
     </variable>
     <variable name="VolumeColorVar">
         <value condition="Stringcompare(Control.GetLabel(20),100)">FFFF2409</value>
@@ -937,7 +927,7 @@
         <value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
         <value condition="[Window.IsActive(programs) + [Window.IsActive(programs) + !Container.Content(addons)]]">$INFO[ListItem.Studio]</value>
         <value condition="Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.TVShowTitle]</value>
-        <value condition="Container.Content(tvshows)">$INFO[ListItem.Label2]$INFO[ListItem.Property(UnWatchedEpisodes), [LOWERCASE]($LOCALIZE[16101]:  ,)[/LOWERCASE]]</value>
+        <value condition="Container.Content(tvshows)">$INFO[ListItem.Genre]</value>
         <value>$INFO[ListItem.Label2]</value>
     </variable>
     <variable name="InfoWallBottomLabel1Var">
@@ -945,7 +935,9 @@
         <value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version),[COLOR floorlabel]$LOCALIZE[24051] [/COLOR]]</value>
         <value condition="Container.Content(albums)">$INFO[ListItem.Year]</value>
         <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_YearsActive))">$INFO[ListItem.Property(Artist_YearsActive),[COLOR floorlabel]$LOCALIZE[21898]: [/COLOR]]</value>
-        <value condition="Container.Content(tvshows) | [Window.IsActive(programs) + [Window.IsActive(programs) + !Container.Content(addons)]]">$INFO[ListItem.Genre]</value>
+        <value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR grey]$LOCALIZE[209]:[/COLOR] $INFO[Window(Home).Property(NextAired.LatestSeasonNumber),S]$INFO[Window(Home).Property(NextAired.LatestEpisodeNumber),E]$INFO[Window(Home).Property(NextAired.NextTitle),: ]</value>
+        <value condition="Container.Content(tvshows)">[COLOR grey]$LOCALIZE[210]:[/COLOR] $INFO[Window(Home).Property(NextAired.LatestSeasonNumber),S]$INFO[Window(Home).Property(NextAired.LatestEpisodeNumber),E]$INFO[Window(Home).Property(NextAired.LatestTitle),:  ]</value>
+        <value condition="Window.IsActive(programs) + [Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Genre]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.Artist]</value>
         <value condition="Window.IsActive(pictures)">$INFO[ListItem.PictureResolution,[COLOR floorlabel]$LOCALIZE[21805]: [/COLOR]]</value>
         <value condition="Container.Content(musicvideos)">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
@@ -958,7 +950,7 @@
         <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Formed)]</value>
         <value condition="[Window.IsActive(programs) + [Window.IsActive(programs) + !Container.Content(addons)]]">$INFO[ListItem.Writer]$INFO[ListItem.Premiered, • ]</value>
         <value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</value>
-        <value condition="Container.Content(tvshows)">$INFO[ListItem.Premiered]$INFO[ListItem.RatingAndVotes, • ]</value>
+        <value condition="Container.Content(tvshows)">$INFO[ListItem.Premiered,[COLOR grey]$LOCALIZE[20416]: [/COLOR]]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.Album]</value>
         <value condition="Window.IsActive(pictures)">$INFO[ListItem.PictureDateTime,[COLOR floorlabel]$LOCALIZE[21803]: [/COLOR]]</value>
         <value condition="Container.Content(musicvideos)">$INFO[ListItem.RatingAndVotes]</value>
@@ -1022,6 +1014,10 @@
     <variable name="OneOrMoreSeasonsVar">
         <value condition="StringCompare(ListItem.Property(TotalSeasons),1)">$LOCALIZE[20373]</value>
         <value>$LOCALIZE[33054]</value>
+    </variable>
+    <variable name="UnwatchedEpisodesLabelVar">
+        <value condition="StringCompare(ListItem.Property(TotalEpisodes),ListItem.Property(UnwatchedEpisodes))">$LOCALIZE[593]</value>
+        <value>$INFO[ListItem.Property(UnwatchedEpisodes)]</value>
     </variable>
     <variable name="OneOrMoreEpisodesVar">
         <value condition="StringCompare(ListItem.Property(TotalEpisodes),1)">$LOCALIZE[20359]</value>
@@ -1474,11 +1470,15 @@
         <value condition="[Container.Content(songs) | Container.Content(episodes)] + !IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
         <value>$INFO[ListItem.Label]</value>
     </variable>
+    <variable name="SlimListLabel1Var">
+        <value condition="Container.Content(albums)">[COLOR grey]$INFO[ListItem.Year,, • ][/COLOR]$INFO[ListItem.Label]</value>
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
     <variable name="ListLabel2Var">
         <value condition="Container.Content(songs)">$INFO[ListItem.Artist]</value>
         <value condition="SubString(ListItem.Path,videodb://1/7) + !Stringcompare(ListItem.Label,..)">$LOCALIZE[20457]</value>
-        <value condition="Container.Content(movies) + [StringCompare(ListItem.Label2,ListItem.Rating) | StringCompare(ListItem.Label2,ListItem.Year)]">$INFO[ListItem.Genre]</value>
-        <value condition="Container.Content(tvshows) + [StringCompare(ListItem.Label2,ListItem.Rating) | StringCompare(ListItem.Label2,ListItem.Premiered)]">$INFO[ListItem.Genre]</value>
+        <value condition="Container.Content(movies) + [StringCompare(ListItem.Label2,ListItem.Rating) | StringCompare(ListItem.Label2,ListItem.Year)]">$INFO[ListItem.Rating]</value>
+        <value condition="Container.Content(tvshows) + [StringCompare(ListItem.Label2,ListItem.Rating) | StringCompare(ListItem.Label2,ListItem.Premiered)]">$INFO[ListItem.Rating]</value>
         <value condition="Container.Content(seasons)">[LOWERCASE]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]][/LOWERCASE]</value>
         <value condition="[Container.Content(episodes)  + [StringCompare(ListItem.Label2,ListItem.Rating) | StringCompare(ListItem.Label2,ListItem.Premiered)]] + ![Control.IsVisible(50) + Skin.HasSetting(slimlist)]">$INFO[ListItem.TVShowTitle]</value>
         <value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
@@ -1489,7 +1489,7 @@
     <variable name="ListLabel3Var">
         <value condition="Container.Content(albums) | Container.Content(movies)">$INFO[ListItem.Year]</value>
         <value condition="Container.Content(tvshows) | Container.Content(episodes) | [Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Premiered]</value>
-        <value condition="Container.Content(seasons)">[LOWERCASE]$INFO[ListItem.Property(TotalEpisodes)] $VAR[OneOrMoreEpisodesVar][/LOWERCASE]</value>
+        <value condition="Container.Content(seasons) + !IsEmpty(ListItem.Property(TotalEpisodes))">[B]$INFO[ListItem.Property(TotalEpisodes)][/B][CR]$VAR[OneOrMoreEpisodesVar]</value>
         <value>$INFO[ListItem.Label2]</value>
     </variable>
     <variable name="ListLabel4Var">
@@ -1632,13 +1632,11 @@
     </variable>
     <!-- LowList-->
     <variable name="LowListInfoDetail3">
-        <value condition="Container.Content(tvshows) + Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[33054]:</value>
-        <value condition="Container.Content(tvshows) + !Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[705]:</value>
+        <value condition="Container.Content(tvshows)">$LOCALIZE[33054]:</value>
         <value>$LOCALIZE[572]:</value>
     </variable>
     <variable name="LowListInfoValue3">
-        <value condition="Container.Content(tvshows) + Skin.HasSetting(DisableNextAiredInfo)">$INFO[ListItem.Property(TotalSeasons)]</value>
-        <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)] + IsEmpty(ListItem.Studio)">$LOCALIZE[31452]</value>
+        <value condition="Container.Content(tvshows)">$INFO[ListItem.Property(TotalSeasons)]</value>
         <value>$INFO[ListItem.Studio]</value>
     </variable>
     <variable name="LowListInfoDetail4">
@@ -1647,21 +1645,17 @@
     </variable>
     <variable name="LowListInfoValue4">
         <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)] + !IsEmpty(ListItem.Mpaa)">$INFO[ListItem.Mpaa]</value>
-        <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)] + IsEmpty(ListItem.Mpaa)">$LOCALIZE[31452]</value>
+        <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)]">$LOCALIZE[31452]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</value>
     </variable>
     <variable name="LowListInfoDetail5">
         <value condition="Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[2050]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$LOCALIZE[209]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo) + IsEmpty(Window(Home).Property(NextAired.NextDate))">$LOCALIZE[210]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[20074]:</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[4]:</value>
     </variable>
     <variable name="LowListInfoValue5">
         <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)] + !ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
-        <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)] + ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR grey]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$VAR[NextEpisodeVar]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo) + IsEmpty(Window(Home).Property(NextAired.NextDate))">$VAR[LastEpisodeVar]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Mpaa]</value>
+        <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)]">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR grey]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[Window(Home).Property(NextAired.AirTime)]</value>
     </variable>
      <!-- SERGIU LOW LIST --><variable name="LowListSubTitleVar">
         <value condition="SubString(ListItem.Path,videodb://1/7)">$LOCALIZE[20457]</value>
@@ -1684,7 +1678,6 @@
     <!-- TriPanel -->
     <variable name="TriPanelDetail1Var">
         <value condition="System.HasAddon(script.metadata.actors) + [Container.Content(actors) | Container.Content(directors)]">$ADDON[script.metadata.actors 32012]</value>
-        <value condition="Container.Content(tvshows) + !IsEmpty(ListItem.TvShowTitle) + Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[563]:</value>
         <value condition="Container.Content(seasons)">$LOCALIZE[20360]:</value>
         <value condition="Window.IsActive(programs)">$LOCALIZE[572]:</value>
         <value>$LOCALIZE[2050]:</value>
@@ -1693,8 +1686,7 @@
         <value condition="System.HasAddon(script.metadata.actors) + [Container.Content(actors) | Container.Content(directors)]">$INFO[Window.Property(current.actor.age)]</value>
         <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)] + !ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
         <value condition="[Container.Content(episodes) | IsEmpty(ListItem.TvShowTitle)]">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR grey]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$INFO[Window(Home).Property(NextAired.Runtime),, $LOCALIZE[12391]]</value>
-        <value condition="Container.Content(tvshows)">$INFO[ListItem.Rating]</value>
+        <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[Window(Home).Property(NextAired.Runtime),, $LOCALIZE[12391]]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes)]</value>
         <value condition="Window.IsActive(programs)">$INFO[ListItem.Studio]</value>
     </variable>
@@ -1709,8 +1701,8 @@
         <value>$INFO[ListItem.Genre]</value>
     </variable>
     <variable name="TriPanelDetail3Var">
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$LOCALIZE[31190]:</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$LOCALIZE[31189]:</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$LOCALIZE[31190]:</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.LatestDate))">$LOCALIZE[31189]:</value>
         <value condition="Container.Content(tvshows)">$LOCALIZE[31005]:</value>
         <value condition="Container.Content(seasons)">$LOCALIZE[16101]:</value>
         <value condition="Window.IsActive(programs)">$LOCALIZE[31364]:</value>
@@ -1718,8 +1710,8 @@
         <value>$LOCALIZE[20339]:</value>
     </variable>
     <variable name="TriPanelValue3Var">
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$VAR[NextEpisodeVar]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(DisableNextAiredInfo)">$INFO[Window(Home).Property(NextAired.LatestDate)]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$VAR[NextEpisodeVar]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.LatestDate))">$INFO[Window(Home).Property(NextAired.LatestDate)]</value>
         <value condition="Container.Content(tvshows)">$INFO[ListItem.Premiered]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
         <value condition="Window.IsActive(programs)">$INFO[ListItem.Writer]</value>
@@ -1842,7 +1834,7 @@
     </variable>
     <variable name="PlayListWidgetLabelVar">
         <value condition="Skin.HasSetting(itemsplaylist) + !Skin.HasSetting(fiveitemsplaylist)">10 $LOCALIZE[31045]</value>
-        <value condition="Skin.HasSetting(itemsplaylist) + Skin.HasSetting(fiveitemsplaylist)">5 $LOCALIZE[31045]</value>
+        <value condition="Skin.HasSetting(itemsplaylist)">5 $LOCALIZE[31045]</value>
         <value condition="Skin.HasSetting(homeartistslideshow)">$LOCALIZE[31044]</value>
         <value>$LOCALIZE[16039]</value>
     </variable>
@@ -2450,10 +2442,6 @@
     <variable name="InfoWallTagLineSettingsVar">
         <value condition="Skin.HasSetting(InfoWallTagLine)">$LOCALIZE[351]</value>
         <value>$LOCALIZE[31429]</value>
-    </variable>
-    <variable name="wallgenretvSettingsVar">
-        <value condition="Skin.HasSetting(wallgenretv)">$LOCALIZE[515]</value>
-        <value>$LOCALIZE[31172]</value>
     </variable>
     <variable name="VideoInfoThumbPreviewVar">
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[listItem.Art(poster)]</value>
