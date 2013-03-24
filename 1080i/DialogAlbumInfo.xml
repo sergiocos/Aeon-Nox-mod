@@ -1506,11 +1506,6 @@
                 <visible>!Skin.HasSetting(kioskmode)</visible>
                 <control type="group">
                     <include>Animation_MediaMenuSlide2</include>
-                    <animation type="Conditional" condition="Window.IsActive(1121)">
-                        <effect type="fade" start="100" end="0" time="400" />
-                        <effect type="zoom" end="66,100" time="320" easing="in" tween="cubic" />
-                        <effect type="slide" end="-49" time="320" easing="in" tween="cubic" />
-                    </animation>
                     <control type="grouplist" id="9003">
                         <width>400</width>
                         <height>1080</height>
@@ -1555,60 +1550,50 @@
                             <visible>System.HasAddon(script.artistslideshow)</visible>
                         </control>
                     </control>
-                    <control type="group">
-                        <posy>-5</posy>
+                    <control type="grouplist">
+                        <posy>15</posy>
+                        <orientation>vertical</orientation>
+                        <itemgap>20</itemgap>
+                        <visible>ControlGroup(9003).HasFocus</visible>
+                        <animation effect="fade" time="220">Visible</animation>
+                        <animation effect="fade" time="160" delay="1000">Hidden</animation>
                         <control type="image">
-                            <posy>15</posy>
                             <texture>special://skin/extras/BigIcons/ButtonReload.png</texture>
                             <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(6)">Conditional</animation>
                             <include>MediaMenuIcons</include>
                         </control>
                         <control type="image">
-                            <posy>115</posy>
                             <texture>special://skin/extras/BigIcons/Presentation.png</texture>
                             <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(10)">Conditional</animation>
                             <include>MediaMenuIcons</include>
                             <visible>Control.IsVisible(10)</visible>
                         </control>
                         <control type="image">
-                            <posy>215</posy>
                             <texture>special://skin/extras/BigIcons/Presentation.png</texture>
                             <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(11)">Conditional</animation>
                             <include>MediaMenuIcons</include>
                             <visible>Control.IsVisible(11)</visible>
                         </control>
                         <control type="image">
-                            <posy>315</posy>
                             <texture>special://skin/extras/BigIcons/Image.png</texture>
-                            <animation effect="slide" end="0,-100" time="0" condition="!Control.IsVisible(11)">Conditional</animation>
                             <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(12)">Conditional</animation>
                             <include>MediaMenuIcons</include>
                             <visible>Control.IsVisible(12)</visible>
                         </control>
                         <control type="image">
-                            <posy>415</posy>
                             <texture>special://skin/extras/BigIcons/CD-DVD.png</texture>
-                            <animation effect="slide" end="0,-100" time="0" condition="!Control.IsVisible(11)">Conditional</animation>
-                            <animation effect="slide" end="0,-100" time="0" condition="!Control.IsVisible(12)">Conditional</animation>
                             <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(120)">Conditional</animation>
                             <include>MediaMenuIcons</include>
                             <visible>Control.IsVisible(120)</visible>
                         </control>
                         <control type="image">
-                            <posy>515</posy>
                             <texture>special://skin/extras/BigIcons/Gears.png</texture>
-                            <animation effect="slide" end="0,-100" time="0" condition="!Control.IsVisible(11)">Conditional</animation>
-                            <animation effect="slide" end="0,-100" time="0" condition="!Control.IsVisible(12)">Conditional</animation>
-                            <animation effect="slide" end="0,-100" time="0" condition="!Control.IsVisible(120)">Conditional</animation>
                             <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(121)">Conditional</animation>
                             <include>MediaMenuIcons</include>
                             <visible>Control.IsVisible(121)</visible>
                         </control>
                     </control>
                     <include>QuickNavLabel</include>
-                    <control type="group">
-                        <include>Media_Menu_NowPlaying</include>
-                    </control>
                 </control>
             </control>
         </control>
