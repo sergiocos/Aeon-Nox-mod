@@ -9,8 +9,12 @@
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
-            <control type="label" id="4421">
-                <posy>100</posy>
+            <control type="label" id="4420">
+                <label>$VAR[1112StyleVar]</label>
+                <include>HiddenObject</include>
+            </control>
+
+    <control type="label" id="4421">
                 <label>$VAR[InfoPanelVar]</label>
                 <include>HiddenObject</include>
                 <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
@@ -214,7 +218,7 @@
                 <posy>610</posy>
                 <posx>650</posx>
                 <width>720</width>
-                <label>31187</label>
+                <label>31193</label>
                 <include>Objects_MediaMenuLabelAlt2</include>
                 <align>center</align>
             </control>
