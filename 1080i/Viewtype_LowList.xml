@@ -373,7 +373,7 @@
                         <visible>!Skin.HasSetting(DisableNextAiredInfo)</visible>	
                     <control type="label">  	
                        <posx>1912</posx>	  	
-                        <posy>966</posy>	  	
+                        <posy>979</posy>	  	
                         <width>330</width>	  	
                         <height>90</height>	  	
                         <align>right</align>	  	
@@ -382,7 +382,7 @@
                     </control>  	
                     <control type="label">	  	
                         <posx>1912</posx>	  	
-                        <posy>995</posy>	  	
+                        <posy>1008</posy>	  	
                         <width>330</width>	  	
                         <height>90</height>	  	
                         <align>right</align>	  	
@@ -392,7 +392,7 @@
                     </control> 	
           <control type="label">	  	
                         <posx>1912</posx>  	
-                        <posy>995</posy>	  	
+                        <posy>1008</posy>	  	
                         <width>330</width>	  	
                         <height>90</height>	  	
                        <align>right</align>	  	
@@ -520,7 +520,7 @@
                         <animation effect="slide" end="0,-165" time="120" condition="!Skin.HasSetting(nohighlist)">Conditional</animation>
                         <control type="textbox">
                             <posx>1275</posx>
-                            <posy>756</posy>
+                            <posy>750</posy>
                             <width>633</width>
                             <height>237</height>
                             <label>$VAR[GlobalPlotVar]</label>
