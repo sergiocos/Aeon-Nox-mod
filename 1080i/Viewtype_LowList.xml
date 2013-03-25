@@ -522,7 +522,7 @@
                             <posx>1275</posx>
                             <posy>750</posy>
                             <width>633</width>
-                            <height>237</height>
+                            <height>240</height>
                             <label>$VAR[GlobalPlotVar]</label>
                             <font>Font_Reg32</font>
                             <textcolor>white6</textcolor>
