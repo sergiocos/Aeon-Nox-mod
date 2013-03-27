@@ -387,7 +387,7 @@
                         <height>90</height>	  	
                         <align>right</align>	  	
                         <font>Font_Bold19</font>	  	
-                        <label>urmÄ?torul: $VAR[NextEpisodeVar]</label>	  	
+                        <label>urmÄƒtorul: $VAR[NextEpisodeVar]</label>	  	
             <visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>	  	
                     </control> 	
           <control type="label">	  	
