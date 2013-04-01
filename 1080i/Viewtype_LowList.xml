@@ -387,18 +387,18 @@
                         <height>90</height>	  	
                         <align>right</align>	  	
                         <font>Font_Bold19</font>	  	
-                        <label>urmÄ?torul: $VAR[NextEpisodeVar]</label>	  	
-            <visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>	  	
+                        <label>urmÄƒtorul: $VAR[NextEpisodeVar]</label>	  	
+						<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>	  	
                     </control> 	
-          <control type="label">	  	
+					<control type="label">	  	
                         <posx>1912</posx>  	
                         <posy>1008</posy>	  	
                         <width>330</width>	  	
                         <height>90</height>	  	
                        <align>right</align>	  	
                         <font>Font_Bold19</font>
-	  	                <label>$VAR[ShowStatusVar]</label>
-	  	        <visible>IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>
+	  	                <label>$INFO[Window(Home).Property(NextAired.Status)]</label>
+						<visible>IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>
                         </control>
                     </control>
                 </control>
