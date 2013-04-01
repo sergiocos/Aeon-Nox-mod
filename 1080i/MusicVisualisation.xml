@@ -17,7 +17,7 @@
             <label>$INFO[Skin.String(MusicViz.MultiFanart)]</label>
             <include>HiddenObject</include>
         </control>
-            <include>BackgroundFadeLabels</include>
+        <include>BackgroundFadeLabels</include>
         <control type="visualisation" id="2">
             <include>FullscreenDimensions</include>
             <visible>Skin.HasSetting(FadeVizBG)</visible>
@@ -540,7 +540,6 @@
                         <label>$INFO[MusicPlayer.Property(Album_Label)]</label>
                         <font>Font_Reg14_Caps</font>
                         <textcolor>grey</textcolor>
-                        <textcolor>BBa4a4a4</textcolor>
                         <wrapmultiline>true</wrapmultiline>
                         <visible>IsEmpty(Control.GetLabel(8669))</visible>
                     </control>

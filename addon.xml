@@ -28,5 +28,8 @@
     <description lang="en">Aeon Nox is an artwork-intense XBMC skin with an endless amount of customization possibilites. There are many different views and options to present your media in the way you want it. The home window is fully customizable, you can re-order main menu items, assign submenus and widgets to them or change the overall look with different styles and themes. A skin which perfectly adapts to your needs.It is based on the design of Aeon by djh_. A great deal of textures used are from Aeon and its mods. All credits to the creators of these skins and mods.</description>
     <disclaimer lang="en">Only compatible with XBMC 12.0 Frodo. Not recommended for low-end platforms (Raspberry PI, AppleTV, Android devices)</disclaimer>
     <platform>all</platform>
+    <source>https://github.com/BigNoid/Aeon-Nox</source>
+    <forum>http://forum.xbmc.org/forumdisplay.php?fid=142</forum>
+    <website>https://github.com/BigNoid/Aeon-Nox</website>
   </extension>
 </addon>
