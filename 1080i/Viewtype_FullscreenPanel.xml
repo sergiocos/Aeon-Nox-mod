@@ -82,7 +82,7 @@
                                 <height>50</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font_Reg38_Caps</font>
+                                <font>Font_Reg57_Caps</font>
                             </control>
                             <control type="label">
                                 <posx>370</posx>
@@ -91,7 +91,7 @@
                                 <height>30</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$VAR[InfoWallSubTitleVar]</label>
-                                <font>Font_Reg19</font>
+                                <font>Font_Reg30_2</font>
                                 <textcolor>grey2</textcolor>
                             </control>
                             <control type="textbox">
@@ -101,7 +101,7 @@
                                 <height>195</height>
                                 <aligny>top</aligny>
                                 <label>$VAR[InfoWallTextboxVar]</label>
-                                <font>Font_Reg20</font>
+                                <font>Font_Reg32</font>
                                 <textcolor>white6</textcolor>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -148,7 +148,7 @@
                                 <height>50</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font_Reg38_Caps</font>
+                                <font>Font_Reg57_Caps</font>
                             </control>
                             <control type="label">
                                 <posx>370</posx>
@@ -157,7 +157,7 @@
                                 <height>30</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$VAR[InfoWallSubTitleVar]</label>
-                                <font>Font_Reg19</font>
+                                <font>Font_Reg30_2</font>
                                 <textcolor>grey2</textcolor>
                             </control>
                             <control type="textbox">
@@ -167,7 +167,7 @@
                                 <height>195</height>
                                 <aligny>top</aligny>
                                 <label>$VAR[InfoWallTextboxVar]</label>
-                                <font>Font_Reg20</font>
+                                <font>Font_Reg32</font>
                                 <textcolor>white6</textcolor>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -231,7 +231,7 @@
                                 <height>50</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font_Reg38_Caps</font>
+                                <font>Font_Reg57_Caps</font>
                             </control>
                             <control type="image">
                                 <posx>390</posx>
@@ -249,7 +249,7 @@
                                 <height>30</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Year, • ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                                <font>Font_Reg21</font>
+                                <font>Font_Reg35</font>
                                 <textcolor>grey2</textcolor>
                             </control>
                             <control type="textbox">
@@ -259,7 +259,7 @@
                                 <height>210</height>
                                 <aligny>top</aligny>
                                 <label>$VAR[GlobalPlotVar]</label>
-                                <font>Font_Reg21</font>
+                                <font>Font_Reg35</font>
                                 <textcolor>white6</textcolor>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -275,7 +275,7 @@
                                 <height>50</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font_Reg38_Caps</font>
+                                <font>Font_Reg57_Caps</font>
                             </control>
                             <control type="image">
                                 <posx>235</posx>
@@ -293,7 +293,7 @@
                                 <height>30</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Year, • ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                                <font>Font_Reg21</font>
+                                <font>Font_Reg35</font>
                                 <textcolor>grey2</textcolor>
                             </control>
                             <control type="textbox">
@@ -303,7 +303,7 @@
                                 <height>210</height>
                                 <aligny>top</aligny>
                                 <label>$VAR[GlobalPlotVar]</label>
-                                <font>Font_Reg21</font>
+                                <font>Font_Reg35</font>
                                 <textcolor>white6</textcolor>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -372,7 +372,7 @@
                                 <height>50</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font_Reg38_Caps</font>
+                                <font>Font_Reg57_Caps</font>
                             </control>
                             <control type="image">
                                 <posx>390</posx>
@@ -390,7 +390,7 @@
                                 <height>30</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Year, • ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                                <font>Font_Reg21</font>
+                                <font>Font_Reg35</font>
                                 <textcolor>grey2</textcolor>
                             </control>
                             <control type="textbox">
@@ -400,7 +400,7 @@
                                 <height>210</height>
                                 <aligny>top</aligny>
                                 <label>$VAR[GlobalPlotVar]</label>
-                                <font>Font_Reg21</font>
+                                <font>Font_Reg35</font>
                                 <textcolor>white6</textcolor>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -416,7 +416,7 @@
                                 <height>50</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Label]</label>
-                                <font>Font_Reg38_Caps</font>
+                                <font>Font_Reg57_Caps</font>
                             </control>
                             <control type="image">
                                 <posx>235</posx>
@@ -434,7 +434,7 @@
                                 <height>30</height>
                                 <textoffsetx>15</textoffsetx>
                                 <label>$INFO[ListItem.Year, • ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                                <font>Font_Reg21</font>
+                                <font>Font_Reg35</font>
                                 <textcolor>grey2</textcolor>
                             </control>
                             <control type="textbox">
@@ -444,7 +444,7 @@
                                 <height>210</height>
                                 <aligny>top</aligny>
                                 <label>$VAR[GlobalPlotVar]</label>
-                                <font>Font_Reg21</font>
+                                <font>Font_Reg35</font>
                                 <textcolor>white6</textcolor>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -504,7 +504,7 @@
                             <height>45</height>
                             <textoffsetx>10</textoffsetx>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>Font_Bold24</font>
+                            <font>Font_Bold40</font>
                             <textcolor>grey2</textcolor>
                         </control>
                         <control type="label">
@@ -514,7 +514,7 @@
                             <height>30</height>
                             <textoffsetx>10</textoffsetx>
                             <label>$INFO[ListItem.Label2,• ]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg32</font>
                             <textcolor>grey2</textcolor>
                             <visible>Container.Content(tvshows)</visible>
                         </control>
@@ -606,7 +606,7 @@
                             <height>45</height>
                             <textoffsetx>10</textoffsetx>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>Font_Bold24</font>
+                            <font>Font_Bold40</font>
                         </control>
                         <control type="label">
                             <posx>563</posx>
@@ -615,7 +615,7 @@
                             <height>30</height>
                             <textoffsetx>10</textoffsetx>
                             <label>$INFO[ListItem.Label2,• ]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg32</font>
                             <visible>Container.Content(tvshows)</visible>
                         </control>
                         <control type="image">
@@ -761,7 +761,7 @@
                 <textoffsetx>15</textoffsetx>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
-                <font>Font_Reg24</font>
+                <font>Font_Reg40</font>
             </control>
             <control type="label">
                 <posx>589</posx>
@@ -771,7 +771,7 @@
                 <textoffsetx>15</textoffsetx>
                 <align>right</align>
                 <label>$INFO[ListItem.Year,, • ]</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>grey2</textcolor>
             </control>
             <control type="image">
@@ -789,7 +789,7 @@
                 <height>30</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>grey2</textcolor>
             </control>
             <control type="textbox">
@@ -799,7 +799,7 @@
                 <height>180</height>
                 <aligny>top</aligny>
                 <label>$VAR[GlobalPlotOutlineVar]</label>
-                <font>Font_Reg20</font>
+                <font>Font_Reg32</font>
                 <textcolor>white6</textcolor>
                 <autoscroll>false</autoscroll>
             </control>
@@ -815,7 +815,7 @@
                 <height>50</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$INFO[ListItem.Label]</label>
-                <font>Font_Reg38_Caps</font>
+                <font>Font_Reg57_Caps</font>
             </control>
             <control type="image">
                 <posx>235</posx>
@@ -833,7 +833,7 @@
                 <height>30</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$INFO[ListItem.Year, • ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>grey2</textcolor>
             </control>
             <control type="textbox">
@@ -843,7 +843,7 @@
                 <height>180</height>
                 <aligny>top</aligny>
                 <label>$VAR[GlobalPlotVar]</label>
-                <font>Font_Reg20</font>
+                <font>Font_Reg32</font>
                 <textcolor>white6</textcolor>
                 <autoscroll>false</autoscroll>
             </control>
@@ -900,7 +900,7 @@
                 <textoffsetx>15</textoffsetx>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
-                <font>Font_Reg24</font>
+                <font>Font_Reg40</font>
             </control>
             <control type="label">
                 <posx>589</posx>
@@ -910,7 +910,7 @@
                 <textoffsetx>15</textoffsetx>
                 <align>right</align>
                 <label>$INFO[ListItem.Year,, • ]</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>grey2</textcolor>
             </control>
             <control type="image">
@@ -928,7 +928,7 @@
                 <height>30</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>grey2</textcolor>
             </control>
             <control type="textbox">
@@ -938,7 +938,7 @@
                 <height>180</height>
                 <aligny>top</aligny>
                 <label>$VAR[GlobalPlotOutlineVar]</label>
-                <font>Font_Reg20</font>
+                <font>Font_Reg32</font>
                 <textcolor>white6</textcolor>
                 <autoscroll>false</autoscroll>
             </control>
@@ -954,7 +954,7 @@
                 <height>50</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$INFO[ListItem.Label]</label>
-                <font>Font_Reg38_Caps</font>
+                <font>Font_Reg57_Caps</font>
             </control>
             <control type="image">
                 <posx>235</posx>
@@ -972,7 +972,7 @@
                 <height>30</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$INFO[ListItem.Year, • ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>grey2</textcolor>
             </control>
             <control type="textbox">
@@ -982,7 +982,7 @@
                 <height>180</height>
                 <aligny>top</aligny>
                 <label>$VAR[GlobalPlotVar]</label>
-                <font>Font_Reg20</font>
+                <font>Font_Reg32</font>
                 <textcolor>white6</textcolor>
                 <autoscroll>false</autoscroll>
             </control>
@@ -1029,7 +1029,7 @@
                 <height>50</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$INFO[ListItem.Label]</label>
-                <font>Font_Reg38_Caps</font>
+                <font>Font_Reg57_Caps</font>
             </control>
             <control type="label">
                 <posx>370</posx>
@@ -1038,7 +1038,7 @@
                 <height>30</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$VAR[InfoWallSubTitleVar]</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>grey2</textcolor>
             </control>
             <control type="textbox">
@@ -1048,7 +1048,7 @@
                 <height>195</height>
                 <aligny>top</aligny>
                 <label>$VAR[InfoWallTextboxVar]</label>
-                <font>Font_Reg20</font>
+                <font>Font_Reg32</font>
                 <textcolor>white6</textcolor>
                 <autoscroll>false</autoscroll>
             </control>
@@ -1087,7 +1087,7 @@
                 <height>50</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$INFO[ListItem.Label]</label>
-                <font>Font_Reg38_Caps</font>
+                <font>Font_Reg57_Caps</font>
             </control>
             <control type="label">
                 <posx>370</posx>
@@ -1096,7 +1096,7 @@
                 <height>30</height>
                 <textoffsetx>15</textoffsetx>
                 <label>$VAR[InfoWallSubTitleVar]</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>grey2</textcolor>
             </control>
             <control type="textbox">
@@ -1106,7 +1106,7 @@
                 <height>195</height>
                 <aligny>top</aligny>
                 <label>$VAR[InfoWallTextboxVar]</label>
-                <font>Font_Reg20</font>
+                <font>Font_Reg32</font>
                 <textcolor>white6</textcolor>
                 <autoscroll>false</autoscroll>
             </control>
@@ -1165,7 +1165,7 @@
             <height>45</height>
             <textoffsetx>10</textoffsetx>
             <label>$INFO[ListItem.Label]</label>
-            <font>Font_Bold24</font>
+            <font>Font_Bold40</font>
         </control>
         <control type="label">
             <posx>563</posx>
@@ -1174,7 +1174,7 @@
             <height>30</height>
             <textoffsetx>10</textoffsetx>
             <label>$INFO[ListItem.Label2,• ]</label>
-            <font>Font_Reg20</font>
+            <font>Font_Reg32</font>
             <visible>Container.Content(tvshows)</visible>
         </control>
         <control type="image">
@@ -1249,7 +1249,7 @@
             <height>45</height>
             <textoffsetx>10</textoffsetx>
             <label>$INFO[ListItem.Label]</label>
-            <font>Font_Bold24</font>
+            <font>Font_Bold40</font>
             <textcolor>grey2</textcolor>
         </control>
         <control type="label">
@@ -1259,7 +1259,7 @@
             <height>30</height>
             <textoffsetx>10</textoffsetx>
             <label>$INFO[ListItem.Label2,• ]</label>
-            <font>Font_Reg20</font>
+            <font>Font_Reg32</font>
             <textcolor>grey2</textcolor>
             <visible>Container.Content(tvshows)</visible>
         </control>

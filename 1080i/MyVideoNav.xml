@@ -53,6 +53,9 @@
                 <visible>[Container.Content(musicvideos) + Skin.HasSetting(extrafanartmusicvideos)] | [Container.Content(movies) + Skin.HasSetting(extrafanartmovies)] | [Container.Content(tvshows) + Skin.HasSetting(extrafanartseries)] | [Container.Content(seasons) + Skin.HasSetting(extrafanartseasons)] | [Container.Content(episodes) + Skin.HasSetting(extrafanartepisodes)]</visible>
                 <visible>!SubString(ListItem.Label,*,left) + [Substring(Container.FolderPath,videodb://,left) | Substring(Container.FolderPath,special://profile/playlist,left)]</visible>
             </control>
+            
+         <include condition="System.HasAddon(script.extendedinfo)">InteractiveNodeCases</include>
+
         </control>
         <!-- view id = 516-->
         <include condition="!Skin.HasSetting(DisableBigFanVL)">BigFan</include>
@@ -194,7 +197,6 @@
                 </control>
             </control>
             <include>FloorFlags</include>
-            <include condition="Window.IsActive(videos)">FloorFlagsList</include>
             <include>FloorLabels</include>
             <include condition="!Skin.HasSetting(DisablePostersVL) | !Skin.HasSetting(DisableShiftVL) |!Skin.HasSetting(DisableTriPanelVL)">Posters_Furniture</include>
             <control type="group">

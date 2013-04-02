@@ -689,7 +689,7 @@
                 <width>900</width>
                 <height>45</height>
                 <label>$LOCALIZE[31889]</label>
-                <font>Font_Reg22_Caps</font>
+                <font>Font_Reg37_Caps</font>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
                 <visible>!IsEmpty(MusicPlayer.Offset(1).Title)</visible>
             </control>
@@ -704,21 +704,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>1:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(1).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(1).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -732,21 +732,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>2:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(2).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(2).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -760,21 +760,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>3:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(3).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(3).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -788,21 +788,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>4:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(4).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(4).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -816,21 +816,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>5:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(5).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(5).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -845,21 +845,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>6:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(6).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(6).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -874,21 +874,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>7:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(7).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(7).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -903,21 +903,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>8:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(8).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(8).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -932,21 +932,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>9:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(9).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(9).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -961,21 +961,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>10:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(10).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(10).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -990,21 +990,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>11:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(11).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(11).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -1019,21 +1019,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>12:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(12).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(12).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
             <control type="grouplist">
@@ -1048,21 +1048,21 @@
                     <width min="30" max="60">auto</width>
                     <height>26</height>
                     <label>13:</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="380">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(13).Artist,,:]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>white3</textcolor>
                 </control>
                 <control type="label">
                     <width min="50" max="610">auto</width>
                     <height>26</height>
                     <label>$INFO[MusicPlayer.Offset(13).Title]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                 </control>
             </control>
         </control>
@@ -1115,7 +1115,7 @@
             <width>230</width>
             <height>108</height>
             <align>center</align>
-            <font>Font_Reg14_Caps</font>
+            <font>Font_Reg22_Caps</font>
             <textcolor>white2</textcolor>
             <info>ListItem.Label</info>
         </control>
@@ -1697,7 +1697,7 @@
                             <height>34</height>
                             <align>center</align>
                             <label>$LOCALIZE[31635]</label>
-                            <font>Font_Reg22_Caps</font>
+                            <font>Font_Reg37_Caps</font>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                         </control>
                         <control type="group">
@@ -1818,7 +1818,7 @@
                             <height>34</height>
                             <align>center</align>
                             <label>$LOCALIZE[21888]</label>
-                            <font>Font_Reg22_Caps</font>
+                            <font>Font_Reg37_Caps</font>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                         </control>
                         <control type="group">
@@ -1947,7 +1947,7 @@
                             <height>34</height>
                             <align>center</align>
                             <label>$LOCALIZE[21887]</label>
-                            <font>Font_Reg22_Caps</font>
+                            <font>Font_Reg37_Caps</font>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                         </control>
                         <control type="group">
@@ -1988,7 +1988,7 @@
                             <width>724</width>
                             <height>474</height>
                             <label>$INFO[Window(visualisation).Property(ArtistSlideshow.ArtistBiography)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <pagecontrol>7010</pagecontrol>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
@@ -2053,7 +2053,7 @@
                             <height>34</height>
                             <align>center</align>
                             <label>$LOCALIZE[559]</label>
-                            <font>Font_Reg22_Caps</font>
+                            <font>Font_Reg37_Caps</font>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                         </control>
                         <control type="group">
@@ -2117,7 +2117,7 @@
                                     <height>48</height>
                                     <align>right</align>
                                     <label>$INFO[ListItem.Property(Number)]</label>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <textcolor>$VAR[TitleColorVar]</textcolor>
                                 </control>
                                 <control type="label">
@@ -2127,7 +2127,7 @@
                                     <height>48</height>
                                     <align>left</align>
                                     <label>[COLOR white2]$INFO[ListItem.Property(Artist)]: [/COLOR]$INFO[ListItem.Label]</label>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <textcolor>grey2</textcolor>
                                 </control>
                                 <!--                 <control type="label">
@@ -2138,7 +2138,7 @@
                     <textcolor>grey2</textcolor>
                     <align>right</align>
                     <number>yes</number>
-                    <font>Font_Reg18</font>
+                    <font>Font_Reg29</font>
                     <label>$INFO[ListItem.Property(Number)]</label>
                 </control> -->
                             </itemlayout>
@@ -2164,7 +2164,7 @@
                                     <height>48</height>
                                     <align>right</align>
                                     <label>$INFO[ListItem.Property(Number)]</label>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <textcolor>$VAR[TitleColorVar]</textcolor>
                                 </control>
                                 <control type="label">
@@ -2174,7 +2174,7 @@
                                     <height>48</height>
                                     <align>left</align>
                                     <label>[COLOR white2]$INFO[ListItem.Property(Artist)]: [/COLOR]$INFO[ListItem.Label]</label>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <textcolor>grey2</textcolor>
                                 </control>
                             </focusedlayout>
@@ -2343,7 +2343,7 @@
                                 <width min="50" max="800">auto</width>
                                 <aligny>bottom</aligny>
                                 <label>$LOCALIZE[21893]: [COLOR white3]$INFO[MusicPlayer.Property(Artist_Born)][/COLOR]</label>
-                                <font>Font_Reg18</font>
+                                <font>Font_Reg29</font>
                                 <shadowcolor>black</shadowcolor>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <visible>!IsEmpty(MusicPlayer.Property(Artist_Born))</visible>
@@ -2352,7 +2352,7 @@
                                 <width min="50" max="800">auto</width>
                                 <aligny>bottom</aligny>
                                 <label>$LOCALIZE[21894]: [COLOR white3]$INFO[MusicPlayer.Property(Artist_Formed)][/COLOR]</label>
-                                <font>Font_Reg18</font>
+                                <font>Font_Reg29</font>
                                 <shadowcolor>black</shadowcolor>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <visible>!IsEmpty(MusicPlayer.Property(Artist_Formed))</visible>
@@ -2361,7 +2361,7 @@
                                 <width min="50" max="800">auto</width>
                                 <aligny>bottom</aligny>
                                 <label>$LOCALIZE[21897]: [COLOR white3]$INFO[MusicPlayer.Property(Artist_Died)][/COLOR]</label>
-                                <font>Font_Reg18</font>
+                                <font>Font_Reg29</font>
                                 <shadowcolor>black</shadowcolor>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <visible>!IsEmpty(MusicPlayer.Property(Artist_Died))</visible>
@@ -2370,7 +2370,7 @@
                                 <width min="50" max="800">auto</width>
                                 <aligny>bottom</aligny>
                                 <label>$LOCALIZE[21896]: [COLOR white3]$INFO[MusicPlayer.Property(Artist_Disbanded)][/COLOR]</label>
-                                <font>Font_Reg18</font>
+                                <font>Font_Reg29</font>
                                 <shadowcolor>black</shadowcolor>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <visible>!IsEmpty(MusicPlayer.Property(Artist_Disbanded))</visible>
