@@ -679,8 +679,8 @@
             <align>center</align>
             <aligny>bottom</aligny>
             <textcolor>osdseek</textcolor>
-            <font>Font_Bold22_Caps</font>
-            <label>[UPPERCASE][B]$INFO[VideoPlayer.Title][/B][/UPPERCASE]</label>
+            <font>Font_Bold37_Caps</font>
+            <label>[B]$INFO[VideoPlayer.Title][/B]</label>
             <scroll>true</scroll>
             <animation effect="slide" start="0,15" end="0,15" time="0" condition="IsEmpty(VideoPlayer.Tagline)+!VideoPlayer.Content(episodes)">Conditional</animation>
           </control>

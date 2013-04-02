@@ -72,7 +72,7 @@
         <height>68</height>
         <align>center</align>
         <aligny>bottom</aligny>
-        <font>Font_Bold22_Caps</font>
+        <font>Font_Bold37_Caps</font>
         <label>$INFO[VideoPlayer.Title]</label>
         <scroll>true</scroll>
       </control>
