@@ -37,7 +37,7 @@
         <width>420</width>
         <height>42</height>
         <align>center</align>
-        <font>Font_Reg24</font>
+        <font>Font_Reg42_Caps</font>
         <textcolor>FF363636</textcolor>
 		<shadowcolor>88e5e5e5</shadowcolor>
         <label>$INFO[VideoPlayer.TimeRemaining, - ]</label>
@@ -230,11 +230,11 @@
         <control type="group">
           <control type="image">
             <description>IMDB Rating</description>
-            <posx>1670</posx>
-            <posy>118</posy>
+            <posx>1675</posx>
+            <posy>110</posy>
             <width>180</width>
             <height>36</height>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<colordiffuse>$VAR[SubTitleColorVar]</colordiffuse>
             <texture>$INFO[VideoPlayer.Rating,stars/,.png]</texture>
           </control>
         </control>

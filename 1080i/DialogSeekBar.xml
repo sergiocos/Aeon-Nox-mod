@@ -618,7 +618,7 @@
               <height>42</height>
               <aligny>center</aligny>
               <align>center</align>
-              <font>Font_Reg24</font>
+              <font>Font_Reg42_Caps</font>
               <textcolor>FF363636</textcolor>
               <label>[UPPERCASE]$INFO[VideoPlayer.TimeRemaining, - ][/UPPERCASE]</label>
               <visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
