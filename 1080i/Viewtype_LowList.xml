@@ -377,7 +377,7 @@
                         <width>330</width>	  	
                         <height>90</height>	  	
                         <align>right</align>	  	
-                        <font>Font_Reg28_Caps</font>	  	
+                        <font>Font_Reg32</font>	  	
                         <label>recent: [B]$VAR[LastEpisodeVar][/B]</label>	  	
                     </control>  	
                     <control type="label">	  	
@@ -386,7 +386,7 @@
                         <width>330</width>	  	
                         <height>90</height>	  	
                         <align>right</align>	  	
-                        <font>Font_Reg28_Caps</font>	  	
+                        <font>Font_Reg32</font>	  	
                         <label>următorul: [B]$VAR[NextEpisodeVar][/B]</label>	  	
 						<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>	  	
                     </control> 	
@@ -396,7 +396,7 @@
                         <width>330</width>	  	
                         <height>90</height>	  	
                        <align>right</align>	  	
-                        <font>Font_Reg28_Caps</font>
+                        <font>Font_Reg32</font>
 	  	                <label>$INFO[Window(Home).Property(NextAired.Status)]</label>
 						<visible>IsEmpty(Window(Home).Property(NextAired.NextDate)</visible>
                         </control>
