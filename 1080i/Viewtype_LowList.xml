@@ -80,7 +80,7 @@
                         <width>400</width>
                         <height>155</height>
                         <aspectratio>keep</aspectratio>
-                        <texture background="true">$VAR[TVShowLogoVar]</texture>
+                        <texture background="true">$VAR[LogoVar]</texture>
                         <fadetime>400</fadetime>
                         <include>Animation_VisibleChange400</include>
                         <visible>!Player.HasVideo+!Skin.HasSetting(lowlistclearart) + [!Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
@@ -90,7 +90,7 @@
 						<posy>915</posy>
 						<width>380</width>
 						<height>149</height>
-						<texture background="true">$VAR[TVShowLogoVar]</texture>
+						<texture background="true">$VAR[LogoVar]</texture>
 						<visible>Container.Content(episodes)</visible>
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
