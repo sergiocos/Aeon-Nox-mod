@@ -84,7 +84,7 @@
                         <fadetime>400</fadetime>
                         <include>Animation_VisibleChange400</include>
                         <visible>!Player.HasVideo+!Skin.HasSetting(lowlistclearart) + [!Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
-                    </control>
+                        </control>
 					<!--sergiu: logo si banner ep--> <control type="image">
 						<posx>33</posx>
 						<posy>915</posy>
