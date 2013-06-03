@@ -1722,13 +1722,12 @@
                         <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_7.Disable))</visible>
                     </item>
                     <item>
-                        <label fallback="137">$INFO[Skin.String(QuickList1_8.Label)]</label>
+                        <label fallback="137">OPRIRE PC SUFRA</label>
                         <property name="Path" fallback="RunScript(script.globalsearch)">$INFO[Skin.String(QuickList1_8.Path)]</property>
                         <property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_8.Type)]</property>
                         <property name="DisableIcon">$INFO[Skin.String(QuickList1_8.Disable)]</property>
                         <thumb fallback="special://skin/extras/BigIcons/Search.png">$INFO[Skin.String(QuickList1_8.MultiFanart)]</thumb>
-                        <onclick>SetProperty(MenuItem,QuickList1_8,home)</onclick>
-                        <onclick>SetFocus(810)</onclick>
+                        <onclick>XBMC.System.Exec(c:/sd.bat)</onclick>
                         <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_8.Disable))</visible>
                     </item>
                     <item>
