@@ -1726,7 +1726,7 @@
                         <property name="Path" fallback="RunScript(script.globalsearch)">$INFO[Skin.String(QuickList1_8.Path)]</property>
                         <property name="Type" fallback="custom">$INFO[Skin.String(QuickList1_8.Type)]</property>
                         <property name="DisableIcon">$INFO[Skin.String(QuickList1_8.Disable)]</property>
-                        <thumb fallback="special://skin/extras/BigIcons/Search.png">$INFO[Skin.String(QuickList1_8.MultiFanart)]</thumb>
+                        <thumb fallback="special://skin/extras/BigIcons/XFIRE.png">$INFO[Skin.String(QuickList1_8.MultiFanart)]</thumb>
                         <onclick>XBMC.System.Exec(c:/sd.bat)</onclick>
                         <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_8.Disable))</visible>
                     </item>
