@@ -958,7 +958,6 @@
             <posx>0</posx>
             <posy>922</posy>
             <control type="group">
-              <visible>VideoPlayer.Content(episodes)</visible>
               <control type="image" id="1000">
                 <description>Clearart</description>
                 <posx>-3</posx>
@@ -978,7 +977,7 @@
               </control>
             </control>
             <control type="group">
-              <visible>VideoPlayer.Content(movies)</visible>
+              <visible>IsEmpty(Player.Art(clearart))+IsEmpty(Player.Art(clearlogo))</visible>
               <control type="image">
                 <description>IMDB Rating</description>
                 <posx>98</posx>
