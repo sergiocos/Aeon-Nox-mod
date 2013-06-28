@@ -977,14 +977,14 @@
               </control>
             </control>
             <control type="group">
-              <visible>IsEmpty(Player.Art(clearart))+IsEmpty(Player.Art(clearlogo))</visible>
+              <visible>!VideoPlayer.Content(episodes)+IsEmpty(Player.Art(clearart))+IsEmpty(Player.Art(clearlogo))</visible>
               <control type="image">
                 <description>IMDB Rating</description>
                 <posx>98</posx>
                 <posy>105</posy>
                 <width>180</width>
                 <height>36</height>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<colordiffuse>$VAR[SubTitleColorVar]</colordiffuse>
                 <texture>$INFO[VideoPlayer.Rating,stars/,.png]</texture>
               </control>
               <control type="label">

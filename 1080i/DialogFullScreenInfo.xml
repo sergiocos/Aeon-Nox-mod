@@ -51,6 +51,28 @@
         <height>135</height>
         <texture flipy="true">osd/osd_back.png</texture>
       </control>
+	  <control type="group">
+            <visible>!VideoPlayer.Content(episodes)+IsEmpty(Player.Art(clearart))+IsEmpty(Player.Art(clearlogo))</visible>
+            <control type="image">
+              <description>IMDB Rating</description>
+                <posx>98</posx>
+                <posy>20</posy>
+                <width>180</width>
+                <height>36</height>
+				<colordiffuse>$VAR[SubTitleColorVar]</colordiffuse>
+                <texture>$INFO[VideoPlayer.Rating,stars/,.png]</texture>
+              </control>
+              <control type="label">
+                <posx>98</posx>
+                <posy>70</posy>
+                <width>195</width>
+                <height>38</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>Font_OSDTitle2</font>
+                <label>$INFO[VideoPlayer.Year]</label>
+              </control>
+            </control>
 	  <control type="image">
           <posx>1490</posx>
           <posy>19</posy>
@@ -224,9 +246,6 @@
       <control type="group">
         <posx>0</posx>
         <posy>-27</posy>
-        <control type="group">
-          <visible>VideoPlayer.Content(episodes)</visible>
-        </control>
         <control type="group">
           <control type="image">
             <description>IMDB Rating</description>
