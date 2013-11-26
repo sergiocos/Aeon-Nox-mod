@@ -1041,17 +1041,17 @@
               <label>$INFO[Player.FinishTime]</label>
             </control>
 	  <control type="image">
-          <posx>1490</posx>
-          <posy>48</posy>
-        <width>44</width>
-        <height>44</height>
+          <posx>1460</posx>
+          <posy>14</posy>
+        <width>105</width>
+        <height>105</height>
         <texture flipy="true">osd/end.png</texture>
       </control>
 	  <control type="image">
-          <posx>390</posx>
-          <posy>52</posy>
-        <width>35</width>
-        <height>35</height>
+          <posx>360</posx>
+          <posy>14</posy>
+        <width>105</width>
+        <height>105</height>
         <texture flipy="true">osd/clock.png</texture>
       </control>
           </control>
