@@ -9,10 +9,24 @@
         </font>
         <font>
             <name>Font_ShowcaseMainLabel2_Caps</name>
-            <filename>MC360.ttf</filename>
+            <filename>BebasNeue.ttf</filename>
             <style>uppercase</style>
-            <size>49</size>
+            <size>66</size>
         </font>
+	<font>
+            <name>Font_ShowcaseMainLabel2x_Caps</name>
+            <filename>BebasNeue.ttf</filename>
+            <style>uppercase</style>
+            <size>76</size>
+        </font>
+
+	<font>
+            <name>Font_ShowcaseMainLabel3x_Caps</name>
+            <filename>BebasNeue.ttf</filename>
+            <style>bold uppercase</style>
+            <size>136</size>
+        </font>
+		
         <font>
             <name>Font_Reg42_Caps</name>
             <filename>MC360.ttf</filename>
@@ -265,10 +279,10 @@
         </font>
         <font>
             <name>Font_BigPause</name>
-            <filename>MC360.ttf</filename>
-            <aspect>0.67</aspect>
+            <filename>BebasNeue.ttf</filename>
+            <aspect>0.87</aspect>
             <style>bold uppercase</style>
-            <size>555</size>
+            <size>500</size>
         </font>
         <font>
             <name>Font_OSDClassic2</name>
