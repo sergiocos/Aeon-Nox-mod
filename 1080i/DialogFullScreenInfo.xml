@@ -78,14 +78,14 @@
           <posy>-15</posy>
         <width>105</width>
         <height>105</height>
-        <texture flipy="true">osd/end.png</texture>
+        <texture>osd/end.png</texture>
       </control>
 	  <control type="image">
           <posx>360</posx>
           <posy>-15</posy>
         <width>105</width>
         <height>105</height>
-        <texture flipy="true">osd/clock.png</texture>
+        <texture>osd/clock.png</texture>
       </control>
       <control type="label">
         <posx>543</posx>
